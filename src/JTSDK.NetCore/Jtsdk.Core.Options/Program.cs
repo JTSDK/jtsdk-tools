@@ -8,7 +8,7 @@ namespace Jtsdk.Core.Options
     {
         static void Main(string[] args)
         {
-            // verify we are running with JTSDK_HOME set
+            // instantiate PathUtils and verify JTSDK_HOME is set
             PathUtils tools = new PathUtils();
             if (!tools.ValidJtsdkHomePath())
             {
@@ -27,45 +27,54 @@ namespace Jtsdk.Core.Options
 
             // instantiate config tools
             OptionItem config = new OptionItem();
-            
-            #region CLI Arg[0] Processing
-            // check args[0] first
-            if (args.Length == 1)
+
+            #region Args < 1 Processing
+            if (args.Length < 1)
             {
-                if (
-                    args[0].ToLower() == "-h" ||
-                    args[0].ToLower() == "-help" ||
-                    args[0].ToLower() == "--help" ||
-                    args[0].ToLower() == "help"
-                    )
-                {
-                    Common.ClearScreen();
-                    config.OptionItemHelpMessage();
-                    Environment.Exit(1);
-                }
-                else if (
-                        args[0].ToLower() == "-l" ||
-                        args[0].ToLower() == "-list" ||
-                        args[0].ToLower() == "--list" ||
-                        args[0].ToLower() == "list"
-                        )
-                {
-                    Common.ClearScreen();
-                    Common.DashLine();
-                    Console.WriteLine($" Configuration Status");
-                    Common.DashLine();
-                    config.GetAllOptionStatus(tools.GetConfigDir());
-                    Environment.Exit(1);
-                }
-                else
-                {
-                    Console.WriteLine($"\nUnonown Argument : {args[0]}");
-                    Common.PausePrompt();
-                }
+                Common.ClearScreen();
+                config.OptionItemHelpMessage();
+                Environment.Exit(1);
             }
             #endregion
 
-            #region CLI Arg[1] Processing
+            #region Args == 1 Processing
+            // check args[0] first
+            if (args.Length == 1)
+            {
+            if (
+                args[0].ToLower() == "-h" ||
+                args[0].ToLower() == "-help" ||
+                args[0].ToLower() == "--help" ||
+                args[0].ToLower() == "help"
+                )
+            {
+                Common.ClearScreen();
+                config.OptionItemHelpMessage();
+                Environment.Exit(1);
+            }
+            else if (
+                    args[0].ToLower() == "-l" ||
+                    args[0].ToLower() == "-list" ||
+                    args[0].ToLower() == "--list" ||
+                    args[0].ToLower() == "list"
+                    )
+            {
+                Common.ClearScreen();
+                Common.DashLine();
+                Console.WriteLine($" Configuration Status");
+                Common.DashLine();
+                config.GetAllOptionStatus(tools.GetConfigDir());
+                Environment.Exit(1);
+            }
+            else
+            {
+                Console.WriteLine($"\nUnonown Argument : {args[0]}");
+                Common.PausePrompt();
+            }
+        }
+        #endregion
+
+            #region Args == 2 Processing
             if (args.Length == 2)
             {
                 string opt2 = args[1].ToString().ToLower();
@@ -134,71 +143,6 @@ namespace Jtsdk.Core.Options
                     Environment.Exit(1);
                 }
             }
-            #endregion
-
-            #region Main Menu
-            // main menu
-            for (; ; )
-            {
-                char choice;
-                do
-                {
-                    Common.ClearScreen();
-                    Common.MainMenuHeader("Configuration Main Menu");
-                     Console.WriteLine();
-                    Console.WriteLine(" Group Options\n");
-                    Console.WriteLine("   1. Enable All Options");
-                    Console.WriteLine("   2. Disable All Options");
-                    Console.WriteLine("   3. List All Options Status");
-                    Console.WriteLine("   4. Help Message\n");
-                    Common.DashLine();
-                    Console.Write("Choose Option (q to quit): ");
-                    do
-                    {
-                        choice = (char)Console.Read();
-                    } while (choice == '\n' | choice == '\r');
-                } while (choice < '1' | choice > '4' & choice != 'q');
-
-                if (choice == 'q')
-                {
-                    break;
-                }
-                Console.WriteLine("\n");
-
-                // if a valid option was selected
-                switch (choice)
-                {
-                    case '1': // display help message
-                        config.EnableAllOptions(configDir);
-                        config.GetAllOptionStatus(tools.GetConfigDir());
-                        Common.PausePrompt();
-                        break;
-                    case '2': // disable options
-                        config.DisableAllOptions(configDir);
-                        config.GetAllOptionStatus(tools.GetConfigDir());
-                        Common.PausePrompt();
-                        break;
-                    case '3': // list option status
-                        Common.ClearScreen();
-                        Common.DashLine();
-                        Console.WriteLine($" Configuration Status");
-                        Common.DashLine();
-                        config.GetAllOptionStatus(tools.GetConfigDir());
-                        Common.PausePrompt();
-                        break;
-                    case '4': // disable options
-                        Common.ClearScreen();
-                        config.OptionItemHelpMessage();
-                        Common.PausePrompt();
-                        break;
-                    default:
-                        Common.ClearScreen();
-                        Common.PausePrompt();
-                        break;
-
-                } // END - Switch
-
-            } // END - ForLoop
             #endregion
 
         } // END - Main Method
