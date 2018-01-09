@@ -41,38 +41,41 @@ namespace Jtsdk.Core.Options
             // check args[0] first
             if (args.Length == 1)
             {
-            if (
-                args[0].ToLower() == "-h" ||
-                args[0].ToLower() == "-help" ||
-                args[0].ToLower() == "--help" ||
-                args[0].ToLower() == "help"
-                )
-            {
-                Common.ClearScreen();
-                config.OptionItemHelpMessage();
-                Environment.Exit(1);
-            }
-            else if (
-                    args[0].ToLower() == "-l" ||
-                    args[0].ToLower() == "-list" ||
-                    args[0].ToLower() == "--list" ||
-                    args[0].ToLower() == "list"
+                if (
+                    args[0].ToLower() == "-h" ||
+                    args[0].ToLower() == "-help" ||
+                    args[0].ToLower() == "--help" ||
+                    args[0].ToLower() == "help"
                     )
-            {
-                Common.ClearScreen();
-                Common.DashLine();
-                Console.WriteLine($" Configuration Status");
-                Common.DashLine();
-                config.GetAllOptionStatus(tools.GetConfigDir());
-                Environment.Exit(1);
+                {
+                    Common.ClearScreen();
+                    config.OptionItemHelpMessage();
+                    Environment.Exit(1);
+                }
+                else if (
+                        args[0].ToLower() == "-l" ||
+                        args[0].ToLower() == "-list" ||
+                        args[0].ToLower() == "--list" ||
+                        args[0].ToLower() == "list"
+                        )
+                {
+                        Common.ClearScreen();
+                        Common.DashLine();
+                        Console.WriteLine($" Configuration Status");
+                        Common.DashLine();
+                        config.GetAllOptionStatus(tools.GetConfigDir());
+                        Console.WriteLine(tools.GetConfigDir());
+                        Console.WriteLine();
+                        Environment.Exit(0);
+                }
+                else
+                {
+                    Console.WriteLine($"\nUnonown Argument : {args[0]}");
+                    Common.PausePrompt();
+                    Environment.Exit(1);
+                }
             }
-            else
-            {
-                Console.WriteLine($"\nUnonown Argument : {args[0]}");
-                Common.PausePrompt();
-            }
-        }
-        #endregion
+            #endregion
 
             #region Args == 2 Processing
             if (args.Length == 2)
