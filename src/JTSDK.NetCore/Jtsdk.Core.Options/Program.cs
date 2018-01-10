@@ -81,7 +81,12 @@ namespace Jtsdk.Core.Options
             {
                 string opt2 = args[1].ToString().ToLower();
 
-                if (args[0] == "-e" || args[0] == "-E")
+                if (
+                    args[0] == "-e" ||
+                    args[0] == "-E" ||
+                    args[0] == "enable" ||
+                    args[0] == "ENABLE"
+                    )
                 {
                     if (opt2 == "all")
                     {
@@ -110,7 +115,12 @@ namespace Jtsdk.Core.Options
                         Environment.Exit(1);
                     }
                 }
-                else if (args[0] == "-d" || args[0] == "-D")
+                else if (
+                        args[0] == "-d" ||
+                        args[0] == "-D" ||
+                        args[0] == "disable" ||
+                        args[0] == "DISABLE"
+                        )
                 {
                     if (opt2 == "all")
                     {
