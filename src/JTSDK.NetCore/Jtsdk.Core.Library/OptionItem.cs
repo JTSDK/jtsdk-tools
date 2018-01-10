@@ -29,7 +29,7 @@ namespace Jtsdk.Core.Library
         // enable item - create file
         public void EnableOption(string path, string item)
         {
-            File.Create(Path.Combine(path, item)).Dispose();
+            File.Create(Path.Combine(path, item.ToLower())).Dispose();
         }
 
         // disable item - delete file
@@ -37,7 +37,7 @@ namespace Jtsdk.Core.Library
         {
             if (File.Exists(Path.Combine(path, item.ToLower())))
             {
-                File.Delete(Path.Combine(path, item));
+                File.Delete(Path.Combine(path, item.ToLower()));
             }
         }
 
