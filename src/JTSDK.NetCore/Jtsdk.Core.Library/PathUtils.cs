@@ -105,7 +105,7 @@ namespace Jtsdk.Core.Library
         {
             // Validate we are running with JTSDK_HOME set
             Console.WriteLine();
-            Console.WriteLine($"Invalid Enviroment %JTSDK_HOME% variable is NULL.");
+            Console.WriteLine($"Invalid Enviroment. [ JTSDK_HOME ] variable is NULL.");
             Console.WriteLine("Are Running From a JTSDK Environment?\n");
             Console.Write("Press ENTER key to exit ... ");
             Console.ReadKey();

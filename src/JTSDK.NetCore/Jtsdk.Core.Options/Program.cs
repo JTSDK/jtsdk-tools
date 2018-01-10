@@ -64,7 +64,6 @@ namespace Jtsdk.Core.Options
                         Console.WriteLine($" Configuration Status");
                         Common.DashLine();
                         config.GetAllOptionStatus(tools.GetConfigDir());
-                        Console.WriteLine(tools.GetConfigDir());
                         Console.WriteLine();
                         Environment.Exit(0);
                 }
