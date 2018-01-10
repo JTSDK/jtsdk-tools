@@ -6,31 +6,42 @@ namespace Jtsdk.Core.Library
 {
     public class PathUtils
     {
+        #region Get JTSDK Home Path
         private string GetJtsdkHomePath()
         {
-            return GetEnvironmentVariablePath("JTSDK_HOME");
+            return GetEnvironmentVariableData("JTSDK_HOME");
         }
+        #endregion
 
+        #region Is Windows Platform
         public bool IsWindows()
         {
             return RuntimeInformation.IsOSPlatform(OSPlatform.Windows);
         }
+        #endregion
 
+        #region Is macOS Platform
         public bool IsMacOS()
         {
             return RuntimeInformation.IsOSPlatform(OSPlatform.OSX);
         }
+        #endregion
 
+        #region Is Linux Platform
         public bool IsLinux()
         {
             return RuntimeInformation.IsOSPlatform(OSPlatform.Linux);
         }
+        #endregion
 
+        #region Get SRC Direcotry
         public string GetSrcDir()
         {
             return Path.Combine(GetJtsdkHomePath(), "src");
         }
+        #endregion
 
+        #region Get Config Directory
         public string GetConfigDir()
         {
             string pathD;
@@ -41,36 +52,45 @@ namespace Jtsdk.Core.Library
             }
             else if (IsMacOS())
             {
-                pathD = Path.Combine(GetEnvironmentVariablePath("HOME"), "Library", "Application Support", "JTSDK", "config");
+                pathD = Path.Combine(GetEnvironmentVariableData("HOME"), "Library", "Application Support", "JTSDK", "config");
             }
             else
             {
-                pathD = Path.Combine(GetEnvironmentVariablePath("HOME"), ".jtsdk", "config");
+                pathD = Path.Combine(GetEnvironmentVariableData("HOME"), ".jtsdk", "config");
             }
             return pathD;
         }
+        #endregion
 
+        #region Get App Directory
         public string GetAppDir()
         {
             return Path.Combine(GetJtsdkHomePath(), "tools", "JTSDK.NetCore");
         }
+        #endregion
 
+        #region Get AppData Directory
         public string GetAppDataDir()
         {
             return Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
         }
+        #endregion
 
+        #region Get LocalAppData Directory
         public string GetLocalAppDataDir()
         {
             return Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
         }
+        #endregion
 
-        public string GetEnvironmentVariablePath(string var)
+        #region Get Environment Variable Data
+        public string GetEnvironmentVariableData(string var)
         {
             return Environment.GetEnvironmentVariable(var);
         }
+        #endregion
 
-        // validate %JTSDK_HOME% variable
+        #region Valid JTSDK Home Path
         public bool ValidJtsdkHomePath()
         {
             bool var1 = false;
@@ -82,8 +102,9 @@ namespace Jtsdk.Core.Library
 
             return var1;
         }
+        #endregion
 
-        // display help message
+        #region Display All Paths
         public void DisplayAllPaths()
         {
             Console.WriteLine();
@@ -99,8 +120,9 @@ namespace Jtsdk.Core.Library
             Console.WriteLine($"   AppData.......: {GetAppDataDir()}");
             Console.WriteLine($"   LocalAppData..: {GetLocalAppDataDir()}\n");
         }
+        #endregion
 
-        // environment error message
+        #region Invalid Environment Message
         public void InvalidEnvironmentMessage()
         {
             // Validate we are running with JTSDK_HOME set
@@ -111,6 +133,7 @@ namespace Jtsdk.Core.Library
             Console.ReadKey();
             Environment.Exit(1);
         }
+        #endregion
 
     } // END - PathUtils
 
