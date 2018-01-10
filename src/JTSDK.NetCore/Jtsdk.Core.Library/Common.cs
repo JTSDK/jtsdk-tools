@@ -5,25 +5,29 @@ namespace Jtsdk.Core.Library
 {
     public class Common
     {
-
+        #region Path Separator
         public static char OperatingSystemPathSeparator()
         {
             return Path.DirectorySeparatorChar;
         }
+        #endregion
 
+        #region Application Name
         // returns the name of the current assembly
         public static string GetApplicationName()
         {
             return System.Reflection.Assembly.GetExecutingAssembly().GetName().Name;
         }
+        #endregion
 
-        // return current directory
+        #region Current Directory
         public static string GetCurrentDir()
         {
             return Directory.GetCurrentDirectory();
         }
+        #endregion
 
-        // create a directory
+        #region Create Directory
         public static void MakeDirectory(string myDir)
         {
             try
@@ -36,13 +40,15 @@ namespace Jtsdk.Core.Library
                 Environment.Exit(1);
             }
         }
+        #endregion
 
-        // check if a file exists
+        #region Check File Exists
         public static bool CheckFileExists(string path, string fileName)
         {
             bool status = File.Exists(path + Path.DirectorySeparatorChar + fileName);
             return status;
         }
+        #endregion
 
         #region StarLine
 
@@ -62,7 +68,7 @@ namespace Jtsdk.Core.Library
 
         #endregion
 
-        #region MainMenuHeader
+        #region Main Menu Header
 
         public static void MainMenuHeader(string title)
         {
@@ -73,7 +79,7 @@ namespace Jtsdk.Core.Library
 
         #endregion
 
-        #region ClearScreen
+        #region Clear Screen
 
         public static void ClearScreen()
         {
@@ -82,7 +88,7 @@ namespace Jtsdk.Core.Library
 
         #endregion
 
-        #region UnderConstruction
+        #region Under Construction
 
         public static void UnderConstruction()
         {
@@ -94,7 +100,7 @@ namespace Jtsdk.Core.Library
 
         #endregion
 
-        #region PausePrompt
+        #region Pause Prompt
 
         public static void PausePrompt()
         {
@@ -104,5 +110,7 @@ namespace Jtsdk.Core.Library
         }
 
         #endregion
-    }
-}
+
+    } // END - class Common
+
+} // END - namespace Jtsdk.Core.Library
