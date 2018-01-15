@@ -16,7 +16,8 @@ namespace Jtsdk.Core.Library
             "Clean",
             "Reconfigure",
             "Autorun",
-            "Autosvn"
+            "Autosvn",
+            "QT57"
         };
 
         // is valid = Item Is In List
