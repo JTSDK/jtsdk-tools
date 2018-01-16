@@ -17,7 +17,9 @@ namespace Jtsdk.Core.Library
             "Reconfigure",
             "Autorun",
             "Autosvn",
-            "QT57"
+            "QT57",
+            "UnixTools",
+            "Python3"
         };
 
         // is valid = Item Is In List
