@@ -11,37 +11,66 @@
 ::
 ::-----------------------------------------------------------------------------::
 
-:: Get Command line Options %1
-IF /I [%1]==[clean] (
-set message=Clean Build Tree
-set action=clean
-GOTO START
-) ELSE IF /I [%1]==[publish] (
-set message=Publish JTSDK.NetCore
-set action=publish -o %JTSDK_HOME%\tools\JTSDK.NetCore
-GOTO START
-) ELSE ( GOTO HELP )
+:: NOTE: This script is designed to wotk with JTSDK ONLY
+
+@ECHO OFF
+
+IF DEFINED JTSDK_HOME ( GOTO START ) ELSE ( GOTO NOT_DEFINED )
 
 :START
-ECHO.
+setlocal 
+set base=%CD%
+
+:: Get Command line Options %1
+IF /I [%1]==[clean] ( GOTO A_CLEAN )
+
+:: Get Command line Options %1
+IF /I [%1]==[build] ( GOTO A_BUILD )
+
+:: Get Command line Options %1
+IF /I [%1]==[publish] ( GOTO A_PUBLISH )
+GOTO HELP
+
+:A_CLEAN
+CLS
 ECHO ------------------------------
-ECHO  %message%
+ECHO  Clean JTSDK.NetCore
 ECHO ------------------------------
 ECHO.
 CD %CD%\src\JTSDK.NetCore
-dotnet %action%
+dotnet clean
+goto EOF
+
+:A_BUILD
+CLS
+ECHO ------------------------------
+ECHO  Building JTSDK.NetCore
+ECHO ------------------------------
+ECHO.
+CD %CD%\src\JTSDK.NetCore
+dotnet build
+goto EOF
+
+:A_PUBLISH
+CLS
+ECHO ------------------------------
+ECHO  Publishing JTSDK.NetCore
+ECHO ------------------------------
+ECHO.
+CD %CD%\src\JTSDK.NetCore
+dotnet publish -c release -o %JTSDK_HOME%\tools\JTSDK.NetCore
 goto EOF
 
 :HELP
-ECHO.
+CLS
 ECHO ------------------------------
 ECHO  JTSDK Build Help
 ECHO ------------------------------
 ECHO.
 ECHO  The build script takes one option^:
 ECHO.
-ECHO    clean          :  clean the build tree
-ECHO    publish        :  publishes the application
+ECHO    clean       :  clean the build tree
+ECHO    publish     :  publish the application
 ECHO.
 ECHO    Example: build clean
 ECHO    Example: build publish
@@ -49,7 +78,21 @@ ECHO.
 GOTO EOF
 
 :EOF
-ECHO.
-CD %JTSDK_HOME%
+cd %base%
+endlocal
 
 exit /b 0
+
+:NOT_DEFINED
+CLS
+ECHO ------------------------------
+ECHO  Environment Error
+ECHO ------------------------------
+ECHO.
+ECHO   JTSDK_HOME ^= NOT SET
+ECHO. 
+ECHO   This script must be run from within
+ECHO   the JTSDK Environment.
+ECHO.
+
+exit /b 1
