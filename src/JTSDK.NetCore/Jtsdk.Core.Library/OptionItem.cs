@@ -19,7 +19,7 @@ namespace Jtsdk.Core.Library
             "Autosvn",
             "QT57",
             "Python3",
-            "CMake310"
+            "CMake311"
         };
 
         // is valid = Item Is In List

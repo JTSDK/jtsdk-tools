@@ -58,7 +58,7 @@ ECHO  Publishing JTSDK.NetCore
 ECHO ------------------------------
 ECHO.
 CD %CD%\src\JTSDK.NetCore
-dotnet publish -c release -o %JTSDK_HOME%\tools\JTSDK.NetCore
+dotnet publish -c release -o %JTSDK_HOME%\tools\apps
 goto EOF
 
 :HELP
