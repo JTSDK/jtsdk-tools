@@ -11,9 +11,11 @@
 :: License ......: GPLv3
 ::
 ::-----------------------------------------------------------------------------::
-
-:: Returns ERRORLEVEL=1 is %JTSDK_DATA does not exist
 @ECHO OFF
+
+:: Example script variables
+SET config_script=set-jtsdk-data.cmd
+SET example_path=%CD%\JTSDK-Tools\env\%config_script%
 
 :: If anything is in %1 it should set debug to ON
 if [%1]==[] (
@@ -22,10 +24,14 @@ if [%1]==[] (
     SET data_debug=1
 )
 
+:: Returns ERRORLEVEL=1 is %JTSDK_DATA does not exist
 IF [%JTSDK_DATA%]==[] (
     ECHO.
     ECHO JTSDK_DATA Variable was not found.
     ECHO Ensure you are running from the JTSDK Tools Environment
+    ECHO.
+    ECHO For testing purposes, you can use ^: ^( %config_script ^)
+    ECHO Script Location ^: %example_path%
     exit /b 1
 )
 GOTO EOF
