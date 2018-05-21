@@ -11,9 +11,11 @@
 :: License ......: GPLv3
 ::
 ::-----------------------------------------------------------------------------::
-
-:: Returns ERRORLEVEL=1 is %JTSDK_CONFIG% does not exist
 @ECHO OFF
+
+:: Example script variables
+SET config_script=set-jtsdk-config.cmd
+SET example_path=%CD%\JTSDK-Tools\env\%config_script%
 
 :: If anything is in %1 it should set debug to ON
 if [%1]==[] (
@@ -22,10 +24,15 @@ if [%1]==[] (
     SET config_debug=1
 )
 
+:: Returns ERRORLEVEL=1 is %JTSDK_CONFIG% does not exist
 IF [%JTSDK_CONFIG%]==[] (
     ECHO.
-    ECHO JTSDK_CONFIG Variable was not found.
+    ECHO JTSDK_CONFIG variable was not found.
     ECHO Ensure you are running from the JTSDK Tools Environment
+    ECHO.
+    ECHO For testing purposes, you can use ^: ^( %config_script ^)
+    ECHO Script Location ^: %example_path%
+    ECHO.
     exit /b 1
 )
 GOTO EOF
