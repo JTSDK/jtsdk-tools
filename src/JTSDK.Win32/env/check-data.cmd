@@ -30,7 +30,7 @@ IF [%JTSDK_DATA%]==[] (
     ECHO JTSDK_DATA Variable was not found.
     ECHO Ensure you are running from the JTSDK Tools Environment
     ECHO.
-    ECHO For testing purposes, you can use ^: ^( %config_script ^)
+    ECHO For testing purposes, you can use ^: ^( %config_script% ^)
     ECHO Script Location ^: %example_path%
     exit /b 1
 )
