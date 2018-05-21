@@ -18,7 +18,7 @@ SET config_script=set-jtsdk-config.cmd
 SET example_path=%CD%\JTSDK-Tools\env\%config_script%
 
 :: If anything is in %1 it should set debug to ON
-if [%1]==[] (
+IF [%1]==[] (
     SET config_debug=0
 ) ELSE (
     SET config_debug=1
