@@ -14,6 +14,7 @@ also makes for easier maintenance going forward.
 - [X]  jtsdk-core-utils
 - [ ]  jtsdk-dotnet-utils
 - [ ]  jtsdk-doc-utils
+- [ ]  jtsdk-python-utils
 - [ ]  jtsdk-db-utils
 - [ ]  jtsdk-java-utils
 
@@ -22,7 +23,7 @@ Postgres, etc, additional installation action will be required.
 
 The core installer is finished. However, all of these installations could be
 performed with a self-extracting 7z archive. I've not ruled out that possiblity
-if the need for a formal installaiton is no longer necessary. This concern
+if the need for a formal installaiton is no longer necessary. The concern
 with this approach is the extraction does not land in the correct location.
 
 ## Post Inno Setup Steps and Scripts
