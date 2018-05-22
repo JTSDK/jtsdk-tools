@@ -28,9 +28,9 @@ IF %ERRORLEVEL% NEQ 0 (EXIT /b 1)
 :: If JTSDK_CONFIG variable is not set, exit without setting path
 call check-config.cmd
 IF %ERRORLEVEL% NEQ 0 (EXIT /b 1)
-GOTO SET_inno_PATH
+GOTO SET_PANDOC_PATH
 
-:SET_INNO_PATH
+:SET_PANDOC_PATH
 SET pandoc_dir=%JTSDK_HOME%\tools\pandoc\%pandocv%
 GOTO EOF
 
