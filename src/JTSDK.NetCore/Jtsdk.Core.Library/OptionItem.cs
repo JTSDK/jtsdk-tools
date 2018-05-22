@@ -17,7 +17,7 @@ namespace Jtsdk.Core.Library
             "Reconfigure",
             "Autorun",
             "Autosvn",
-            "QT57",
+            "QT59",
             "Python3",
             "CMake311",
             "Unix"
