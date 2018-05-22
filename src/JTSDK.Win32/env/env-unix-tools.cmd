@@ -31,7 +31,7 @@ IF %ERRORLEVEL% NEQ 0 (EXIT /b 1)
 GOTO SET_UNIX_TOOLS
 
 ::------------------------------------------------------------------------------
-:: CONDITIONAL PATHS for MSYS2 Unix Tools
+:: PATH for MSYS2 Unix Tools
 ::------------------------------------------------------------------------------
 :SET_UNIX_TOOLS
 SET unix_dir=%JTSDK_HOME%\tools\msys2\usr\bin
