@@ -35,7 +35,7 @@ code builds.
 
 | Item              |  Description 
 |:------------------|:-------------
-| install-vscode    | VS Code installaiton at the Syste Level|
+| install-vscode    | VS Code installaiton at the System Level
 | install-pgit      | Run Post-Install setup for Portable Git
 | install-python    | Install Anaconda python
 | update-python     | Update conda. Needs to run Twice
