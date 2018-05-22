@@ -16,6 +16,7 @@
 @ECHO OFF
 
 CLS
+:: Usets the JTSDK_CONFIG Variable for testing purposes
 ECHO Unsetting JTSDK_CONFIG for testing purposes.
 SET JTSDK_CONFIG=
 ECHO JTSDK_CONFIG Set To ^( %JTSDK_CONFIG% ^)
