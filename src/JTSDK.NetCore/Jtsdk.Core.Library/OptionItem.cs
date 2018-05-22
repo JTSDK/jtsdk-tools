@@ -19,7 +19,10 @@ namespace Jtsdk.Core.Library
             "Autosvn",
             "QT59",
             "CMake311",
-            "Unix"
+            "Unix",
+            "Java",
+            "PostgreSQL",
+            "Sqlite3"
 
         };
 
