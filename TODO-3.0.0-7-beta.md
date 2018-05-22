@@ -27,7 +27,7 @@ with this approach is the extraction does not land in the correct location.
 
 ## Post Inno Setup Steps and Scripts
 
-Most all of these items will require a deticate script to complete. Along
+Most all of these items will require a deticated script to complete. Along
 with the scripts, each will need a How-To document in the install section.
 Having jtsdk-doc-utils instlled upfront makes this fairly stright forward, as
 Markdown and Pandoc can be put to work during the publish stage of source
