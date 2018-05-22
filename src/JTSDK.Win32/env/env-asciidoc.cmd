@@ -37,6 +37,7 @@ GOTO SET_ASCIIDOC_PATH
 SET asciidoc_dir=
 SET asciidoc_dir_f=
 
+:: Set the path only if it exists
 IF EXIST %JTSDK_HOME%\tools\asciidoc\%asciidocv%\asciidoc.py (
     SET asciidoc_dir=%JTSDK_HOME%\tools\asciidoc\%asciidocv%
     SET "asciidoc_dir_f=%asciidoc_dir:\=/%"
@@ -46,7 +47,6 @@ IF EXIST %JTSDK_HOME%\tools\asciidoc\%asciidocv%\asciidoc.py (
 :: DOSKEY (ENABLE | DISABLE) FEATURES
 :: Note: None for AsciiDoc
 ::------------------------------------------------------------------------------
-
 GOTO EOF
 
 :EOF
