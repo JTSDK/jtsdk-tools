@@ -11,11 +11,11 @@
 :: License ......: GPLv3
 ::
 ::-----------------------------------------------------------------------------::
-
-:: Edit this path variable for local testing
 @ECHO OFF
 
 CLS
+:: This variable should ne be changed. It should be standard for both Win-10
+:: and Win-8 | 7
 ECHO Setting JTSDK_CONFIG For Testing Purposes.
 SET JTSDK_CONFIG=%LOCALAPPDATA%\JTSDK\config
 ECHO JTSDK_CONFIG Set To ^( %JTSDK_CONFIG% ^)
