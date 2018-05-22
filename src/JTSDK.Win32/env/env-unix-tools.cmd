@@ -40,9 +40,10 @@ GOTO SET_DOSKEY
 :SET_DOSKEY
 ::------------------------------------------------------------------------------
 :: DOSKEY (ENABLE | DISABLE) FEATURES
+:: Note: This is now handled by JTSDK.NetCore.Options program
 ::------------------------------------------------------------------------------
-DOSKEY enable-unix = copy /y nul %JTSDK_CONFIG%\unixtools >nul 2>&1 $T call %scriptd%\config-change-msg unix
-DOSKEY disable-unix = del /Q %JTSDK_CONFIG%\unixtools >nul 2>&1 $T call %scriptd%\config-change-msg unix
+:: DOSKEY enable-unix = copy /y nul %JTSDK_CONFIG%\unixtools >nul 2>&1 $T call %scriptd%\config-change-msg unix
+:: DOSKEY disable-unix = del /Q %JTSDK_CONFIG%\unixtools >nul 2>&1 $T call %scriptd%\config-change-msg unix
 GOTO EOF
 
 :EOF

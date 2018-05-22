@@ -19,7 +19,9 @@ namespace Jtsdk.Core.Library
             "Autosvn",
             "QT57",
             "Python3",
-            "CMake311"
+            "CMake311",
+            "Unix"
+
         };
 
         // is valid = Item Is In List
@@ -124,4 +126,4 @@ namespace Jtsdk.Core.Library
 
     } // END - class OptionItem
 
-} // END - namespace Jtsdk.Core.Library
+} // END - namespace Jtsdk.Core.Library.Options
