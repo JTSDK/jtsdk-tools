@@ -15,8 +15,9 @@
 
 CLS
 :: NOTE: This is the default installation path for x86_64 bit Java from Oracle
-:: It gets dynamically updated by the Java Update facilities, so this path
-:: may chabge based on the _revion variable in the path.
+:: It gets dynamically updated by the Java Update facilities. This path
+:: may change based on the revion variable in the path; e.g. 1.8.0_712 may
+:: change to 1.8.0_188 or whatever the next update is.
 ECHO Setting JAVA_HOME for testing purposes.
 SET JAVA_HOME="C:\PROGRA~2\Java\jdk1.8.0_172"
 ECHO JAVA_HOME Set To ^( %JAVA_HOME% ^)
