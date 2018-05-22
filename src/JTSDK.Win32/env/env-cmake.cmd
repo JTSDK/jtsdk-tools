@@ -47,10 +47,10 @@ GOTO SET_DOSKEY
 :SET_DOSKEY
 ::------------------------------------------------------------------------------
 :: DOSKEY (ENABLE | DISABLE) FEATURES
-:: Note: Cmake surrently has only one, but this is here for testing.
+:: Note: This is now handled by JTSDK.NetCore.Options program
 ::------------------------------------------------------------------------------
-DOSKEY enable-cmake311 = touch %JTSDK_CONFIG%\cmake311
-DOSKEY disable-cmake311 = rm -f %JTSDK_CONFIG%\cmake311
+::DOSKEY enable-cmake311 = touch %JTSDK_CONFIG%\cmake311
+::DOSKEY disable-cmake311 = rm -f %JTSDK_CONFIG%\cmake311
 GOTO EOF
 
 :EOF
