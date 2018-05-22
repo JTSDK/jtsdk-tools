@@ -11,9 +11,11 @@
 :: License ......: GPLv3
 ::
 ::-----------------------------------------------------------------------------::
-
-:: Returns ERRORLEVEL=1 is %JAVA_HOME% does not exist
 @ECHO OFF
+
+:: Example script variables
+SET config_script=set-java-home.cmd
+SET example_path=%CD%\JTSDK-Tools\env\%config_script%
 
 :: If anything is in %1 it should set debug to ON
 if [%1]==[] (
@@ -37,6 +39,9 @@ ECHO  ^- Java was installed without the JDK
 ECHO.
 ECHO Please ensure you have installed Java and 
 ECHO set the JAVA_HOME variable globally.
+ECHO.
+ECHO For testing purposes, you can use ^: ^( %config_script% ^)
+ECHO Script Location ^: %example_path%
 ECHO.
 EXIT /b 1
 
