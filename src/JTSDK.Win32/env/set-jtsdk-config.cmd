@@ -14,8 +14,8 @@
 @ECHO OFF
 
 CLS
-:: This variable should ne be changed. It should be standard for both Win-10
-:: and Win-8 | 7
+:: This variable should not be changed. It should be standard for Win-10, 
+:: Win-8, and Win-7
 ECHO Setting JTSDK_CONFIG For Testing Purposes.
 SET JTSDK_CONFIG=%LOCALAPPDATA%\JTSDK\config
 ECHO JTSDK_CONFIG Set To ^( %JTSDK_CONFIG% ^)
