@@ -14,8 +14,8 @@
 @ECHO OFF
 
 CLS
-:: This variable should not be changed. It should be standard for Win-10,
-:: Win-8, and Win-7
+
+:: Usets the JTSDK_DATA Variable for testing purposes
 ECHO Unsetting JTSDK_DATA for testing purposes.
 SET JTSDK_DATA=
 ECHO JTSDK_DATA Set To ^( %JTSDK_DATA% ^)
