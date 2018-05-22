@@ -45,7 +45,7 @@ code builds.
 | validate-postgres | Test DB access from command line
 | install-qt        | Base Qt Installation
 | validate-qt       | Ensure both GCC compilers work
-| install-jave      | Install or Verify Java Installation
+| install-java      | Install or Verify Java Installation
 | check-java        | Ensure JAVA_HOME is set properly
 
 ## Building jtsdk-dotnet-core
@@ -82,4 +82,4 @@ make-publish
 - [ ]  Validator Script. Simple script to check the basic health of the install
 - [ ]  Makefile for Hamlib in MSYS2 (should be a separate package ??)
 
-Last Update: 5/21/2018 @ 2300 MST
+Last Update: 5/21/2018 @ 2330 MST
