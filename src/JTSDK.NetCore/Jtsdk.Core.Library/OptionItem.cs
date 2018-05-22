@@ -18,7 +18,6 @@ namespace Jtsdk.Core.Library
             "Autorun",
             "Autosvn",
             "QT59",
-            "Python3",
             "CMake311",
             "Unix"
 
