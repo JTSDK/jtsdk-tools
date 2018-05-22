@@ -31,6 +31,7 @@ IF %ERRORLEVEL% NEQ 0 (EXIT /b 1)
 GOTO SET_RUBY_PATH
 
 :SET_RUBY_PATH
+:: Per the instructions from Ruby, we only need to add the .\bin path
 SET ruby_dir=%JTSDK_HOME%\tools\ruby\%rubyv%\bin
 SET "ruby_dir_f=%ruby_dir:\=/%"
 GOTO EOF
