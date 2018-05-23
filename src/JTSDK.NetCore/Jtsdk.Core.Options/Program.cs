@@ -96,6 +96,7 @@ namespace Jtsdk.Core.Options
                         Console.WriteLine($" Enabled All Options");
                         Common.DashLine();
                         config.GetAllOptionStatus(configDir);
+                        Console.WriteLine();
                         Environment.Exit(0);
 
                     }
@@ -107,6 +108,7 @@ namespace Jtsdk.Core.Options
                         Console.WriteLine($" Enabled Default Options");
                         Common.DashLine();
                         config.GetAllOptionStatus(configDir);
+                        Console.WriteLine();
                         Environment.Exit(0);
 
                     }
@@ -141,6 +143,7 @@ namespace Jtsdk.Core.Options
                         Console.WriteLine($" Disable All Options");
                         Common.DashLine();
                         config.GetAllOptionStatus(configDir);
+                        Console.WriteLine();
                         Environment.Exit(0);
 
                     }
