@@ -23,10 +23,23 @@ namespace Jtsdk.Core.Library
             "Java",
             "PostgreSQL",
             "Sqlite3"
-
         };
 
-        // is valid = Item Is In List
+        // Exclusion List - these get removed from ConfigItemList
+        // when setting Default Options
+        public readonly List<string> ExclusionList = new List<string>
+        {
+            "Quiet",
+            "QT59",
+            "CMake311",
+            "Java",
+            "PostgreSQL",
+            "Sqlite3",
+            "Skipsvn",
+        };
+
+
+         // is valid = Item Is In List
         public bool IsValid(string item)
         {
             bool exists = ConfigItemList.Any(s => s.Equals(item, StringComparison.OrdinalIgnoreCase));
@@ -49,10 +62,16 @@ namespace Jtsdk.Core.Library
         }
 
         // get status of item <true|false>
-        public bool GetOptionStatus( string path, string item)
+        public string GetOptionStatus( string path, string item)
         {
+            string value = "--";
+
             bool status = File.Exists(Path.Combine(path, item.ToLower()));
-            return status;
+            if (status)
+            {
+                value = "Enabled";
+            }
+            return value;
         }
 
         // send the path location and check if file exists
@@ -65,11 +84,42 @@ namespace Jtsdk.Core.Library
             foreach (var item in featureList)
             {
                 bool exists = File.Exists(Path.Combine(path, item.ToLower()));
-                Console.WriteLine($" {item.PadRight(8)}\t{exists}");
+                string val="--";
+                if(exists)
+                {
+                    val="Enabled";
+                }
+                Console.WriteLine($" {item.PadRight(8)}\t{val}");
             }
          }
 
-        // disable all items
+        // enable default items
+        public void EnableDefaultOptions(string path)
+        {
+            // disable all the options first
+            DisableAllOptions(path);
+
+            var list1 = new List<string>(ConfigItemList);
+            var list2 = new List<string>(ExclusionList);
+            
+            // sort the lists
+            list1.Sort();
+            list2.Sort();
+
+            // remove exclusion list items from list1
+            foreach (var item in list2)
+            {
+                list1.Remove(item);
+            }
+
+            // only add items that are left
+            foreach (var item in list1)
+            {
+                EnableOption(path, item);
+            }
+        }
+
+        // enable all items
         public void EnableAllOptions(string path)
         {
             var featureList = new List<string>(ConfigItemList);
@@ -81,7 +131,7 @@ namespace Jtsdk.Core.Library
                 EnableOption(path, item);
             }
         }
-
+        
         // disable all items
         public void DisableAllOptions(string path)
         {
@@ -120,6 +170,7 @@ namespace Jtsdk.Core.Library
             Console.WriteLine("   -d <option>\t Disables Single Option\n");
             Console.WriteLine(" Group Options\n");
             Console.WriteLine("   -e all\t Enables All Options");
+            Console.WriteLine("   -e default\t Enables Default Options");
             Console.WriteLine("   -d all\t Disables All Options");
             Console.WriteLine("   -l\t\t List All Option Status");
             Console.WriteLine("   -h\t\t Display this message");

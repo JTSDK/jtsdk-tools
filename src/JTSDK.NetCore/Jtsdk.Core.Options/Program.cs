@@ -99,6 +99,17 @@ namespace Jtsdk.Core.Options
                         Environment.Exit(0);
 
                     }
+                    else if (opt2 == "default")
+                    {
+                        Common.ClearScreen();
+                        config.EnableDefaultOptions(configDir);
+                        Common.DashLine();
+                        Console.WriteLine($" Enabled Default Options");
+                        Common.DashLine();
+                        config.GetAllOptionStatus(configDir);
+                        Environment.Exit(0);
+
+                    }
                     else if (config.IsValid(opt2))
                     {
                         //Console.WriteLine($"\nYeahhh ... {args[1]} is in the list!!");
