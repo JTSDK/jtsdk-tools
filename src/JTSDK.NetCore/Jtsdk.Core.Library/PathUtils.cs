@@ -6,20 +6,6 @@ namespace Jtsdk.Core.Library
 {
     public class PathUtils
     {
-        #region Get JTSDK Home Path
-        private string GetJtsdkHomePath()
-        {
-            return GetEnvironmentVariableData("JTSDK_HOME");
-        }
-        #endregion
-
-        #region Get JAVA_HOME Home Path
-        private string GetJavaHomePath()
-        {
-            return GetEnvironmentVariableData("JAVA_HOME");
-        }
-        #endregion
-
         #region Is Windows Platform
         public bool IsWindows()
         {
@@ -38,6 +24,20 @@ namespace Jtsdk.Core.Library
         public bool IsLinux()
         {
             return RuntimeInformation.IsOSPlatform(OSPlatform.Linux);
+        }
+        #endregion
+
+        #region Get JTSDK Home Path
+        private string GetJtsdkHomePath()
+        {
+            return GetEnvironmentVariableData("JTSDK_HOME");
+        }
+        #endregion
+
+        #region Get JAVA_HOME Home Path
+        private string GetJavaHomePath()
+        {
+            return GetEnvironmentVariableData("JAVA_HOME");
         }
         #endregion
 
@@ -124,8 +124,6 @@ namespace Jtsdk.Core.Library
             return var1;
         }
         #endregion
-
-
 
         #region Display All Paths
         public void DisplayAllPaths()
