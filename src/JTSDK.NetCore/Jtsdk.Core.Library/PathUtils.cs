@@ -13,6 +13,14 @@ namespace Jtsdk.Core.Library
         }
         #endregion
 
+        #region Get JAVA_HOME Home Path
+        private string GetJavaHomePath()
+        {
+            return GetEnvironmentVariableData("JAVA_HOME");
+        }
+        #endregion
+
+
         #region Is Windows Platform
         public bool IsWindows()
         {
