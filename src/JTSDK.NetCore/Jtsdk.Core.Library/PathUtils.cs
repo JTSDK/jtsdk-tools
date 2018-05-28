@@ -65,7 +65,7 @@ namespace Jtsdk.Core.Library
         #region Get App Directory
         public string GetAppDir()
         {
-            return Path.Combine(GetJtsdkHomePath(), "tools", "JTSDK.NetCore");
+            return Path.Combine(GetJtsdkHomePath(), "tools", "apps");
         }
         #endregion
 
