@@ -20,7 +20,6 @@ namespace Jtsdk.Core.Library
         }
         #endregion
 
-
         #region Is Windows Platform
         public bool IsWindows()
         {
@@ -111,6 +110,22 @@ namespace Jtsdk.Core.Library
             return var1;
         }
         #endregion
+
+        #region Valid Java Home Path
+        public bool ValidJavaHomePath()
+        {
+            bool var1 = false;
+
+            if (GetJavaHomePath() != null)
+            {
+                var1 = true;
+            }
+
+            return var1;
+        }
+        #endregion
+
+
 
         #region Display All Paths
         public void DisplayAllPaths()
