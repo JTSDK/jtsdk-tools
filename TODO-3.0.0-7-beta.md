@@ -33,7 +33,7 @@ Having jtsdk-doc-utils instlled upfront makes this fairly stright forward, as
 Markdown and Pandoc can be put to work during the publish stage of source
 code builds.
 
-### **Required**
+### **Required How-Too Docs**
 | Item              |  Description
 |:------------------|:-------------
 | install-pgit      | Run Post-Install setup for Portable Git
