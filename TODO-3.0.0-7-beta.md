@@ -1,7 +1,7 @@
 
 # TODO LIST For 3.0.0-7 Beta Release
 
-Last Update: 5/29/2018 1730 MST
+Last Update: 5/31/2018 0100 MST
 
 The following items are on the critical TODO list for releasing 3.0.0-7 Beta. It
 looks like a lot work, but, most is shell scripting, test or validaiton. This
@@ -79,4 +79,4 @@ make-install
 make-publish
 ```
 
-Last Update: 5/29/2018 1730 MST
+Last Update: 5/31/2018 0100 MST
