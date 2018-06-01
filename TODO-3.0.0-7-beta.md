@@ -24,14 +24,12 @@ also makes for easier maintenance going forward.
 - [ ]  Optional - jtsdk-java-utils
 
 > NOTE - This installation method only delivers the binaries. In cases such as
-Qt, VS Code, Postgres, etc, additional installation action will be required.
+Qt, VS Code, Postgres, etc, additional installation action will be required
+by the user.
 
-## Post Inno Setup Steps and Scripts
-Most all of these items will require a deticated script to complete. Along
-with the scripts, each will need a How-Too document in the install section.
-Having jtsdk-doc-utils instlled upfront makes this fairly stright forward, as
-Markdown and Pandoc can be put to work during the publish stage of source
-code builds.
+## Post Inno Setup Steps
+Rather that automate each step with scripts, users willl be required to perform
+the individual actions.  
 
 ### **Required How-Too Docs**
 | Item              |  Description
@@ -43,7 +41,7 @@ code builds.
 ### **Optional**
 | Item              |  Description 
 |:------------------|:-------------
-| install-python    | Install Anaconda python
+| install-python    | Install Anaconda Python
 | update-python     | Update conda. Needs to run Twice
 | install-vscode    | VS Code installaiton at the System Level
 | install-postgres  | Base PostgreSQL Installation
@@ -67,7 +65,6 @@ code builds.
 - [ ]  make-build
 - [ ]  make-restore
 - [X]  make-publish
-- [ ]  make-install
 
 Ideally, and after git clone of the repository, the user just enters a simple
 command such as:

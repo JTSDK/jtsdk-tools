@@ -1,5 +1,5 @@
 ::-----------------------------------------------------------------------------::
-:: Name .........: build.cmd
+:: Name .........: make.cmd
 :: Project ......: Part of the JTSDK Version 3.0.0 Project
 :: Description ..: JTSDK.NetCore Build script
 :: Project URL ..: https://github.com/KI7MT
@@ -22,54 +22,73 @@ setlocal
 set base=%CD%
 
 :: Get Command line Options %1
-IF /I [%1]==[clean] ( GOTO A_CLEAN )
+IF /I [%1]==[clean] ( GOTO _CLEAN )
 
 :: Get Command line Options %1
-IF /I [%1]==[build] ( GOTO A_BUILD )
+IF /I [%1]==[build] ( GOTO _BUILD )
 
 :: Get Command line Options %1
-IF /I [%1]==[publish] ( GOTO A_PUBLISH )
+IF /I [%1]==[publish] ( GOTO _PUBLISH )
+
+:: Get Command line Options %1
+IF /I [%1]==[help] ( GOTO _HELP )
+)
 GOTO HELP
 
-:A_CLEAN
+:_CLEAN
 CLS
 ECHO ------------------------------
 ECHO  Clean JTSDK.NetCore
 ECHO ------------------------------
 ECHO.
-CD %CD%\src\JTSDK.NetCore
+pushd %CD%\src\JTSDK.NetCore
 dotnet clean
+popd
 goto EOF
 
-:A_BUILD
+:_BUILD
 CLS
 ECHO ------------------------------
 ECHO  Building JTSDK.NetCore
 ECHO ------------------------------
 ECHO.
-CD %CD%\src\JTSDK.NetCore
+pushd %CD%\src\JTSDK.NetCore
 dotnet build
+popd
 goto EOF
 
-:A_PUBLISH
+:_PUBLISH
 CLS
 ECHO ------------------------------
 ECHO  Publishing JTSDK.NetCore
 ECHO ------------------------------
 ECHO.
-CD %CD%\src\JTSDK.NetCore
-dotnet publish -c release -o %JTSDK_HOME%\tools\apps
+pushd %CD%\src\JTSDK.NetCore
+:: For Production Uncomment the following line
+:: dotnet publish -c release -o %JTSDK_HOME%\tools\apps
+
+:: For Debug uncomment
+dotnet publish -c release
+popd
+IF [%1]==[install] (
+
+GOTO _INSTALL
+
+)
+
+:_INSTALL
 goto EOF
 
-:HELP
+:_HELP
 CLS
 ECHO ------------------------------
-ECHO  JTSDK Build Help
+ECHO  JTSDK Make Help
 ECHO ------------------------------
 ECHO.
 ECHO  The build script takes one option^:
 ECHO.
 ECHO    clean       :  clean the build tree
+ECHO    build       :  build source tree
 ECHO    publish     :  publish the application
 ECHO.
 ECHO    Example: build clean
@@ -78,11 +97,13 @@ ECHO.
 GOTO EOF
 
 :EOF
-cd %base%
 endlocal
 
 exit /b 0
 
+:: ----------------------------------------------------------------------------
+::  ERROR MESSAGES
+:: ----------------------------------------------------------------------------
 :NOT_DEFINED
 CLS
 ECHO ------------------------------
