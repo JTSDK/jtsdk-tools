@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
     <Copyright>Greg Beam, KI7MT 2018</Copyright>
     <Description>JTSDK.Core - .Net Core Library for JTSDK v3</Description>
     <Authors>Greg Beam</Authors>
