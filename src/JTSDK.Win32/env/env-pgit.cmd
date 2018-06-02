@@ -24,7 +24,7 @@
 :: along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ::-----------------------------------------------------------------------------::
 @ECHO OFF
-SET pgitv=2.17.0
+SET pgitv=2.17.1.2
 
 :: If anything is in %1 it should set debug to ON
 if [%1]==[] (
