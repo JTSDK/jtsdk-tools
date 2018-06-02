@@ -70,11 +70,7 @@ pushd %CD%\src\JTSDK.NetCore
 :: For Debug uncomment
 dotnet publish -c release
 popd
-IF [%1]==[install] (
-
-GOTO _INSTALL
-
-)
+IF [%1]==[install] ( GOTO _INSTALL )
 
 :_INSTALL
 goto EOF
