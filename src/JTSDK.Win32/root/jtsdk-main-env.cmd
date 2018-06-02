@@ -1,5 +1,5 @@
 ::-----------------------------------------------------------------------------::
-:: Name .........: JTSDKENV.cmd
+:: Name .........: jtsdk-main-env.cmd
 :: Project ......: Part of the JTSDK Version 3.0.0 Project
 :: Description ..: Environment Test Script
 :: Project URL ..: https://github.com/KI7MT
@@ -7,17 +7,23 @@
 ::
 :: Author .......: Greg, Beam, KI7MT, <ki7mt@yahoo.com>
 :: Copyright ....: Copyright (C) 2014-2018 Greg Beam, KI7MT
-:: License ......: GPLv3
+:: License ......: GPL-3
 ::
+:: jtsdk-main-env.cmd is free software: you can redistribute it and/or modify it
+:: under the terms of the GNU General Public License as published by the Free
+:: Software Foundation either version 3 of the License, or (at your option) any
+:: later version. 
+::
+:: jtsdk-main-env.cmd is distributed in the hope that it will be useful, but WITHOUT
+:: ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+:: FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+:: details.
+::
+:: You should have received a copy of the GNU General Public License
+:: along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ::-----------------------------------------------------------------------------::
 @ECHO OFF
 SET LANG=en_US
-
-:: JTSDK Version
-SET version=3.0.0-7-beta
-
-SET docfxv=2.35.4.0
-SET dotnetsdkv=2.1.200
 
 :: set the header informaiton
 TITLE JTSDK Tools Full Environment
@@ -29,6 +35,9 @@ SET JTSDK_HOME=%CD%
 SET JTSDK_CONFIG=%LOCALAPPDATA%\JTSDK\config
 SET JTSDK_DATA=%LOCALAPPDATA%\JTSDK\data
 SET JTSDK_APPS=%JTSDK_HOME%\tools\apps
+
+:: JTSDK Version
+SET /P version=<ver.jtsdk
 
 ::------------------------------------------------------------------------------
 :: CREATE ESSENTIAL DIRECTORIES
@@ -48,38 +57,10 @@ mkdir %JTSDK_HOME%\tools\hamlib >NUL 2>&1
 :: SET COMMON APPLICATION PATHS
 ::------------------------------------------------------------------------------
 
-:: JTSDK.NetCore ---------------------------------------------------------------
-SET jtsdk_core_dir=%JTSDK_HOME%\tools\JTSDK.NetCore
-SET "jtsdk_core_f=%jtsdk_core:\=/%"
-SET JTSDK_PATH=%JTSDK_PATH%;%jtsdk_core_dir%
-
-::------------------------------------------------------------------------------
-:: DOT NET SDK RELATED PATHS
-::------------------------------------------------------------------------------
-
-:: DOT NET SDK------------------------------------------------------------------
-SET dotnetsdk_dir=%JTSDK_HOME%\tools\dotnet
-SET JTSDK_PATH=%JTSDK_PATH%;%dotnetsdk_dir%
-
-:: DOT NET RUNTIME -------------------------------------------------------------
-SET dotnet_dir=%JTSDK_HOME%\tools\dotnet\runtime\%dotnetv%
-SET JTSDK_PATH=%JTSDK_PATH%;%dotnet_dir%
-
-:: PYTHON ----------------------------------------------------------------------
-IF EXIST "%JTSDK_CONFIG%\python3" (
-SET pythonv=3.6.4
-) ELSE (
-SET pythonv=2.7.14
-)
-SET pyv=%JTSDK_HOME%\tools\python\%pythonv%
-SET pyv_dir=%pyv%;%pyv%\Scripts;%pyv%\Lib;%pyv%\DLLs
-SET "pyv_dir_f=%pyv_dir:\=/%"
-SET JTSDK_PATH=%pyv_dir%;%JTSDK_PATH%
-
 :: QT --------------------------------------------------------------------------
 IF EXIST "%JTSDK_CONFIG%\QT59" (
-SET QTV=5.9.5
-SET PROMPT=$C QT 5.9 $F $P$F
+SET QTV=5.7
+SET PROMPT=$C QT 5.7 $F $P$F
 SET title-string=JTSDK QT 5.9 Development Environment
 set QTD=%JTSDK_HOME%\tools\qt\%QTV%\mingw53_32\bin
 set QTP=%JTSDK_HOME%\tools\qt\%QTV%\mingw53_32\plugins\platforms
@@ -105,15 +86,6 @@ TITLE %title-string%
 SET PATH=%JTSDK_PATH%;%WINDIR%\System32
 
 ::------------------------------------------------------------------------------
-:: DOSKEY (ENABLE | DISABLE) FEATURES
-::------------------------------------------------------------------------------
-DOSKEY enable-qt59 = touch %JTSDK_CONFIG%\qt59
-DOSKEY disable-qt59 = rm -f %JTSDK_CONFIG%\qt59
-
-DOSKEY enable-cmake310 = touch %JTSDK_CONFIG%\cmake310
-DOSKEY disable-cmake310 = rm -f %JTSDK_CONFIG%\cmake310
-
-::------------------------------------------------------------------------------
 :: DOSKEY for JTSDK.NectCore
 ::------------------------------------------------------------------------------
 DOSKEY jtsdk-options = dotnet %jtsdk_core_dir%\Jtsdk.Core.Options.dll $*
@@ -135,39 +107,6 @@ DOSKEY clear=cls
 DOSKEY ls = ls --color=tty $*
 DOSKEY lsb=dir /b
 DOSKEY postinstall="%JTSDK_HOME%\tools\postinstall\pinstall.cmd"
-
-::------------------------------------------------------------------------------
-:: UNINSTALL COMMANDS
-::------------------------------------------------------------------------------
-DOSKEY uninstall-python2 = CD %JTSDK_HOME%\tools\third-party-setup $T call uninstall-python2.cmd
-DOSKEY uninstall-python3 = CD %JTSDK_HOME%\tools\third-party-setup $T call uninstall-python3.cmd
-DOSKEY uninstall-qt = %JTSDK_HOME%\tools\qt\MaintenanceTool.exe
-DOSKEY uninstall-jtsdk = %JTSDK_HOME%\unins000.exe
-
-::------------------------------------------------------------------------------
-:: CHECK FIRST RUN
-::------------------------------------------------------------------------------
-if exist 1st-run.txt (
-GOTO POSTINSTALL_MSG  
-)
-GOTO ENV_MSG
-
-::------------------------------------------------------------------------------
-:: POSTINSTALL 1st RUN
-::------------------------------------------------------------------------------
-:POSTINSTALL_MSG
-CLS
-ECHO.
-ECHO --------------------------------------------
-ECHO  Post Install Action Required
-ECHO --------------------------------------------
-ECHO.
-ECHO  This appears to be the first time
-ECHO  ^[ %0 ^] has been run.
-ECHO.
-ECHO  To fininsh the installation, type: postinstall
-ECHO.
-GOTO RUN
 
 ::------------------------------------------------------------------------------
 :: PRIN ENVIRONMENT MSG
@@ -209,12 +148,11 @@ ECHO.
 ECHO  Misc Tools
 ECHO    Asciidoctor    : %ADV%
 ECHO    Cmake          : %CMV%
-ECHO    Git Portable   : %GITV%
+ECHO    Git            : %GITV%
 ECHO    InnoSetup      : %innov%
 ECHO    DotNet Core    : %DOTV%
 ECHO    NSIS           : %NSM%
 ECHO    Pkg Config     : %PKG%
-ECHO    Python         : %pythonv%
 ECHO    Subversion     : %SVNV%
 ECHO.
 ECHO. MSYS2 Environment
