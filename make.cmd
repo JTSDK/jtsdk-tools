@@ -6,18 +6,28 @@
 ::
 :: Author .......: Greg, Beam, KI7MT, <ki7mt@yahoo.com>
 :: Copyright ....: Copyright (C) 2018 Greg Beam, KI7MT
-:: License ......: Apache 2.0
+:: License ......: GPL-3
 ::
+:: make.cmd is free software: you can redistribute it and/or modify it
+:: under the terms of the GNU General Public License as published by the Free
+:: Software Foundation either version 3 of the License, or (at your option) any
+:: later version. 
+::
+:: make.cmd is distributed in the hope that it will be useful, but WITHOUT
+:: ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+:: FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more
+:: details.
+::
+:: You should have received a copy of the GNU General Public License
+:: along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ::-----------------------------------------------------------------------------::
 @ECHO OFF
 
 :: NOTE: This script is designed to wotk with JTSDK ONLY
 IF DEFINED JTSDK_HOME ( GOTO START ) ELSE ( GOTO _NOT_DEFINED )
+GOTO _START
 
-:: Only define target if %2 !=NULL
-IF [%2]==[] ( SET target=%2 )
-
-:START
+:_START
 SETLOCAL
 
 :: Get Command line Options %1
@@ -26,7 +36,6 @@ IF /I [%1]==[build] ( GOTO _BUILD )
 IF /I [%1]==[publish] ( GOTO _PUBLISH )
 IF /I [%1]==[install] ( GOTO _INSTALL )
 IF /I [%1]==[help] ( GOTO _HELP )
-)
 GOTO HELP
 
 :: Note: The requires that MSYS2 be installed first as it uses the (rm) package
@@ -81,12 +90,12 @@ ECHO.
 POPD
 :: Copy files to destination
 ECHO * Copying Files to Final Directories
-ECHO.
 PUSHD %CD%\src\JTSDK.NetCore\Jtsdk.Core.Options\bin\Release\netcoreapp2.1
 robocopy %CD%\env %JTSDK_HOME%\env /E /NFL /NDL /NJH /NJS /nc /ns /np
 robocopy %CD%\scripts %JTSDK_HOME%\scripts /E /NFL /NDL /NJH /NJS /nc /ns /np
 robocopy %CD%\root %JTSDK_HOME% /NFL /NDL /NJH /NJS /nc /ns /np
 robocopy %CD%\ %JTSDK_HOME%\tools\apps /NFL /NDL /NJH /NJS /nc /ns /np Jtsdk.*
+ECHO * Finished Installation
 POPD
 GOTO EOF
 
