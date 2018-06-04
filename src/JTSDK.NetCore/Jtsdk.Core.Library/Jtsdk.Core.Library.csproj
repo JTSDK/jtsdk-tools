@@ -2,12 +2,16 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
-    <Copyright>Greg Beam, KI7MT 2018</Copyright>
+    <Copyright>GPLv3, Greg Beam, KI7MT 2018</Copyright>
     <Description>JTSDK.Core - .Net Core Library for JTSDK v3</Description>
     <Authors>Greg Beam</Authors>
-    <PackageLicenseUrl>Apache 2.0</PackageLicenseUrl>
-    <Company>Open Source</Company>
-    <Product>Build Tools For WSJT-X APplication</Product>
+    <PackageLicenseUrl>https://www.gnu.org/licenses/gpl-3.0.txt</PackageLicenseUrl>
+    <Company>WSJT Development Team</Company>
+    <Product>Build Tools For WSJT Applicaitons</Product>
+    <Version>3.0.0-77-beta</Version>
+    <PackageProjectUrl>https://github.com/KI7MT/jtsdk-dotnet-core</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/KI7MT/jtsdk-dotnet-core</RepositoryUrl>
+    <RepositoryType>it</RepositoryType>
   </PropertyGroup>
 
 </Project>

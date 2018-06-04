@@ -5,13 +5,22 @@
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <Version>3.0.0-7-beta</Version>
     <Description>User config build options.</Description>
-    <Copyright>Apache 2.0</Copyright>
+    <Copyright>GPLv3, Greg Beam, KI7MT 2018</Copyright>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <StartupObject>Jtsdk.Core.Options.Program</StartupObject>
+    <PackageLicenseUrl>https://www.gnu.org/licenses/gpl-3.0.txt</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/KI7MT/jtsdk-dotnet-core</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/KI7MT/jtsdk-dotnet-core</RepositoryUrl>
+    <RepositoryType>Git</RepositoryType>
+    <Authors>Greg Beam</Authors>
+    <Company>WSJT Development Team</Company>
+    <Product>WSJT Application Group Tool Chain Core Library</Product>
+    <NeutralLanguage>en-US</NeutralLanguage>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <Optimize>true</Optimize>
-    <Prefer32Bit>true</Prefer32Bit>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
 
   <ItemGroup>
