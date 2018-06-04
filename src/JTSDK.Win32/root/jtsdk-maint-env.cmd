@@ -58,6 +58,9 @@ SET PATH=%JTSDK_HOME%;%PATH%
 TITLE JTSDK Maintenance Console
 
 :: Doskey's for use with the Maintenance Environment
+DOSKEY help-checkout=@echo This feature has not be implemented yet.
+DOSKEY help-install=@echo This feature has not be implemented yet.
+DOSKEY help-upgrade=@echo This feature has not be implemented yet.
 DOSKEY clear=cls
 DOSKEY ls=dir
 
@@ -73,6 +76,8 @@ ECHO.
 ECHO  JTSDK Version ........: %ver_jtsdk%
 ECHO  Net Core Versoin .....: %ver_dotnet%
 ECHO.
+ECHO  To Checkout JTSDK Net Core, type ..: checkout-jtsdk
+ECHO  To Update JTSDK Net Core, type ....: update-jtsdk
 ECHO.
 GOTO _EOF
 

@@ -23,12 +23,9 @@
 ::-----------------------------------------------------------------------------::
 @ECHO OFF
 
-:: NOTE: This script is designed to wotk with JTSDK ONLY
-IF DEFINED JTSDK_HOME ( GOTO _START ) ELSE ( GOTO _NOT_DEFINED )
-GOTO _START
-
-:_START
-SETLOCAL
+IF DEFINED JTSDK_HOME (
+    SET PATH=%JTSDK_HOME%\tools\msys2\usr\bin;%PATH%
+)
 
 :: Get Command line Options %1
 IF /I [%1]==[clean] ( GOTO _CLEAN )
@@ -45,12 +42,11 @@ ECHO ------------------------------
 ECHO  Clean JTSDK.NetCore
 ECHO ------------------------------
 ECHO.
-SET PATH=%JTSDK_HOME%\tools\msys2\usr\bin;%PATH%
 PUSHD %CD%\src\JTSDK.NetCore\Jtsdk.Core.Options\bin
 ECHO * Cleaning All Release Files
-rm -rf %CD%\Release
+rm -rf %CD%\Release >nul 2>&1
 ECHO * Cleaning All Debug Files
-rm -rf %CD%\Debug
+rm -rf %CD%\Debug >nul 2>&1
 POPD
 GOTO EOF
 
@@ -125,7 +121,6 @@ ECHO.
 GOTO EOF
 
 :EOF
-ENDLOCAL
 EXIT /b 0
 
 :: ----------------------------------------------------------------------------
