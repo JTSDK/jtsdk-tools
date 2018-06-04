@@ -53,8 +53,8 @@ fi
 SRCD="$JTSDK_CYG_BASE/src/hamlib"
 BUILDD="$SRCD/build"
 PREFIX="$JTSDK_CYG_BASE/tools/hamlib/qt/$QTV"
-LIBINC="$JTSDK_CYG_BASE/tools/libusb/1.0.21/include"
-LIBDLL="$JTSDK_CYG_BASE/tools/libusb/1.0.21/MinGW32/dll"
+LIBINC="$JTSDK_CYG_BASE/tools/libusb/1.0.22/include"
+LIBDLL="$JTSDK_CYG_BASE/tools/libusb/1.0.22/MinGW32/dll"
 
 # Foreground colours
 C_R='\033[01;31m'		# red
@@ -265,7 +265,7 @@ fi
 
 echo ''
 echo '---------------------------------------------------------------'
-echo -e ${C_Y} " ANOTHER HACK TO FIX PKGCONFIG "${C_NC}
+echo -e ${C_Y} " FIXUP PKGCONFIG "${C_NC}
 echo '---------------------------------------------------------------'
 echo ''
 echo '  Updating hamlib.pc'
