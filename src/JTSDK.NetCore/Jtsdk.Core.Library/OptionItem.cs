@@ -162,8 +162,8 @@ namespace Jtsdk.Core.Library
             Console.WriteLine("Configuration Option Help");
             Common.DashLine();
             Console.WriteLine("");
-            Console.WriteLine(" Usage ....: jtsdk-options [ option ]");
-            Console.WriteLine(" Example ..: jtsdk-options -h");
+            Console.WriteLine(" Usage ....: config [ option ]");
+            Console.WriteLine(" Example ..: config -h");
             Console.WriteLine("");
             Console.WriteLine(" Individual Options\n");
             Console.WriteLine("   -e <option>\t Enables Single Option");

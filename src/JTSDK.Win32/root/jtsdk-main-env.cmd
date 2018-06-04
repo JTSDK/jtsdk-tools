@@ -97,7 +97,7 @@ SET ruby_dir=%JTSDK_HOME%\tools\ruby\%rubyv%\bin
 SET "ruby_dir_f=%ruby_dir:\=/%"
 SET JTSDK_PATH=%JTSDK_PATH%;%ruby_dir%
 
-:: RUBY ------------------------------------------------------------------------
+:: SVN- ------------------------------------------------------------------------
 SET svn_dir=%JTSDK_HOME%\tools\subversion\%svnv%\bin
 SET "svn_dir_f=%svn_dir:\=/%"
 SET JTSDK_PATH=%JTSDK_PATH%;%svn_dir%
@@ -124,22 +124,22 @@ IF EXIST "%JTSDK_CONFIG%\QT59" (
 SET QTV=5.9.5
 SET PROMPT=$C QT 5.9 $F $P$F
 SET title-string=JTSDK QT 5.9 Development Environment
-set QTD=%JTSDK_HOME%\tools\Qt\%QTV%\mingw53_32\bin
-set QTP=%JTSDK_HOME%\tools\Qt\%QTV%\mingw53_32\plugins\platforms
-set GCCD=%JTSDK_HOME%\tools\Qt\Tools\mingw530_32\bin
+SET QTD=%JTSDK_HOME%\tools\Qt\%QTV%\mingw53_32\bin
+SET QTP=%JTSDK_HOME%\tools\Qt\%QTV%\mingw53_32\plugins\platforms
+SET GCCD=%JTSDK_HOME%\tools\Qt\Tools\mingw530_32\bin
 ) ELSE (
 set QTV=5.5
 SET PROMPT=$C QT 5.5 $F $P$F
 SET title-string=JTSDK QT 5.5 Development Environment
-set QTD=%JTSDK_HOME%\tools\Qt\%QTV%\mingw492_32\bin
-set QTP=%JTSDK_HOME%\tools\Qt\%QTV%\mingw492_32\plugins\platforms
-set GCCD=%JTSDK_HOME%\tools\Qt\Tools\mingw492_32\bin
+SET QTD=%JTSDK_HOME%\tools\Qt\%QTV%\mingw492_32\bin
+SET QTP=%JTSDK_HOME%\tools\Qt\%QTV%\mingw492_32\plugins\platforms
+SET GCCD=%JTSDK_HOME%\tools\Qt\Tools\mingw492_32\bin
 )
 SET JTSDK_PATH=%GCCD%;%QTD%;%QTP%;%JTSDK_PATH%
 
 :: Set forward slash paths for MSYS2 and QT
-set "QTD_F=%QTD:\=/%"
-set "GCCD_F=%GCCD:\=/%"
+SET "QTD_F=%QTD:\=/%"
+SET "GCCD_F=%GCCD:\=/%"
 
 ::------------------------------------------------------------------------------
 :: SET FINAL ENVIRONMENT PATHS and CONSOLE TITLE
@@ -150,7 +150,7 @@ SET PATH=%JTSDK_PATH%;%PATH%
 ::------------------------------------------------------------------------------
 :: DOSKEY for JTSDK.NectCore
 ::------------------------------------------------------------------------------
-DOSKEY jtsdk-options = dotnet %JTSDK_APPS%\Jtsdk.Core.Options.dll $*
+DOSKEY config = dotnet %JTSDK_APPS%\Jtsdk.Core.Options.dll $*
 
 ::------------------------------------------------------------------------------
 :: DOSKEY for MSYS2 related using Ruby ridk
