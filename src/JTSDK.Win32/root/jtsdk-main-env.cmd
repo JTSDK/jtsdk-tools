@@ -25,6 +25,16 @@
 @ECHO OFF
 SET LANG=en_US
 
+:: Set Supported Versions
+SET asciidocv=8.6.9
+SET fftwv=3.3.5
+SET innov=5.5.9
+SET libusbv=1.0.22
+SET nsisv=3.03
+SET pkgconfigv=0.28.1
+SET rubyv=2.4.4-1
+SET svnv=1.9.7
+
 :: JTSDK Version
 SET /P version=<ver.jtsdk
 
@@ -102,6 +112,11 @@ SET svn_dir=%JTSDK_HOME%\tools\subversion\%svnv%\bin
 SET "svn_dir_f=%svn_dir:\=/%"
 SET JTSDK_PATH=%JTSDK_PATH%;%svn_dir%
 
+:: UNIX TOOLS ------------------------------------------------------------------
+SET unix_dir=%JTSDK_HOME%\tools\msys2\usr\bin
+SET JTSDK_PATH=%JTSDK_PATH%;%unix_dir%
+
+
 ::------------------------------------------------------------------------------
 :: CONDITIONAL PATHS for Multiple versions of Cmake
 ::------------------------------------------------------------------------------
@@ -177,7 +192,7 @@ CLS
 ECHO ^*^*^*^* Gathering Environment Information, Please Wait ^*^*^*^*
 setlocal
 
-qmake --version |awk "FNR==2 {print $4}" >q.m & set /p QMV=<q.m & rm q.m
+qmake.exe --version |awk "FNR==2 {print $4}" >q.m & set /p QMV=<q.m & rm q.m
 g++.exe --version |grep Built |awk "{print $7}" >g.v & set /p CVER=<g.v & rm g.v
 mingw32-make --version |grep Make |awk "{print $3}" >g.v & set /p GNMK=<g.v & rm g.v
 asciidoctor --version |grep "asciidoctor" |awk "{print $2}" >a.v & set /p ADV=<a.v & rm a.v
