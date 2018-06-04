@@ -121,19 +121,19 @@ SET JTSDK_PATH=%JTSDK_PATH%;%cmake_dir%
 :: CONDITIONAL PATHS for Multiple versions of Qt
 ::------------------------------------------------------------------------------
 IF EXIST "%JTSDK_CONFIG%\QT59" (
-SET QTV=5.7
-SET PROMPT=$C QT 5.7 $F $P$F
+SET QTV=5.9.5
+SET PROMPT=$C QT 5.9 $F $P$F
 SET title-string=JTSDK QT 5.9 Development Environment
-set QTD=%JTSDK_HOME%\tools\qt\%QTV%\mingw53_32\bin
-set QTP=%JTSDK_HOME%\tools\qt\%QTV%\mingw53_32\plugins\platforms
-set GCCD=%JTSDK_HOME%\tools\qt\Tools\mingw530_32\bin
+set QTD=%JTSDK_HOME%\tools\Qt\%QTV%\mingw53_32\bin
+set QTP=%JTSDK_HOME%\tools\Qt\%QTV%\mingw53_32\plugins\platforms
+set GCCD=%JTSDK_HOME%\tools\Qt\Tools\mingw530_32\bin
 ) ELSE (
 set QTV=5.5
 SET PROMPT=$C QT 5.5 $F $P$F
 SET title-string=JTSDK QT 5.5 Development Environment
-set QTD=%JTSDK_HOME%\tools\qt\%QTV%\mingw492_32\bin
-set QTP=%JTSDK_HOME%\tools\qt\%QTV%\mingw492_32\plugins\platforms
-set GCCD=%JTSDK_HOME%\tools\qt\Tools\mingw492_32\bin
+set QTD=%JTSDK_HOME%\tools\Qt\%QTV%\mingw492_32\bin
+set QTP=%JTSDK_HOME%\tools\Qt\%QTV%\mingw492_32\plugins\platforms
+set GCCD=%JTSDK_HOME%\tools\Qt\Tools\mingw492_32\bin
 )
 SET JTSDK_PATH=%GCCD%;%QTD%;%QTP%;%JTSDK_PATH%
 
