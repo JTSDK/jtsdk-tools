@@ -24,25 +24,22 @@
 :: along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ::-----------------------------------------------------------------------------::
 @ECHO OFF
-SET URL=https://github.com/KI7MT/jtsdk-dotnet-core.git
+SET LANG=en_US
 
+:: Check for JTSDK_HOME
 IF EXIST %CD%\ver.jtsdk (
     SET JTSDK_HOME=%CD%
 )
 
 :: NOTE: This script is designed to wotk with JTSDK ONLY
 IF DEFINED JTSDK_HOME ( GOTO _SET_VERSION ) ELSE ( GOTO _NOT_DEFINED )
-GOTO GOTO _SET_VERSION
+GOTO _SET_VERSION
 
 :: .Net Version at time fo initial release
 :_SET_VERSION
 IF EXIST %CD%\ver.jtsdk (
 SET /P ver_jtsdk=<ver.jtsdk
 )
-
-:: Set some basic ennvironment variables
-COLOR 0E
-SET LANG=en_US
 
 :: Add SRCD Path
 SET srcd=%JTSDK_HOME%\src
@@ -58,26 +55,18 @@ SET PATH=%JTSDK_HOME%;%PATH%
 TITLE JTSDK Maintenance Console
 
 :: Doskey's for use with the Maintenance Environment
-DOSKEY help-checkout=@echo This feature has not be implemented yet.
-DOSKEY help-install=@echo This feature has not be implemented yet.
-DOSKEY help-upgrade=@echo This feature has not be implemented yet.
 DOSKEY clear=cls
 DOSKEY ls=dir
 
 :: Start Main Script
 CD /D %JTSDK_HOME%
 IF NOT EXIST %srcd% (mkdir %srcd%)
-dotnet --version >d.v. & set /p ver_dotnet=<d.v & del /s d.v >nul 2>&1
 CLS
 ECHO -----------------------------------------------------------
 ECHO  JTSDK Maintenance Environment - %ver_jtsdk%
 ECHO -----------------------------------------------------------
 ECHO.
-ECHO  JTSDK Version ........: %ver_jtsdk%
-ECHO  Net Core Versoin .....: %ver_dotnet%
-ECHO.
-ECHO  To Checkout JTSDK Net Core, type ..: checkout-jtsdk
-ECHO  To Update JTSDK Net Core, type ....: update-jtsdk
+dotnet --info
 ECHO.
 GOTO _EOF
 
