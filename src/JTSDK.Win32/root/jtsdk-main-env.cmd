@@ -139,15 +139,15 @@ IF EXIST "%JTSDK_CONFIG%\QT59" (
 SET QTV=5.9.5
 SET PROMPT=$C QT 5.9 $F $P$F
 SET title-string=JTSDK QT 5.9 Development Environment
-SET QTD=%JTSDK_HOME%\tools\Qt\%QTV%\mingw53_32\bin
-SET QTP=%JTSDK_HOME%\tools\Qt\%QTV%\mingw53_32\plugins\platforms
+SET QTD=%JTSDK_HOME%\tools\Qt\5.9.5\mingw53_32\bin
+SET QTP=%JTSDK_HOME%\tools\Qt\5.9.5\mingw53_32\plugins\platforms
 SET GCCD=%JTSDK_HOME%\tools\Qt\Tools\mingw530_32\bin
 ) ELSE (
 set QTV=5.5
 SET PROMPT=$C QT 5.5 $F $P$F
 SET title-string=JTSDK QT 5.5 Development Environment
-SET QTD=%JTSDK_HOME%\tools\Qt\%QTV%\mingw492_32\bin
-SET QTP=%JTSDK_HOME%\tools\Qt\%QTV%\mingw492_32\plugins\platforms
+SET QTD=%JTSDK_HOME%\tools\Qt\5.5\mingw492_32\bin
+SET QTP=%JTSDK_HOME%\tools\Qt\5.5\mingw492_32\plugins\platforms
 SET GCCD=%JTSDK_HOME%\tools\Qt\Tools\mingw492_32\bin
 )
 SET JTSDK_PATH=%GCCD%;%QTD%;%QTP%;%JTSDK_PATH%
@@ -190,14 +190,14 @@ DOSKEY lsb=dir /b
 CD /D %JTSDK_HOME%
 CLS
 ECHO ^*^*^*^* Gathering Environment Information, Please Wait ^*^*^*^*
-setlocal
+SETLOCAL
 
-qmake.exe --version |awk "FNR==2 {print $4}" >q.m & set /p QMV=<q.m & rm q.m
+qmake.exe --version |awk "FNR==1 {print $3}" >q.m & set /p QMV=<q.m & rm q.m
 g++.exe --version |grep Built |awk "{print $7}" >g.v & set /p CVER=<g.v & rm g.v
 mingw32-make --version |grep Make |awk "{print $3}" >g.v & set /p GNMK=<g.v & rm g.v
 asciidoctor --version |grep "asciidoctor" |awk "{print $2}" >a.v & set /p ADV=<a.v & rm a.v
 cmake --version |awk "{print $3}" >c.m & set /p CMV=<c.m & rm c.m
-makensis.exe /VERSION  >n.m & set /p NSM=<n.m & rm n.m
+makensis.exe /VERSION  |tr -d "v" >n.m & set /p NSM=<n.m & rm n.m
 pkg-config --version >p.c & set /p PKG=<p.c & rm p.c
 git --version |awk "{print $3}" >c.m & set /p GITV=<c.m & rm c.m
 svn --version |awk "{print $3}" >c.m & set /p SVNV=<c.m & rm c.m
@@ -233,7 +233,7 @@ ECHO.
 ECHO. MSYS2 Environment
 ECHO    Bash           : %BENV%
 ECHO.
-endlocal 
+ENDLOCAL 
 
 :RUN
 %WINDIR%\System32\cmd.exe /A /Q /K
