@@ -23,10 +23,6 @@
 ::-----------------------------------------------------------------------------::
 @ECHO OFF
 
-IF DEFINED JTSDK_HOME (
-    SET PATH=%JTSDK_HOME%\tools\msys2\usr\bin;%PATH%
-)
-
 :: Get Command line Options %1
 IF /I [%1]==[clean] ( GOTO _CLEAN )
 IF /I [%1]==[build] ( GOTO _BUILD )
