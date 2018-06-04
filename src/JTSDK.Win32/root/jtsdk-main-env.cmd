@@ -172,6 +172,7 @@ DOSKEY config = dotnet %JTSDK_APPS%\Jtsdk.Core.Options.dll $*
 ::------------------------------------------------------------------------------
 :: DOSKEY update-msys2 = cls $T ridk exec pacman -Syuu
 :: DOSKEY search-msys2 = ridk exec pacman -Ss $*
+DOSKEY msys2 = call %JTSDK_HOME%\tools\msys2\msys2_shell.cmd
 DOSKEY build-hamlib3 = start /wait ridk exec bash msys-build-hamlib3.sh
 
 ::------------------------------------------------------------------------------
