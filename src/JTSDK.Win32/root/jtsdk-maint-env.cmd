@@ -25,9 +25,17 @@
 ::-----------------------------------------------------------------------------::
 @ECHO OFF
 SET URL=https://github.com/KI7MT/jtsdk-dotnet-core.git
-SET JTSDK_HOME=%CD%
+
+IF EXIST %CD%\ver.jtsdk (
+    SET JTSDK_HOME=%CD%
+)
+
+:: NOTE: This script is designed to wotk with JTSDK ONLY
+IF DEFINED JTSDK_HOME ( GOTO _SET_VERSION ) ELSE ( GOTO _NOT_DEFINED )
+GOTO GOTO _SET_VERSION
 
 :: .Net Version at time fo initial release
+:_SET_VERSION
 IF EXIST %CD%\ver.jtsdk (
 SET /P ver_jtsdk=<ver.jtsdk
 )
@@ -36,12 +44,12 @@ SET /P ver_jtsdk=<ver.jtsdk
 COLOR 0E
 SET LANG=en_US
 
-:: Set Minimal Path
-SET unix_tools=%JTSDK_HOME%\tools\msys2\usr\bin
+:: Add SRCD Path
 SET srcd=%JTSDK_HOME%\src
+mkdir %srcd% >nul 2>&1
 
 :: Set Final path
-SET PATH=%JTSDK_HOME%;%PATH%;%unix_tools%
+SET PATH=%JTSDK_HOME%;%PATH%
 
 :: Make sure srcd exists
 
@@ -50,34 +58,48 @@ SET PATH=%JTSDK_HOME%;%PATH%;%unix_tools%
 TITLE JTSDK Maintenance Console
 
 :: Doskey's for use with the Maintenance Environment
-DOSKEY help-checkout=@echo This feature has not be implemented yet.
-DOSKEY help-install=@echo This feature has not be implemented yet.
-DOSKEY help-upgrade=@echo This feature has not be implemented yet.
-DOSKEY clone-jtsdk=cd %srcd% $T start /wait git clone %URL% jtsdk-master
-DOSKEY update-jtsdk=cd %srcd%^\jtsdk-master $T start /wait git pull
 DOSKEY clear=cls
 DOSKEY ls=dir
 
 :: Start Main Script
 CD /D %JTSDK_HOME%
 IF NOT EXIST %srcd% (mkdir %srcd%)
-dotnet --version |%unix_tools%\awk.exe "{print $1}" >d.v. & set /p ver_dotnet=<d.v & rm d.v
+dotnet --version >d.v. & set /p ver_dotnet=<d.v & del /s d.v >nul 2>&1
 CLS
 ECHO -----------------------------------------------------------
 ECHO  JTSDK Maintenance Environment - %ver_jtsdk%
 ECHO -----------------------------------------------------------
 ECHO.
-ECHO  JTSDK Version .........: %ver_jtsdk%
-ECHO  .Net Core Versoin .....: %ver_dotnet%
+ECHO  JTSDK Version ........: %ver_jtsdk%
+ECHO  Net Core Versoin .....: %ver_dotnet%
 ECHO.
-ECHO  Provides Access To: Subversion, Git, and many other Gnu
-ECHO  tools from the MSYS2 bin diretory.
 ECHO.
-ECHO  NOTE: Unix applicaitons are enabled by default.
-ECHO.
-ECHO  - For Checkout Help ..: help-checkout
-ECHO  - For Update Help ....: help-update
-ECHO  - For Upgrade Help ...: help-upgrade
-ECHO.
+GOTO _EOF
 
+:: ----------------------------------------------------------------------------
+::  ERROR MESSAGES
+:: ----------------------------------------------------------------------------
+:_NOT_DEFINED
+CLS
+ECHO ------------------------------
+ECHO  Environment Error
+ECHO ------------------------------
+ECHO.
+ECHO   JTSDK_HOME ^= NOT SET
+ECHO. 
+ECHO   This script must be run from within
+ECHO   the JTSDK Environment.
+ECHO.
+ECHO   Alternatively, you can manyally set the
+ECHO   JTSDK_HOME variable with the following:
+ECHO.
+ECHO   C-Drive Location
+ECHO   set JTSDK_HOME=C:\JTSDK-Tools
+ECHO.
+ECHO   D-Drive Location
+ECHO   set JTSDK_HOME=D:\JTSDK-Tools
+ECHO.
+GOTO _EOF
+
+:_EOF
 %COMSPEC% /A /Q /K
