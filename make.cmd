@@ -87,6 +87,8 @@ ECHO * Installing Environment Files
 robocopy %CD%\env %JTSDK_HOME%\env /E /NFL /NDL /NJH /NJS /nc /ns /np
 ECHO * Installing Scripts
 robocopy %CD%\scripts %JTSDK_HOME%\scripts /E /NFL /NDL /NJH /NJS /nc /ns /np
+ECHO * Installing MSYS2 Scripts
+robocopy %CD%\scripts\msys2\ %JTSDK_HOME%\tools\msys2\usr\bin /NFL /NDL /NJH /NJS /nc /ns /np *.sh
 ECHO * Installing Root Files
 robocopy %CD%\root %JTSDK_HOME% /NFL /NDL /NJH /NJS /nc /ns /np
 ECHO * Installing Dot Net Apps
