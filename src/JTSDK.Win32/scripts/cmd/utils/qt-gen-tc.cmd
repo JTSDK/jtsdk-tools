@@ -21,11 +21,12 @@
 ::-----------------------------------------------------------------------------::
 
 SETLOCAL
-
+ECHO.
 ECHO ------------------------------
 ECHO  Generate Tool Chain Files
 ECHO ------------------------------
 ECHO.
+mkdir %JTSDK_HOME%\tools\tc-files >NUL 2>&1
 
 :: Hamlib3 Dirs
 SET hamlib_base=%JTSDK_HOME%\tools\hamlib
@@ -86,7 +87,7 @@ REM ----------------------------------------------------------------------------
 ECHO.
 ECHO  Version          : %version%
 ECHO  TC File          : QT59.cmake
-ECHO  File Path        : %JTSDK_HOME%\tools\tc-files\QT57.cmake
+ECHO  File Path        : %JTSDK_HOME%\tools\tc-files\QT59.cmake
 
 SET QTD59=%JTSDK_HOME%\tools\Qt\5.9.5\mingw53_32\bin
 SET GCCD59=%JTSDK_HOME%\tools\Qt\Tools\mingw530_32\bin

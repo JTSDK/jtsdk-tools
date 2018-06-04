@@ -168,6 +168,11 @@ SET PATH=%JTSDK_PATH%;%PATH%
 DOSKEY config = dotnet %JTSDK_APPS%\Jtsdk.Core.Options.dll $*
 
 ::------------------------------------------------------------------------------
+:: DOSKEY -for Generating QT Tool Chain Files
+::------------------------------------------------------------------------------
+DOSKEY gen-tc = PUSHD %JTSDK_HOME%\scripts\cmd\utils $T call qt-gen-tc.cmd $T POPD
+
+::------------------------------------------------------------------------------
 :: DOSKEY for MSYS2 related using Ruby ridk
 ::------------------------------------------------------------------------------
 :: DOSKEY update-msys2 = cls $T ridk exec pacman -Syuu
@@ -183,6 +188,11 @@ DOSKEY home = CD %JTSDK_HOME%
 DOSKEY clear=cls
 DOSKEY ls = ls --color=tty $*
 DOSKEY lsb=dir /b
+
+::------------------------------------------------------------------------------
+:: AUTO GENERATE QT Tool Chain Files
+::------------------------------------------------------------------------------
+call %JTSDK_HOME%\scripts\cmd\utils\qt-gen-tc.cmd >NUL 2>&1
 
 ::------------------------------------------------------------------------------
 :: PRINT ENVIRONMENT MSG
