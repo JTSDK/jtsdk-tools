@@ -91,9 +91,13 @@ POPD
 :: Copy files to destination
 ECHO * Copying Files to Final Directories
 PUSHD %CD%\src\JTSDK.NetCore\Jtsdk.Core.Options\bin\Release\netcoreapp2.1
+ECHO * Installing Environment Files
 robocopy %CD%\env %JTSDK_HOME%\env /E /NFL /NDL /NJH /NJS /nc /ns /np
+ECHO * Installing Scripts
 robocopy %CD%\scripts %JTSDK_HOME%\scripts /E /NFL /NDL /NJH /NJS /nc /ns /np
+ECHO * Installing Root Files
 robocopy %CD%\root %JTSDK_HOME% /NFL /NDL /NJH /NJS /nc /ns /np
+ECHO * Installing Dot Net Apps
 robocopy %CD%\ %JTSDK_HOME%\tools\apps /NFL /NDL /NJH /NJS /nc /ns /np Jtsdk.*
 ECHO * Finished Installation
 POPD
