@@ -25,25 +25,25 @@
 @ECHO OFF
 SET LANG=en_US
 
+:: JTSDK Version
+SET /P version=<ver.jtsdk
+
 :: set the header informaiton
 TITLE JTSDK Tools Full Environment
 
 ::------------------------------------------------------------------------------
-:: GLOBAL ENVIRONMENT VARIABLES
+:: GLOBAL ENVIRONMENT VARIABLES and PATHS
 ::------------------------------------------------------------------------------
 SET JTSDK_HOME=%CD%
 SET JTSDK_CONFIG=%LOCALAPPDATA%\JTSDK\config
 SET JTSDK_DATA=%LOCALAPPDATA%\JTSDK\data
 SET JTSDK_APPS=%JTSDK_HOME%\tools\apps
 
-:: JTSDK Version
-SET /P version=<ver.jtsdk
-
 ::------------------------------------------------------------------------------
 :: CREATE ESSENTIAL DIRECTORIES
 ::------------------------------------------------------------------------------
 
-:: %LOCALAPPDATA% Folders 
+:: %LOCALAPPDATA% Folders
 mkdir %LOCALAPPDATA%\JTSDK >NUL 2>&1
 mkdir %JTSDK_CONFIG% >NUL 2>&1
 mkdir %JTSDK_DATA% >NUL 2>&1
@@ -51,13 +51,75 @@ mkdir %JTSDK_DATA% >NUL 2>&1
 :: JTSDK-Tools Root Folders
 mkdir %JTSDK_APPS% >NUL 2>&1
 mkdir %JTSDK_HOME%\src >NUL 2>&1
+mkdir %JTSDK_HOME%\tmp >NUL 2>&1
 mkdir %JTSDK_HOME%\tools\hamlib >NUL 2>&1
 
 ::------------------------------------------------------------------------------
 :: SET COMMON APPLICATION PATHS
 ::------------------------------------------------------------------------------
 
-:: QT --------------------------------------------------------------------------
+:: ASCIIDOC --------------------------------------------------------------------
+IF EXIST %JTSDK_HOME%\tools\asciidoc\%asciidocv%\asciidoc.py (
+    SET asciidoc_dir=%JTSDK_HOME%\tools\asciidoc\%asciidocv%
+    SET "asciidoc_dir_f=%asciidoc_dir:\=/%"
+    SET JTSDK_PATH=%asciidoc_dir%
+)
+
+:: FFTW ------------------------------------------------------------------------
+SET fftw3f_dir=%JTSDK_HOME%\tools\fftw\%fftwv%
+SET "fftw3f_dir_f=%fftw3f_dir:\=/%"
+SET JTSDK_PATH=%JTSDK_PATH%;%fftw3f_dir%
+
+:: INNO ------------------------------------------------------------------------
+SET inno_dir=%JTSDK_HOME%\tools\inno\%innov%
+SET "inno_dir_f=%inno_dir:\=/%"
+SET JTSDK_PATH=%JTSDK_PATH%;%inno_dir%
+
+:: LIBUSB ----------------------------------------------------------------------
+IF EXIST %JTSDK_HOME%\tools\libusb\%libusbv%\libusb-1.0.def (
+    SET libusb_dir=%JTSDK_HOME%\tools\libusb\%libusbv%
+    SET "libusb_dir_f=%libusb_dir:\=/%"
+    SET JTSDK_PATH=%JTSDK_PATH%;%linusb_dir%
+)
+
+:: NSIS ------------------------------------------------------------------------
+SET nsis_dir=%JTSDK_HOME%\tools\nsis\%nsisv%
+SET "nsis_dir_f=%nsis_dir:\=/%"
+SET JTSDK_PATH=%JTSDK_PATH%;%nsis_dir%
+
+:: PKG_CONFIG ------------------------------------------------------------------
+SET pkgconfig_dir=%JTSDK_HOME%\tools\pkgconfig\%pkgconfigv%\bin
+SET "pkgconfig_dir_f=%pkgconfig_dir:\=/%"
+SET JTSDK_PATH=%JTSDK_PATH%;%pkgconfig_dir%
+
+:: RUBY ------------------------------------------------------------------------
+SET ruby_dir=%JTSDK_HOME%\tools\ruby\%rubyv%\bin
+SET "ruby_dir_f=%ruby_dir:\=/%"
+SET JTSDK_PATH=%JTSDK_PATH%;%ruby_dir%
+
+:: RUBY ------------------------------------------------------------------------
+SET svn_dir=%JTSDK_HOME%\tools\subversion\%svnv%\bin
+SET "svn_dir_f=%svn_dir:\=/%"
+SET JTSDK_PATH=%JTSDK_PATH%;%svn_dir%
+
+::------------------------------------------------------------------------------
+:: CONDITIONAL PATHS for Multiple versions of Cmake
+::------------------------------------------------------------------------------
+:SET_CMAKE_PATH
+SET cmake_dir=
+
+IF EXIST "%JTSDK_CONFIG%\cmake311" (
+SET cmakev=3.11.2
+) ELSE (
+SET cmakev=3.5.2
+)
+SET cmake_dir=%JTSDK_HOME%\tools\cmake\%cmakev%\Bin
+SET "cmake_dir_f=%cmake_dir:\=/%"
+SET JTSDK_PATH=%JTSDK_PATH%;%cmake_dir%
+
+::------------------------------------------------------------------------------
+:: CONDITIONAL PATHS for Multiple versions of Qt
+::------------------------------------------------------------------------------
 IF EXIST "%JTSDK_CONFIG%\QT59" (
 SET QTV=5.7
 SET PROMPT=$C QT 5.7 $F $P$F
@@ -83,12 +145,12 @@ set "GCCD_F=%GCCD:\=/%"
 :: SET FINAL ENVIRONMENT PATHS and CONSOLE TITLE
 ::------------------------------------------------------------------------------
 TITLE %title-string%
-SET PATH=%JTSDK_PATH%;%WINDIR%\System32
+SET PATH=%JTSDK_PATH%;%PATH%
 
 ::------------------------------------------------------------------------------
 :: DOSKEY for JTSDK.NectCore
 ::------------------------------------------------------------------------------
-DOSKEY jtsdk-options = dotnet %jtsdk_core_dir%\Jtsdk.Core.Options.dll $*
+DOSKEY jtsdk-options = dotnet %JTSDK_APPS%\Jtsdk.Core.Options.dll $*
 
 ::------------------------------------------------------------------------------
 :: DOSKEY for MSYS2 related using Ruby ridk
@@ -102,14 +164,12 @@ DOSKEY build-hamlib3 = start /wait ridk exec bash msys-build-hamlib3.sh
 ::------------------------------------------------------------------------------
 DOSKEY srcd = CD %JTSDK_HOME%/src
 DOSKEY home = CD %JTSDK_HOME%
-DOSKEY enable-qt57 = touch %JTSDK_CONFIG%\qt57
 DOSKEY clear=cls
 DOSKEY ls = ls --color=tty $*
 DOSKEY lsb=dir /b
-DOSKEY postinstall="%JTSDK_HOME%\tools\postinstall\pinstall.cmd"
 
 ::------------------------------------------------------------------------------
-:: PRIN ENVIRONMENT MSG
+:: PRINT ENVIRONMENT MSG
 ::------------------------------------------------------------------------------
 :ENV_MSG
 CD /D %JTSDK_HOME%
