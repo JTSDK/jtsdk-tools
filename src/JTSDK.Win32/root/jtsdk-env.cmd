@@ -137,14 +137,14 @@ SET JTSDK_PATH=%JTSDK_PATH%;%cmake_dir%
 ::------------------------------------------------------------------------------
 IF EXIST "%JTSDK_CONFIG%\QT59" (
 SET QTV=5.9.5
-SET PROMPT=$C QT 5.9 $F $P$F
+SET PROMPT=$C QT 5.9 $F $P^:
 SET title-string=JTSDK QT 5.9 Development Environment
 SET QTD=%JTSDK_HOME%\tools\Qt\5.9.5\mingw53_32\bin
 SET QTP=%JTSDK_HOME%\tools\Qt\5.9.5\mingw53_32\plugins\platforms
 SET GCCD=%JTSDK_HOME%\tools\Qt\Tools\mingw530_32\bin
 ) ELSE (
 set QTV=5.5
-SET PROMPT=$C QT 5.5 $F $P$F
+SET PROMPT=$C QT 5.5 $F $P^:
 SET title-string=JTSDK QT 5.5 Development Environment
 SET QTD=%JTSDK_HOME%\tools\Qt\5.5\mingw492_32\bin
 SET QTP=%JTSDK_HOME%\tools\Qt\5.5\mingw492_32\plugins\platforms
