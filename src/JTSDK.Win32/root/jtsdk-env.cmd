@@ -39,7 +39,7 @@ SET svnv=1.9.7
 SET /P version=<ver.jtsdk
 
 :: set the header informaiton
-TITLE JTSDK Tools Full Environment
+TITLE JTSDK Tools %version%
 
 ::------------------------------------------------------------------------------
 :: GLOBAL ENVIRONMENT VARIABLES and PATHS
@@ -138,14 +138,14 @@ SET JTSDK_PATH=%JTSDK_PATH%;%cmake_dir%
 IF EXIST "%JTSDK_CONFIG%\QT59" (
 SET QTV=5.9.5
 SET PROMPT=$C QT 5.9 $F $P^:
-SET title-string=JTSDK QT 5.9 Development Environment
+SET title-string=JTSDK-Tools QT 5.9 Environment
 SET QTD=%JTSDK_HOME%\tools\Qt\5.9.5\mingw53_32\bin
 SET QTP=%JTSDK_HOME%\tools\Qt\5.9.5\mingw53_32\plugins\platforms
 SET GCCD=%JTSDK_HOME%\tools\Qt\Tools\mingw530_32\bin
 ) ELSE (
 set QTV=5.5
 SET PROMPT=$C QT 5.5 $F $P^:
-SET title-string=JTSDK QT 5.5 Development Environment
+SET title-string=JTSDK-Tools QT 5.5 Environment
 SET QTD=%JTSDK_HOME%\tools\Qt\5.5\mingw492_32\bin
 SET QTP=%JTSDK_HOME%\tools\Qt\5.5\mingw492_32\plugins\platforms
 SET GCCD=%JTSDK_HOME%\tools\Qt\Tools\mingw492_32\bin
