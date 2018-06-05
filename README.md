@@ -29,7 +29,7 @@ it is highly recommended to use x86-64 if your hardware supports it.
 As the tool-chain is updated, this package will track with those changes.
 
 ## Prerequisites
-In order to checkoiut and build this package, the user must have have two
+In order to checkout and compile this package, the user must have have two
 utilities installed at the `system level`:
 * [Git for Windows](https://git-scm.com/) (or comprable Git Client)
 * Microsoft [.Net Core SDK v2.1.300](https://www.microsoft.com/net/download/windows)
