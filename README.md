@@ -36,8 +36,8 @@ utilities installed at the `system level`:
 or later
 
 Both packages must be available from a standard Windows Console. If not, users
-should add--either locally or system wide--the path locations to allow access to
-both `git` and `dotnet` command line tools. Using the commands `git --version`
+should add--either locally or system wide--the path locations which allows access
+to both `git` and `dotnet` command line tools. Using the commands `git --version`
 and `dotnet --info` should render without error.
 
 ## Installation
