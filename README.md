@@ -6,7 +6,7 @@ This package will be a continious release integration. Unless otherwise
 noted, there will be no branches or tags maintained. If circumstances mandate a
 change in this approach, tags will be placed in the release section.
 
-# Supported Operating Systems
+## Supported Operating Systems
 At present, this repository only supports Windows. Later releases with include
 generic Linux support, and additional Ubuntu / Debian specific artifacts.
 
