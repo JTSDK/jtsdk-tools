@@ -11,7 +11,7 @@ change in this approach, tags will be placed in the release section.
 
 As the tool-chain is updated, this package will track with those changes.
 
-## Requirments
+## Requirement
 In order to use this package, the user must have have two utilities installed at
 the system level:
 * [Git for Windows](https://git-scm.com/) (or comprable Git Client)
