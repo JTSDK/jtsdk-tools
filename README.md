@@ -44,7 +44,7 @@ Installation of this package should follow the tool-chain installation and
 setup.
 
 ```
-# Open a Windows Console, then change directories to the JTSDK-Tools locaiton
+# Open a Windows Console, then change directories to the JTSDK-Tools installation
 cd /d (C|D):\JTSDK-Tools
 
 # Set Temporary JTSDK_HOME variable
