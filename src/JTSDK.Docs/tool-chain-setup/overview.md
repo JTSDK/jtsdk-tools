@@ -9,7 +9,7 @@ followed to prevent missing critical steps, or, missing out on a particular
 feature from another installaiton process.
 
 ## Language and Syntax
-Throught this guide you will often see the use of `(C|D):\JTSDK-Tools` or
+Throughout this guide you will often see the use of `(C|D):\JTSDK-Tools` or
 reference to `JTSDK_HOME`
 
 * The syntax `(C|D)` referes to the drive letter, either C-Drive `C:` or
