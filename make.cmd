@@ -81,7 +81,7 @@ dotnet publish -c release
 ECHO.
 POPD
 :: Copy files to destination
-ECHO ^-^-^> Installing JTSDK .Net Core Files
+ECHO ^-^-^> Installing JTSDK .Net Core
 ECHO.
 PUSHD %CD%\src\JTSDK.NetCore\Jtsdk.Core.Options\bin\Release\netcoreapp2.1
 ECHO ^-^-^> Installing Environment Files
@@ -92,7 +92,7 @@ ECHO ^-^-^> Installing MSYS2 Scripts
 robocopy %CD%\scripts\msys2\ %JTSDK_HOME%\tools\msys2\usr\bin /NFL /NDL /NJH /NJS /nc /ns /np *.sh
 ECHO ^-^-^> Installing Root Files
 robocopy %CD%\root %JTSDK_HOME% /NFL /NDL /NJH /NJS /nc /ns /np
-ECHO ^-^-^> Installing Dot Net Apps
+ECHO ^-^-^> Installing .Net Core Libraries and Applications
 robocopy %CD%\ %JTSDK_HOME%\tools\apps /NFL /NDL /NJH /NJS /nc /ns /np Jtsdk.*
 ECHO Finished
 POPD
