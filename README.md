@@ -4,17 +4,17 @@ tool-chain. It would be of little use elsewhere.
 
 Delivery will be a frequent release of the of the `master` branch. `Branches`
 will be used mainly for development, keeping the `master` branch in a stable
-condition for end users. `Tags` will be use to archive milestones and will
+condition for end users. `Tags` will be use dto archive milestones and will
 appear in the [release section](https://github.com/KI7MT/jtsdk-dotnet-core/releases).
 
 ## Bug Reports and Feature Requests
-For filing bugs and feature requests, use the [Issue Tracker](https://github.com/KI7MT/jtsdk-dotnet-core/issues)
+For submitting bugs reports and feature requests, use the [Issue Tracker](https://github.com/KI7MT/jtsdk-dotnet-core/issues).
 
 One of the main faulre points of `JTSDK v2` was the lack of flexablity and absence
-of user request tracking. The aim of `JTSDK-Tools` to use an Agile delivery
-approach, while maintaing a quality build system for the applicaitons it can
+of user request tracking. The aim of `JTSDK-Tools` is to use an Agile delivery
+system to create a high-quality build system for the applicaitons it can
 support. Utilizing Githubs [Issue Tracker](https://github.com/KI7MT/jtsdk-dotnet-core/issues)
-users can quicly see the status of any particular request, discuss the merits,
+users can quickly see the status of any particular request, discuss the merits,
 and see the final disposition.
 
 ## Supported Operating Systems
