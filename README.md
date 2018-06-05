@@ -6,6 +6,22 @@ This package will be a continious release integration. Unless otherwise
 noted, there will be no branches or tags maintained. If circumstances mandate a
 change in this approach, tags will be placed in the release section.
 
+# Supported Operating Systems
+At present, this repository only supports Windows. Later releases with include
+generic Linux support, and additional Ubuntu / Debian specific artifacts.
+
+### WIndows
+* Win-10 x86-64 / x86-32
+* Win-7|8 x86-64 / x86-32, in theory, but not tested.
+* Win-XP and Vista are not supported.
+
+### Linux
+* Linux - Unsupported at this time.
+* Arm Devices - Unsupported at this time.
+
+>Note - The Core tool-chain does not require x86-64 bit applications. However,
+it is highly recommended to use x86-64 if your hardware supports it.
+
 ## Supported Tool Chain
 * [JTSDK-Tools v3.0.0-7 Beta](https://sourceforge.net/projects/jtsdk/files/win32/3.0.0/beta-testing/)
 
