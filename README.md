@@ -4,7 +4,7 @@ tool-chain. It would be of little use elsewhere.
 
 Delivery will be a frequent release of the of the `master` branch. `Branches`
 will be used mainly for development, keeping the `master` branch in a stable
-condition for end users. `Tags` will be use dto archive milestones and will
+condition for end users. `Tags` will be use to archive milestones and will
 appear in the [release section](https://github.com/KI7MT/jtsdk-dotnet-core/releases).
 
 ## Bug Reports and Feature Requests
