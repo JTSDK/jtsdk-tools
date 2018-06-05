@@ -10,7 +10,7 @@ change in this approach, tags will be placed in the release section.
 At present, this repository only supports Windows. Later releases with include
 generic Linux support, and additional Ubuntu / Debian specific artifacts.
 
-### WIndows
+### Windows
 * Win-10 x86-64 / x86-32
 * Win-7|8 x86-64 / x86-32, in theory, but not tested.
 * Win-XP and Vista are not supported.
