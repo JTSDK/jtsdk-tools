@@ -202,18 +202,18 @@ CD /D %JTSDK_HOME%
 CLS
 ECHO ^*^*^*^* Gathering Environment Information, Please Wait ^*^*^*^*
 SETLOCAL
-
-qmake.exe --version |awk "FNR==1 {print $3}" >q.m & set /p QMV=<q.m & rm q.m
-g++.exe --version |grep Built |awk "{print $7}" >g.v & set /p CVER=<g.v & rm g.v
-mingw32-make --version |grep Make |awk "{print $3}" >g.v & set /p GNMK=<g.v & rm g.v
-asciidoctor --version |grep "asciidoctor" |awk "{print $2}" >a.v & set /p ADV=<a.v & rm a.v
-cmake --version |awk "{print $3}" >c.m & set /p CMV=<c.m & rm c.m
-makensis.exe /VERSION  |tr -d "v" >n.m & set /p NSM=<n.m & rm n.m
-pkg-config --version >p.c & set /p PKG=<p.c & rm p.c
-git --version |awk "{print $3}" >c.m & set /p GITV=<c.m & rm c.m
-svn --version |awk "{print $3}" >c.m & set /p SVNV=<c.m & rm c.m
-dotnet --version >d.n & set /p DOTV=<d.n & rm d.n
-bash --version |awk "FNR==1 {print $4}" >b.v & set /p BENV=<b.v & rm b.v
+SET /P git_tag=<git.tag
+qmake.exe --version |awk "FNR==1 {print $3}" >q.m & SET /P QMV=<q.m & rm q.m
+g++.exe --version |grep Built |awk "{print $7}" >g.v & SET /P CVER=<g.v & rm g.v
+mingw32-make --version |grep Make |awk "{print $3}" >g.v & SET /P GNMK=<g.v & rm g.v
+asciidoctor --version |grep "asciidoctor" |awk "{print $2}" >a.v & SET /P ADV=<a.v & rm a.v
+cmake --version |awk "{print $3}" >c.m & SET /P CMV=<c.m & rm c.m
+makensis.exe /VERSION  |tr -d "v" >n.m & SET /P NSM=<n.m & rm n.m
+pkg-config --version >p.c & SET /P PKG=<p.c & rm p.c
+git --version |awk "{print $3}" >c.m & SET /P GITV=<c.m & rm c.m
+svn --version |awk "{print $3}" >c.m & SET /P SVNV=<c.m & rm c.m
+dotnet --version >d.n & SET /P DOTV=<d.n & rm d.n
+bash --version |awk "FNR==1 {print $4}" >b.v & SET /P BENV=<b.v & rm b.v
 
 CLS
 ECHO --------------------------------------------
@@ -222,6 +222,7 @@ ECHO --------------------------------------------
 ECHO.
 ECHO  JTSDK
 ECHO    Version        : %version%
+ECHO    Git Tag        : %git_tag%
 ECHO.
 ECHO  QT Information
 ECHO    Version        : %QTV%

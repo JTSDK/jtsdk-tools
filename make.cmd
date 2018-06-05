@@ -23,6 +23,11 @@
 ::-----------------------------------------------------------------------------::
 @ECHO OFF
 
+:: Set the Git tag into a file
+>%JTSDK_HOME%\git.tag (
+git rev-parse --short HEAD
+)
+
 :: Get Command line Options %1
 IF /I [%1]==[clean] ( GOTO _CLEAN )
 IF /I [%1]==[build] ( GOTO _BUILD )
