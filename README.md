@@ -12,8 +12,8 @@ For submitting bugs reports and feature requests, use the [Issue Tracker](https:
 
 One of the main faulre points of `JTSDK v2` was the lack of flexablity and absence
 of user request tracking. The aim of `JTSDK-Tools` is to use an Agile delivery
-system to create a high-quality build system for the applicaitons it can
-support. Utilizing Githubs [Issue Tracker](https://github.com/KI7MT/jtsdk-dotnet-core/issues)
+approach to create a high-quality, yet flexable build system. Utilizing Githubs 
+[Issue Tracker](https://github.com/KI7MT/jtsdk-dotnet-core/issues)
 users can quickly see the status of any particular request, discuss the merits,
 and see the final disposition.
 
