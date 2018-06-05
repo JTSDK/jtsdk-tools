@@ -47,8 +47,8 @@ GOTO SET_CMAKE_PATH
 :SET_CMAKE_PATH
 SET cmake_dir=
 
-IF EXIST "%JTSDK_CONFIG%\cmake311" (
-SET cmakev=3.11.2
+IF EXIST "%JTSDK_CONFIG%\cmake310" (
+SET cmakev=3.10.3
 ) ELSE (
 SET cmakev=3.5.2
 )

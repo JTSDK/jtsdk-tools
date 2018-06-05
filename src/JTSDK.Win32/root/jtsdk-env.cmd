@@ -120,11 +120,11 @@ SET JTSDK_PATH=%JTSDK_PATH%;%unix_dir%
 ::------------------------------------------------------------------------------
 :: CONDITIONAL PATHS for Multiple versions of Cmake
 ::------------------------------------------------------------------------------
-:SET_CMAKE_PATH
-SET cmake_dir=
-
-IF EXIST "%JTSDK_CONFIG%\cmake311" (
-SET cmakev=3.11.2
+:: Note: Cmake 3.10.3 was chosen to match Ubuntu Bionc (18.04.0)
+::       if the first point release ugrades this version, JTSDK should
+::       follow suit.
+IF EXIST "%JTSDK_CONFIG%\cmake310" (
+SET cmakev=3.10.3
 ) ELSE (
 SET cmakev=3.5.2
 )

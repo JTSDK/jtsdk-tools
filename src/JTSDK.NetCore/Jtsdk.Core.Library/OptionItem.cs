@@ -16,7 +16,7 @@ namespace Jtsdk.Core.Library
             "Reconfigure",
             "Autorun",
             "QT59",
-            "CMake311",
+            "CMake310",
             "Unix",
             "Java",
             "PostgreSQL",
@@ -29,7 +29,7 @@ namespace Jtsdk.Core.Library
         {
             "Quiet",
             "QT59",
-            "CMake311",
+            "CMake310",
             "Java",
             "PostgreSQL",
             "Sqlite3"
