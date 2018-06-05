@@ -8,7 +8,7 @@ condition for end users. `Tags` will be use to archive milestones and will
 appear in the [release section](https://github.com/KI7MT/jtsdk-dotnet-core/releases).
 
 ## Bug Reports and Feature Requests
-For submitting bugs reports and feature requests, use the [Issue Tracker](https://github.com/KI7MT/jtsdk-dotnet-core/issues).
+For submitting bug reports and feature requests, use the [Issue Tracker](https://github.com/KI7MT/jtsdk-dotnet-core/issues).
 
 One of the main faulre points of `JTSDK v2` was the lack of flexablity and absence
 of user request tracking. The aim of `JTSDK-Tools` is to use an Agile delivery
