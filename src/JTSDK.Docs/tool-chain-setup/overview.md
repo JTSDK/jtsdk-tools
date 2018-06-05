@@ -66,4 +66,6 @@ JTSDK-Tools requires two packages to be installed at the System Level:
 If the application in question is not installed to the Windows default system
 installation locaiton, they must be added to the System or User path variables.
 In either case, the application must be available when opening a non-privilaged
-Windows Console. Most applicaiton installer use the system location by default.
+Windows Console. Many applicaiton installers use the system folders by default.
+However, there are no gaurentees, and users should verify the location for 
+any System Level application requirment.
