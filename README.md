@@ -2,9 +2,10 @@
 This repository is designed to work specifically with the JTSDK Version 3 series
 tool-chain. It would be of little use elsewhere.
 
-This package will be a continious release integration. Unless otherwise
-noted, there will be no branches or tags maintained. If circumstances mandate a
-change in this approach, tags will be placed in the release section.
+Delivery will be a continious release integration of the `master` branch. Unless
+otherwise noted, there will be no `branches` or `tags` tracked on the server. If
+circumstances mandate a change in this approach, `tags` will be placed in the
+[release section](https://github.com/KI7MT/jtsdk-dotnet-core/releases).
 
 ## Supported Operating Systems
 At present, this repository only supports Windows. Later releases with include
