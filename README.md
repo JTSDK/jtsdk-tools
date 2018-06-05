@@ -28,7 +28,7 @@ it is highly recommended to use x86-64 if your hardware supports it.
 
 As the tool-chain is updated, this package will track with those changes.
 
-## Requirement
+## Prerequisites
 In order to use this package, the user must have have two utilities installed at
 the system level:
 * [Git for Windows](https://git-scm.com/) (or comprable Git Client)
