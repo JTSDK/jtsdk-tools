@@ -12,11 +12,9 @@ namespace Jtsdk.Core.Library
         {
             "Separate",
             "Quiet",
-            "Skipsvn",
             "Clean",
             "Reconfigure",
             "Autorun",
-            "Autosvn",
             "QT59",
             "CMake311",
             "Unix",
@@ -34,8 +32,7 @@ namespace Jtsdk.Core.Library
             "CMake311",
             "Java",
             "PostgreSQL",
-            "Sqlite3",
-            "Skipsvn",
+            "Sqlite3"
         };
 
 
