@@ -52,11 +52,11 @@ Most of the tools have extensive documentation by the original authors, often
 located within the applicaiton folder structure.
 
 ## Choosing 64-bit or 32-bit
-For the most part, any tool that is used to compile, either in-part or whole, any
-WSJT application should be 32-Bit on Windows. Tools such as Git, Dotnet, 7-Zip,
+For the most part, any tool that is used to compile--either in-part or whole--
+WSJT applications should be 32-bit on Windows. Tools such as Git, Dotnet, 7-Zip,
 RapidEE, and others, can be 64-bit as they are tools to help users with
 non-compiling tasks. Each guide will have the `Required` arch-type and indicate
-whether it is acceptable to use 64-Bit or not.
+whether it is acceptable to use 64-bit or not.
 
 ## System System Level Installation
 JTSDK-Tools requires two packages to be installed at the System Level:
