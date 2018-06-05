@@ -57,8 +57,7 @@ cd /d (C|D):\JTSDK-Tools\src\jtsdk-dotnet-core
 # Update Source
 git pull origin master
 
-# Change Directories and Make Install
-cd jtsdk-dotnet-core
+# Make Install
 make install
 ```
 
