@@ -99,7 +99,7 @@ ECHO   Installing Root Files
 robocopy %CD%\root %JTSDK_HOME% /NFL /NDL /NJH /NJS /nc /ns /np
 ECHO   Installing .Net Core Libraries and Applications
 robocopy %CD%\ %JTSDK_HOME%\tools\apps /NFL /NDL /NJH /NJS /nc /ns /np Jtsdk.*
-ECHO Finished
+ECHO   Finished
 POPD
 GOTO EOF
 
