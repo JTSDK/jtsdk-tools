@@ -24,7 +24,7 @@
 @ECHO OFF
 
 :: Set the Git tag into a file
->%JTSDK_HOME%\git.tag (
+>%JTSDK_HOME%\ver.git (
 git rev-parse --short HEAD
 )
 

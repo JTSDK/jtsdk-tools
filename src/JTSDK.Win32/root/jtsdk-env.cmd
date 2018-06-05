@@ -202,7 +202,7 @@ CD /D %JTSDK_HOME%
 CLS
 ECHO ^*^*^*^* Gathering Environment Information, Please Wait ^*^*^*^*
 SETLOCAL
-SET /P git_tag=<git.tag
+SET /P git_tag=<ver.tag
 qmake.exe --version |awk "FNR==1 {print $3}" >q.m & SET /P QMV=<q.m & rm q.m
 g++.exe --version |grep Built |awk "{print $7}" >g.v & SET /P CVER=<g.v & rm g.v
 mingw32-make --version |grep Make |awk "{print $3}" >g.v & SET /P GNMK=<g.v & rm g.v
