@@ -30,12 +30,14 @@ generic Linux support, and additional Ubuntu / Debian specific artifacts.
 * Linux - Unsupported at this time.
 * Arm Devices - Unsupported at this time.
 
->Note - The Core tool-chain does not require x86-64 bit applications. However,
+>Note - The Core Tool Chain does not require x86-64 bit applications. However,
 it is highly recommended to use x86-64 if your hardware supports it.
 
 ## Installation
 Installation of this package should follow the tool-chain installation and
-setup.
+setup. If you've not already done so, review the [Tool Chain Overview](./src/JTSDK.Docs/tool-chain-setup/overview.md)
+and the [Tool Cahin Installaiton](./src/JTSDK.Docs/tool-chain-setup/overview.md)
+guides **before** checking out and compiling the source code.
 
 ```
 # Open a Windows Console, then change directories to the JTSDK-Tools installation
