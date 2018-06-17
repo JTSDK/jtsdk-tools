@@ -1,4 +1,4 @@
-# JTSDK-Tools and .Net Core Applications
+# JTSDK Net Core Applications
 This repository is designed to work specifically with the JTSDK Version 3 series
 tool-chain. It would be of little use elsewhere.
 
