@@ -1,5 +1,4 @@
-# JTSDK-Tools Setup Overview
-JTSDK-Tools Version 3 setup is broken down into three primary areas:
+JTSDK Tools Version 3 setup is broken down into three primary areas:
 * Prerequisit Installation
 * JTSDK-Tools Core Installer Installation
 * Core Application Installation and Configuraiton
