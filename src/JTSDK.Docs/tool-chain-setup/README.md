@@ -18,8 +18,8 @@ followed to prevent missing critical steps, or, missing out on a particular
 feature from another installaiton process.
 
 ## .Net Core Usage
-At present, [.Net Core](https://docs.microsoft.com/en-us/dotnet/core/index) is
-only used at the environment configuration stage. Its the long term intention to
+At present, [.Net Core Applicaitons](https://docs.microsoft.com/en-us/dotnet/core/index)
+are only used in setting environment variable and configuration. Its the long term intention to
 convert all Bash and Windows Batch/CMD scripts over to [.Net Core](https://docs.microsoft.com/en-us/dotnet/core/index).
 
 
