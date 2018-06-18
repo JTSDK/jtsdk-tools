@@ -22,7 +22,7 @@ allows access from the command. Using the commands `git --version`,
 respective console.
 
 For detailed installation instructions, see the following guides:
-* [Install Git]()
+* [Install Git](install-git.md)
 * [Install .Net Core SDK]()
 * [Install VS Code Editor]()
 
