@@ -66,6 +66,12 @@ If the source clone is still present on the system, upgrading is the same as
 installation, with an additional pull command. If not, use the installation steps
 from above.
 ```
+# Change directories to the JTSDK-Tools installation
+cd /d (C|D):\JTSDK-Tools
+
+# Set Temporary JTSDK_HOME variable
+set JTSDK_HOME=%CD%
+
 # Change Directories To The Cloned Repository
 cd /d (C|D):\JTSDK-Tools\src\jtsdk-dotnet-core
 
