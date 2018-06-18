@@ -97,32 +97,66 @@ installer before installaiton unless advised otherwise.
 
 ## Tool Chain Matrix
 
-The following matrix provides basic information about each application or
+The following matrices provides basic information about each application or
 framework used within the `JTSDK Tool Chain` collection. Collections such as
 [MSYS2](http://www.msys2.org/) include many [GNU Core Utils](https://www.gnu.org/software/coreutils/coreutils.html)
 that are not outlined specifically in this document. For more information a given
 item, following the links provided.
 
+The intension is to limit download and installation footprints to a bare minimum
+for each workload type. 
+
+### JTSDK Core Tools
+The following tools are required as part of the `JTSDK Core Tool Chain`. All of
+the tool in this group are required, and should be considered the bare minimum
+installation.
+
 | Application | Purpose |
 | --- | --- |
 | [Asciidoctor](https://asciidoctor.org/docs/) | General purpose documeatation system based on [Ruby](https://www.ruby-lang.org/en/) | 
 | [CMake](https://cmake.org/) | Cross-Platform tools to build, test and deploy software |
-| [DocFX](https://dotnet.github.io/docfx/) | Generates documentation directly from source code |
 | [Dotnet Core](https://docs.microsoft.com/en-us/dotnet/core/index) | Cross Platform Framework based on [C-Charp](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/) |
-| [Eclipse](https://www.eclipse.org/downloads/) | Cross-Platform IDE primarily for Java Application Development |
 | [FFTW](http://fftw.org/) | Subroutine library for computing the discrete Fourier transform (DFT) in one or more dimensions |
-| [Gradle](https://gradle.org/) | Cross-Platform tools for building and deploying applications |
-| [InnoSetup](http://www.jrsoftware.org/isinfo.php) | Install and build system for Windows applications |
 | [Libusb](https://libusb.info/) | C-Library providing access to USB devices on Windows |
-| [Maven](https://maven.apache.org/index.html) | Build System from the [Apache Foundation](https://www.apache.org/) |
 | [MSYS2](http://www.msys2.org/) | A collection of GNU Tools for Windows with [Pacman package manager](https://wiki.archlinux.org/index.php/Pacman) |
 | [NSIS](http://nsis.sourceforge.net/Main_Page) | Professional open source system to create Windows installers |
-| [Pandoc](https://pandoc.org/index.html) | Cross-Platform document conversion utility |
 | [PKG-Config](https://sourceforge.net/projects/pkgconfiglite/) | Package Config built for Windows |
 | [Qt](https://www.qt.io/) | Cross-Platform Development Framework |
 | [Ruby](https://www.ruby-lang.org/en/) | Open source programming language |
-| [Sqlite](https://sqlite.org/about.html) | A powerful In-Process SQL Database Engine  |
-| [Subversion](http://svnbook.red-bean.com/en/1.6/svn.intro.whatis.html) | Cross-Platform Version Control System |
-| [Tomcat](https://tomcat.apache.org/) | Open Source Cross-Platform server for: Java Servlet and JavaServer Pages from the [Apache Foundation](https://www.apache.org/) |
 | [Visual Studio](https://www.visualstudio.com/vs/) | Fully-featured integrated development environment (IDE) for Android, iOS, Windows, web, and cloud |
+
+### JTSDK Java Tools
+
+The folowing tools are generally related to Java and associate build activities.
+While applications such as [Gradle](https://gradle.org/) and [Eclipse](https://www.eclipse.org/downloads/)
+may very well apply to other programming languages, they are most commonly used
+in Java development.
+
+| Application | Purpose |
+| --- | --- |
+| [Java](http://www.oracle.com/technetwork/java/javase/downloads/index.html) | Cross-Platform Programming Language |
+| [Eclipse](https://www.eclipse.org/downloads/) | Cross-Platform IDE primarily for Java Application Development |
+| [Gradle](https://gradle.org/) | Cross-Platform tools for building and deploying applications |
+| [Maven](https://maven.apache.org/index.html) | Build System from the [Apache Foundation](https://www.apache.org/) |
+| [Tomcat](https://tomcat.apache.org/) | Open Source Cross-Platform server for: Java Servlet and JavaServer Pages from the [Apache Foundation](https://www.apache.org/) |
+
+### JTSDK Database Tools
+
+The following tools general purpose database applications and / or servers.
+
+| Application | Purpose |
+| --- | --- |
+| [PostgreSQL](https://www.postgresql.org/download/windows/) | Advanced High Performance Relational Database  |
+| [Sqlite](https://sqlite.org/about.html) | A powerful In-Process SQL Database Engine  |
+
+### JTSDK Miscellaneous Tools
+
+The following tools are can be installed in addition to the `JTSDK Tool Chain`.
+
+| Application | Purpose |
+| --- | --- |
 | [Visual Studio Code](https://code.visualstudio.com/docs/supporting/faq#_what-is-the-difference-between-vs-code-and-vs-community) |Powerful Cross-Platform Editor |
+| [DocFX](https://dotnet.github.io/docfx/) | Generates documentation directly from source code |
+| [Pandoc](https://pandoc.org/index.html) | Cross-Platform document conversion utility |
+| [InnoSetup](http://www.jrsoftware.org/isinfo.php) | Install and build system for Windows applications |
+| [Subversion](http://svnbook.red-bean.com/en/1.6/svn.intro.whatis.html) | Cross-Platform Version Control System |
