@@ -1,16 +1,16 @@
 # JTSDK Tools Overview
 
 JTSDK Tools Version 3 is broken down into two primary areas:
-* [Prerequisite Applications](tool-chain-installation.md#prerequisite-applications)
-* [Core Tools](tool-chain-installation.md#core-tools-installation)
+* [Prerequisite Applications](guides/tool-chain-installation.md#prerequisite-applications)
+* [Core Tools](guides/tool-chain-installation.md#core-tools-installation)
 
 In addition to the required tools and frameworks, there are a number of optional
 items the tool chain will be supporting:
 
-* [Anaconda Python](install-anaconda-python.md)
-* [Java](install-java.md)
-* [PostgreSQL Database](install-postgresql.md)
-* [Visual Studio (Windows Only)](install-vistual-studio.md)
+* [Anaconda Python](guides/install-anaconda-python.md)
+* [Java](guides/install-java.md)
+* [PostgreSQL Database](guides/install-postgresql.md)
+* [Visual Studio (Windows Only)](guides/install-vistual-studio.md)
 
 While not absolute, the order of installaiton an configuraiton should be
 followed to prevent missing critical steps, or, missing out on a particular
@@ -91,9 +91,9 @@ documents as appropriate.
 
 ## Third Party Installers
 
->One or more of the tool chain components may be provided by [Third Party
-Installers](#third-party-installers). Users should always check for the latest
-version of the respective installer before installaiton. 
+>One or more of the tool chain components may be provided by Third Party
+Installers. Users should always check for the latest version of the respective
+installer before installaiton unless advised otherwise.
 
 ## Tool Chain Matrix
 
