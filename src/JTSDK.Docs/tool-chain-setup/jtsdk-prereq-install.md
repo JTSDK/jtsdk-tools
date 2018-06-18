@@ -24,6 +24,10 @@ allows access from the command. Using the commands `git --version`,
 `dotnet --info`, and `code --version` should all render without error from their 
 respective console.
 
-* [Install Git](guides/install-git.md)
+### Installation Order
+While not critical, the oder below should be followed to allow the Git installer
+to identify the existaince of the VS Code Editor.
+
 * [Install .Net Core SDK](guides/install-dotnet-core.md)
 * [Install VS Code Editor](guides/install-vs-code.md)
+* [Install Git](guides/install-git.md)
