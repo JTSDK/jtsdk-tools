@@ -1,2 +1,2 @@
 ## Core Tools Installation
-Under developent
+Under development

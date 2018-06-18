@@ -7,10 +7,10 @@ JTSDK Tools Version 3 is broken down into two primary install groups:
 In addition to the required tools and frameworks, there are a number of additional
 components the `JTSDK Tools Environment` will be supporting:
 
-* [Python Tools](jtsdk-python-tools-install.md)
-* [Java Tools](jtsdk-java-tools-install-java.md)
-* [Database Tools](jtsdk-db-tools-install.md)
-* [Miscellaneous Tools](jtsdk-misc-tools-install.md)
+* [Python Tools](jtsdk-python-install.md)
+* [Java Tools](jtsdk-java-install-java.md)
+* [Database Tools](jtsdk-db-install.md)
+* [Miscellaneous Tools](jtsdk-misc-install.md)
 
 While not absolute, the order of installaiton an configuraiton should be
 followed to prevent missing critical steps, or, missing out on a particular
