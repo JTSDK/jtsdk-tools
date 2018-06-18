@@ -9,6 +9,11 @@ three applications installed at the `system level`.
 | [Dotnet Core](https://docs.microsoft.com/en-us/dotnet/core/index) | Cross Platform Framework based on [C-Charp] |
 | [Visual Studio Code](https://code.visualstudio.com/docs/supporting/faq#_what-is-the-difference-between-vs-code-and-vs-community) |Powerful Cross-Platform Editor |
 
+## Prerequisite Install Walkthrough:
+The following guides are provided to assist users with installing 
+`JTSDK Tool Chain` prerequisite  applications. All three applications are installed
+to the `Default System Install Location(s)` if the guides are followed.
+
 >IMPORTANT - It is up to the user where these packages are installed. However, 
 unless there are specific reasons to *NOT* use the default install locations,
 it's `highly advisable` to use the recommended installer locations.
@@ -18,11 +23,6 @@ not, users should add--either locally or system wide--the path locations which
 allows access from the command. Using the commands `git --version`,
 `dotnet --info`, and `code --version` should all render without error from their 
 respective console.
-
-## Prerequisite Install Walkthrough:
-The following guides are provided to assist users with installing 
-`JTSDK Tool Chain` prerequisite  applications. All three applications are installed
-to the `Default System Install Location(s)` if the guides are followed.
 
 * [Install Git](guides/install-git.md)
 * [Install .Net Core SDK](guides/install-dotnet-core.md)
