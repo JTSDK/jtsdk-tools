@@ -69,7 +69,7 @@ RapidEE, and others, can be 64-bit as they are tools to help users with
 non-compiling tasks. Each guide will have the `Required` arch-type and indicate
 whether it is acceptable to use 64-bit or not.
 
-## System System Level Installation
+## System Level Installation
 
 JTSDK-Tools requires two packages to be installed at the System Level:
 * For 32-bit `C:\Program Files (x86)`
