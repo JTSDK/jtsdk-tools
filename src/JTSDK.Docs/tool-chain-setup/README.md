@@ -140,7 +140,7 @@ minimum installation.
 | [Subversion](http://svnbook.red-bean.com/en/1.6/svn.intro.whatis.html) | Cross-Platform Version Control System |
 
 ### Python Tools
-The following tools can be installed in addition to the `JTSDK Tool Chain`.
+The following tools can be installed in addition to the `JTSDK Core Tool Chain`.
 
 > See [Python Install Instructions](jtsdk-python-install.md) for details.
 
@@ -179,7 +179,7 @@ The following tools are general purpose database applications and / or servers.
 
 ### Miscellaneous Tools
 
-The following tools can be installed in addition to the `JTSDK Tool Chain`.
+The following tools can be installed in addition to the `JTSDK Core Tool Chain`.
 
 > See [Miscellaneous Tools Install Instructions](jtsdk-misc-install.md) for details.
 
