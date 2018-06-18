@@ -35,8 +35,8 @@ it is highly recommended to use x86-64 if your hardware supports it.
 
 ## Installation
 Installation of this package should follow the tool-chain installation and
-setup. If you've not already done so, review the [Tool Chain Overview](./src/JTSDK.Docs/guides/tool-chain-setup/README.md)
-and the [Tool Cahin Installaiton](./src/JTSDK.Docs/guides/tool-chain-setup/guides/tool-chain-installation.md)
+setup. If you've not already done so, review the [Tool Chain Overview](src/JTSDK.Docs/tool-chain-setup/README.md)
+and the [Tool Cahin Installaiton](src/JTSDK.Docs/tool-chain-setup/guides/tool-chain-installation.md)
 guides **before** checking out and compiling the source code.
 
 ```
