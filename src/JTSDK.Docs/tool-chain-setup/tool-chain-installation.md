@@ -20,9 +20,9 @@ allows access from the command. Using the commands `git --version`,
 respective console.
 
 ## Prerequisite Install Walkthroughs:
-The following guides are provides to assist users with installting the 
-prerequisite `JTSDK Tool Chain` applications. All three are install to the
-`Default System Install Locations` if the guides are followed.
+The following guides are provided to assist users with installing the 
+prerequisite `JTSDK Tool Chain` applications. All three applications are installed
+to the `Default System Install Locations` if the guides are followed.
 
 * [Install Git](install-git.md)
 * [Install .Net Core SDK]()
