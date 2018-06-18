@@ -2,7 +2,7 @@
 
 Last Update : June 17th, 2018
 
-| Application Data |
+| Application Data ||
 | ---| --- |
 | Name        | Git SCM |
 | Version     | 2.17.1.2 |
