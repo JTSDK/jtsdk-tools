@@ -127,10 +127,11 @@ minimum installation.
 
 ### JTSDK Java Tools
 
-The folowing tools are generally related to Java and associate build activities.
+The folowing tools are generally related to Java and associated build activities.
 While applications such as [Gradle](https://gradle.org/) and [Eclipse](https://www.eclipse.org/downloads/)
 may very well apply to other programming languages, they are most commonly used
-in Java development.
+in [Java](http://www.oracle.com/technetwork/java/javase/downloads/index.html) 
+related application development.
 
 | Application | Purpose |
 | --- | --- |
