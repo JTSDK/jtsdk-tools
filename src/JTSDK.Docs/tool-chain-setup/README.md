@@ -110,9 +110,9 @@ three applications installed at the `system level`.
 
 | Application | Purpose |
 | :--- | :--- |
-| [Git DCVS](https://git-scm.com/) | Distributed Version Control System Client |
-| [Dotnet Core](https://docs.microsoft.com/en-us/dotnet/core/index) | Cross Platform Framework based on [C-Charp](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/) |
+| [Microsoft .Net Core SDK](https://docs.microsoft.com/en-us/dotnet/core/index) | Cross Platform Framework based on [C-Charp](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/) |
 | [Visual Studio Code](https://code.visualstudio.com/docs) | Powerful Cross-Platform Editor |
+| [Git Client](https://git-scm.com/) | Distributed Version Control System Client |
 
 ### Core Tools
 The following tools are required and comprise the `JTSDK Core Tool Chain`.
