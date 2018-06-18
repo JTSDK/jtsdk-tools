@@ -112,7 +112,7 @@ three applications installed at the `system level`.
 | :--- | :--- |
 | [Git DCVS](https://git-scm.com/) | Distributed Version Control System Client |
 | [Dotnet Core](https://docs.microsoft.com/en-us/dotnet/core/index) | Cross Platform Framework based on [C-Charp] |
-| [Visual Studio Code](https://code.visualstudio.com/docs/supporting/faq#_what-is-the-difference-between-vs-code-and-vs-community) | Powerful Cross-Platform Editor |
+| [Visual Studio Code](https://code.visualstudio.com/docs) | Powerful Cross-Platform Editor |
 
 ### Core Tools
 The following tools are required and comprise the `JTSDK Core Tool Chain`.
