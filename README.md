@@ -73,7 +73,7 @@ cd /d (C|D):\JTSDK-Tools
 set JTSDK_HOME=%CD%
 
 # Change Directories To The Cloned Repository
-cd /d (C|D):\JTSDK-Tools\src\jtsdk-dotnet-core
+cd /d %JTSDK_HOME%\src\jtsdk-dotnet-core
 
 # Update Source
 git pull origin master
