@@ -98,8 +98,8 @@ installer before installaiton unless advised otherwise.
 ## Tool Chain Matrix
 
 The following matrix provides basic information about each application or
-framework used within the JTSDK-Tools collection. Collections such as [MSYS2](http://www.msys2.org/)
-include many [GNU Core Utils](https://www.gnu.org/software/coreutils/coreutils.html)
+framework used within the `JTSDK Tool Chain` collection. Collections such as
+[MSYS2](http://www.msys2.org/) include many [GNU Core Utils](https://www.gnu.org/software/coreutils/coreutils.html)
 that are not outlined specifically in this document. For more information a given
 item, following the links provided.
 
