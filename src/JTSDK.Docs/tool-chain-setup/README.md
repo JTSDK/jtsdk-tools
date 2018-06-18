@@ -1,16 +1,16 @@
 # JTSDK Tool Chain Overview
 
 JTSDK Tools Version 3 is broken down into two primary install groups:
-* [Prerequisite Tools](jtsdk-prereq-install.md#prerequisite-installation)
-* [Core Tools](jtsdk-core-install.md)
+* [Prerequisite Tools](#prerequisite-tools)
+* [Core Tools](#core-tools)
 
 In addition to the required tools and frameworks, there are a number of additional
 components the `JTSDK Tools Environment` will be supporting:
 
-* [Python Tools](jtsdk-python-install.md)
-* [Java Tools](jtsdk-java-install.md)
-* [Database Tools](jtsdk-db-install.md)
-* [Miscellaneous Tools](jtsdk-misc-install.md)
+* [Python Tools](#python-tools)
+* [Java Tools](#java-tools)
+* [Database Tools](#database-tools)
+* [Miscellaneous Tools](#miscellaneous-tools)
 
 While not absolute, the order of installaiton an configuraiton should be
 followed to prevent missing critical steps, or, missing out on a particular
@@ -138,6 +138,15 @@ minimum installation.
 | [Qt](https://www.qt.io/) | Cross-Platform Development Framework |
 | [Ruby](https://www.ruby-lang.org/en/) | Open source programming language |
 | [Subversion](http://svnbook.red-bean.com/en/1.6/svn.intro.whatis.html) | Cross-Platform Version Control System |
+
+### Python Tools
+The following tools can be installed in addition to the `JTSDK Tool Chain`.
+
+> See [Python Install Instructions](jtsdk-python-install.md) for details.
+
+| Application | Purpose |
+| :--- | :--- |
+| [Anaconda Python](https://www.anaconda.com/) | Python data science platform system |
 
 ### Java Tools
 
