@@ -35,12 +35,12 @@ available form the command line, there is *no need* to re-install it for `JTSDK`
 usage.
 
 ## Installaiton Walkthrough
-The following walks through the steps known to work with JTSDK.
+The following walks through the steps known to work with `JTSDK`.
 
 > IMPORTANT - The steps below are mere recommendations, and not set in stone. If
 you have a particular preference or need for an option, you should use your own
-judegment during the isntallaiton. If a specific option is needed by `JTSDK`, it
-will be made known during the relevate section.
+judegment during the installation. If a specific option is needed by `JTSDK`, it
+will be made known during the relevant section.
 
 [Download](https://git-scm.com/download/win) the appropriate installer
 from [git-scm.com](https://git-scm.com/). Run the installer and follow the steps
