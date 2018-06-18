@@ -1,7 +1,8 @@
 # Prerequisite Installaiton
 
 This guide will walk users through the basic installaiton and subsequent
-configuration of the core tool chain. As the tool-chain is updated, this package will track with those changes.
+configuration of the core tool chain. As the tool-chain is updated, this package
+will track with those changes.
 
 In order to checkout and compile this package, users must have three
 utilities installed at the `system level`.
