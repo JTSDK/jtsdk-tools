@@ -106,7 +106,7 @@ item, following the links provided.
 The intension is to limit download and installation footprints to a bare minimum
 for each workload type. 
 
-### JTSDK Core Tools
+### Core Tools
 The following tools are required and comprise the `JTSDK Core Tool Chain`.
 All of the tool in this group are required, and should be considered the bare
 minimum installation.
@@ -125,7 +125,7 @@ minimum installation.
 | [Ruby](https://www.ruby-lang.org/en/) | Open source programming language |
 | [Visual Studio Code](https://code.visualstudio.com/docs/supporting/faq#_what-is-the-difference-between-vs-code-and-vs-community) |Powerful Cross-Platform Editor |
 
-### JTSDK Java Tools
+### Java Tools
 
 The folowing tools are generally related to Java and associated build activities.
 While applications such as [Gradle](https://gradle.org/) and [Eclipse](https://www.eclipse.org/downloads/)
@@ -141,7 +141,7 @@ related application development.
 | [Maven](https://maven.apache.org/index.html) | Build System from the [Apache Foundation](https://www.apache.org/) |
 | [Tomcat](https://tomcat.apache.org/) | Open Source Cross-Platform server for: Java Servlet and JavaServer Pages from the [Apache Foundation](https://www.apache.org/) |
 
-### JTSDK Database Tools
+### Database Tools
 
 The following tools are general purpose database applications and / or servers.
 
@@ -150,7 +150,7 @@ The following tools are general purpose database applications and / or servers.
 | [PostgreSQL](https://www.postgresql.org/download/windows/) | Advanced High Performance Relational Database  |
 | [Sqlite](https://sqlite.org/about.html) | A powerful In-Process SQL Database Engine  |
 
-### JTSDK Miscellaneous Tools
+### Miscellaneous Tools
 
 The following tools are can be installed in addition to the `JTSDK Tool Chain`.
 
