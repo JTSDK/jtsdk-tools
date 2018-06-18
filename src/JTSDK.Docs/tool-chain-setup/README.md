@@ -107,7 +107,7 @@ The intension is to limit download and installation footprints to a bare minimum
 for each workload type. 
 
 ### JTSDK Core Tools
-The following tools are required and comprise comprise the `JTSDK Core Tool Chain`.
+The following tools are required and comprise the `JTSDK Core Tool Chain`.
 All of the tool in this group are required, and should be considered the bare
 minimum installation.
 
