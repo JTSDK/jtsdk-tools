@@ -119,7 +119,7 @@ item, following the links provided.
 | [NSIS](http://nsis.sourceforge.net/Main_Page) | Professional open source system to create Windows installers |
 | [Pandoc](https://pandoc.org/index.html) | Cross-Platform document conversion utility |
 | [PKG-Config](https://sourceforge.net/projects/pkgconfiglite/) | Package Config built for Windows |
-| [Qt](https://www.qt.io/) | Cross-Platform Devemoment Framework |
+| [Qt](https://www.qt.io/) | Cross-Platform Development Framework |
 | [Ruby](https://www.ruby-lang.org/en/) | Open source programming language |
 | [Sqlite](https://sqlite.org/about.html) | A powerful In-Process SQL Database Engine  |
 | [Subversion](http://svnbook.red-bean.com/en/1.6/svn.intro.whatis.html) | Cross-Platform Version Control System |
