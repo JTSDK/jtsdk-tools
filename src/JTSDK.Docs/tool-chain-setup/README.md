@@ -5,7 +5,7 @@ JTSDK Tools Version 3 is broken down into two primary areas:
 * [Core Tools](guides/tool-chain-installation.md#core-tools-installation)
 
 In addition to the required tools and frameworks, there are a number of major
-framwwork components the `JTSDK Tools Environment` will be supporting:
+framewwork components the `JTSDK Tools Environment` will be supporting:
 
 * [Anaconda Python](guides/install-anaconda-python.md)
 * [Java](guides/install-java.md)
