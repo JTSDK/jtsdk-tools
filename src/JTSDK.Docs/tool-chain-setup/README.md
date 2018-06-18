@@ -112,7 +112,7 @@ item, following the links provided.
 In order to checkout and compile the `JTSDK .Net Core Package`, users must have
 three applications installed at the `system level`.
 
-> See [Prereq Install Instructions]((jtsdk-prereq-install.md#prerequisite-installation)) for details.
+> See [Prereq Install Instructions](jtsdk-prereq-install.md#prerequisite-installation) for details.
 
 | Application | Purpose |
 | :--- | :--- |
