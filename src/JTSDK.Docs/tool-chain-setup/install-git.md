@@ -1,13 +1,13 @@
-# Git Installation
+# Git DCVS
 
 Last Update : June 17th, 2018
 
 | Application Data ||
 | ---| --- |
-| Name        | Git SCM |
+| Name        | Git-SCM |
 | Version     | 2.17.1.2 |
 | Arch        | 64 or 32 Bit |
-| Description | Distributed Version Contol System |
+| Description | Distributed Version Contol System Client|
 
 ## Helpful Links
 * Download : [git-for-windows](https://git-scm.com/download/win)

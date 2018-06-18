@@ -7,10 +7,10 @@ JTSDK Tools Version 3 is broken down into two primary areas:
 In addition to the required tools and frameworks, there are a number of optional
 items the tool chain will be supporting:
 
-* [Anaconda Python](#anaconda-python)
-* [Java](#Java)
-* [PostgreSQL Database](#postgresql)
-* [Visual Studio (Windows Only)](#vistual-studio)
+* [Anaconda Python](install-anaconda-python.md)
+* [Java](install-java.md)
+* [PostgreSQL Database](install-postgresql.md)
+* [Visual Studio (Windows Only)](install-vistual-studio.md)
 
 While not absolute, the order of installaiton an configuraiton should be
 followed to prevent missing critical steps, or, missing out on a particular
