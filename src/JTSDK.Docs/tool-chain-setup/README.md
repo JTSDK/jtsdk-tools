@@ -115,7 +115,7 @@ All of the tool in this group are required, and should be considered the bare
 minimum installation.
 
 | Application | Purpose |
-| --- | --- |
+| :--- | :--- |
 | [Asciidoctor](https://asciidoctor.org/docs/) | General purpose documeatation system based on [Ruby](https://www.ruby-lang.org/en/) | 
 | [CMake](https://cmake.org/) | Cross-Platform tools to build, test and deploy software |
 | [Dotnet Core](https://docs.microsoft.com/en-us/dotnet/core/index) | Cross Platform Framework based on [C-Charp](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/) |
@@ -137,7 +137,7 @@ in [Java](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 related application development.
 
 | Application | Purpose |
-| --- | --- |
+| :--- | :--- |
 | [Java](http://www.oracle.com/technetwork/java/javase/downloads/index.html) | Cross-Platform Programming Language |
 | [Eclipse](https://www.eclipse.org/downloads/) | Cross-Platform IDE primarily for Java Application Development |
 | [Gradle](https://gradle.org/) | Cross-Platform tools for building and deploying applications |
@@ -149,16 +149,16 @@ related application development.
 The following tools are general purpose database applications and / or servers.
 
 | Application | Purpose |
-| --- | --- |
+| :--- | :--- |
 | [PostgreSQL](https://www.postgresql.org/download/windows/) | Advanced High Performance Relational Database  |
 | [Sqlite](https://sqlite.org/about.html) | A powerful In-Process SQL Database Engine  |
 
 ### Miscellaneous Tools
 
-The following tools are can be installed in addition to the `JTSDK Tool Chain`.
+The following tools can be installed in addition to the `JTSDK Tool Chain`.
 
 | Application | Purpose |
-| --- | --- |
+| :--- | :--- |
 | [Visual Studio](https://www.visualstudio.com/vs/) | Fully-featured integrated development environment (IDE) for Android, iOS, Windows, web, and cloud |
 | [DocFX](https://dotnet.github.io/docfx/) | Generates documentation directly from source code |
 | [Pandoc](https://pandoc.org/index.html) | Cross-Platform document conversion utility |
