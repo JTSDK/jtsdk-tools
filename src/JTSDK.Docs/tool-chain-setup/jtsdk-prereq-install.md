@@ -1,7 +1,7 @@
 ## Prerequisite Installation
 
-In order to checkout and compile this package, users must have three
-utilities installed at the `system level`.
+In order to checkout and compile the `JTSDK .Net Core Package`, users must have
+three applications installed at the `system level`.
 
 | Application | Purpose |
 | :--- | :--- |
