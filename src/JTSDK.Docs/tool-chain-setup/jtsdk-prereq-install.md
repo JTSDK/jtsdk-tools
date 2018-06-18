@@ -26,8 +26,8 @@ respective console.
 
 ### Installation Order
 While not critical, the oder below should be followed to allow the Git installer
-to identify the existaince of the VS Code Editor, nd VS Code editor to easily
-find the [.Net Core SDK](guides/install-dotnet-core.md)
+to identify the existaince of the [VS Code Editor](guides/install-vs-code.md),
+and [VS Code Editor](guides/install-vs-code.md) to easily find the [.Net Core SDK](guides/install-dotnet-core.md).
 
 * [Install .Net Core SDK](guides/install-dotnet-core.md)
 * [Install VS Code Editor](guides/install-vs-code.md)
