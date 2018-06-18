@@ -10,7 +10,7 @@ items the tool chain will be supporting:
 * [Anaconda Python](guides/install-anaconda-python.md)
 * [Java](guides/install-java.md)
 * [PostgreSQL Database](guides/install-postgresql.md)
-* [Visual Studio (Windows Only)](guides/install-vistual-studio.md)
+* [Visual Studio (Windows Only)](guides/install-visual-studio.md)
 
 While not absolute, the order of installaiton an configuraiton should be
 followed to prevent missing critical steps, or, missing out on a particular
