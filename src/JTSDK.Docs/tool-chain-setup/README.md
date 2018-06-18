@@ -71,13 +71,13 @@ whether it is acceptable to use 64-bit or not.
 
 ## System Level Installation
 
-JTSDK-Tools requires two packages to be installed at the System Level:
+The JTSDK Tool Chain requires thhree packages to be installed at the System Level:
 * For 32-bit `C:\Program Files (x86)`
 * For 64-bit `C:\Program Files`
 
 If the application in question is not installed to the Windows default system
 installation locaiton, they must be added to the System or User path variables.
-In either case, the application must be available when opening a non-privilaged
+In either case, the applications must be available when opening a non-privilaged
 Windows Console. Many applicaiton installers use the system folders by default.
 However, there are no gaurentees, and users should verify the location for 
 any System Level application requirment.
@@ -143,7 +143,7 @@ related application development.
 
 ### JTSDK Database Tools
 
-The following tools general purpose database applications and / or servers.
+The following tools are general purpose database applications and / or servers.
 
 | Application | Purpose |
 | --- | --- |
