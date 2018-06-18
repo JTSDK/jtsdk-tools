@@ -1,15 +1,16 @@
 # JTSDK Tool Chain Overview
 
-JTSDK Tools Version 3 is broken down into two primary areas:
-* [Prerequisite Applications](guides/tool-chain-installation.md#prerequisite-applications)
-* [Core Tools](guides/tool-chain-installation.md#core-tools-installation)
+JTSDK Tools Version 3 is broken down into two primary install groups:
+* [Prerequisite Tools](jtsdk-prereq-install.md#prerequisite-tools)
+* [Core Tools](jtsdk-core-tools-install.md#core-tools-installation)
 
-In addition to the required tools and frameworks, there are a number of major
-framewwork components the `JTSDK Tools Environment` will be supporting:
+In addition to the required tools and frameworks, there are a number of additional
+components the `JTSDK Tools Environment` will be supporting:
 
-* [Anaconda Python](guides/install-anaconda-python.md)
-* [Java](guides/install-java.md)
-* [PostgreSQL Database](guides/install-postgresql.md)
+* [Python Tools](jtsdk-python-tools-install.md)
+* [Java Tools](jtsdk-java-tools-install-java.md)
+* [Database Tools](jtsdk-db-tools-install.md)
+* [Miscellaneous Tools](jtsdk-misc-tools-install.md)
 
 While not absolute, the order of installaiton an configuraiton should be
 followed to prevent missing critical steps, or, missing out on a particular
@@ -98,16 +99,10 @@ installer before installaiton unless advised otherwise.
 The [Tool Chain Matrix(s)](#tool-chain-matrix) provides a brief description and
 links to each application or framework used within `JTSDK-Tools`. `Installation`,
 `Configuration` and `Removal` will be outlined in each of the respective
-application or framework documents as appropriate.
-
-The following matrices provides basic information about each application or
-framework used within the `JTSDK Tool Chain` collection. Collections such as
+application or framework documents as appropriate. Collections such as
 [MSYS2](http://www.msys2.org/) include many [GNU Core Utils](https://www.gnu.org/software/coreutils/coreutils.html)
 that are not outlined specifically in this document. For more information a given
 item, following the links provided.
-
-The intension is to limit download and installation footprints to a bare minimum
-for each workload type. 
 
 ### Core Tools
 The following tools are required and comprise the `JTSDK Core Tool Chain`.
@@ -118,14 +113,18 @@ minimum installation.
 | :--- | :--- |
 | [Asciidoctor](https://asciidoctor.org/docs/) | General purpose documeatation system based on [Ruby](https://www.ruby-lang.org/en/) | 
 | [CMake](https://cmake.org/) | Cross-Platform tools to build, test and deploy software |
+| [DocFX](https://dotnet.github.io/docfx/) | Generates documentation directly from source code |
 | [Dotnet Core](https://docs.microsoft.com/en-us/dotnet/core/index) | Cross Platform Framework based on [C-Charp](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/) |
 | [FFTW](http://fftw.org/) | Subroutine library for computing the discrete Fourier transform (DFT) in one or more dimensions |
+| [InnoSetup](http://www.jrsoftware.org/isinfo.php) | Install and build system for Windows applications |
 | [Libusb](https://libusb.info/) | C-Library providing access to USB devices on Windows |
 | [MSYS2](http://www.msys2.org/) | A collection of GNU Tools for Windows with [Pacman package manager](https://wiki.archlinux.org/index.php/Pacman) |
 | [NSIS](http://nsis.sourceforge.net/Main_Page) | Professional open source system to create Windows installers |
+| [Pandoc](https://pandoc.org/index.html) | Cross-Platform document conversion utility |
 | [PKG-Config](https://sourceforge.net/projects/pkgconfiglite/) | Package Config built for Windows |
 | [Qt](https://www.qt.io/) | Cross-Platform Development Framework |
 | [Ruby](https://www.ruby-lang.org/en/) | Open source programming language |
+| [Subversion](http://svnbook.red-bean.com/en/1.6/svn.intro.whatis.html) | Cross-Platform Version Control System |
 | [Visual Studio Code](https://code.visualstudio.com/docs/supporting/faq#_what-is-the-difference-between-vs-code-and-vs-community) |Powerful Cross-Platform Editor |
 
 ### Java Tools
@@ -159,8 +158,5 @@ The following tools can be installed in addition to the `JTSDK Tool Chain`.
 
 | Application | Purpose |
 | :--- | :--- |
+| [RapidEE](https://www.rapidee.com/en/about) | Rapid Environment Editor (RapidEE) is an environment variables editor. |
 | [Visual Studio](https://www.visualstudio.com/vs/) | Fully-featured integrated development environment (IDE) for Android, iOS, Windows, web, and cloud |
-| [DocFX](https://dotnet.github.io/docfx/) | Generates documentation directly from source code |
-| [Pandoc](https://pandoc.org/index.html) | Cross-Platform document conversion utility |
-| [InnoSetup](http://www.jrsoftware.org/isinfo.php) | Install and build system for Windows applications |
-| [Subversion](http://svnbook.red-bean.com/en/1.6/svn.intro.whatis.html) | Cross-Platform Version Control System |

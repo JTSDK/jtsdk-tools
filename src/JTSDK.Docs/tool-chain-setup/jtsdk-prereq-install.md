@@ -24,9 +24,9 @@ The following guides are provided to assist users with installing
 `JTSDK Tool Chain` prerequisite  applications. All three applications are installed
 to the `Default System Install Location(s)` if the guides are followed.
 
-* [Install Git](install-git.md)
-* [Install .Net Core SDK]()
-* [Install VS Code Editor]()
+* [Install Git](guides/install-git.md)
+* [Install .Net Core SDK](guides/install-dotnet-core.md)
+* [Install VS Code Editor](guides/install-vs-code.md)
 
 ## Core Tools Installation
 Under developent
