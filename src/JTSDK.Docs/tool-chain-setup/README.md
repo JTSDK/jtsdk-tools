@@ -109,6 +109,7 @@ In order to checkout and compile the `JTSDK .Net Core Package`, users must have
 three applications installed at the `system level`.
 
 | Application | Purpose |
+| :--- | :--- |
 | [Git DCVS](https://git-scm.com/) | Distributed Version Control System Client |
 | [Dotnet Core](https://docs.microsoft.com/en-us/dotnet/core/index) | Cross Platform Framework based on [C-Charp] |
 | [Visual Studio Code](https://code.visualstudio.com/docs/supporting/faq#_what-is-the-difference-between-vs-code-and-vs-community) |Powerful Cross-Platform Editor |
