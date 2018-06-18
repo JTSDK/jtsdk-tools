@@ -8,7 +8,7 @@ In addition to the required tools and frameworks, there are a number of addition
 components the `JTSDK Tools Environment` will be supporting:
 
 * [Python Tools](jtsdk-python-install.md)
-* [Java Tools](jtsdk-java-install-java.md)
+* [Java Tools](jtsdk-java-install.md)
 * [Database Tools](jtsdk-db-install.md)
 * [Miscellaneous Tools](jtsdk-misc-install.md)
 
