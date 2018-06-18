@@ -1,7 +1,7 @@
 # JTSDK Tool Chain Overview
 
 JTSDK Tools Version 3 is broken down into two primary install groups:
-* [Prerequisite Tools](jtsdk-prereq-install.md#prerequisite-tools)
+* [Prerequisite Tools](jtsdk-prereq-install.md#prerequisite-installation)
 * [Core Tools](jtsdk-core-tools-install.md#core-tools-installation)
 
 In addition to the required tools and frameworks, there are a number of additional
