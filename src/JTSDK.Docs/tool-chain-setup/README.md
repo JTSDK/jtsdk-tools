@@ -1,4 +1,4 @@
-# JTSDK Tools Overview
+# JTSDK Tool Chain Overview
 
 JTSDK Tools Version 3 is broken down into two primary areas:
 * [Prerequisite Applications](guides/tool-chain-installation.md#prerequisite-applications)
