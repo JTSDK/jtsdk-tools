@@ -38,6 +38,8 @@ JTSDK_HOME = C:\JTSDK-Tools
 # D-Drive Installaiton
 JTSDK_HOME = D:\JTSDK-Tools
 ```
+
+## Setting JTSDK_HOME Variable
 On several occasions, you will be required to set `JTSDK_HOME` temporarily. The
 following shows how to do this for either `(C|D)` installation locations. 
 ```
