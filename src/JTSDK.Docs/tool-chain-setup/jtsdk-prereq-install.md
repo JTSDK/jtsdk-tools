@@ -31,6 +31,6 @@ While not critical, the order below should be followed to allow the
 [VS Code Editor](guides/install-vs-code.md) to easily find the 
 [.Net Core SDK](guides/install-dotnet-core.md).
 
-* [Install .Net Core SDK](guides/install-dotnet-core.md)
-* [Install VS Code Editor](guides/install-vs-code.md)
-* [Install Git](guides/install-git.md)
+1. [Install .Net Core SDK](guides/install-dotnet-core.md)
+2. [Install VS Code Editor](guides/install-vs-code.md)
+3. [Install Git](guides/install-git.md)
