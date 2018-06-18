@@ -38,9 +38,9 @@ Installation of this package should follow the tool-chain installation and
 setup. If you've not already done so, review the following guides **before**
 checking out and compiling the source code.
 
-* [Tool Chain Overview](src/JTSDK.Docs/tool-chain-setup/README.md)
-* [Prerequisite Tools Install](src/JTSDK.Docs/tool-chain-setup/jtsdk-prereq-install.md)
-* [Core Tools Install](src/JTSDK.Docs/tool-chain-setup/jtsdk-core-install.md)
+* [Tool Chain Overview](src/JTSDK.Docs/tool-chain-setup/win21/README.md)
+* [Prerequisite Tools Install](src/JTSDK.Docs/tool-chain-setup/win32/jtsdk-prereq-install.md)
+* [Core Tools Install](src/JTSDK.Docs/tool-chain-setup/win32/jtsdk-core-install.md)
 
 ```
 # Open a Windows Console, then change directories to the JTSDK-Tools installation
