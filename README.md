@@ -2,10 +2,10 @@
 This repository is designed to work specifically with the JTSDK Version 3 series
 tool-chain. It would be of little use elsewhere.
 
-Delivery will be a frequent release of the of the `master` branch. `Branches`
-will be used for development and testing, keeping the `master` branch in a stable
-condition for end users. `Tags` will be use to archive milestones and will
-appear in the [release section](https://github.com/KI7MT/jtsdk-dotnet-core/releases).
+Delivery will be directly from the `master` branch. `Branches` will be used for
+development and testing, while reserving the `master` branch in a stable
+condition for end users. `Tags` will be use to archive milestones and will appear
+in the [release section](https://github.com/KI7MT/jtsdk-dotnet-core/releases).
 
 ## Bug Reports and Feature Requests
 For submitting bug reports and feature requests, use the [Issue Tracker](https://github.com/KI7MT/jtsdk-dotnet-core/issues).
