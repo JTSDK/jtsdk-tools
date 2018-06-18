@@ -4,17 +4,22 @@ JTSDK Tools Version 3 is broken down into two primary areas:
 * [Prerequisite Applications](guides/tool-chain-installation.md#prerequisite-applications)
 * [Core Tools](guides/tool-chain-installation.md#core-tools-installation)
 
-In addition to the required tools and frameworks, there are a number of optional
-components the `JTSDK Tools Environment` will be supporting:
+In addition to the required tools and frameworks, there are a number of major
+framwwork components the `JTSDK Tools Environment` will be supporting:
 
 * [Anaconda Python](guides/install-anaconda-python.md)
 * [Java](guides/install-java.md)
 * [PostgreSQL Database](guides/install-postgresql.md)
-* [Visual Studio (Windows Only)](guides/install-visual-studio.md)
 
 While not absolute, the order of installaiton an configuraiton should be
 followed to prevent missing critical steps, or, missing out on a particular
 feature from another installaiton process.
+
+## .Net Core Usage
+At present, [.Net Core](https://docs.microsoft.com/en-us/dotnet/core/index) is
+only used at the environment configuration stage. Its the long term intention to
+convert all Bash and Windows Batch/CMD scripts over to [.Net Core](https://docs.microsoft.com/en-us/dotnet/core/index).
+
 
 ## Language and Syntax
 
@@ -82,13 +87,6 @@ Windows Console. Many applicaiton installers use the system folders by default.
 However, there are no gaurentees, and users should verify the location for 
 any System Level application requirment.
 
-## Tool Chain Install Overview
-
-The [Tool Chain Matrix](#tool-chain-matrix) provides a bried description and link to
-each application or framework within `JTSDK-Tools`. `Installation`, `Configuration`
-and `Removal` will be outlined in each of the respective application or framework
-documents as appropriate.
-
 ## Third Party Installers
 
 >One or more of the tool chain components may be provided by Third Party
@@ -96,6 +94,11 @@ Installers. Users should always check for the latest version of the respective
 installer before installaiton unless advised otherwise.
 
 ## Tool Chain Matrix
+
+The [Tool Chain Matrix(s)](#tool-chain-matrix) provides a brief description and
+links to each application or framework used within `JTSDK-Tools`. `Installation`,
+`Configuration` and `Removal` will be outlined in each of the respective
+application or framework documents as appropriate.
 
 The following matrices provides basic information about each application or
 framework used within the `JTSDK Tool Chain` collection. Collections such as
