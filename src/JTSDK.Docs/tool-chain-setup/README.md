@@ -1,8 +1,9 @@
 # JTSDK Tool Chain Overview
 
-JTSDK Tools Version 3 is broken down into two primary install groups:
+JTSDK Tools Version 3 is broken down into three primary install groups:
 * [Prerequisite Tools](#prerequisite-tools)
 * [Core Tools](#core-tools)
+* [JTSDK .Net Core Package](https://github.com/KI7MT/jtsdk-dotnet-core)
 
 In addition to the required tools and frameworks, there are a number of additional
 components the `JTSDK Tools Environment` will be supporting:
