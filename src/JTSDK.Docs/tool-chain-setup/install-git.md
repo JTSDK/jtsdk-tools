@@ -1,4 +1,4 @@
-# Git DCVS
+# Git DCVS Client
 
 Last Update : June 17th, 2018
 
