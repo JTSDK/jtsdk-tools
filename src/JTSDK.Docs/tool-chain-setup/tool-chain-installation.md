@@ -1,5 +1,3 @@
-# Prerequisite Installaiton
-
 This guide will walk users through the basic installaiton and subsequent
 configuration of the core tool chain. As the tool-chain is updated, this package
 will track with those changes.
