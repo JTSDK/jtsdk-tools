@@ -23,7 +23,7 @@ allows access from the command. Using the commands `git --version`,
 `dotnet --info`, and `code --version` should all render without error from their 
 respective console.
 
-### Installation Order
+## Installation Order
 While not critical, the order below should be followed to allow the 
 [Git installation](guides/install-git.md) to identify the existaince of the 
 [VS Code Editor](guides/install-vs-code.md), and 
