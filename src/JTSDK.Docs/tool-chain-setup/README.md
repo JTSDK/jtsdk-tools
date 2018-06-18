@@ -2,7 +2,7 @@
 
 JTSDK Tools Version 3 is broken down into two primary areas:
 * [Prerequisite Applications](tool-chain-installation.md#prerequisite-applications)
-* [Core Tools](#core-tools)
+* [Core Tools]((tool-chain-installation.md#core-tools-installation)
 
 In addition to the required tools and frameworks, there are a number of optional
 items the tool chain will be supporting:
