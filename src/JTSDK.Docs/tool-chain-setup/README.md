@@ -104,6 +104,15 @@ application or framework documents as appropriate. Collections such as
 that are not outlined specifically in this document. For more information a given
 item, following the links provided.
 
+### Prerequisite Tools
+In order to checkout and compile the `JTSDK .Net Core Package`, users must have
+three applications installed at the `system level`.
+
+| Application | Purpose |
+| [Git DCVS](https://git-scm.com/) | Distributed Version Control System Client |
+| [Dotnet Core](https://docs.microsoft.com/en-us/dotnet/core/index) | Cross Platform Framework based on [C-Charp] |
+| [Visual Studio Code](https://code.visualstudio.com/docs/supporting/faq#_what-is-the-difference-between-vs-code-and-vs-community) |Powerful Cross-Platform Editor |
+
 ### Core Tools
 The following tools are required and comprise the `JTSDK Core Tool Chain`.
 All of the tool in this group are required, and should be considered the bare
@@ -114,7 +123,7 @@ minimum installation.
 | [Asciidoctor](https://asciidoctor.org/docs/) | General purpose documeatation system based on [Ruby](https://www.ruby-lang.org/en/) | 
 | [CMake](https://cmake.org/) | Cross-Platform tools to build, test and deploy software |
 | [DocFX](https://dotnet.github.io/docfx/) | Generates documentation directly from source code |
-| [Dotnet Core](https://docs.microsoft.com/en-us/dotnet/core/index) | Cross Platform Framework based on [C-Charp](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/) |
+(https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/) |
 | [FFTW](http://fftw.org/) | Subroutine library for computing the discrete Fourier transform (DFT) in one or more dimensions |
 | [InnoSetup](http://www.jrsoftware.org/isinfo.php) | Install and build system for Windows applications |
 | [Libusb](https://libusb.info/) | C-Library providing access to USB devices on Windows |
@@ -125,7 +134,6 @@ minimum installation.
 | [Qt](https://www.qt.io/) | Cross-Platform Development Framework |
 | [Ruby](https://www.ruby-lang.org/en/) | Open source programming language |
 | [Subversion](http://svnbook.red-bean.com/en/1.6/svn.intro.whatis.html) | Cross-Platform Version Control System |
-| [Visual Studio Code](https://code.visualstudio.com/docs/supporting/faq#_what-is-the-difference-between-vs-code-and-vs-community) |Powerful Cross-Platform Editor |
 
 ### Java Tools
 
