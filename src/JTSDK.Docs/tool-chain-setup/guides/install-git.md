@@ -1,4 +1,4 @@
-# Git DCVS Client
+# Git Client Instllation
 
 Last Update : June 17th, 2018
 
