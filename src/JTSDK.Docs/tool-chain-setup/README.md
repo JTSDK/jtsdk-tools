@@ -19,8 +19,9 @@ feature from another installaiton process.
 
 ## .Net Core Usage
 At present, [.Net Core Applicaitons](https://docs.microsoft.com/en-us/dotnet/core/index)
-are only used in setting environment variable and configuration. Its the long term intention to
-convert all Bash and Windows Batch/CMD scripts over to [.Net Core](https://docs.microsoft.com/en-us/dotnet/core/index).
+are only used in setting environment , paths and configuration. Its the long
+term intention to convert all Bash and Windows Batch/CMD scripts over to 
+[.Net Core](https://docs.microsoft.com/en-us/dotnet/core/index).
 
 
 ## Language and Syntax
