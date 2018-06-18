@@ -39,8 +39,8 @@ setup. If you've not already done so, review the following guides **before**
 checking out and compiling the source code.
 
 * [Tool Chain Overview](src/JTSDK.Docs/tool-chain-setup/README.md)
-* [Prerequisite Tools Install](src/JTSDK.Docs/tool-chain-setup/jtsdk-prereq-tools-install.md)
-* [Core Tools Install](src/JTSDK.Docs/tool-chain-setup/tool-chain-installation.md)
+* [Prerequisite Tools Install](src/JTSDK.Docs/tool-chain-setup/jtsdk-prereq-install.md)
+* [Core Tools Install](src/JTSDK.Docs/tool-chain-setup/jtsdk-core-install.md)
 
 ```
 # Open a Windows Console, then change directories to the JTSDK-Tools installation
