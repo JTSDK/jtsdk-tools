@@ -9,7 +9,6 @@ three applications installed at the `system level`.
 | [Visual Studio Code](https://code.visualstudio.com/docs/supporting/faq#_what-is-the-difference-between-vs-code-and-vs-community) |Powerful Cross-Platform Editor |
 | [Git Client](https://git-scm.com/) | Distributed Version Control System Client |
 
-## Prerequisite Install Walkthrough:
 The following guides are provided to assist users with installing 
 `JTSDK Tool Chain` prerequisite applications. All three applications are installed
 to the `Default System Install Location(s)` if the guides are followed.
