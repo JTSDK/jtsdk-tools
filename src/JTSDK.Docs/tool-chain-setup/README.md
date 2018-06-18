@@ -123,7 +123,7 @@ minimum installation.
 | [PKG-Config](https://sourceforge.net/projects/pkgconfiglite/) | Package Config built for Windows |
 | [Qt](https://www.qt.io/) | Cross-Platform Development Framework |
 | [Ruby](https://www.ruby-lang.org/en/) | Open source programming language |
-| [Visual Studio](https://www.visualstudio.com/vs/) | Fully-featured integrated development environment (IDE) for Android, iOS, Windows, web, and cloud |
+| [Visual Studio Code](https://code.visualstudio.com/docs/supporting/faq#_what-is-the-difference-between-vs-code-and-vs-community) |Powerful Cross-Platform Editor |
 
 ### JTSDK Java Tools
 
@@ -155,7 +155,7 @@ The following tools are can be installed in addition to the `JTSDK Tool Chain`.
 
 | Application | Purpose |
 | --- | --- |
-| [Visual Studio Code](https://code.visualstudio.com/docs/supporting/faq#_what-is-the-difference-between-vs-code-and-vs-community) |Powerful Cross-Platform Editor |
+| [Visual Studio](https://www.visualstudio.com/vs/) | Fully-featured integrated development environment (IDE) for Android, iOS, Windows, web, and cloud |
 | [DocFX](https://dotnet.github.io/docfx/) | Generates documentation directly from source code |
 | [Pandoc](https://pandoc.org/index.html) | Cross-Platform document conversion utility |
 | [InnoSetup](http://www.jrsoftware.org/isinfo.php) | Install and build system for Windows applications |
