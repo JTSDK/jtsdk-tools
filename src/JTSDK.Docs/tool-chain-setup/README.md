@@ -112,7 +112,7 @@ three applications installed at the `system level`.
 | :--- | :--- |
 | [Git DCVS](https://git-scm.com/) | Distributed Version Control System Client |
 | [Dotnet Core](https://docs.microsoft.com/en-us/dotnet/core/index) | Cross Platform Framework based on [C-Charp] |
-| [Visual Studio Code](https://code.visualstudio.com/docs/supporting/faq#_what-is-the-difference-between-vs-code-and-vs-community) |Powerful Cross-Platform Editor |
+| [Visual Studio Code](https://code.visualstudio.com/docs/supporting/faq#_what-is-the-difference-between-vs-code-and-vs-community) | Powerful Cross-Platform Editor |
 
 ### Core Tools
 The following tools are required and comprise the `JTSDK Core Tool Chain`.
@@ -124,7 +124,6 @@ minimum installation.
 | [Asciidoctor](https://asciidoctor.org/docs/) | General purpose documeatation system based on [Ruby](https://www.ruby-lang.org/en/) | 
 | [CMake](https://cmake.org/) | Cross-Platform tools to build, test and deploy software |
 | [DocFX](https://dotnet.github.io/docfx/) | Generates documentation directly from source code |
-(https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/) |
 | [FFTW](http://fftw.org/) | Subroutine library for computing the discrete Fourier transform (DFT) in one or more dimensions |
 | [InnoSetup](http://www.jrsoftware.org/isinfo.php) | Install and build system for Windows applications |
 | [Libusb](https://libusb.info/) | C-Library providing access to USB devices on Windows |
