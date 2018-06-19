@@ -108,7 +108,7 @@ application or framework documents as appropriate. Collections such as
 that are not outlined specifically in this document. For more information a given
 item, following the links provided.
 
-### Prerequisite Tools
+## Prerequisite Tools
 In order to checkout and compile the `JTSDK .Net Core Package`, users must have
 three applications installed at the `system level`.
 
@@ -120,7 +120,7 @@ three applications installed at the `system level`.
 | [Visual Studio Code](https://code.visualstudio.com/docs) | Powerful Cross-Platform Editor |
 | [Git Client](https://git-scm.com/) | Distributed Version Control System Client |
 
-### Core Tools
+## Core Tools
 The following tools are required and comprise the `JTSDK Core Tool Chain`.
 All of the tool in this group are required, and should be considered the bare
 minimum installation.
@@ -143,7 +143,7 @@ minimum installation.
 | [Ruby](https://www.ruby-lang.org/en/) | Open source programming language |
 | [Subversion](http://svnbook.red-bean.com/en/1.6/svn.intro.whatis.html) | Cross-Platform Version Control System |
 
-### Python Tools
+## Python Tools
 The following tools can be installed in addition to the `JTSDK Core Tool Chain`.
 
 > See [Python Install Instructions](jtsdk-python-install.md) for details.
@@ -152,7 +152,7 @@ The following tools can be installed in addition to the `JTSDK Core Tool Chain`.
 | :--- | :--- |
 | [Anaconda Python](https://www.anaconda.com/) | Python data science platform system |
 
-### Java Tools
+## Java Tools
 
 The following tools are generally related to Java and associated build activities.
 While applications such as [Gradle](https://gradle.org/) and [Eclipse](https://www.eclipse.org/downloads/)
@@ -170,7 +170,7 @@ related application development.
 | [Maven](https://maven.apache.org/index.html) | Build System from the [Apache Foundation](https://www.apache.org/) |
 | [Tomcat](https://tomcat.apache.org/) | Open Source Cross-Platform server for: Java Servlet and JavaServer Pages from the [Apache Foundation](https://www.apache.org/) |
 
-### Database Tools
+## Database Tools
 
 The following tools are general purpose database applications and / or servers.
 
@@ -181,7 +181,7 @@ The following tools are general purpose database applications and / or servers.
 | [PostgreSQL](https://www.postgresql.org/download/windows/) | Advanced High Performance Relational Database  |
 | [Sqlite](https://sqlite.org/about.html) | A powerful In-Process SQL Database Engine  |
 
-### Miscellaneous Tools
+## Miscellaneous Tools
 
 The following tools can be installed in addition to the `JTSDK Core Tool Chain`.
 
