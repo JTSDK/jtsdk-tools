@@ -1,5 +1,8 @@
 -- Project .............: R-DaaS
--- Author ..............: Greg Beam (KI7MT)
+-- Author ..............: Greg, Beam, KI7MT, <ki7mt@yahoo.com>
+-- Copyright ...........: Copyright (C) 2018 Greg Beam, KI7MT
+-- License .............: GPL-3
+
 -- File ................: R-DaaS_Enum.sql
 -- Description .........: Enumeration Tables for R-DaaS
 -- Database Type .......: PostgreSQL v10 or later
@@ -440,4 +443,4 @@ ALTER TABLE enum.submode ADD CONSTRAINT fk_submode_mode
 ALTER TABLE enum.submode ADD CONSTRAINT fk_submode_mode_description
     FOREIGN KEY (mode_description_id) REFERENCES enum.mode_description (mode_description_id);
 
--- END OF SQL SCRIPT
+-- END R-DaaS-Enum.sql
