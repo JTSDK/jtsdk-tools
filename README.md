@@ -81,3 +81,6 @@ git pull origin master
 # Install New Update
 make install
 ```
+
+## Documentation
+Installation and other documents are located in the [JTSDK .Net Core Wiki](https://github.com/KI7MT/jtsdk-dotnet-core/wiki)

@@ -383,22 +383,22 @@ CREATE TABLE enum.weblink
 -- *****************************************************************************
 --  CSV FILE DATA
 -- *****************************************************************************
-COPY enum.antenna_path FROM 'D:/tmp/antenna-path-enum.csv' DELIMITER '|' CSV HEADER;
-COPY enum.arrl_section FROM 'D:/tmp/arrl-section-enum.csv' DELIMITER '|' CSV HEADER;
-COPY enum.award FROM 'D:/tmp/award-enum.csv' DELIMITER '|' CSV HEADER;
-COPY enum.band FROM 'D:/tmp/band-enum.csv' DELIMITER '|' CSV HEADER;
-COPY enum.contest FROM 'D:/tmp/contest-enum.csv' DELIMITER '|' CSV HEADER;
-COPY enum.continent FROM 'D:/tmp/continent-enum.csv' DELIMITER '|' CSV HEADER;
-COPY enum.county_name FROM 'D:/tmp/county-name-enum.csv' DELIMITER '|' CSV HEADER;
-COPY enum.credit FROM 'D:/tmp/credit-enum.csv' DELIMITER '|' CSV HEADER;
-COPY enum.credit_award FROM 'D:/tmp/credit-award-enum.csv' DELIMITER '|' CSV HEADER;
-COPY enum.credit_facet FROM 'D:/tmp/credit-facet-enum.csv' DELIMITER '|' CSV HEADER;
-COPY enum.credit_sponsor FROM 'D:/tmp/credit-sponsor-enum.csv' DELIMITER '|' CSV HEADER;
-COPY enum.dxcc_entity FROM 'D:/tmp/dxcc-entity-enum.csv' DELIMITER '|' CSV HEADER;
-COPY enum.state FROM 'D:/tmp/state-enum.csv' DELIMITER '|' CSV HEADER;
-COPY enum.state_county FROM 'D:/tmp/state-county-enum.csv' DELIMITER '|' CSV HEADER;
-COPY enum.mode FROM 'D:/tmp/mode-enum.csv' DELIMITER '|' CSV HEADER;
-COPY enum.submode FROM 'D:/tmp/submode-enum.csv' DELIMITER '|' CSV HEADER;
+\COPY enum.antenna_path FROM 'antenna-path-enum.csv' DELIMITER '|' CSV HEADER;
+\COPY enum.arrl_section FROM 'arrl-section-enum.csv' DELIMITER '|' CSV HEADER;
+\COPY enum.award FROM 'award-enum.csv' DELIMITER '|' CSV HEADER;
+\COPY enum.band FROM 'band-enum.csv' DELIMITER '|' CSV HEADER;
+\COPY enum.contest FROM 'contest-enum.csv' DELIMITER '|' CSV HEADER;
+\COPY enum.continent FROM 'continent-enum.csv' DELIMITER '|' CSV HEADER;
+\COPY enum.county_name FROM 'county-name-enum.csv' DELIMITER '|' CSV HEADER;
+\COPY enum.credit FROM 'credit-enum.csv' DELIMITER '|' CSV HEADER;
+\COPY enum.credit_award FROM 'credit-award-enum.csv' DELIMITER '|' CSV HEADER;
+\COPY enum.credit_facet FROM 'credit-facet-enum.csv' DELIMITER '|' CSV HEADER;
+\COPY enum.credit_sponsor FROM 'credit-sponsor-enum.csv' DELIMITER '|' CSV HEADER;
+\COPY enum.dxcc_entity FROM 'dxcc-entity-enum.csv' DELIMITER '|' CSV HEADER;
+\COPY enum.state FROM 'state-enum.csv' DELIMITER '|' CSV HEADER;
+\COPY enum.state_county FROM 'state-county-enum.csv' DELIMITER '|' CSV HEADER;
+\COPY enum.mode FROM 'mode-enum.csv' DELIMITER '|' CSV HEADER;
+\COPY enum.submode FROM 'submode-enum.csv' DELIMITER '|' CSV HEADER;
 
 -- *****************************************************************************
 --  FOREIGN KEY's
