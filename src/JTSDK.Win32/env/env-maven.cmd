@@ -24,7 +24,7 @@
 :: along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ::-----------------------------------------------------------------------------::
 @ECHO OFF
-SET mavenv=3.5.3
+SET mavenv=3.5.4
 
 :: If anything is in %1 it should set debug to ON
 if [%1]==[] (

@@ -24,7 +24,7 @@
 :: along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ::-----------------------------------------------------------------------------::
 @ECHO OFF
-SET docfxv=2.35.4.0
+SET docfxv=2.37
 
 :: If anything is in %1 it should set debug to ON
 if [%1]==[] (

@@ -38,49 +38,5 @@ Installation of this package should follow the tool-chain installation and
 setup. If you've not already done so, review the following guides **before**
 checking out and compiling the source code.
 
-* [Tool Chain Overview](src/JTSDK.Docs/tool-chain-setup/win32/README.md)
-* [Prerequisite Tools Install](src/JTSDK.Docs/tool-chain-setup/win32/jtsdk-prereq-install.md)
-* [Core Tools Install](src/JTSDK.Docs/tool-chain-setup/win32/jtsdk-core-install.md)
-
-```
-# Open a Windows Console, then change directories to the JTSDK-Tools installation
-cd /d (C|D):\JTSDK-Tools
-
-# Set Temporary JTSDK_HOME variable
-set JTSDK_HOME=%CD%
-
-# Make a Source Directory
-mkdir src
-
-# Change Directories and Clone
-cd src
-git clone https://github.com/KI7MT/jtsdk-dotnet-core.git
-
-# Change Directories and Make Install
-cd jtsdk-dotnet-core
-make install
-```
-
-## Upgrade
-If the source clone is still present on the system, upgrading is the same as
-installation, with an additional pull command. If not, use the installation steps
-from above.
-```
-# Change directories to the JTSDK-Tools installation
-cd /d (C|D):\JTSDK-Tools
-
-# Set Temporary JTSDK_HOME variable
-set JTSDK_HOME=%CD%
-
-# Change Directories To The Cloned Repository
-cd /d %JTSDK_HOME%\src\jtsdk-dotnet-core
-
-# Update Source
-git pull origin master
-
-# Install New Update
-make install
-```
-
-## Documentation
-Installation and other documents are located in the [JTSDK .Net Core Wiki](https://github.com/KI7MT/jtsdk-dotnet-core/wiki)
+See [JTSDK net Core Wiki](https://github.com/KI7MT/jtsdk-dotnet-core/wiki) for
+details instalaltion instructions.

@@ -24,7 +24,7 @@
 :: along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ::-----------------------------------------------------------------------------::
 @ECHO OFF
-SET rubyv=2.4.4-1
+SET rubyv=2.5.1-2
 
 :: If anything is in %1 it should set debug to ON
 if [%1]==[] (

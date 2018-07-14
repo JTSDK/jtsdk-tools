@@ -24,7 +24,7 @@
 :: along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ::-----------------------------------------------------------------------------::
 @ECHO OFF
-SET sqlite3v=3230100
+SET sqlite3v=3240000
 
 :: If anything is in %1 it should set debug to ON
 if [%1]==[] (
