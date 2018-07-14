@@ -23,17 +23,24 @@
 :: along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ::-----------------------------------------------------------------------------::
 @ECHO OFF
+@chcp 1252
 SET LANG=en_US
 
 :: Set Supported Versions
 SET asciidocv=8.6.9
+SET docfxv=2.37
 SET fftwv=3.3.5
+SET gradlev=4.8.1
 SET innov=5.5.9
 SET libusbv=1.0.22
+SET mavenv=3.5.4
 SET nsisv=3.03
+SET pandocv=2.2.1
 SET pkgconfigv=0.28.1
-SET rubyv=2.4.4-1
+SET rubyv=2.5.1-2
+SET sqlite3v=3.24.0
 SET svnv=1.9.7
+SET psqlv=10
 
 :: JTSDK Version
 SET /P version=<ver.jtsdk
@@ -75,10 +82,18 @@ IF EXIST %JTSDK_HOME%\tools\asciidoc\%asciidocv%\asciidoc.py (
     SET JTSDK_PATH=%asciidoc_dir%
 )
 
+:: DOCFX -----------------------------------------------------------------------
+SET docfx_dir=%JTSDK_HOME%\tools\docfx\%docfxv%
+SET JTSDK_PATH=%JTSDK_PATH%;%docfx_dir%
+
 :: FFTW ------------------------------------------------------------------------
 SET fftw3f_dir=%JTSDK_HOME%\tools\fftw\%fftwv%
 SET "fftw3f_dir_f=%fftw3f_dir:\=/%"
 SET JTSDK_PATH=%JTSDK_PATH%;%fftw3f_dir%
+
+:: GRADLE ----------------------------------------------------------------------
+SET gradle_dir=%JTSDK_HOME%\tools\gradle\%gradlev%
+SET JTSDK_PATH=%JTSDK_PATH%;%gradle_dir%\bin
 
 :: INNO ------------------------------------------------------------------------
 SET inno_dir=%JTSDK_HOME%\tools\inno\%innov%
@@ -86,16 +101,26 @@ SET "inno_dir_f=%inno_dir:\=/%"
 SET JTSDK_PATH=%JTSDK_PATH%;%inno_dir%
 
 :: LIBUSB ----------------------------------------------------------------------
-IF EXIST %JTSDK_HOME%\tools\libusb\%libusbv%\libusb-1.0.def (
-    SET libusb_dir=%JTSDK_HOME%\tools\libusb\%libusbv%
-    SET "libusb_dir_f=%libusb_dir:\=/%"
-    SET JTSDK_PATH=%JTSDK_PATH%;%linusb_dir%
-)
+SET libusb_dir=%JTSDK_HOME%\tools\libusb\%libusbv%
+SET "libusb_dir_f=%libusb_dir:\=/%"
+SET JTSDK_PATH=%JTSDK_PATH%;%linusb_dir%
+
+:: MAVEN -----------------------------------------------------------------------
+SET maven_dir=%JTSDK_HOME%\tools\maven\%mavenv%
+SET JTSDK_PATH=%JTSDK_PATH%;%maven_dir%\bin
 
 :: NSIS ------------------------------------------------------------------------
 SET nsis_dir=%JTSDK_HOME%\tools\nsis\%nsisv%
 SET "nsis_dir_f=%nsis_dir:\=/%"
 SET JTSDK_PATH=%JTSDK_PATH%;%nsis_dir%
+
+:: NUGET -----------------------------------------------------------------------
+SET nuget_dir=%JTSDK_HOME%\tools\nuget
+SET JTSDK_PATH=%JTSDK_PATH%;%nuget_dir%
+
+:: PANDOC --------------------------------------------------------------------
+SET pandoc_dir=%JTSDK_HOME%\tools\pandoc\%pandocv%
+SET JTSDK_PATH=%JTSDK_PATH%;%pandoc_dir%
 
 :: PKG_CONFIG ------------------------------------------------------------------
 SET pkgconfig_dir=%JTSDK_HOME%\tools\pkgconfig\%pkgconfigv%\bin
@@ -107,6 +132,10 @@ SET ruby_dir=%JTSDK_HOME%\tools\ruby\%rubyv%\bin
 SET "ruby_dir_f=%ruby_dir:\=/%"
 SET JTSDK_PATH=%JTSDK_PATH%;%ruby_dir%
 
+:: SQLITE ----------------------------------------------------------------------
+SET sqlite3_dir=%JTSDK_HOME%\tools\sqlite3\%sqlite3v%
+SET JTSDK_PATH=%JTSDK_PATH%;%sqlite3_dir%
+
 :: SVN- ------------------------------------------------------------------------
 SET svn_dir=%JTSDK_HOME%\tools\subversion\%svnv%\bin
 SET "svn_dir_f=%svn_dir:\=/%"
@@ -116,6 +145,10 @@ SET JTSDK_PATH=%JTSDK_PATH%;%svn_dir%
 SET unix_dir=%JTSDK_HOME%\tools\msys2\usr\bin
 SET JTSDK_PATH=%JTSDK_PATH%;%unix_dir%
 
+:: POSTGRES --------------------------------------------------------------------
+IF EXIST "%JTSDK_HOME%\tools\PostgreSQL\10\pg_env.bat" (
+call %JTSDK_HOME%\tools\PostgreSQL\10\pg_env.bat
+)
 
 ::------------------------------------------------------------------------------
 :: CONDITIONAL PATHS for Multiple versions of Cmake
@@ -212,8 +245,25 @@ makensis.exe /VERSION  |tr -d "v" >n.m & SET /P NSM=<n.m & rm n.m
 pkg-config --version >p.c & SET /P PKG=<p.c & rm p.c
 git --version |awk "{print $3}" >c.m & SET /P GITV=<c.m & rm c.m
 svn --version |awk "{print $3}" >c.m & SET /P SVNV=<c.m & rm c.m
+mvn --version |awk "FNR==1 {print $3}" >mv.v & SET /P MVNV=<mv.v & rm mv.v
+gradle --version |awk "FNR==2 {print $2}" >g.v & SET /P GDLV=<g.v & rm g.v
+sqlite3 --version |awk "FNR==1 {print $1}" >s.v & SET /P SQ3V=<s.v & rm s.v
 dotnet --version >d.n & SET /P DOTV=<d.n & rm d.n
 bash --version |awk "FNR==1 {print $4}" >b.v & SET /P BENV=<b.v & rm b.v
+pandoc --version | awk "FNR==1 {print $2}" >p.v & SET /P PDV=<p.v & rm p.v
+docfx.exe --version | awk "FNR==1 {print $2}" >p.v & SET /P DFX=<p.v & rm p.v
+nuget help |awk "FNR==1 {print $3}" >ng.v & SET /P NUG=<ng.v & rm ng.v
+
+::------------------------------------------------------------------------------
+:: CONDITIONAL VERSION CHECKS
+::------------------------------------------------------------------------------
+
+:: PostgreSQL
+IF EXIST "%JTSDK_HOME%\tools\PostgreSQL\10\bin\psql.exe" (
+postgres --version --version |awk "FNR==1 {print $3}" >p.m & SET /P PGV=<p.m & rm p.m
+) ELSE (
+SET PGV=Not Installed
+)
 
 CLS
 ECHO --------------------------------------------
@@ -224,26 +274,30 @@ ECHO  JTSDK
 ECHO    Version        : %version%
 ECHO    Git Tag        : %git_tag%
 ECHO.
-ECHO  QT Information
-ECHO    Version        : %QTV%
-ECHO    Qmake          : %QMV%
-ECHO.
-ECHO  GCC Tool Chain
-ECHO    GCC            : %CVER%
-ECHO    Mingw32 Make   : %GNMK%
-ECHO.
-ECHO  Misc Tools
+ECHO  Core Tools
 ECHO    Asciidoctor    : %ADV%
 ECHO    Cmake          : %CMV%
 ECHO    Git            : %GITV%
-ECHO    InnoSetup      : %innov%
 ECHO    DotNet Core    : %DOTV%
+ECHO    GCC            : %CVER%
+ECHO    InnoSetup      : %innov%
+ECHO    Maven          : %MVNV%
+ECHO    Mingw32 Make   : %GNMK%
+ECHO    MSYS2 Bash     : %BENV%
 ECHO    NSIS           : %NSM%
+ECHO    NuGet          : %NUG%
 ECHO    Pkg Config     : %PKG%
+ECHO    Qmake          : %QMV%
+ECHO    QT Version     : %QTV%
+ECHO    SQLite         : %SQ3V%
 ECHO    Subversion     : %SVNV%
 ECHO.
-ECHO. MSYS2 Environment
-ECHO    Bash           : %BENV%
+ECHO. Doc Tools
+ECHO    DocFX          : %DFX%
+ECHO    Pandoc         : %PDV%
+ECHO.
+ECHO. Database Tools
+ECHO    PostgeSQL      : %PGV%
 ECHO.
 ENDLOCAL 
 
