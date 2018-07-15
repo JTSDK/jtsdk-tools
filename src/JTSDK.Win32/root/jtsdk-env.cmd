@@ -250,6 +250,19 @@ IF EXIST "%JTSDK_HOME%\core.tools" (
 :: END CORE TOOLS
 
 ::------------------------------------------------------------------------------
+:: PYTHON TOOLS
+:: Set those tool paths ONLY if they were installed with jtsdk-core-tools
+::------------------------------------------------------------------------------
+IF EXIST "%JTSDK_CONFIG%\Anaconda3\Scripts\activate.bat" (
+
+    SET PYTOOLS=Installed
+    call %JTSDK_HOME%\tools\Anaconda3\Scripts\activate.bat D:\JTSDK-Tools\tools\Anaconda3
+
+) ELSE (
+    SET PYTOOLS=Not Installed
+)
+
+::------------------------------------------------------------------------------
 :: SET FINAL ENVIRONMENT PATHS and CONSOLE TITLE
 ::------------------------------------------------------------------------------
 TITLE %title-string%
@@ -278,11 +291,12 @@ ECHO    Version        : %version%
 ECHO    Git Tag        : %git_tag%
 ECHO.
 ECHO  Tool Status
-ECHO    Core Tools     :
-ECHO    DOC Tools      :
-ECHO    DB Tools       :
-ECHO    Python Tools   :
-ECHO    Java Tools     :
+ECHO    Core Tools     : %CORETOOLS%
+ECHO    DOC Tools      : %DOCTOOLS%
+ECHO    DB Tools       : %DBTOOLS%
+ECHO    Python Tools   : %PYTOOLS%
+ECHO    Java Tools     : $JAVATOOLS%
+ECHO.
 GOTO RUN
 
 :RUN
