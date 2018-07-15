@@ -43,8 +43,16 @@ generic Linux support, and additional Ubuntu / Debian specific artifacts.
 
 - Linux
     - Linux - Unsupported at this time.
-    -Arm Devices - Unsupported at this time.
+    - Arm Devices - Unsupported at this time.
 
->Note - The Core Tool Chain does not require x86-64 bit applications. However,
-it is highly recommended to use x86-64 if your hardware supports it.
+## Minimum System Requirments
+This project creates a development-environment that supports many languages.
+Performance has a direct coorelation to system resources. While it is possible
+to build applications on marginal systems, using minimal hardware will lead to
+lengthy compiling times and marginal system performance. With that in
+mind, the following should be considered bare-minimum requirments:
 
+- CPU: 2x Cores @ 2.5+ Ghz. (More Cores + Higher Clock Rates) = Better Performance
+- RAM: 4GB Minimum
+- Disk Space: At least 25GB to 30GB of Free Space
+- SSD - If you have them, use them!
