@@ -291,7 +291,7 @@ ECHO  JTSDK
 ECHO    Version        : %version%
 ECHO    Git Tag        : %git_tag%
 ECHO.
-ECHO  Tool Status
+ECHO  Tool Chain Status
 ECHO    Core Tools     : %CORETOOLS%
 ECHO    DOC Tools      : %DOCTOOLS%
 ECHO    DB Tools       : %DBTOOLS%
