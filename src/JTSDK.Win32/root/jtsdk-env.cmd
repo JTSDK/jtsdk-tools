@@ -35,6 +35,7 @@ SET CORETOOLS=
 
 :: JTSDK Version
 SET /P version=<ver.jtsdk
+SET /P git_tag=<ver.git
 
 :: set the header informaiton
 TITLE JTSDK Tools %version%
@@ -48,7 +49,7 @@ SET JTSDK_DATA=%LOCALAPPDATA%\JTSDK\data
 SET JTSDK_APPS=%JTSDK_HOME%\tools\apps
 
 ::------------------------------------------------------------------------------
-:: CREATE ESSENTIAL DIRECTORIES
+:: CREATE LOCAL DIRECTORIES
 ::------------------------------------------------------------------------------
 
 :: %LOCALAPPDATA% Folders
