@@ -21,7 +21,7 @@ Installation of this package should follow the tool-chain installation and
 setup. If you've not already done so, review the following guides **before**
 checking out and compiling the source code.
 
-See [JTSDK net Core Wiki](https://github.com/KI7MT/jtsdk-dotnet-core/wiki) for
+See [JTSDK Net Core Wiki](https://github.com/KI7MT/jtsdk-dotnet-core/wiki) for
 detailed instalaltion instructions.
 
 ## Bug Reports and Feature Requests
