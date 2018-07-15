@@ -10,7 +10,7 @@ condition for end users.
 in the [release section](https://github.com/KI7MT/jtsdk-dotnet-core/releases).
 
 ## Community Support Group
-To assist users with installation, usage, compiing applicaitons, and
+To assist users with installation, usage, compiling applicaitons, and
 general discussion, use [JTSDK@Group.io](https://groups.io/g/JTSDK).
 
 - Post: [JTSDK@groups.io](JTSDK@groups.io)
