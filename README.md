@@ -49,8 +49,8 @@ generic Linux support, and additional Ubuntu / Debian specific artifacts.
 This project creates a development-environment that supports many languages.
 Performance has a direct coorelation to system resources. While it is possible
 to build applications on marginal systems, using minimal hardware will lead to
-lengthy compiling times and marginal system performance. With that in
-mind, the following should be considered bare-minimum requirments:
+lengthy compiling times and subpar system performance. With that in
+mind, the following should be considered the bare-minimum requirments:
 
 - CPU: 2x Cores @ 2.5+ Ghz. (More Cores + Higher Clock Rates) = Better Performance
 - RAM: 4GB Minimum
