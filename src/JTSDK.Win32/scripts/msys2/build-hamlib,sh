@@ -40,13 +40,13 @@ JTSDK_CYG_BASE=`cygpath.exe -u $JTSDK_HOME`
 JTSDK_CYG_CONFIG=`cygpath.exe -u $JTSDK_CONFIG`
 
 # Set the Tool Chain based on User Config Selection
-if [[ -f $JTSDK_CYG_CONFIG/qt57 ]]
+if [[ -f $JTSDK_CYG_CONFIG/qt59 ]]
 then
-    export PATH="$JTSDK_CYG_BASE/tools/qt/Tools/mingw530_32/bin:$PATH"
-    TC="$JTSDK_CYG_BASE/tools/qt/Tools/mingw530_32/bin"
+    export PATH="$JTSDK_CYG_BASE/tools/Qt/Tools/mingw530_32/bin:$PATH"
+    TC="$JTSDK_CYG_BASE/tools/Qt/Tools/mingw530_32/bin"
 else
-    export PATH="$JTSDK_CYG_BASE/tools/qt/Tools/mingw492_32/bin:$PATH"
-    TC="$JTSDK_CYG_BASE/tools/qt/Tools/mingw492_32/bin"
+    export PATH="$JTSDK_CYG_BASE/tools/Qt/Tools/mingw492_32/bin:$PATH"
+    TC="$JTSDK_CYG_BASE/tools/Qt/Tools/mingw492_32/bin"
 fi
 
 # set remaing path variables

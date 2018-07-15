@@ -17,5 +17,6 @@
   <ItemGroup>
     <ProjectReference Include="..\Jtsdk.Core.Library\Jtsdk.Core.Library.csproj" />
     <Content Include="..\..\JTSDK.Win32\**\*" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="..\..\JTSDK.Pgsql\**\*" CopyToOutputDirectory="PreserveNewest" />    
   </ItemGroup>
 </Project>
