@@ -9,6 +9,9 @@ condition for end users.
 - `Tags` are used to archive milestones, and will appear
 in the [release section](https://github.com/KI7MT/jtsdk-dotnet-core/releases).
 
+See the [Matrix](#global-tool-matrix) below for a list of artifacts that can
+be tested as [Net Core Global Tools](https://github.com/dotnet/core/tree/master/samples/dotnetsay)
+
 ## Community Support Group
 To assist users with installation, usage, compiling applicaitons, and
 general discussion, use [JTSDK@Group.io](https://groups.io/g/JTSDK).
@@ -56,3 +59,12 @@ mind, the following should be considered the bare-minimum requirments:
 - RAM: 4GB Minimum
 - Disk Space: At least 25GB to 30GB of Free Space
 - SSD - If you have them, use them!
+
+## Global Tool Matrix
+
+The following tools can be installed as Global .Net Core Tools.
+
+| Global Command Line Tools ||
+| ---| :--- |
+|Jtsdk.Core.Options| Manages all JTSDK Options and used in compiling apps.
+|More Pending| Many more appls are pending inclusion
