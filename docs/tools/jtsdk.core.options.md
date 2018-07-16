@@ -18,10 +18,10 @@
 | Java | Indicates Java is enabled in the environemt
 | PostposgreSQL | Indicates PostgreSQL is enabled in the environemt
 | QT59 | Enable Qt 5.9 and associated GCC tool-chain
-| Quiet | Supressexcess screen display messages
+| Quiet | Supress screen display messages
 | Reconfigure | Re-Run Configure before compiling
 | Separate | Separate builds by versions and build type
-| Squilte3 | Indicates Java is enabled in the environemt
+| Squilte3 | Indicates Sqlite3 is enabled in the environemt
 | Unix | Enable MSYS2 Unix Command Line Tools
  
 ## Usage
