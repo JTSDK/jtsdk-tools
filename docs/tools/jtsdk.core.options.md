@@ -28,16 +28,18 @@
 
 - Display Help Message: `Jtsdk.Core.Options -h`
 
-| ![Set Environment](images/jtsdk-core-options/options.1.PNG?raw=true) | 
+| ![Option Help Menu](images/jtsdk-core-options/options.1.PNG?raw=true) | 
 |:--:| 
 | *Display Help Menu* |
 
 - List Option Status: `Jtsdk.Core.Options -l`
 
-| ![Set Environment](images/jtsdk-core-options/options.2.PNG?raw=true) | 
+| ![Option Status](images/jtsdk-core-options/options.2.PNG?raw=true) | 
 |:--:| 
 | *Option Status* |
 
+- Enable Default Options: `Jtsdk.Core.Options -e default`
 
-
-
+| ![Set Default Options](images/jtsdk-core-options/options.2.PNG?raw=true) | 
+|:--:| 
+| *Enable Default Options* |
