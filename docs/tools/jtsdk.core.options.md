@@ -8,7 +8,7 @@
 
 ## Available Options
 
-- The following options are availabe through `Jtsdk-Core.Options`
+- The following options are availabe through `Jtsdk.Core.Options`
 
 | Option | Description
 | :--- | :--- |
