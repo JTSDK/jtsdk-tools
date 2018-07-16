@@ -3,7 +3,7 @@
 | Name        | Jtsdk.Core.Options |
 | Version     | 3.0.0 |
 | Arch        | 32 or 64 bit |
-| Description | Use for configureing options for JTSDK CLI tools |
+| Description | Used for configuring options in JTSDK CLI tools |
 
 
 ## Available Options
