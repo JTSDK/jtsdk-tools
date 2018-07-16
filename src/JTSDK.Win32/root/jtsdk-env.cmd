@@ -134,16 +134,21 @@ GOTO CORE_CHECK
 :JAVA_TOOLS
 ECHO ^*^* Setting Java Tool Paths
 SET JAVATOOLS=Installed
-SET gradlev=4.8.1
+SET gradlev=4.9
 SET mavenv=3.5.4
+SET antv=3.5.4
 
 :: GRADLE
 SET gradle_dir=%JTSDK_HOME%\tools\gradle\%gradlev%
 SET JTSDK_PATH=%JTSDK_PATH%;%gradle_dir%\bin
 
-:: MAVEN
+:: APACHE MAVEN
 SET maven_dir=%JTSDK_HOME%\tools\maven\%mavenv%
 SET JTSDK_PATH=%JTSDK_PATH%;%maven_dir%\bin
+
+:: APACHE ANT
+SET ant_dir=%JTSDK_HOME%\tools\ant\%antv%
+SET JTSDK_PATH=%JTSDK_PATH%;%ant_dir%\bin
 
 :: END JAVA TOOLS --------------------------------------------------------------
 GOTO CORE_CHECK

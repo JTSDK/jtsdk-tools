@@ -70,7 +70,14 @@ gradle --version |awk "FNR==3 {print $2}" >g.v & SET /P GDLV=<g.v & rm g.v
 SET GDLV=Not Installed
 )
 
-:: Maven
+:: Apache Ant
+IF EXIST "%JTSDK_HOME%\tools\ant\%antv%" (
+gradle --version |awk "FNR==1 {print $4}" >a.v & SET /P ANTV=<a.v & rm a.v
+) ELSE (
+SET ANTV=Not Installed
+)
+
+:: Apache Maven
 IF EXIST "%JTSDK_HOME%\tools\maven\%mavenv%" (
 mvn --version |awk "FNR==1 {print $3}" >mv.v & SET /P MVNV=<mv.v & rm mv.v
 ) ELSE (
@@ -104,6 +111,7 @@ ECHO    QT Version     : %QTV%
 ECHO    Subversion     : %SVNV%
 ECHO.
 ECHO  Java Tools
+ECHO    Ant            : %ANTV%
 ECHO    Gradle         : %GDLV%
 ECHO    Maven          : %MVNV%
 ECHO.

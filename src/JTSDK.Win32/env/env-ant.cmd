@@ -1,5 +1,5 @@
 ::-----------------------------------------------------------------------------::
-:: Name .........: env-gradle.cmd
+:: Name .........: env-ant.cmd
 :: Project ......: Part of the JTSDK Version 3.0.0 Project
 :: Description ..: Path Variables for Gradle
 :: Project URL ..: https://github.com/KI7MT
@@ -28,9 +28,9 @@ SET gradlev=4.9
 
 :: If anything is in %1 it should set debug to ON
 if [%1]==[] (
-    SET gradle_debug=0
+    SET ant_debug=0
 ) ELSE (
-    SET gradle_debug=1
+    SET ant_debug=1
 )
 
 :: If JTSDK_HOME variable is not set, exit without setting path
@@ -48,17 +48,17 @@ GOTO SET_GRADLE_PATH
 
 :SET_GRADLE_PATH
 :: Note, to add Gradle to the Path, use : %GRADLE_HOME%\bin
-SET GRADLE_HOME=%JTSDK_HOME%\tools\gradle\%gradlev%
+SET GRADLE_HOME=%JTSDK_HOME%\tools\ant\%antv%
 GOTO EOF
 
 :EOF
 IF %gradle_debug%==1 (
     CLS
     ECHO.
-    ECHO Grdle Version Informaiton
-    ECHO GRADLE_HOME ....: %GRADLE_HOME%
-    ECHO BIN Directory ..: %GRADLE_HOME%\bin
-    %GRADLE_HOME%\bin\gradle -v
+    ECHO Ant Version Informaiton
+    ECHO ANT_HOME .......: %ANT_HOME%
+    ECHO BIN Directory ..: %ANT_HOME%\bin
+    %GRADLE_HOME%\bin\ant -version
 )
 
 exit /b 0
