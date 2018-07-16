@@ -50,6 +50,8 @@ Open a Windows Command Prompt, and type the following:
 Jtsdk.Core.Options -h
 ```
 
+See Results in [Jtsdk.Core.Options Docs](https://github.com/KI7MT/jtsdk-dotnet-core/blob/master/docs/tools/jtsdk.core.options.md#usage).
+
 ### Uninstall The Application
 ```
 dotnet tool uninstall -g Jtsdk.Core.Options
