@@ -8,7 +8,7 @@
 
 ## Available Options
 
-The following options are availabe through `Jtsdk-Core.Options`.
+- The following options are availabe through `Jtsdk-Core.Options`
 
 | Optoin | Description
 | :--- | :--- |
@@ -26,7 +26,7 @@ The following options are availabe through `Jtsdk-Core.Options`.
  
 ## Usage
 
-### Display Help Message: `Jtsdk.Core.Options -h`
+- Display Help Message: `Jtsdk.Core.Options -h`
 
 | ![Set Environment](images/jtsdk-core-options/options.1.PNG?raw=true) | 
 |:--:| 
