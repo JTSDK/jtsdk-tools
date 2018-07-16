@@ -36,7 +36,7 @@
 
 | ![Set Environment](images/jtsdk-core-options/options.2.PNG?raw=true) | 
 |:--:| 
-| *Display Help Menu* |
+| *Option Status* |
 
 
 
