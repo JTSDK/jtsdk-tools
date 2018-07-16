@@ -88,23 +88,44 @@ POPD
 :: Copy files to destination
 ECHO   Installing JTSDK .Net Core
 ECHO.
+
+:: Change directories to .Net Core App Output Location
 PUSHD %CD%\src\JTSDK.NetCore\Jtsdk.Core.Options\bin\Release\netcoreapp2.1
-ECHO   Installing Environment Files
-robocopy %CD%\env %JTSDK_HOME%\env /E /NFL /NDL /NJH /NJS /nc /ns /np
-ECHO   Installing Scripts
-robocopy %CD%\scripts %JTSDK_HOME%\scripts /E /NFL /NDL /NJH /NJS /nc /ns /np
-ECHO   Installing Psql Scipts
-robocopy %CD%\R-DaaS %JTSDK_HOME%\scripts\sql\R-DaaS /E /NFL /NDL /NJH /NJS /nc /ns /np
-ECHO   Installing MSYS2 ^/usr^/bin scripts
-robocopy %CD%\scripts\msys2\bin %JTSDK_HOME%\tools\msys2\usr\bin /NFL /NDL /NJH /NJS /nc /ns /np *.sh
-ECHO   Installing MSYS2 ^/usr^/etc scripts
-robocopy %CD%\scripts\msys2\etc %JTSDK_HOME%\tools\msys2\usr\etc /NFL /NDL /NJH /NJS /nc /ns /np *.*
-ECHO   Installing Root Files
-robocopy %CD%\root %JTSDK_HOME% /NFL /NDL /NJH /NJS /nc /ns /np
+
 ECHO   Installing .Net Core Libraries and Applications
 robocopy %CD%\ %JTSDK_HOME%\tools\apps /NFL /NDL /NJH /NJS /nc /ns /np Jtsdk.*
-ECHO   Finished
+
 POPD
+
+:: Change Directories to JTSDK.Win32
+PUSHD %CD%\src\JTSDK.Win32
+
+ECHO   Installing Environment Files
+robocopy %CD%\env %JTSDK_HOME%\env /E /NFL /NDL /NJH /NJS /nc /ns /np
+
+ECHO   Installing Scripts
+robocopy %CD%\scripts %JTSDK_HOME%\scripts /E /NFL /NDL /NJH /NJS /nc /ns /np
+
+ECHO   Installing MSYS2 ^/usr^/bin scripts
+robocopy %CD%\scripts\msys2\bin %JTSDK_HOME%\tools\msys2\usr\bin /NFL /NDL /NJH /NJS /nc /ns /np *.sh
+
+ECHO   Installing MSYS2 ^/usr^/etc scripts
+robocopy %CD%\scripts\msys2\etc %JTSDK_HOME%\tools\msys2\usr\etc /NFL /NDL /NJH /NJS /nc /ns /np *.*
+
+ECHO   Installing Root Files
+robocopy %CD%\root %JTSDK_HOME% /NFL /NDL /NJH /NJS /nc /ns /np
+
+POPD
+
+:: Change Directories to JTSDK.Pgsql
+PUSHD %CD%\src\JTSDK.Pgsql
+
+ECHO   Installing Psql Scipts
+robocopy %CD%\R-DaaS %JTSDK_HOME%\scripts\sql\R-DaaS /E /NFL /NDL /NJH /NJS /nc /ns /np
+
+POPD
+
+ECHO   Finished
 GOTO EOF
 
 :: ----------------------------------------------------------------------------
