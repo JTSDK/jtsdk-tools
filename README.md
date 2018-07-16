@@ -66,5 +66,5 @@ The following tools can be installed as Global .Net Core Tools.
 
 | Global Command Line Tools ||
 | ---| :--- |
-|Jtsdk.Core.Options| Manages all JTSDK Options and used in compiling apps.
+|[Jtsdk.Core.Options](docs/tools/jtsdk.core.options.md)| Manages all JTSDK Options and used in compiling apps.
 |More Pending| Many more appls are pending inclusion
