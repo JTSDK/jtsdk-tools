@@ -1,0 +1,15 @@
+apr
+apr-util
+autoconf
+automake-wrapper
+doxygen
+gettext-devel
+git
+libtool
+swig
+libreadline-devel
+libxml2-devel
+make
+libgdbm-devel
+pkg-config
+texinfo
