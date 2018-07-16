@@ -32,7 +32,7 @@
 |:--:| 
 | *Display Help Menu* |
 
-### List Option Status: `Jtsdk.Core.Options -l`
+- List Option Status: `Jtsdk.Core.Options -l`
 
 | ![Set Environment](images/jtsdk-core-options/options.2.PNG?raw=true) | 
 |:--:| 
