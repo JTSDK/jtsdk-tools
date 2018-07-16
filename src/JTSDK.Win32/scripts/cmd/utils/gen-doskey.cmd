@@ -41,7 +41,7 @@ DOSKEY msys2 = %JTSDK_HOME%\tools\msys2\msys2_shell.cmd
 ::------------------------------------------------------------------------------
 :: DOSKEY GENERAL PURPOSE
 ::------------------------------------------------------------------------------
-DOSKEY version-check = PUSHD %JTSDK_HOME%\scripts\cmd\utils $T call versoin-check.cmd &T POPD
+DOSKEY version-check = PUSHD %JTSDK_HOME%\scripts\cmd\utils $T call versoin-check.cmd $T POPD
 DOSKEY srcd = CD %JTSDK_HOME%/src
 DOSKEY home = CD %JTSDK_HOME%
 DOSKEY clear=cls
