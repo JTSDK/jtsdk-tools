@@ -86,6 +86,7 @@ SET PGV=Not Installed
 
 :: Print the Version Data
 CLS
+ECHO.
 ECHO  Core Tools
 ECHO    Asciidoctor    : %ADV%
 ECHO    Cmake          : %CMV%
