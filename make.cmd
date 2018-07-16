@@ -75,56 +75,46 @@ GOTO EOF
 
 :_INSTALL
 CLS
-ECHO ------------------------------
-ECHO  Installing JTSDK.NetCore
-ECHO ------------------------------
-ECHO.
-ECHO * Building Source Files
+ECHO -------------------------------------------
+ECHO  Installing JTSDK Net Core Applications
+ECHO -------------------------------------------
 ECHO.
 PUSHD %CD%\src\JTSDK.NetCore
 dotnet publish -c release
 ECHO.
 POPD
-:: Copy files to destination
-ECHO   Installing JTSDK .Net Core
-ECHO.
 
 :: Change directories to .Net Core App Output Location
 PUSHD %CD%\src\JTSDK.NetCore\Jtsdk.Core.Options\bin\Release\netcoreapp2.1
-
 ECHO   Installing .Net Core Libraries and Applications
 robocopy %CD%\ %JTSDK_HOME%\tools\apps /NFL /NDL /NJH /NJS /nc /ns /np Jtsdk.*
-
 POPD
 
 :: Change Directories to JTSDK.Win32
 PUSHD %CD%\src\JTSDK.Win32
-
-ECHO   Installing Environment Files
+ECHO   Install Environment Files
 robocopy %CD%\env %JTSDK_HOME%\env /E /NFL /NDL /NJH /NJS /nc /ns /np
 
-ECHO   Installing Scripts
+ECHO   Install Scripts
 robocopy %CD%\scripts %JTSDK_HOME%\scripts /E /NFL /NDL /NJH /NJS /nc /ns /np
 
-ECHO   Installing MSYS2 ^/usr^/bin scripts
+ECHO   Install MSYS2 ^/usr^/bin scripts
 robocopy %CD%\scripts\msys2\bin %JTSDK_HOME%\tools\msys2\usr\bin /NFL /NDL /NJH /NJS /nc /ns /np *.sh
 
-ECHO   Installing MSYS2 ^/usr^/etc scripts
+ECHO   Install MSYS2 ^/usr^/etc scripts
 robocopy %CD%\scripts\msys2\etc %JTSDK_HOME%\tools\msys2\usr\etc /NFL /NDL /NJH /NJS /nc /ns /np *.*
 
-ECHO   Installing Root Files
+ECHO   Install Root Files
 robocopy %CD%\root %JTSDK_HOME% /NFL /NDL /NJH /NJS /nc /ns /np
-
 POPD
 
 :: Change Directories to JTSDK.Pgsql
 PUSHD %CD%\src\JTSDK.Pgsql
-
-ECHO   Installing Psql Scipts
+ECHO   Install Pgsql Scipts
 robocopy %CD%\R-DaaS %JTSDK_HOME%\scripts\sql\R-DaaS /E /NFL /NDL /NJH /NJS /nc /ns /np
-
 POPD
 
+:: Finished installation
 ECHO   Finished
 GOTO EOF
 
