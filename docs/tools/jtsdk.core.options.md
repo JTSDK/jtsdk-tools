@@ -10,7 +10,7 @@
 
 - The following options are availabe through `Jtsdk-Core.Options`
 
-| Optoin | Description
+| Option | Description
 | :--- | :--- |
 | Autorun | Runs an application after compiling
 | Clean | Cleans the build tree
