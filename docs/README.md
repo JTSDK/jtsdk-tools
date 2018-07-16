@@ -19,7 +19,7 @@ their home user sapce, which enables access globally from within.
 > - Update the tool.
 > - Uninstall the tool.
 >
-> <cite>--Microsoft Documentation Project</cite>
+> <cite>--[Microsoft Documentation Project](https://docs.microsoft.com/en-us/dotnet/core/tools/global-tools)</cite>
 
 ## JTSDK Global Tools
 Where possible, all JTSDK Net Core Applicaitons will support Global Tool
