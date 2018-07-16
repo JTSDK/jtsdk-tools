@@ -136,7 +136,7 @@ ECHO ^*^* Setting Java Tool Paths
 SET JAVATOOLS=Installed
 SET gradlev=4.9
 SET mavenv=3.5.4
-SET antv=3.5.4
+SET antv=1.10.4
 
 :: GRADLE
 SET gradle_dir=%JTSDK_HOME%\tools\gradle\%gradlev%
