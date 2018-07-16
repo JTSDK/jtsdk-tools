@@ -42,7 +42,7 @@ dotnet tool install --add-source .\nupkg -g Jtsdk.Core.Options
 
 ### Run the Application
 
-Open a Windows COmmand Promt, and type the following:
+Open a Windows Command Prompt, and type the following:
 
 >NOTE: You do not need to be in the `JTSDK Environment`:
 
