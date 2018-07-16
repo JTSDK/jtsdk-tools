@@ -25,7 +25,7 @@
 ################################################################################
 
 # Exit on errors
-set -e
+#set -e
 
 # General use Vars and colour
 PKG_NAME=Hamlib

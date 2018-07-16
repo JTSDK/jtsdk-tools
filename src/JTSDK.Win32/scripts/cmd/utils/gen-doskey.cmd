@@ -36,11 +36,12 @@ DOSKEY gen-tc = PUSHD %JTSDK_HOME%\scripts\cmd\utils $T call qt-gen-tc.cmd $T PO
 :: DOSKEY update-msys2 = cls $T ridk exec pacman -Syuu
 :: DOSKEY search-msys2 = ridk exec pacman -Ss $*
 :: DOSKEY build-hamlib3 = start /wait ridk exec bash msys-build-hamlib3.sh
-DOSKEY msys2 = call %JTSDK_HOME%\tools\msys2\msys2_shell.cmd
+DOSKEY msys2 = %JTSDK_HOME%\tools\msys2\msys2_shell.cmd
 
 ::------------------------------------------------------------------------------
 :: DOSKEY GENERAL PURPOSE
 ::------------------------------------------------------------------------------
+DOSKEY version-check = PUSHD %JTSDK_HOME%\scripts\cmd\utils $T call versoin-check.cmd &T POPD
 DOSKEY srcd = CD %JTSDK_HOME%/src
 DOSKEY home = CD %JTSDK_HOME%
 DOSKEY clear=cls
