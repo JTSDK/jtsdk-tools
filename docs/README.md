@@ -3,7 +3,7 @@ Starting with Dotnet Core SDK 2.1.300, users can publish dotnet core apps to
 their home user sapce, which enables access globally from within.
 
 ### Publish Location
-- Windows Path: `%USERPROFILE%/.dotnet/tools`
+- Windows Path: `%USERPROFILE%\.dotnet\tools`
 - Linux / MacOS path: `$HOME/.dotnet/tools`
 
 ### From Microsoft
