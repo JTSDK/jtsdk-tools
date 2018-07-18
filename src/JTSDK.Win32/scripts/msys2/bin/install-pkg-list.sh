@@ -40,7 +40,7 @@ echo -e ${C_Y}"INSTALL JTSDK v3 PACKAGE LIST"${C_NC}
 echo '---------------------------------------------------------------'
 
 # Declare the array
-declare -a pkg_list()
+declare -a pkg_list
 
 # Read file line items into a Bash Array 
 readarray pkg_list < /usr/etc/hamlib-pkg-list.txt
