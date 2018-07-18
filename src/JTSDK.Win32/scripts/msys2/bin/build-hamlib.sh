@@ -8,7 +8,7 @@
 #
 # Author .......: Greg, Beam, KI7MT, <ki7mt@yahoo.com>
 # Copyright ....: Copyright (C) 2018 Greg Beam, KI7MT
-# License ......: Apache 2.0
+# License ......: GPLv3
 #
 # msys-build-hamlib.sh is free software: you can redistribute it
 # and/or modify it under the terms of the GNU General Public License
