@@ -40,10 +40,9 @@ echo -e ${C_Y}"INSTALL JTSDK v3 PACKAGE LIST"${C_NC}
 echo '---------------------------------------------------------------'
 
 # Declare the array
-declare -a pkg_list
-
-# Read file line items into a Bash Array 
-readarray pkg_list < /usr/etc/hamlib-pkg-list.txt
+declare -a pkg_list=("apr" "apr-util" "autoconf" "automake-wrapper" \
+"doxygen" "gettext-devel" "git" "libtool" "swig" "libreadline-devel" \
+"libxml2-devel" "make" "libgdbm-devel" "pkg-config" "texinfo")
 
 # Loop through the pkg_list array and install as needed
 for i in "${pkg_list[@]}"
