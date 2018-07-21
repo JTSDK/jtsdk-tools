@@ -1,0 +1,10 @@
+# For use with build-wsjtx-git.cmd
+# - Only the paths needs to be changed, not the prefix
+# - Do not use spaces in the paths as the build will fail
+# - Ensure there is only one space between the prefix and path
+
+# Edit the next line to set Source Location
+SRCD D:\JTSDK-tools\tmp\wsjtx-git-sf
+
+# Edit the next line to set Destination Directory
+DEST D:\JTSDK-tools\tmp\wsjtx-output

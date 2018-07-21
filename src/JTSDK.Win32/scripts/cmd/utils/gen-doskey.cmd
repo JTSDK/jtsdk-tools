@@ -39,6 +39,11 @@ DOSKEY gen-tc = PUSHD %JTSDK_HOME%\scripts\cmd\utils $T call qt-gen-tc.cmd $T PO
 DOSKEY msys2 = %JTSDK_HOME%\tools\msys2\msys2_shell.cmd
 
 ::------------------------------------------------------------------------------
+:: DOSKEY for Building WSJT-C
+::------------------------------------------------------------------------------
+DOSKEY build-wsjtx=pushd %cd% ^& %JTSDK_HOME%\tools\scripts\cmd\utils\build-wsjtx-git.cmd $*
+
+::------------------------------------------------------------------------------
 :: DOSKEY GENERAL PURPOSE
 ::------------------------------------------------------------------------------
 DOSKEY version-check = call %JTSDK_HOME%\scripts\cmd\utils\version-check.cmd

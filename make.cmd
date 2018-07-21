@@ -101,9 +101,6 @@ robocopy %CD%\scripts %JTSDK_HOME%\scripts /E /NFL /NDL /NJH /NJS /nc /ns /np
 ECHO   Install MSYS2 ^/usr^/bin scripts
 robocopy %CD%\scripts\msys2\bin %JTSDK_HOME%\tools\msys2\usr\bin /NFL /NDL /NJH /NJS /nc /ns /np *.sh
 
-ECHO   Install MSYS2 ^/usr^/etc scripts
-robocopy %CD%\scripts\msys2\etc %JTSDK_HOME%\tools\msys2\usr\etc /NFL /NDL /NJH /NJS /nc /ns /np *.*
-
 ECHO   Install Root Files
 robocopy %CD%\root %JTSDK_HOME% /NFL /NDL /NJH /NJS /nc /ns /np
 POPD
