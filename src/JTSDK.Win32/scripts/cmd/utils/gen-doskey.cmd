@@ -39,9 +39,9 @@ DOSKEY gen-tc = PUSHD %JTSDK_HOME%\scripts\cmd\utils $T call qt-gen-tc.cmd $T PO
 DOSKEY msys2 = %JTSDK_HOME%\tools\msys2\msys2_shell.cmd
 
 ::------------------------------------------------------------------------------
-:: DOSKEY for Building WSJT-C
+:: DOSKEY for Java JIT (just in time) Apps
 ::------------------------------------------------------------------------------
-DOSKEY build-wsjtx=pushd %cd% ^& %JTSDK_HOME%\scripts\cmd\utils\build-wsjtx-git.cmd $*
+DOSKEY javaenv = PUSHD %JTSDK_HOME%\scripts\java $T javac JavaEnv.java $T java JavaEnv POPD
 
 ::------------------------------------------------------------------------------
 :: DOSKEY GENERAL PURPOSE
