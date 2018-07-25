@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <Copyright>GPL-v3</Copyright>
+    <PackageLicenseUrl>https://github.com/KI7MT/jtsdk-dotnet-core/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/KI7MT/jtsdk-dotnet-core</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/KI7MT/jtsdk-dotnet-core.git</RepositoryUrl>
+    <RepositoryType>Git</RepositoryType>
+    <PackageTags>dotnet, dotnet core, environment</PackageTags>
+    <Description>Lists varous combinations of environment variables.</Description>
+    <Authors>Greg Beam, KI7MT</Authors>
+    <AssemblyVersion>3.0.0.0</AssemblyVersion>
+    <FileVersion>3.0.0.0</FileVersion>
+    <Version>3.0.0</Version>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Jtsdk.Core.Library\Jtsdk.Core.Library.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -5,7 +5,9 @@ VisualStudioVersion = 15.0.27130.2020
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jtsdk.Core.Library", "Jtsdk.Core.Library\Jtsdk.Core.Library.csproj", "{3FC1123C-3DDA-4282-906E-E74AD3F5961D}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jtsdk.Core.Options", "Jtsdk.Core.Options\Jtsdk.Core.Options.csproj", "{AFCE985E-EE63-4771-910D-C54767A4E993}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JTConfig", "Jtsdk.Core.Options\JTConfig.csproj", "{AFCE985E-EE63-4771-910D-C54767A4E993}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JTEnv", "JtsdkEnv\JTEnv.csproj", "{914BE4BC-2881-434F-8413-2E78876EE095}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{AFCE985E-EE63-4771-910D-C54767A4E993}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AFCE985E-EE63-4771-910D-C54767A4E993}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AFCE985E-EE63-4771-910D-C54767A4E993}.Release|Any CPU.Build.0 = Release|Any CPU
+		{914BE4BC-2881-434F-8413-2E78876EE095}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{914BE4BC-2881-434F-8413-2E78876EE095}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{914BE4BC-2881-434F-8413-2E78876EE095}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{914BE4BC-2881-434F-8413-2E78876EE095}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

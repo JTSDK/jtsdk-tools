@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using Jtsdk.Core.Library;
 
-namespace Jtsdk.Core.Options
+namespace JTConfig
 {
     public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             // instantiate PathUtils and verify JTSDK_HOME is set
             PathUtils tools = new PathUtils();

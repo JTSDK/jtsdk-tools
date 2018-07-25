@@ -16,7 +16,10 @@
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <IsPackable>true</IsPackable>
     <PackAsTool>true</PackAsTool>    
-    <TieredCompilation>true</TieredCompilation>
+    <TieredCompilation>true</TieredCompilation>    
+    <RepositoryUrl>https://github.com/KI7MT/jtsdk-dotnet-core.git</RepositoryUrl>    
+    <RepositoryType>Git</RepositoryType>    
+    <PackageTags>dotnet core</PackageTags>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -25,7 +28,7 @@
   </PropertyGroup>
 
   <ItemGroup Condition="'$(ContinuousIntegrationBuild)'=='true'">
-    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0-beta-63102-01" PrivateAssets="All"/>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0-beta-63102-01" PrivateAssets="All" />
     <!-- Use Makefile v.s. hard coding support files inclusions
     <Content Include="..\..\JTSDK.Win32\**\*" CopyToOutputDirectory="PreserveNewest" />
     <Content Include="..\..\JTSDK.Pgsql\**\*" CopyToOutputDirectory="PreserveNewest" />
