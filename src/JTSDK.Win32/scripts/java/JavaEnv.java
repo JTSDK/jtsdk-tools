@@ -10,7 +10,7 @@
  * 
  * Author: Greg Beam, KI7MT <ki7mt@yahoo.com>
  * 
- * Version: 1.0.0
+ * Version: 1.0.1
  * 
  * Licesne: GPL-3
  * 
@@ -18,6 +18,10 @@
 import java.util.ArrayList;
 
 public class JavaEnv {
+
+    private final static String APP_NAME = "JavaEnv";
+    private final static String APP_VERSION = "1.0.1";
+    private final static String APP_DESC = "Java Environment Variables";
 
     public static void main (String[] args) {
 
@@ -37,8 +41,9 @@ public class JavaEnv {
         variables.add("GRADLE_HOME");
 
         /* print list item(s) and their associated value */
-        for ( String item : variables) {
-            System.out.println(item + " = " + System.getenv(item));
+        for(String item : variables)
+        {
+            System.out.printf("%-20s %-30s%n",item,System.getenv(item));
         }
 
     } /* End - Main Method */
@@ -74,8 +79,11 @@ public class JavaEnv {
     /* Print message header */
     private static void printHeader() {
 
-        System.out.println("\nJava Environment Variables");
-        System.out.println("--------------------------");
+        System.out.println("\nName        : " + APP_NAME );
+        System.out.println("Version     : " + APP_VERSION );
+        System.out.println("Description : " + APP_DESC + "\n");
+        System.out.printf("%-20s %-30s%n","Variable","Path");
+        System.out.println("------------------------------------------------------");
 
     } /* End - printHeader() */
 
