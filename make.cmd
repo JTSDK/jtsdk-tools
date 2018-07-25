@@ -111,6 +111,15 @@ ECHO   Install Pgsql Scipts
 robocopy %CD%\R-DaaS %JTSDK_HOME%\scripts\sql\R-DaaS /E /NFL /NDL /NJH /NJS /nc /ns /np
 POPD
 
+:: Conditional Build of Java Apps / Scripts
+IF EXIST %JTSDK_HOME%\java.tools (
+PUSHD %CD%\src\JTSDK.Win32\scripts\java
+ECHO   Compiling Java Apps
+for /r %%i in (*.java) do javac -d %JTSDK_HOME%\scripts\java %%i
+)
+ECHO.
+POPD
+
 :: Finished installation
 ECHO   Finished
 GOTO EOF

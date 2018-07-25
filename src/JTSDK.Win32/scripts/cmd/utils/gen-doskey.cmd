@@ -41,7 +41,7 @@ DOSKEY msys2 = %JTSDK_HOME%\tools\msys2\msys2_shell.cmd
 ::------------------------------------------------------------------------------
 :: DOSKEY for Java JIT (just in time) Apps
 ::------------------------------------------------------------------------------
-DOSKEY javaenv = PUSHD %JTSDK_HOME%\scripts\java $T javac JavaEnv.java $T java JavaEnv POPD
+DOSKEY javaenv = java ^-cp %JTSDK_HOME%\scripts\java JavaEnv
 
 ::------------------------------------------------------------------------------
 :: DOSKEY GENERAL PURPOSE
