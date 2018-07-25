@@ -8,7 +8,7 @@
     <LangVersion>Latest</LangVersion>
     <VersionPrefix>3.0.0</VersionPrefix>
     <Authors>Greg Beam, KI7MT</Authors>
-    <Product>Jtsdk.Core.Options</Product>
+    <Product>JTConfig</Product>
     <Copyright>GPLv3</Copyright>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageLicenseUrl>https://github.com/KI7MT/jtsdk-dotnet-core/blob/master/LICENSE</PackageLicenseUrl>

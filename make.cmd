@@ -84,9 +84,15 @@ dotnet publish -c release
 ECHO.
 POPD
 
-:: Change directories to .Net Core App Output Location
-PUSHD %CD%\src\JTSDK.NetCore\Jtsdk.Core.Options\bin\Release\netcoreapp2.1
-ECHO   Installing .Net Core Libraries and Applications
+:: Publish JTConfig
+PUSHD %CD%\src\JTSDK.NetCore\JTConfig\bin\Release\netcoreapp2.1
+ECHO   Install JTConfig
+robocopy %CD%\ %JTSDK_HOME%\tools\apps /NFL /NDL /NJH /NJS /nc /ns /np Jtsdk.*
+POPD
+
+:: Publish JTEnv
+PUSHD %CD%\src\JTSDK.NetCore\JTEnv\bin\Release\netcoreapp2.1
+ECHO   Installing JTEnv
 robocopy %CD%\ %JTSDK_HOME%\tools\apps /NFL /NDL /NJH /NJS /nc /ns /np Jtsdk.*
 POPD
 
