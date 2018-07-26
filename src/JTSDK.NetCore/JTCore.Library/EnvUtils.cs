@@ -65,7 +65,7 @@ namespace JTCore.Library
         /* Section header */
         private static void EnvSectionHeader(string text)
         {
-            Console.WriteLine(String.Format("\n{0,-23}{1,-40}", text, "Path"));
+            Console.WriteLine(String.Format("\n{0,-24}{1,-40}", text, "Path"));
             Console.WriteLine("------------------------------------------------------");
         }
 
