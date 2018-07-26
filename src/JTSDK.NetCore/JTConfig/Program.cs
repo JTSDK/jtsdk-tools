@@ -175,4 +175,4 @@ namespace JTConfig
 
     } // END - class Program
 
-} // END - namespace Jtsdk.Core.Options
+} // END - namespace JTConfig

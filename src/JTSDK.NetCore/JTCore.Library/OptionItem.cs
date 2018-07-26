@@ -176,4 +176,4 @@ namespace JTCore.Library
 
     } // END - class OptionItem
 
-} // END - namespace Jtsdk.Core.Library.Options
+} // END - namespace JTCore.Library
