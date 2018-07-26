@@ -42,6 +42,6 @@ No external libraries are required fot build the app. Runs on `Java 8, 9 and 10`
 # Compile
 javac JavaEnv.java
 
-# TO Run
+# Run
 java JavaEnv
 ```
