@@ -10,7 +10,7 @@
  * 
  * Author: Greg Beam, KI7MT <ki7mt@yahoo.com>
  * 
- * Version: 1.0.1
+ * Version: 3.0.1
  * 
  * Licesne: GPL-3
  * 
@@ -20,7 +20,7 @@ import java.util.ArrayList;
 public class JavaEnv {
 
     private final static String APP_NAME = "JavaEnv";
-    private final static String APP_VERSION = "1.0.1";
+    private final static String APP_VERSION = "3.0.1";
     private final static String APP_DESC = "Java Environment Variables";
 
     public static void main (String[] args) {
