@@ -47,6 +47,7 @@ namespace JTEnv
                     PrintAssemblyHeader();
                     EnvUtils.GetSectionInformaiton(new List<string>(envUtils.UserEnvList), "User Vars");
                     EnvUtils.GetSectionInformaiton(new List<string>(envUtils.JavaEnvList), "Java Vars");
+                    EnvUtils.GetSectionInformaiton(new List<string>(envUtils.JtsdkEnvList), "JTSDK Vars");
                     EnvUtils.GetSectionInformaiton(new List<string>(envUtils.SystemEnvList), "System Vars");
                     Environment.Exit(0);
                     break;
@@ -70,7 +71,9 @@ namespace JTEnv
                     PrintAssemblyHeader();
                     EnvUtils.GetSectionInformaiton(new List<string>(envUtils.SystemEnvList), "System Vars");
                     break;
-                case "-z": // No Header, No clear. This is used by JTSDK-Tools Env only
+                case "-z":
+                    Common.ClearScreen();
+                    PrintAssemblyHeader();
                     EnvUtils.GetSectionInformaiton(new List<string>(envUtils.JtsdkEnvList), "JTSDK Vars");
                     break;
                 default:
