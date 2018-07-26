@@ -44,6 +44,11 @@ DOSKEY msys2 = %JTSDK_HOME%\tools\msys2\msys2_shell.cmd
 DOSKEY javaenv = java ^-cp %JTSDK_HOME%\scripts\java JavaEnv
 
 ::------------------------------------------------------------------------------
+:: DOSKEY for JTEnv Command
+::------------------------------------------------------------------------------
+DOSKEY jtenv = dotnet %JTSDK_APPS%\JTEnv.dll $*
+
+::------------------------------------------------------------------------------
 :: DOSKEY GENERAL PURPOSE
 ::------------------------------------------------------------------------------
 DOSKEY version-check = call %JTSDK_HOME%\scripts\cmd\utils\version-check.cmd

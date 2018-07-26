@@ -53,7 +53,7 @@ namespace JTEnv
                     PrintAssemblyHeader();
                     EnvUtils.GetSectionInformaiton(new List<string>(envUtils.UserEnvList), "User Vars");
                     EnvUtils.GetSectionInformaiton(new List<string>(envUtils.JavaEnvList), "Java Vars");
-                    EnvUtils.GetSectionInformaiton(new List<string>(envUtils.SystemEnvList), "Java Vars");
+                    EnvUtils.GetSectionInformaiton(new List<string>(envUtils.SystemEnvList), "System Vars");
                     Environment.Exit(0);
                 }
                 else if (
