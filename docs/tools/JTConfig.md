@@ -1,14 +1,15 @@
+# JTConfig CLI Application
+
 | Application Data ||
 | ---| --- |
 | Name        | JTConfig |
 | Version     | 3.0.1 |
-| Arch        | 32 or 64 bit |
+| Arch        | 64 bit preferred |
 | Description | Used for configuring options in JTSDK CLI tools |
-
 
 ## Available Options
 
-- The following options are available through `JTConfig`
+### The following options are available through `JTConfig`
 
 | Option | Description
 | :--- | :--- |
@@ -26,19 +27,19 @@
 
 ## Usage
 
-- Display Help Message: `JTConfig -h`
+### Display Help Message: `JTConfig -h`
 
 | ![Option Help Menu](images/JTConfig/options.1.PNG?raw=true) |
 |:--:|
 | *Display Help Menu* |
 
-- List Option Status: `JTConfig -l`
+### List Option Status: `JTConfig -l`
 
 | ![Option Status](images/JTConfig/options.2.PNG?raw=true) |
 |:--:|
 | *Option Status* |
 
-- Enable Default Options: `JTConfig -e default`
+### Enable Default Options: `JTConfig -e default`
 
 | ![Set Default Options](images/JTConfig/options.2.PNG?raw=true) |
 |:--:|

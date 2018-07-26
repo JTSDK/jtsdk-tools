@@ -71,10 +71,10 @@ namespace JTCore.Library
             Console.WriteLine(" Example ..: jtenv -h");
             Console.WriteLine("");
             Console.WriteLine(" Options\n");
-            Console.WriteLine("   -a User\tAll environment variables");
-            Console.WriteLine("   -u User\tUser environment variables");
-            Console.WriteLine("   -j Java\tJava environment variables");
-            Console.WriteLine("   -s System\tSystemenvironment variables");
+            Console.WriteLine("   -a All\tAll variables");
+            Console.WriteLine("   -u User\tUser variables");
+            Console.WriteLine("   -j Java\tJava variables");
+            Console.WriteLine("   -s System\tSystem variables");
             Console.WriteLine("   -h Help\tDisplay this message");
             Console.WriteLine();
             Environment.Exit(0);
