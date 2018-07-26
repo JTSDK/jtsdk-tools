@@ -5,7 +5,7 @@ namespace JTCore.Library
 {
     public class EnvUtils
     {
-        // Java Environment Variables List
+        // Java Environment Variable List
         public readonly List<string> JavaEnvList = new List<string>
         {
             "JTSDK_HOME",
@@ -16,7 +16,16 @@ namespace JTCore.Library
             "GRADLE_HOME"
         };
 
-        // User Environment Variables List
+        // JTSDK Environment Variable List
+        public readonly List<string> JtsdkEnvList = new List<string>
+        {
+            "JTSDK_HOME",
+            "JTSDK_APPS",
+            "JTSDK_CONFIG",
+            "JTSDK_DATA"
+        };
+
+        // User Environment Variable List
         public readonly List<string> UserEnvList = new List<string>
         {
             "USERNAME",
@@ -25,7 +34,7 @@ namespace JTCore.Library
             "TEMP"
         };
 
-        // System Environment Variables List
+        // System Environment Variable List
         public readonly List<string> SystemEnvList = new List<string>
         {
             "COMPUTERNAME",
