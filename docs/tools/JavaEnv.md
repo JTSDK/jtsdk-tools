@@ -32,7 +32,7 @@ java -cp (C|D):\JTSDK-Tools\scripts\java JavaEnv
 
 ## Compiling
 
-No external libraries are required fot build the app. Runs on `Java 8, 9 and 10`
+No external libraries are required to build the app. Runs on `Java 8, 9 and 10`
 
 ``` shell
 # In Window command prompt, or JTSDK-Tools Environment
