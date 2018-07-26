@@ -5,6 +5,7 @@
 | Name        | JavaEnv |
 | Version     | 3.0.1 |
 | Arch        | 64 bit preferred |
+| Java Version | 8, 9, 10 |
 | Description | Java app to list Java related environment variables|
 
 ## Usage
