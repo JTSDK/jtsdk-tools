@@ -43,11 +43,13 @@ ECHO ------------------------------
 ECHO  Clean JTSDK.NetCore
 ECHO ------------------------------
 ECHO.
-PUSHD %CD%\src\JTSDK.NetCore\Jtsdk.Core.Options\bin
-ECHO * Cleaning All Release Files
-rm -rf %CD%\Release >nul 2>&1
-ECHO * Cleaning All Debug Files
-rm -rf %CD%\Debug >nul 2>&1
+PUSHD %CD%\src\JTSDK.NetCore
+ECHO  Cleaning All Release Files
+dotnet clean --configuration Release
+ECHO Cleaning All Debug Files
+dotnet clean --configuration Release
+ECHO %JTSDK_HOME%\tools\apps ^=^> Published Files
+DEL /s /q %JTSDK_HOME%\tools\apps\J*
 POPD
 GOTO EOF
 
@@ -58,7 +60,7 @@ ECHO  Building JTSDK.NetCore
 ECHO ------------------------------
 ECHO.
 PUSHD %CD%\src\JTSDK.NetCore
-dotnet build -c release
+dotnet build -c release -o out
 POPD
 GOTO EOF
 
@@ -69,7 +71,7 @@ ECHO  Publishing JTSDK.NetCore
 ECHO ------------------------------
 ECHO.
 PUSHD %CD%\src\JTSDK.NetCore
-dotnet publish -c release
+dotnet publish -c release -o %JTSDK_HOME%\tools\apps
 POPD
 GOTO EOF
 
@@ -80,21 +82,27 @@ ECHO  Installing JTSDK Net Core Applications
 ECHO -------------------------------------------
 ECHO.
 PUSHD %CD%\src\JTSDK.NetCore
-dotnet publish -c release
+dotnet publish -c release -o %JTSDK_HOME%\tools\apps
 ECHO.
 POPD
 
 :: Publish JTConfig
-PUSHD %CD%\src\JTSDK.NetCore\JTConfig\bin\Release\netcoreapp2.1
-ECHO   Install JTConfig
-robocopy %CD%\ %JTSDK_HOME%\tools\apps /NFL /NDL /NJH /NJS /nc /ns /np Jtsdk.*
-POPD
+::PUSHD %CD%\src\JTSDK.NetCore\Jtsdk.Core.Library\out
+::ECHO   Install JTConfig
+::robocopy %CD%\ %JTSDK_HOME%\tools\apps /NFL /NDL /NJH /NJS /nc /ns /np Jtsdk*.*
+::POPD
+
+:: Publish JTConfig
+::PUSHD %CD%\src\JTSDK.NetCore\JTConfig\out
+::ECHO   Install JTConfig
+::robocopy %CD%\ %JTSDK_HOME%\tools\apps /NFL /NDL /NJH /NJS /nc /ns /np JTConfig*.*
+::POPD
 
 :: Publish JTEnv
-PUSHD %CD%\src\JTSDK.NetCore\JTEnv\bin\Release\netcoreapp2.1
-ECHO   Installing JTEnv
-robocopy %CD%\ %JTSDK_HOME%\tools\apps /NFL /NDL /NJH /NJS /nc /ns /np Jtsdk.*
-POPD
+::PUSHD %CD%\src\JTSDK.NetCore\JTEnv\out
+::ECHO   Installing JTEnv
+::robocopy %CD%\ %JTSDK_HOME%\tools\apps /NFL /NDL /NJH /NJS /nc /ns /np JTEnv*.*
+::POPD
 
 :: Change Directories to JTSDK.Win32
 PUSHD %CD%\src\JTSDK.Win32
