@@ -3,19 +3,32 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.1</TargetFramework>
-    <NeutralLanguage>en-US</NeutralLanguage>
-    <Copyright>GPL-v3</Copyright>
-    <PackageLicenseUrl>https://github.com/KI7MT/jtsdk-dotnet-core/blob/master/LICENSE</PackageLicenseUrl>
-    <PackageProjectUrl>https://github.com/KI7MT/jtsdk-dotnet-core</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/KI7MT/jtsdk-dotnet-core.git</RepositoryUrl>
-    <RepositoryType>Git</RepositoryType>
-    <PackageTags>dotnet, dotnet core, environment</PackageTags>
-    <Description>Lists varous combinations of environment variables.</Description>
+    <Product>JTConfig</Product>
+    <Version>3.0.1</Version>
+    <VersionPrefix>3.0.1.0</VersionPrefix>
+    <Description>JTSDK List Environment Variables</Description>
+    <LangVersion>Latest</LangVersion>
     <Authors>Greg Beam, KI7MT</Authors>
-    <AssemblyVersion>3.0.1.0</AssemblyVersion>
-    <FileVersion>3.0.1.0</FileVersion>
-    <Version>3.0.1.0</Version>
+    <Copyright>GPLv3</Copyright>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageLicenseUrl>https://github.com/KI7MT/jtsdk-dotnet-core/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/KI7MT/jtsdk-dotnet-core/blob/master/README.md</PackageProjectUrl>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <RepositoryType>Git</RepositoryType>    
+    <IsPackable>true</IsPackable>
+    <PackAsTool>true</PackAsTool>    
+    <TieredCompilation>true</TieredCompilation>    
+    <PackageTags>dotnet core</PackageTags>
   </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <Optimize>true</Optimize>
+    <Prefer64Bit>true</Prefer64Bit>
+  </PropertyGroup>
+
+  <ItemGroup Condition="'$(ContinuousIntegrationBuild)'=='true'">
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0-beta-63102-01" PrivateAssets="All" />
+  </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\JTCore.Library\JTCore.Library.csproj" />

@@ -9,11 +9,11 @@ namespace JTEnv
     {
         public static void Main(String[] args)
         {
-            /* instantiate Env Enums */
+            /* instantiate EnvUtils */
             EnvUtils envUtils = new EnvUtils();
 
             #region Args < 1 Processing
-            if (args.Length < 1)
+            if (args.Length < 1 || args.Length > 1)
             {
                 Common.ClearScreen();
                 EnvUtils.JTEnvHelpMessage();
@@ -21,84 +21,57 @@ namespace JTEnv
             }
             #endregion
 
-            #region Args == 1 Processing
-            // check args[0] first
-            if (args.Length == 1)
+            #region Arg[0] Switch
+            var option = args[0].ToLower();
+            switch (option)
             {
-                if (
-                    args[0].ToLower() == "-h" ||
-                    args[0].ToLower() == "-help"
-                    )
-                {
+                case "-h":
+                case "-help":
                     Common.ClearScreen();
                     EnvUtils.JTEnvHelpMessage();
                     Environment.Exit(0);
-                }
-                if (
-                    args[0].ToLower() == "-v" ||
-                    args[0].ToLower() == "-version"
-                    )
-                {
+                    break;
+                case "-v":
+                case "-version":
                     Common.ClearScreen();
                     PrintAssemblyHeader();
                     Environment.Exit(0);
-                }
-
-                else if (
-                    args[0].ToLower() == "-a" ||
-                    args[0].ToLower() == "-all"
-                    )
-                {
+                    break;
+                case "-a":
+                case "-all":
                     Common.ClearScreen();
                     PrintAssemblyHeader();
                     EnvUtils.GetSectionInformaiton(new List<string>(envUtils.UserEnvList), "User Vars");
                     EnvUtils.GetSectionInformaiton(new List<string>(envUtils.JavaEnvList), "Java Vars");
                     EnvUtils.GetSectionInformaiton(new List<string>(envUtils.SystemEnvList), "System Vars");
                     Environment.Exit(0);
-                }
-                else if (
-                    args[0].ToLower() == "-u" ||
-                    args[0].ToLower() == "-user"
-                    )
-                {
+                    break;
+                case "-u":
+                case "-user":
                     Common.ClearScreen();
                     PrintAssemblyHeader();
                     EnvUtils.GetSectionInformaiton(new List<string>(envUtils.UserEnvList), "User Vars");
                     Environment.Exit(0);
-                }
-                else if (
-                    args[0].ToLower() == "-j" ||
-                    args[0].ToLower() == "-java"
-                        )
-                {
+                    break;
+                case "-j":
+                case "-java":
                     Common.ClearScreen();
                     PrintAssemblyHeader();
                     EnvUtils.GetSectionInformaiton(new List<string>(envUtils.JavaEnvList), "Java Vars");
                     Environment.Exit(0);
-                }
-                else if (
-                    args[0].ToLower() == "-s" ||
-                    args[0].ToLower() == "-system"
-                        )
-                {
+                    break;
+                case "-s":
+                case "-system":
                     Common.ClearScreen();
                     PrintAssemblyHeader();
-                    EnvUtils.GetSectionInformaiton(new List<string>(envUtils.SystemEnvList), "Java Vars");
-                    Environment.Exit(0);
-                }
-                else
-                {
-                    Console.WriteLine($"\nUnonown Argument : {args[0]}\n");
+                    EnvUtils.GetSectionInformaiton(new List<string>(envUtils.SystemEnvList), "System Vars");
+                    break;
+                default:
+                    Common.ClearScreen();
                     EnvUtils.JTEnvHelpMessage();
-                    Environment.Exit(1);
-                }
+                    break;
             }
             #endregion
-
-#if DEBUG
-            /* pause */
-            Console.ReadKey();
-#endif
 
         } /* End - Main Method */
 
@@ -106,7 +79,7 @@ namespace JTEnv
         // METHODS
         //---------------------------------------------------------------------
 
-        /* Print Assembly Header */
+        /* pring assembly header */
         private static void PrintAssemblyHeader()
         {
             Console.WriteLine("\n");
