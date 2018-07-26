@@ -3,12 +3,12 @@
 Starting with Dotnet Core SDK 2.1.300, users can publish dotnet core apps to
 their home user sapce, which enables access globally from within.
 
-### Publish Location
+## Publish Location
 
 - Windows Path: `%USERPROFILE%\.dotnet\tools`
 - Linux / MacOS path: `$HOME/.dotnet/tools`
 
-### From Microsoft
+## From Microsoft
 
 > A .NET Core Global Tool is a special NuGet package that contains a console
 > application. A Global Tool can be installed on your machine on a default
