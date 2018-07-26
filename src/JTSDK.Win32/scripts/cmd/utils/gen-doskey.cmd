@@ -23,7 +23,7 @@
 ::------------------------------------------------------------------------------
 :: DOSKEY for JTSDK Core Applications
 ::------------------------------------------------------------------------------
-DOSKEY config = dotnet %JTSDK_APPS%\Jtsdk.Core.Options.dll $*
+DOSKEY jtconfig = dotnet %JTSDK_APPS%\JTConfig.dll $*
 
 ::------------------------------------------------------------------------------
 :: DOSKEY -for Generating QT Tool Chain Files
