@@ -23,7 +23,7 @@ needs to be.
 ``` shell
 # Run from JTSDK-Tools Environment
 
-javaenv -h
+javaenv
 
 # Run From Windows Command Prompt:
 
