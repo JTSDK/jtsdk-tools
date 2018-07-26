@@ -27,7 +27,7 @@ their home user sapce, which enables access globally from within.
 ## JTSDK Global Tools
 
 Where possible, all JTSDK Net Core Applications will support Global Tool
-Installation. The following example shows how to publish `Jtsdk.Core.Options`
+Installation. The following example shows how to publish `JTConfig`
 artifacts globally.
 
 ### Clone the repository
@@ -42,7 +42,7 @@ git clone https://github.com/KI7MT/jtsdk-dotnet-core.git
 
 ``` shell
 dotnet pack -c release -o nupkg
-dotnet tool install --add-source .\nupkg -g Jtsdk.Core.Options
+dotnet tool install --add-source .\nupkg -g JTConfig
 ```
 
 ### Run the Application
@@ -52,15 +52,15 @@ Open a Windows Command Prompt, and type the following:
 >NOTE: You do not need to be in the `JTSDK Environment`:
 
 ``` shell
-Jtsdk.Core.Options -h
+JTConfig -h
 ```
 
-See Results in [Jtsdk.Core.Options Docs](https://github.com/KI7MT/jtsdk-dotnet-core/blob/master/docs/tools/jtsdk.core.options.md#usage).
+See Results in [JTConfig Docs](https://github.com/KI7MT/jtsdk-dotnet-core/blob/master/docs/tools/JTConfig.md#usage).
 
 ### Uninstall The Application
 
 ``` shell
-dotnet tool uninstall -g Jtsdk.Core.Options
+dotnet tool uninstall -g JTConfig
 ```
 
 ## Additional Artifacts
