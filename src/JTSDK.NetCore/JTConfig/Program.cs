@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using Jtsdk.Core.Library;
+using JTCore.Library;
 
 namespace JTConfig
 {

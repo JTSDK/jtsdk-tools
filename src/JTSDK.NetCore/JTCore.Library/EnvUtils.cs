@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Jtsdk.Core.Library
+namespace JTCore.Library
 {
     public class EnvUtils
     {

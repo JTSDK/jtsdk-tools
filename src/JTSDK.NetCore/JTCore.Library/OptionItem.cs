@@ -3,7 +3,7 @@ using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Jtsdk.Core.Library
+namespace JTCore.Library
 {
     public class OptionItem
     {

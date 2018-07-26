@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Diagnostics;
 using System.IO;
-using System.Reflection;
 
-namespace Jtsdk.Core.Library
+namespace JTCore.Library
 {
     public class Common
     {

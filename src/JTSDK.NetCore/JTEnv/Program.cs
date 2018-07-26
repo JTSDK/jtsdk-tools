@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Reflection;
-using Jtsdk.Core.Library;
+using JTCore.Library;
 
 namespace JTEnv
 {
