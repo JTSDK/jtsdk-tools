@@ -37,7 +37,7 @@ No external libraries are required fot build the app. Runs on `Java 8, 9 and 10`
 ``` shell
 # In Window command prompt, or JTSDK-Tools Environment
 
-(C|D):\JTSDK-Tools\scripts\java JavaEnv
+(C|D):\JTSDK-Tools\scripts\java
 
 # Compile
 javac JavaEnv.java
