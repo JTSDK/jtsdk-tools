@@ -75,5 +75,5 @@ The following tools can be installed as Global .Net Core Tools.
 | Global Command Line Tools ||
 | ---| :--- |
 |[JTConfig](docs/tools/JTConfig.md)| Manages all JTSDK Options and used in compiling apps.
-|[JTEnv](docs/tools/JTEnv.md)| Checks three gorups of Environment Varables --User, java, System
-|More Pending| Many more CLI Apps are pending inclusion
+|[JTEnv](docs/tools/JTEnv.md)| Checks three gorups of Environment Variables `User, Java, System`
+|More Pending| More CLI Apps are pending inclusion
