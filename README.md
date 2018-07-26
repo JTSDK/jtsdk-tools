@@ -5,8 +5,10 @@ This repository is designed to work specifically with the
 tool-chain. It would be of little use elsewhere.
 
 Delivery is directly from the `master` branch.
+
 - `Branches` are used for development and testing, while reserving the `master` branch in a stable
 condition for end users. 
+
 - `Tags` are used to archive milestones, and will appear
 in the [release section](https://github.com/KI7MT/jtsdk-dotnet-core/releases).
 
@@ -19,7 +21,7 @@ To assist users with installation, usage, compiling applications, and
 general discussion, use [JTSDK@Group.io](https://groups.io/g/JTSDK).
 
 - Post: [JTSDK@groups.io](JTSDK@groups.io)
-- Subscribe: [JTSDK+subscribe@groups.io](JTSDK+subscribe@groups.io)
+-Subscribe: [JTSDK+subscribe@groups.io](JTSDK+subscribe@groups.io)
 
 ## Installation
 
@@ -34,7 +36,8 @@ detailed installation instructions.
 
 For submitting bug reports and feature requests, use the [Issue Tracker](https://github.com/KI7MT/jtsdk-dotnet-core/issues).
 
-The aim of `JTSDK-Tools` is to use an Agile delivery approach to create a high-quality, yet flexable build system. Utilizing Githubs 
+The aim of `JTSDK-Tools` is to use an Agile delivery approach to create a
+high-quality, yet flexable build system. Utilizing Github's 
 [Issue Tracker](https://github.com/KI7MT/jtsdk-dotnet-core/issues)
 users can quickly see the status of any particular request, discuss the merits,
 and implement the final disposition.
