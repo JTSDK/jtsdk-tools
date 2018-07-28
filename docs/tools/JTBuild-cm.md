@@ -112,7 +112,7 @@ git clone https://git.code.sf.net/p/wsjt/wsjtx (C|D):\JTSDK-Tools\tmp\wsjtx
 * Using Git-Bash
 git clone https://git.code.sf.net/p/wsjt/wsjtx /(c|d)/JTSDK-Tools/tmp/wsjtx
 
-Both commands should yeild the same resutls, a new checkout in: C:\JTSDK\tmp\wsjtx-git-sf
+Both commands should yield the same results, a new checkout in: (C|D):\JTSDK-Tools\tmp\wsjtx
 
 ```
 
