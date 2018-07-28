@@ -8,7 +8,6 @@ namespace JTCore.Library
         // Java Environment Variable List
         public readonly List<string> JavaEnvList = new List<string>
         {
-            "JTSDK_HOME",
             "JAVA_HOME",
             "JAVA_TOOL_OPTIONS",
             "MAVEN_HOME",
