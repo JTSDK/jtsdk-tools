@@ -156,7 +156,7 @@ Note: you can use any of the following commands:
    package    Release Install Win32 Installer Package
    docs       Compiles the documentation
 
-The Output should be located at:
+The Output should be located at or near:
 
 Source : (C|D):\JTSDK-Tools\tmp\wsjtx
 Output :  (C|D):\JTSDK-Tools\tmp\\qt55\1.9.2\Release\{build, install, package}
