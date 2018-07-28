@@ -21,11 +21,9 @@
 ::-----------------------------------------------------------------------------::
 
 :: Used to prevent CMake errors with MinGW Makefiles
-IF EXIST %JTSDK_HOME%\tools\msys2\usr\bin\sh.exe (
 set sh_orig=%JTSDK_HOME%\tools\msys2\usr\bin\sh.exe
 set sh_bak=%JTSDK_HOME%\tools\msys2\usr\bin\sh-bak.exe
 ren %sh_orig% %sh_bak% >NUL 2>&1
-)
 GOTO DEFAULT_TEXT
 
 :: generate build.txt file if not exist --------------------------------------
@@ -575,8 +573,6 @@ REM  ***************************************************************************
 :EOF
 COLOR 0B
 popd
-IF EXIST %JTSDK_HOME%\tools\msys2\usr\bin\sh_bak.exe (
 ren %sh_bak% %sh_orig% >NUL 2>&1
-)
 
 EXIT /B 0
