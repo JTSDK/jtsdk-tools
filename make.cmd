@@ -127,7 +127,7 @@ POPD
 
 :: Conditional Build of Java Apps / Scripts
 IF EXIST %JTSDK_HOME%\java.tools (
-PUSHD %CD%\src\JTSDK.Java\java
+PUSHD %CD%\src\JTSDK.Java\scripts
 ECHO   Compiling Java Apps
 for /r %%i in (*.java) do javac -d %JTSDK_HOME%\scripts\java %%i
 )
