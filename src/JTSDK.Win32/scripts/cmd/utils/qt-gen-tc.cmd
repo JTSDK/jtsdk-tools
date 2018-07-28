@@ -62,7 +62,7 @@ ECHO # FFTW
 ECHO ^SET^(FFTWD %fftw3f_dir_f%^)
 ECHO.
 ECHO # Hamlib
-ECHO ^SET^(HLBIN %hamlib_base_f%/qt/5.5^)
+ECHO ^SET^(HLIB %hamlib_base_f%/qt/5.5^)
 ::ECHO ^SET^(HLINC %hamlib_base_f%/qt/5.5/include^)
 ::ECHO ^SET^(HLLIB %hamlib_base_f%/qt/5.5/lib^)
 ECHO.
@@ -70,7 +70,7 @@ ECHO # Subversion
 ECHO ^SET^(SVND %svn_dir_f%^)
 ECHO.
 ECHO # Cmake Consolidated Variables
-ECHO ^SET^(CMAKE_PREFIX_PATH ^${GCCD} ^${QTDIR} ^${HLBIN} ^${HLBIN}/bin ^${ADOCD} ^${FFTWD} ^${SVND}^)
+ECHO ^SET^(CMAKE_PREFIX_PATH ^${GCCD} ^${QTDIR} ^${HLIB} ^${HLIB}/bin ^${ADOCD} ^${FFTWD} ^${SVND}^)
 ECHO ^SET^(CMAKE_FIND_ROOT_PATH ^${TOOLSROOT}^)
 ECHO ^SET^(CMAKE_FIND_ROOT_PATH_PROGRAM NEVER^)
 ECHO ^SET^(CMAKE_FIND_ROOT_PATH_LIBRARY BOTH^)
@@ -110,7 +110,7 @@ ECHO # FFTW
 ECHO ^SET^(FFTWD %fftw3f_dir_f%^)
 ECHO.
 ECHO # Hamlib
-ECHO ^SET^(HLBIN %hamlib_base_f%/qt/5.9.5^)
+ECHO ^SET^(HLIB %hamlib_base_f%/qt/5.9.5^)
 ::ECHO ^SET^(HLINC %hamlib_base_f%/qt/5.9.5/include^)
 ::ECHO ^SET^(HLLIB %hamlib_base_f%/qt/5.9.5/lib^)
 ECHO.
@@ -118,7 +118,7 @@ ECHO # Subversion
 ECHO ^SET^(SVND %svn_dir_f%^)
 ECHO.
 ECHO # Cmake Consolidated Variables
-ECHO ^SET^(CMAKE_PREFIX_PATH ^${GCCD} ^${QTDIR} ^${HLBIN} ^${HLBIN}/bin ^${ADOCD} ^${FFTWD} ^${SVND}^)
+ECHO ^SET^(CMAKE_PREFIX_PATH ^${GCCD} ^${QTDIR} ^${HLIB} ^${HLIB}/bin ^${ADOCD} ^${FFTWD} ^${SVND}^)
 ECHO ^SET^(CMAKE_FIND_ROOT_PATH ^${TOOLSROOT}^)
 ECHO ^SET^(CMAKE_FIND_ROOT_PATH_PROGRAM NEVER^)
 ECHO ^SET^(CMAKE_FIND_ROOT_PATH_LIBRARY BOTH^)
