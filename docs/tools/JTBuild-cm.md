@@ -20,7 +20,7 @@ path.
 ## Available Options
 
 ``` shell
-# In JTSDK-QT
+# In JTSDK-Tools Environment
 jtbuild-cm rinstall
 jtbuild-cm dinstall
 jtbuild-cm rconfig
