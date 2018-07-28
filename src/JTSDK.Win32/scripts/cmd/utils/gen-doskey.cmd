@@ -51,7 +51,7 @@ DOSKEY jtenv = dotnet %JTSDK_APPS%\JTEnv.dll $*
 ::------------------------------------------------------------------------------
 :: DOSKEY for JTBuild--cm.cmd
 ::------------------------------------------------------------------------------
-DOSKEY jtbuild-cm = call %JTSDK_HOME%\scripts\cmd\utils\version-check.cmd $*
+DOSKEY jtbuild-cm = call %JTSDK_HOME%\scripts\cmd\utils\JTBuild-cm.cmd $*
 
 ::------------------------------------------------------------------------------
 :: DOSKEY GENERAL PURPOSE
