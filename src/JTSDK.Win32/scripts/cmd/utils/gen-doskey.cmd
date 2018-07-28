@@ -49,6 +49,11 @@ DOSKEY javaenv = java ^-cp %JTSDK_HOME%\scripts\java JavaEnv
 DOSKEY jtenv = dotnet %JTSDK_APPS%\JTEnv.dll $*
 
 ::------------------------------------------------------------------------------
+:: DOSKEY for JTBuild--cm.cmd
+::------------------------------------------------------------------------------
+DOSKEY jtbuild-cm = call %JTSDK_HOME%\scripts\cmd\utils\version-check.cmd $*
+
+::------------------------------------------------------------------------------
 :: DOSKEY GENERAL PURPOSE
 ::------------------------------------------------------------------------------
 DOSKEY version-check = call %JTSDK_HOME%\scripts\cmd\utils\version-check.cmd
