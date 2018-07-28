@@ -98,6 +98,9 @@ GOTO START
 
 :: start main script -----------------------------------------------------------
 :START
+IF /I [%1]==[] (
+    GOTO HELP-OPTIONS
+)
 IF /I [%1]==[help] (
 GOTO HELP-OPTIONS
 ) ELSE IF /I [%1]==[-h] (
