@@ -552,13 +552,13 @@ ECHO  First Run of JTBuild-cmd
 ECHO --------------------------------------------
 ECHO.
 ECHO  A file named %JTSDK_HOME%\tmp\build.txt
-ECHO  was auto-generates.
+ECHO  was auto-generated.
 ECHO.
 ECHO  Check this file to ensure SRCD and DEST
-ECHO  value are set to the appropriate locations.
+ECHO  values are set to the appropriate locations.
 ECHO.
-ECHO  If Need be, clone the WSJT-X repository from
-ECHO  Sourceforge first, then set the location value
+ECHO  If need be, clone the WSJT-X repository from
+ECHO  Sourceforge first, then set the location values
 ECHO  as appropriate.
 ECHO. 
 ECHO  After verifying the build.txt file, re-run
