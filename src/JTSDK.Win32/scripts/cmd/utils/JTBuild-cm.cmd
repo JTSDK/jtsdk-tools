@@ -573,6 +573,6 @@ REM  ***************************************************************************
 :EOF
 COLOR 0B
 popd
-ren %sh_bak% %sh_orig% >NUL 2>&1
+::ren %sh_bak% %sh_orig% >NUL 2>&1
 
 EXIT /B 0
