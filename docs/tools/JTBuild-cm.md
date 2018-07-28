@@ -159,7 +159,7 @@ Note: you can use any of the following commands:
 The Output should be located at or near:
 
 Source : (C|D):\JTSDK-Tools\tmp\wsjtx
-Output :  (C|D):\JTSDK-Tools\tmp\\qt55\1.9.2\Release\{build, install, package}
+Output :  (C|D):\JTSDK-Tools\tmp\wsjtx-output\qt55\1.9.2\Release\{build, install, package}
 ```
 
 ## Summary
