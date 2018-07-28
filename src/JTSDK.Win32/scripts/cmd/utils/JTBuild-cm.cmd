@@ -548,7 +548,7 @@ GOTO EOF
 :FIRST-RUN
 ECHO.
 ECHO --------------------------------------------
-ECHO  First Run of JTBuild-cmd
+ECHO  First Run of JTBuild-cm
 ECHO --------------------------------------------
 ECHO.
 ECHO  A file named %JTSDK_HOME%\tmp\build.txt
