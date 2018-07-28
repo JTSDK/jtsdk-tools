@@ -175,9 +175,9 @@ ECHO --------------------------------------------
 ECHO  Folder Locations
 ECHO --------------------------------------------
 ECHO.
-SET buildd=%dest%\%qtv%\%aver%\%copt%\build
-SET installd=%dest%\%qtv%\%aver%\%copt%\install
-SET pkgd=%dest%\%qtv%\%aver%\%copt%\package
+SET buildd=%dest%\qt\%qtv%\%aver%\%copt%\build
+SET installd=%dest%\qt\%qtv%\%aver%\%copt%\install
+SET pkgd=%dest%\qt\%qtv%\%aver%\%copt%\package
 mkdir %buildd% >NUL 2>&1
 mkdir %installd% >NUL 2>&1
 mkdir %pkgd% >NUL 2>&1
@@ -573,6 +573,6 @@ REM  ***************************************************************************
 :EOF
 COLOR 0B
 popd
-ren %sh_bak% %sh_orig% >NUL 2>&1
+::ren %sh_bak% %sh_orig% >NUL 2>&1
 
 EXIT /B 0
