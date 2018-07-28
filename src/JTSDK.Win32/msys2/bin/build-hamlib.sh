@@ -2,9 +2,8 @@
 #
 # Title ........: build-hamlib.sh
 # Version ......: 3.0.1
-# Description ..: Build Hamlib from G4WJS Hammlib Integration Branch
+# Description ..: Build Hamlib from G4WJS Hamlib Integration Branch
 # Project URL ..: git://git.code.sf.net/u/bsomervi/hamlib
-# Usage ........: build-hamlib.sh
 #
 # Author .......: Greg, Beam, KI7MT, <ki7mt@yahoo.com>
 # Copyright ....: Copyright (C) 2018 Greg Beam, KI7MT
@@ -61,6 +60,9 @@ C_G='\033[01;32m'		# green
 C_Y='\033[01;33m'		# yellow
 C_C='\033[01;36m'		# cyan
 C_NC='\033[01;37m'		# no color
+
+# Add required directories
+mkdir -p $HOME/src/hamlib/{build,src} >/dev/null 2>&1
 
 # Tool Check Function ----------------------------------------------------------
 tool_check() {
@@ -138,16 +140,19 @@ then
 	cd "$SRCD/src"
 	git pull
 else
-	echo "sf is down"
 	cd "$SRCD"
 		
+	# ensure the directory is removed first
     if [[ -d $SRCD/src ]]
     then
         rm -rf "$SRCD/src"
     fi
-    
+
+	# clone the repository
     git clone git://git.code.sf.net/u/bsomervi/hamlib src
 	cd "$SRCD/src"
+
+	# checkout the integration branch
 	git checkout integration
 fi
 
