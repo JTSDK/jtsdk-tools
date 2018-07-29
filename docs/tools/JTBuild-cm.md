@@ -4,7 +4,7 @@ The following is a short walkthrough in building the new
 [WSJT-X Git Repository](https://sourceforge.net/p/wsjt/wsjtx/ci/stable/tree/)
 using `JTBuild-cm`.
 
-The script does not depend on Git, nor has any interaction with Git. If the
+The build script does not depend on Git, nor has any interaction with Git. If the
 user wishes to build from different URL / Repository, all that is
 required is to update the `build.txt` file with the new checkout
 path.
@@ -128,7 +128,7 @@ You can use any of the items in `Available Build Commands`. For this example
 we'll build the Master Release Install target.
 
 ``` shell
-# In a Windows or Git-Bash Terminal, change directory to the source location
+# In a Windows Command Prompt or Git-Bash Terminal, change directory to the source location
 
 Windows CMD
 cd /d (C|D):\JTSDK-Tools\tmp\wsjtx
@@ -159,7 +159,7 @@ Note: you can use any of the following commands:
 The Output should be located at or near:
 
 Source : (C|D):\JTSDK-Tools\tmp\wsjtx
-Output :  (C|D):\JTSDK-Tools\tmp\wsjtx-output\qt\5.5\1.9.2\Release\{build, install, package}
+Output : (C|D):\JTSDK-Tools\tmp\wsjtx-output\qt\5.5\1.9.2\Release\{build, install, package}
 ```
 
 ## Summary
