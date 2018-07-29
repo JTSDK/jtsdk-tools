@@ -3,7 +3,7 @@ Date.........: 7/29/2018
 Author.......: Greg, Beam, KI7MT, <ki7mt@yahoo.com>
 Copyright....: Copyright (C) 2018, Greg Beam KI7MT
 License......: GPL-3
-Description..: Shows a pre-defined lists of Environment variables from lists
+Description..: Shows pre-defined lists of Environment variables from lists
 
 Usage:
     python JTEnv-py.py [option]
