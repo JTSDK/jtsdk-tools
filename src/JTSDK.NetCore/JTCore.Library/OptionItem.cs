@@ -31,6 +31,7 @@ namespace JTCore.Library
             "QT59",
             "CMake310",
             "Java",
+            'Unix',
             "PostgreSQL",
             "Sqlite3"
         };
