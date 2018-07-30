@@ -31,7 +31,7 @@ DOSKEY jtconfig = dotnet %JTSDK_APPS%\JTConfig.dll $*
 DOSKEY gen-tc = PUSHD %JTSDK_HOME%\scripts\cmd\utils $T call qt-gen-tc.cmd $T POPD
 
 ::------------------------------------------------------------------------------
-:: DOSKEY for MSYS2 related using Ruby ridk
+:: DOSKEY's for MSYS2
 ::------------------------------------------------------------------------------
 :: DOSKEY update-msys2 = cls $T ridk exec pacman -Syuu
 :: DOSKEY search-msys2 = ridk exec pacman -Ss $*
@@ -39,24 +39,16 @@ DOSKEY gen-tc = PUSHD %JTSDK_HOME%\scripts\cmd\utils $T call qt-gen-tc.cmd $T PO
 DOSKEY msys2 = %JTSDK_HOME%\tools\msys2\msys2_shell.cmd
 
 ::------------------------------------------------------------------------------
-:: DOSKEY for JTEnv Command
+:: DOSKEY for JTEnv Commands
 ::------------------------------------------------------------------------------
-DOSKEY jtenv = dotnet %JTSDK_APPS%\JTEnv.dll $*
+DOSKEY jtenv-cs = dotnet %JTSDK_APPS%\JTEnv.dll $*
+DOSKEY jtenv-jv = java ^-cp %JTSDK_HOME%\scripts\java JavaEnv
+DOSKEY jtenv-py = python %JTSDK_HOME%\scripts\python\JTEnv-py.py $*
 
 ::------------------------------------------------------------------------------
 :: DOSKEY for JTBuild--cm.cmd
 ::------------------------------------------------------------------------------
 DOSKEY jtbuild-cm = call %JTSDK_HOME%\scripts\cmd\utils\JTBuild-cm.cmd $*
-
-::------------------------------------------------------------------------------
-:: DOSKEY for Python Scripts
-::------------------------------------------------------------------------------
-DOSKEY jtenv-py = python %JTSDK_HOME%\scripts\python\JTEnv-py.py $*
-
-::------------------------------------------------------------------------------
-:: DOSKEY for Java Single File Apps / Scripts
-::------------------------------------------------------------------------------
-DOSKEY jtenv-jv = java ^-cp %JTSDK_HOME%\scripts\java JavaEnv
 
 ::------------------------------------------------------------------------------
 :: DOSKEY GENERAL PURPOSE
