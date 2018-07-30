@@ -32,7 +32,7 @@ not set, or cannot be found, a message of `-- not set --` or `-- unavailable --`
 will be displayed in path section.
 
 |Name | Command | Language | Status | Description |
-|:-----|:-----|:-----|:-----|:-----|
+|:-----|:-----|:-----|:------|:-----|
 [JTEnv](tools/JTEnv.md)      | jtenv -h    | C-Sharp | Release | Show environment variables using C# / .Net Core
 [JTEnvJV](tools/JTEnvJV.md)  | jtenv-jv -h | Java    | Release | same as above using Java
 [JTEnvPY ](tools/JTEnvPY.md) | jtenv-py -h | Pyython | Release | same as above using Python
@@ -44,7 +44,7 @@ changing tool-chains, and other runtime activities.
 
 |Name | Command | Language | Status | Description |
 |:-----|:-----|:-----|:-----|:-----|
-[JTConfig.dll](tools/JTConfig.md)   | jtconfig -h    | C-Sharp | Release     | Configure runtime variables
+[JTConfig.dll](tools/JTConfig.md)  | jtconfig -h    | C-Sharp | Release     | Configure runtime variables
 [JTConfigJV](tools/JTConfigJV.md ) | jtconfig-jv -h | Java    | Development | same as above using Java
 [JTConfigPY](tools/JTConfigPY.md)  | jtconfig-py -h | Python  | Development | same as above using Python
 
@@ -54,10 +54,10 @@ These applications are used to compile `WSJT-X` from source code.
 
 |Name | Command | Language | Status | Description |
 |:-----|:-----|:-----|:-----|:-----|
-[JTBuild-cm](tools/JTBuild-cm.md) | jtbuild-cm -h | Batch   | Release     | Compile WSJT-X using Windows Batch
-[JTBuild](tools/JTBuild.md)       | jtbuild-cs -h | C-Sharp | Development | same as above using C-Sharp
-[JTBuildJV](tools/JTBuildJV.md)      | jtbuild-jv -h | Java    | Development | same as above using Java
-[JTBuildPY](tools/JTBuildPY.md)      | jtbuild-py -h | Python  | Development | same as above using Python
+[JTBuild](tools/JTBuild.md)     | jtbuild-cs -h | C-Sharp | Development | same as above using C-Sharp
+[JTBuildCM](tools/JTBuildCM.md) | jtbuild-cm -h | Batch   | Release     | Compile WSJT-X using Windows Batch
+[JTBuildJV](tools/JTBuildJV.md) | jtbuild-jv -h | Java    | Development | same as above using Java
+[JTBuildPY](tools/JTBuildPY.md) | jtbuild-py -h | Python  | Development | same as above using Python
 
 ## Hamlib Compiling
 
@@ -69,6 +69,6 @@ matrix.
 
 |Name | Command | Language | Status| Description |
 :-----|:-----|:-----|:-----|:-----|
-[build-hamlib.sh](tools/JTCOnfig-cs.md)  | build-hamlib -h | Bash | Release | Compile Hamlib Library for Windows
+[build-hamlib.sh]()  | build-hamlib -h | Bash | Release | Compile Hamlib Library for Windows
 [build-hamlib-jv]()  | build-hamlib -h | Bash | Deferred | Investigation use with MSYS2
 [build-hamlib-py]()  | build-hamlib -h | Bash | Deferred | Investigating use with MSYS2
