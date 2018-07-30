@@ -57,7 +57,7 @@ GOTO FIRST-RUN
 :: Sets qtv => QTV
 cat %JTSDK_HOME%\tmp\build.txt |grep "SRCD" |awk "{print $2}" >s.d & SET /p srcd=<s.d & rm s.d
 cat %JTSDK_HOME%\tmp\build.txt |grep "DEST" |awk "{print $2}" >d.d & SET /p dest=<d.d & rm d.d
-set cfdg=%JTSDK_CONFIG%
+set cfgd=%JTSDK_CONFIG%
 set qtv=%QTV%
 
 :: option parameters -----------------------------------------------------------

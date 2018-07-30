@@ -213,8 +213,10 @@ SET "svn_dir_f=%svn_dir:\=/%"
 SET JTSDK_PATH=%JTSDK_PATH%;%svn_dir%
 
 :: UNIX TOOLS
+IF EXIST "%JTSDK_CONFIG%\unix"
 SET unix_dir=%JTSDK_HOME%\tools\msys2\usr\bin
 SET JTSDK_PATH=%JTSDK_PATH%;%unix_dir%
+)
 
 ::------------------------------------------------------------------------------
 :: CONDITIONAL PATHS for Multiple versions of Cmake
