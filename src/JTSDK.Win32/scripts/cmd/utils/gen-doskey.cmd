@@ -39,11 +39,6 @@ DOSKEY gen-tc = PUSHD %JTSDK_HOME%\scripts\cmd\utils $T call qt-gen-tc.cmd $T PO
 DOSKEY msys2 = %JTSDK_HOME%\tools\msys2\msys2_shell.cmd
 
 ::------------------------------------------------------------------------------
-:: DOSKEY for Java Single File Apps / Scripts
-::------------------------------------------------------------------------------
-DOSKEY javaenv = java ^-cp %JTSDK_HOME%\scripts\java JavaEnv
-
-::------------------------------------------------------------------------------
 :: DOSKEY for JTEnv Command
 ::------------------------------------------------------------------------------
 DOSKEY jtenv = dotnet %JTSDK_APPS%\JTEnv.dll $*
@@ -52,6 +47,16 @@ DOSKEY jtenv = dotnet %JTSDK_APPS%\JTEnv.dll $*
 :: DOSKEY for JTBuild--cm.cmd
 ::------------------------------------------------------------------------------
 DOSKEY jtbuild-cm = call %JTSDK_HOME%\scripts\cmd\utils\JTBuild-cm.cmd $*
+
+::------------------------------------------------------------------------------
+:: DOSKEY for Python Scripts
+::------------------------------------------------------------------------------
+DOSKEY jtenv-py = python %JTSDK_HOME%\scripts\python\JTEnv-py.py $*
+
+::------------------------------------------------------------------------------
+:: DOSKEY for Java Single File Apps / Scripts
+::------------------------------------------------------------------------------
+DOSKEY jtenv-jv = java ^-cp %JTSDK_HOME%\scripts\java JavaEnv
 
 ::------------------------------------------------------------------------------
 :: DOSKEY GENERAL PURPOSE
