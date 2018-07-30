@@ -1,8 +1,8 @@
-# JTBuild-cm - WSJT-X Test Build Script
+# JTBuild - Compile WSJT-X using Windows Batch
 
-The following is a short walkthrough in building the new 
+The following is a short walkthrough in building the new
 [WSJT-X Git Repository](https://sourceforge.net/p/wsjt/wsjtx/ci/stable/tree/)
-using `JTBuild-cm`.
+using `JTBuild`.
 
 The build script does not depend on Git, nor has any interaction with Git. If the
 user wishes to build from different URL / Repository, all that is
@@ -21,12 +21,12 @@ path.
 
 ``` shell
 # In JTSDK-Tools Environment
-jtbuild-cm rinstall
-jtbuild-cm dinstall
-jtbuild-cm rconfig
-jtbuild-cm dconfig
-jtbuild-cm package
-jtbuild-cm docs
+JTBuild rinstall
+JTBuild dinstall
+JTBuild rconfig
+JTBuild dconfig
+JTBuild package
+JTBuild docs
 ```
 
 ## Build Options
@@ -52,7 +52,7 @@ of interest, SRCD and DEST. Only the paths should change, do not change the pref
 For this example, the file contains the following:
 
 ``` shell
-# For use with jtbuild-cm only
+# For use with JTBuild only
 # - Only the paths need to be changed
 # - Do not use spaces in the paths as the build will fail
 # - Ensure there is only one space between the prefix and path
@@ -77,14 +77,14 @@ you would like a different Destination directory, update the DEST path.
 It should not matter which repository service is used. For this example, we'll
 being using `Sourceforge` and the [WSJT-X Master Branch](https://sourceforge.net/p/wsjt/wsjtx/ci/master/tree/)
 
-As noted earlier, `JTBuild-cm` does not know of, nor is it concerned with
+As noted earlier, `JTBuild` does not know of, nor is it concerned with
 Git. All repository management should be performed outside of the
-`JTBuild-cm` script by using an appropriate Git Client.
+`JTBuild` script by using an appropriate Git Client.
 
 ### Clone WSJT-X Repository
 
 You can use any Git Client you like. The only things that are of concern to the
-`JTBuild-cm` script is the full path including the checkout-name, and the
+`JTBuild` script is the full path including the checkout-name, and the
 destination directory. For this build example, we'll be using the following:
 
 ``` shell
@@ -146,7 +146,7 @@ Open JTSDK-Tools Config
 - Ensure your're on QT55
 - Ensure you've built Hamlib3, then type:
 
-jtbuild-cm rinstall
+JTBuild rinstall
 
 Note: you can use any of the following commands:
    rinstall   Builds the Release Install target

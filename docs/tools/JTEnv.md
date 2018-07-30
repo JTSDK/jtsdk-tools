@@ -1,11 +1,12 @@
-# JTEnv CLI Application
+# JTEnv - Environment Application using C-Charp
 
 | Application Data ||
 | ---| --- |
 | Name        | JTEnv |
 | Version     | 3.0.1 |
 | Arch        | 64 bit preferred |
-| Description | Used for configuring options in JTSDK CLI tools |
+| Status      | Release |
+| Description | C-Sharp application to list environment variables |
 
 ## Available Options
 
@@ -14,6 +15,7 @@
   1. User - lists basic user path variables
   1. Java - lists commonly used / required Java related variables
   1. System - common system variables such as `OS, ARCH`, etc.
+  1. JTSDK - variable applicable to the JTSDK-Tools environment
 
 ## Usage
 

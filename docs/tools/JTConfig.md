@@ -1,11 +1,12 @@
-# JTConfig CLI Application
+# JTConfig - CLI Configuration Application using C-Sharp
 
 | Application Data ||
 | ---| --- |
 | Name        | JTConfig |
 | Version     | 3.0.1 |
 | Arch        | 64 bit preferred |
-| Description | Used for configuring options in JTSDK CLI tools |
+| Status      | Release
+| Description | Used for configuring options in JTSDK-Tools
 
 ## Available Options
 
