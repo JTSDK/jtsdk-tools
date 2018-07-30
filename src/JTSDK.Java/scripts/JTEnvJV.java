@@ -1,10 +1,10 @@
 /* 
- * Class: JavaEnv
+ * Class: JTEnvJV
  * 
  * Desctiption: Prints Java Related Environment Variables
  *
- * Usage: javac JavaEnv.java
- *        java JavaEnv
+ * Usage: javac JTEnvJV.java
+ *        java JTEnvJV
  * 
  * Date: 7/22/2018
  * 
@@ -17,9 +17,9 @@
 */ 
 import java.util.ArrayList;
 
-public class JavaEnv {
+public class JTEnvJV {
 
-    private final static String APP_NAME = "JavaEnv";
+    private final static String APP_NAME = "JTEnvJV";
     private final static String APP_VERSION = "3.0.1";
     private final static String APP_DESC = "Java Environment Variables";
 
@@ -87,4 +87,4 @@ public class JavaEnv {
 
     } /* End - printHeader() */
 
-} /* End - JavaEnv */
+} /* End - JTEnvJV */
