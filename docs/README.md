@@ -33,9 +33,9 @@ will be displayed in path section.
 
 |Name | Command | Language | Status | Description |
 |:-----|:-----|:-----|:-----|:-----|
-[JTEnv.dll](tools/JTEnv.md)         | jtenv -h    | C-Sharp | Release | Show environment variables using C# / .Net Core
-[JTEnv-jv.class](tools/JTEnv-jv.md) | jtenv-jv -h | Java    | Release | same as above using Java
-[JTEnv-py.py ](tools/JTEnv-py.md)   | jtenv-py -h | Pyython | Release | same as above using Python
+[JTEnv](tools/JTEnv.md)      | jtenv -h    | C-Sharp | Release | Show environment variables using C# / .Net Core
+[JTEnvJV](tools/JTEnvJV.md)  | jtenv-jv -h | Java    | Release | same as above using Java
+[JTEnvPY ](tools/JTEnvPY.md) | jtenv-py -h | Pyython | Release | same as above using Python
 
 ## Configuration
 
@@ -44,9 +44,9 @@ changing tool-chains, and other runtime activities.
 
 |Name | Command | Language | Status | Description |
 |:-----|:-----|:-----|:-----|:-----|
-[JTConfig.dll](tools/JTConfig.md)    | jtconfig -h    | C-Sharp | Release     | Configure runtime variables
-[JTConfig-jv](tools/JTConfig-jv.md ) | jtconfig-jv -h | Java    | Development | same as above using Java
-[JTEnv-py.py](tools/JTConfig-cs.md)  | jtconfig-py -h | Python  | Development | same as above using Python
+[JTConfig.dll](tools/JTConfig.md)   | jtconfig -h    | C-Sharp | Release     | Configure runtime variables
+[JTConfigJV](tools/JTConfigJV.md ) | jtconfig-jv -h | Java    | Development | same as above using Java
+[JTConfigPY](tools/JTConfigPY.md)  | jtconfig-py -h | Python  | Development | same as above using Python
 
 ## WSJT-X Compiling
 
@@ -54,10 +54,10 @@ These applications are used to compile `WSJT-X` from source code.
 
 |Name | Command | Language | Status | Description |
 |:-----|:-----|:-----|:-----|:-----|
-[JTBuild-cm.cmd](tools/JTBuild-cm.md) | jtbuild-cm -h | Batch   | Release     | Compile WSJT-X using Windows Batch
-[JTBuild.dll](tools/JTBuild.md)       | jtbuild-cs -h | C-Sharp | Development | same as above using C-Sharp
-[JTBuild-jv](tools/JTBuild-jv.md)     | jtbuild-jv -h | Java    | Development | same as above using Java
-[JTBuild-py.py](tools/JTBuild-py.md)  | jtbuild-py -h | Python  | Development | same as above using Python
+[JTBuild-cm](tools/JTBuild-cm.md) | jtbuild-cm -h | Batch   | Release     | Compile WSJT-X using Windows Batch
+[JTBuild](tools/JTBuild.md)       | jtbuild-cs -h | C-Sharp | Development | same as above using C-Sharp
+[JTBuildJV](tools/JTBuildJV.md)      | jtbuild-jv -h | Java    | Development | same as above using Java
+[JTBuildPY](tools/JTBuildPY.md)      | jtbuild-py -h | Python  | Development | same as above using Python
 
 ## Hamlib Compiling
 
