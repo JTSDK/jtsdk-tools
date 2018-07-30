@@ -214,9 +214,13 @@ SET JTSDK_PATH=%JTSDK_PATH%;%svn_dir%
 
 :: UNIX TOOLS
 IF EXIST "%JTSDK_CONFIG%\unix" (
+GOTO SET_UNIX
+)
+GOTO SET_CMAKE
+
+:SET_UNIX
 SET unix_dir=%JTSDK_HOME%\tools\msys2\usr\bin
 SET JTSDK_PATH=%JTSDK_PATH%;%unix_dir%
-)
 
 ::------------------------------------------------------------------------------
 :: CONDITIONAL PATHS for Multiple versions of Cmake
@@ -226,6 +230,7 @@ SET JTSDK_PATH=%JTSDK_PATH%;%unix_dir%
 ::       if the first point release ugrades this version, JTSDK should
 ::       follow suit.
 
+:SET_CMAKE
 IF EXIST "%JTSDK_CONFIG%\cmake310" (
 SET cmakev=3.10.3
 ) ELSE (
