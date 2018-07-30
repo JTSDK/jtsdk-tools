@@ -1,68 +1,74 @@
-# Publishing Global Tools
+# Command Line Tools and Status
 
-Starting with Dotnet Core SDK 2.1.300, users can publish dotnet core apps to
-their home user sapce, which enables access globally from within.
+The following lists the command line tools available in `JTSDK-Tools v3`. Each
+tool has it's own documentation. To view the documentation for a particular
+tool, click on the links in the `Name` column.
 
-## Publish Location
+Where possible, each tool will be written in at least two languages. C# (dotnet core)
+applications will generally be first, followed by Python, then Java. This enables
+users to choose which optional-language they would like to install.
 
-- Windows Path: `%USERPROFILE%\.dotnet\tools`
-- Linux / MacOS path: `$HOME/.dotnet/tools`
+>NOTE: the commands listed below represent the DOSKEY's `Command` associated with
+each application. The long form of each command will be in the application
+documentation.
 
-## From Microsoft
+## Status Explication
 
-> A .NET Core Global Tool is a special NuGet package that contains a console
-> application. A Global Tool can be installed on your machine on a default
-> location that is included in the PATH environment variable or on a custom
-> location.
->
-> - Find information about the tool (usually a website or GitHub page).
-> - Check the author and statistics in the home for the feed (usually NuGet.org).
-> - Install the tool.
-> - Call the tool.
-> - Update the tool.
-> - Uninstall the tool.
->
-> -- <cite>[Microsoft Documentation Project](https://docs.microsoft.com/en-us/dotnet/core/tools/global-tools)</cite>
+Each script / application is accompanied by a `Status` column. The following
+explains the meanings used:
 
-## JTSDK Global Tools
+|Name | Description |
+|:-----|:------|
+| Release      | fully functional for it's intended purpose
+| Development  | still a work in progress, not ready for production use
+| Deferred     | while technically viable, work has not begun
+| Incompatible | not applicable for the given Language
 
-Where possible, all JTSDK Net Core Applications will support Global Tool
-Installation. The following example shows how to publish `JTConfig`
-artifacts globally.
+## Environment
 
-### Clone the repository
+Environment variables are set either by the operating system itself, by users
+adding a variable, or the `JTSDK-Tools` Environment Script. If the variable is
+not set, or cannot be found, a message of `-- not set --` or `-- unavailable --`
+will be displayed in path section.
 
-``` shell
-mkdir (C|D):\JTSDK-Tools\tmp
-cd (C|D):\JTSDK-Tools\tmp
-git clone https://github.com/KI7MT/jtsdk-dotnet-core.git
-```
+|Name | Command | Language | Status | Description |
+|:-----|:-----|:-----|:-----|:-----|
+[JTEnv.dll](tools/JTEnv.md)         | jtenv -h    | C-Sharp | Release | Show environment variables using C# / .Net Core
+[JTEnv-jv.class](tools/JTEnv-jv.md) | jtenv-jv -h | Java    | Release | same as above using Java
+[JTEnv-py.py ](tools/JTEnv-py.md)   | jtenv-py -h | Pyython | Release | same as above using Python
 
-### Build and Install Artifacts
+## Configuration
 
-``` shell
-dotnet pack -c release -o nupkg
-dotnet tool install --add-source .\nupkg -g JTConfig
-```
+The configuration scripts set various options for controlling the environment,
+changing tool-chains, and other runtime activities.
 
-### Run the Application
+|Name | Command | Language | Status | Description |
+|:-----|:-----|:-----|:-----|:-----|
+[JTConfig.dll](tools/JTConfig.md)    | jtconfig -h    | C-Sharp | Release     | Configure runtime variables
+[JTConfig-jv](tools/JTConfig-jv.md ) | jtconfig-jv -h | Java    | Development | same as above using Java
+[JTEnv-py.py](tools/JTConfig-cs.md)  | jtconfig-py -h | Python  | Development | same as above using Python
 
-Open a Windows Command Prompt, and type the following:
+## WSJT-X Compiling
 
->NOTE: You do not need to be in the `JTSDK Environment`:
+These applications are used to compile `WSJT-X` from source code.
 
-``` shell
-JTConfig -h
-```
+|Name | Command | Language | Status | Description |
+|:-----|:-----|:-----|:-----|:-----|
+[JTBuild-cm.cmd](tools/JTBuild-cm.md) | jtbuild-cm -h | Batch   | Release     | Compile WSJT-X using Windows Batch
+[JTBuild.dll](tools/JTBuild.md)       | jtbuild-cs -h | C-Sharp | Development | same as above using C-Sharp
+[JTBuild-jv](tools/JTBuild-jv.md)     | jtbuild-jv -h | Java    | Development | same as above using Java
+[JTBuild-py.py](tools/JTBuild-py.md)  | jtbuild-py -h | Python  | Development | same as above using Python
 
-See Results in [JTConfig Docs](https://github.com/KI7MT/jtsdk-dotnet-core/blob/master/docs/tools/JTConfig.md#usage).
+## Hamlib Compiling
 
-### Uninstall The Application
+These scripts, where possible, are used to compile Hamlib from source code. Due
+to the complexities between the standard Windows Environment, and that of MSYS2,
+it may not be possible to build Hamlib on windows using Java, and / or Python.
+If and when this is made possible, the appropriate scripts will be added to the
+matrix.
 
-``` shell
-dotnet tool uninstall -g JTConfig
-```
-
-## Additional Artifacts
-
-As additional applications are published in the [JTSDK Net Core Project](https://github.com/KI7MT/jtsdk-dotnet-core), they will be added to the [Main Page Matrix](https://github.com/KI7MT/jtsdk-dotnet-core#global-tool-matrix).
+|Name | Command | Language | Status| Description |
+:-----|:-----|:-----|:-----|:-----|
+[build-hamlib.sh](tools/JTCOnfig-cs.md)  | build-hamlib -h | Bash | Release | Compile Hamlib Library for Windows
+[build-hamlib-jv]()  | build-hamlib -h | Bash | Deferred | Investigation use with MSYS2
+[build-hamlib-py]()  | build-hamlib -h | Bash | Deferred | Investigating use with MSYS2
