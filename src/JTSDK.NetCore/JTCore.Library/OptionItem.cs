@@ -34,7 +34,6 @@ namespace JTCore.Library
             "Autosvn",
             "CMake310",
             "Java",
-            "Unix",
             "PostgreSQL",
             "Sqlite3"
         };
