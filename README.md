@@ -73,7 +73,7 @@ mind, the following should be considered the bare-minimum requirements:
 
 The following tools can be installed as Global .Net Core Tools.
 
-> SEE [Global Install Example](https://github.com/KI7MT/jtsdk-dotnet-core/tree/master/docs#publishing-global-tools)
+> SEE [Global Install Example](docs/tools/global-tools-example)
 
 | Global Command Line Tools ||
 | ---| :--- |
