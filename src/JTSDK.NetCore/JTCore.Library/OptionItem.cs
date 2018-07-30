@@ -15,6 +15,7 @@ namespace JTCore.Library
             "Clean",
             "Reconfigure",
             "Autorun",
+            "Autosvn",
             "QT59",
             "CMake310",
             "Unix",
@@ -29,9 +30,11 @@ namespace JTCore.Library
         {
             "Quiet",
             "QT59",
+            "Autorun",
+            "Autosvn",
             "CMake310",
             "Java",
-            'Unix',
+            "Unix",
             "PostgreSQL",
             "Sqlite3"
         };
