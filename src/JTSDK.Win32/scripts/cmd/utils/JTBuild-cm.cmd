@@ -21,9 +21,9 @@
 ::-----------------------------------------------------------------------------::
 
 :: Used to prevent CMake errors with MinGW Makefiles
-set sh_orig=%JTSDK_HOME%\tools\msys2\usr\bin\sh.exe
-set sh_bak=%JTSDK_HOME%\tools\msys2\usr\bin\sh-bak.exe
-ren %sh_orig% %sh_bak% >NUL 2>&1
+PUSHD %JTSDK_HOME%\tools\msys2\usr\bin
+ren sh.exe sh-bak.exe >NUL 2>&1
+POPD
 GOTO DEFAULT_TEXT
 
 :: generate build.txt file if not exist --------------------------------------
@@ -571,8 +571,9 @@ REM  END QTENV-BUILD-WSJTX.CMD
 REM  ***************************************************************************
 
 :EOF
-COLOR 0B
 popd
-::ren %sh_bak% %sh_orig% >NUL 2>&1
+PUSHD %JTSDK_HOME%\tools\msys2\usr\bin
+ren sh-bak.exe sh.exe >NUL 2>&1
+POPD
 
 EXIT /B 0
