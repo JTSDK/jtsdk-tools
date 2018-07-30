@@ -50,6 +50,7 @@ allList = userList + systemList + javaList + jtsdkList
 # print the options headers
 def printHeader():
     """Prints the Environment Section Header"""
+    os.system('cls' if os.name == 'nt' else 'clear')
     print("\nApplication : %s" % __name__ )
     print('Version     : %s' % __version__)
     print("")
@@ -109,7 +110,7 @@ def print_list(args):
 
     sys.exit(0)
 
-# input parsing
+# process the arguments
 args = parser.parse_args()
 if len(sys.argv) < 2:
     parser.print_help()

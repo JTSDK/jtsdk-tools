@@ -106,16 +106,16 @@ POPD
 
 :: Change Directories to JTSDK.Win32
 PUSHD %CD%\src\JTSDK.Win32
-ECHO   Install Environment Files
+ECHO   Install Win32 Environment Files
 robocopy %CD%\env %JTSDK_HOME%\env /E /NFL /NDL /NJH /NJS /nc /ns /np
 
-ECHO   Install Scripts
+ECHO   Install Win32 Scripts
 robocopy %CD%\scripts %JTSDK_HOME%\scripts /E /NFL /NDL /NJH /NJS /nc /ns /np
 
 ECHO   Install MSYS2 ^/usr^/bin scripts
 robocopy %CD%\msys2\bin %JTSDK_HOME%\tools\msys2\usr\bin /NFL /NDL /NJH /NJS /nc /ns /np *.sh
 
-ECHO   Install Root Files
+ECHO   Install Win32 Root Files
 robocopy %CD%\root %JTSDK_HOME% /NFL /NDL /NJH /NJS /nc /ns /np
 POPD
 
@@ -123,6 +123,12 @@ POPD
 PUSHD %CD%\src\JTSDK.Pgsql
 ECHO   Install Pgsql Scipts
 robocopy %CD%\R-DaaS %JTSDK_HOME%\scripts\sql\R-DaaS /E /NFL /NDL /NJH /NJS /nc /ns /np
+POPD
+
+:: Change Directories to JTSDK.Python
+PUSHD %CD%\src\JTSDK.Python\scripts
+ECHO   Install Python Scipts
+robocopy %CD%\ %JTSDK_HOME%\scripts\python /E /NFL /NDL /NJH /NJS /nc /ns /np *.py
 POPD
 
 :: Conditional Build of Java Apps / Scripts
