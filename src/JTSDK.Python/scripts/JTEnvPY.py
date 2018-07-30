@@ -6,7 +6,7 @@ License......: GPL-3
 Description..: Shows pre-defined lists of Environment variables from lists
 
 Usage:
-    python JTEnv-py.py [option]
+    python JTEnvPY.py [option]
 
     Option:
         -h, --help      show help message
@@ -29,7 +29,7 @@ __name__ = 'JTEnv-py'
 parser = argparse.ArgumentParser()
 parser.prog = 'JTEnv-py'
 parser.description = "Prints Environment Variables used with JTSDK-Tools v3"
-parser.epilog = "python JTEnv-py.py [OPTION]"
+parser.epilog = "python JTEnvPY.py [OPTION]"
 parser.add_argument('-a', '--all', help="show all list variables end exit", action='store_true')
 parser.add_argument('-j', '--java', help="show Java related variables and exit",  action='store_true')
 parser.add_argument('-s', '--system', help="show System variables and exit",  action='store_true')
@@ -119,4 +119,4 @@ if len(sys.argv) < 2:
 else:
     print_list(args)
 
-# END - JTEnv-py.py
+# END - JTEnvPY.py
