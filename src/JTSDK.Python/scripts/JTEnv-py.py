@@ -53,6 +53,7 @@ def printHeader():
     os.system('cls' if os.name == 'nt' else 'clear')
     print("\nApplication : %s" % __name__ )
     print('Version     : %s' % __version__)
+    print('Python Exec : %s' % sys.executable)
     print("")
     print('{0:<23} {1}'.format("Variable", "Path"))
     print("-" * 55)

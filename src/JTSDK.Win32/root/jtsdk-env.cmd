@@ -272,7 +272,7 @@ GOTO SET_FINAL
 :PY_TOOLS
 ECHO ^*^* Setting Python Tool Paths
 SET PYTOOLS=Installed
-call %JTSDK_HOME%\tools\Anaconda3\Scripts\activate.bat D:\JTSDK-Tools\tools\Anaconda3
+call %JTSDK_HOME%\tools\Anaconda3\Scripts\activate.bat %JTSDK_HOME%\JTSDK-Tools\tools\Anaconda3
 GOTO SET_FINAL
 
 ::------------------------------------------------------------------------------
