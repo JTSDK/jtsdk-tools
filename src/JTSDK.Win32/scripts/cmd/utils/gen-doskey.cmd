@@ -42,7 +42,7 @@ DOSKEY msys2 = %JTSDK_HOME%\tools\msys2\msys2_shell.cmd
 :: DOSKEY for JTEnv Commands
 ::------------------------------------------------------------------------------
 DOSKEY jtenv-cs = dotnet %JTSDK_APPS%\JTEnv.dll $*
-DOSKEY jtenv-jv = java ^-cp %JTSDK_HOME%\scripts\java JTEnvJV $*
+DOSKEY jtenv-jv = java -jar %JTSDK_HOME%\scripts\java\lib\jtenv-3.0.1 $*
 DOSKEY jtenv-py = python %JTSDK_HOME%\scripts\python\JTEnvPY.py $*
 
 ::------------------------------------------------------------------------------
