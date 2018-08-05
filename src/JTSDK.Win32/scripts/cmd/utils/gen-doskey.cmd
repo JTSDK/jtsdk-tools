@@ -20,6 +20,9 @@
 :: along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ::-----------------------------------------------------------------------------::
 
+:: Add ClassPath for JTEnvJV
+SET jtenv_cp=%JTSDK_HOME%\scripts\java\jtenv\lib
+
 ::------------------------------------------------------------------------------
 :: DOSKEY for JTSDK Core Applications
 ::------------------------------------------------------------------------------
@@ -42,7 +45,7 @@ DOSKEY msys2 = %JTSDK_HOME%\tools\msys2\msys2_shell.cmd
 :: DOSKEY for JTEnv Commands
 ::------------------------------------------------------------------------------
 DOSKEY jtenv-cs = dotnet %JTSDK_APPS%\JTEnv.dll $*
-DOSKEY jtenv-jv = java -jar %JTSDK_HOME%\scripts\java\lib\jtenv-3.0.1 $*
+DOSKEY jtenv-jv = java -cp %jtenv_cp% -jar %jtenv_cp%\jtenv-3.0.1.jar $*
 DOSKEY jtenv-py = python %JTSDK_HOME%\scripts\python\JTEnvPY.py $*
 
 ::------------------------------------------------------------------------------
