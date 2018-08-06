@@ -131,14 +131,15 @@ ECHO   Install Python Scipts
 robocopy %CD%\ %JTSDK_HOME%\scripts\python /E /NFL /NDL /NJH /NJS /nc /ns /np *.py
 POPD
 
+:: NO LONGER USED, See: jtsdk-java-utils project
 :: Conditional Build of Java Apps / Scripts
-IF EXIST %JTSDK_HOME%\java.tools (
-PUSHD %CD%\src\JTSDK.Java\scripts
-ECHO   Compiling Java Apps
-for /r %%i in (*.java) do javac -d %JTSDK_HOME%\scripts\java %%i
-)
-ECHO.
-POPD
+::IF EXIST %JTSDK_HOME%\java.tools (
+::PUSHD %CD%\src\JTSDK.Java\scripts
+::ECHO   Compiling Java Apps
+::for /r %%i in (*.java) do javac -d %JTSDK_HOME%\scripts\java %%i
+::)
+::ECHO.
+::POPD
 
 :: Finished installation
 ECHO   Finished
