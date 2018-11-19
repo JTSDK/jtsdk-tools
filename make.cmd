@@ -110,7 +110,7 @@ ECHO   Install Win32 Environment Files
 robocopy %CD%\env %JTSDK_HOME%\env /E /NFL /NDL /NJH /NJS /nc /ns /np
 
 ECHO   Install Win32 Scripts
-robocopy %CD%\scripts %JTSDK_HOME%\scripts /E /NFL /NDL /NJH /NJS /nc /ns /np
+robocopy %CD%\scripts %JTSDK_HOME%\tools\scripts /E /NFL /NDL /NJH /NJS /nc /ns /np
 
 ECHO   Install MSYS2 ^/usr^/bin scripts
 robocopy %CD%\msys2\bin %JTSDK_HOME%\tools\msys2\usr\bin /NFL /NDL /NJH /NJS /nc /ns /np *.sh
@@ -122,13 +122,13 @@ POPD
 :: Change Directories to JTSDK.Pgsql
 PUSHD %CD%\src\JTSDK.Pgsql
 ECHO   Install Pgsql Scipts
-robocopy %CD%\R-DaaS %JTSDK_HOME%\scripts\sql\R-DaaS /E /NFL /NDL /NJH /NJS /nc /ns /np
+robocopy %CD%\R-DaaS %JTSDK_HOME%\tools\scripts\sql\R-DaaS /E /NFL /NDL /NJH /NJS /nc /ns /np
 POPD
 
 :: Change Directories to JTSDK.Python
 PUSHD %CD%\src\JTSDK.Python\scripts
 ECHO   Install Python Scipts
-robocopy %CD%\ %JTSDK_HOME%\scripts\python /E /NFL /NDL /NJH /NJS /nc /ns /np *.py
+robocopy %CD%\ %JTSDK_HOME%\tools\scripts\python /E /NFL /NDL /NJH /NJS /nc /ns /np *.py
 POPD
 
 :: NO LONGER USED, See: jtsdk-java-utils project
@@ -136,7 +136,7 @@ POPD
 ::IF EXIST %JTSDK_HOME%\java.tools (
 ::PUSHD %CD%\src\JTSDK.Java\scripts
 ::ECHO   Compiling Java Apps
-::for /r %%i in (*.java) do javac -d %JTSDK_HOME%\scripts\java %%i
+::for /r %%i in (*.java) do javac -d %JTSDK_HOME%\tools\scripts\java %%i
 ::)
 ::ECHO.
 ::POPD

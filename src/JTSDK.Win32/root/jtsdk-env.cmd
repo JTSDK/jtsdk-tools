@@ -295,13 +295,13 @@ SET PATH=%JTSDK_PATH%;%PATH%
 :: GENERATE DOSKEY's
 ::------------------------------------------------------------------------------
 ECHO ^*^* Generating Doskey^'s
-call %JTSDK_HOME%\scripts\cmd\utils\gen-doskey.cmd
+call %JTSDK_HOME%\tools\scripts\cmd\utils\gen-doskey.cmd
 
 ::------------------------------------------------------------------------------
 :: AUTO GENERATE QT Tool Chain Files (safety feature)
 ::------------------------------------------------------------------------------
 ECHO ^*^* Generating Generating Tool Chain Files
-call %JTSDK_HOME%\scripts\cmd\utils\qt-gen-tc.cmd >NUL 2>&1
+call %JTSDK_HOME%\tools\scripts\cmd\utils\qt-gen-tc.cmd >NUL 2>&1
 
 ::------------------------------------------------------------------------------
 :: PRINT ENVIRONMENT MESSAGE
