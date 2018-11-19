@@ -44,14 +44,14 @@ DOSKEY msys2 = %JTSDK_HOME%\tools\msys2\msys2_shell.cmd
 ::------------------------------------------------------------------------------
 :: DOSKEY for JTEnv Commands
 ::------------------------------------------------------------------------------
-DOSKEY jtenv-cs = dotnet %JTSDK_APPS%\JTEnv.dll $*
+DOSKEY jtenv = dotnet %JTSDK_APPS%\JTEnv.dll $*
 DOSKEY jtenv-jv = java -cp %jtenv_cp% -jar %jtenv_cp%\jtenv-3.0.1.jar $*
 DOSKEY jtenv-py = python %JTSDK_HOME%\scripts\python\JTEnvPY.py $*
 
 ::------------------------------------------------------------------------------
 :: DOSKEY for JTBuild--cm.cmd
 ::------------------------------------------------------------------------------
-DOSKEY jtbuild-cm = call %JTSDK_HOME%\scripts\cmd\utils\JTBuild-cm.cmd $*
+DOSKEY jtbuild = call %JTSDK_HOME%\scripts\cmd\utils\JTBuild-cm.cmd $*
 
 ::------------------------------------------------------------------------------
 :: DOSKEY GENERAL PURPOSE
