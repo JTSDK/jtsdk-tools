@@ -12,7 +12,7 @@ namespace JTEnv
             /* instantiate EnvUtils */
             EnvUtils envUtils = new EnvUtils();
 
-            #region Args < 1 Processing
+            #region Args < 1 || > 1 Processing
             if (args.Length < 1 || args.Length > 1)
             {
                 Common.ClearScreen();
@@ -22,6 +22,10 @@ namespace JTEnv
             #endregion
 
             #region Arg[0] Switch
+            // TODO - Convert switch to use McMaster.Extensions.CommandLineUtils
+            // Github URL: https://github.com/natemcmaster/CommandLineUtils
+            // - PM> Install-Package McMaster.Extensions.CommandLineUtils
+            // - dotnet add package McMaster.Extensions.CommandLineUtils
             var option = args[0].ToLower();
             switch (option)
             {
@@ -43,6 +47,7 @@ namespace JTEnv
                     PrintAssemblyHeader();
                     EnvUtils.GetSectionInformaiton(new List<string>(envUtils.UserEnvList), "User Vars");
                     EnvUtils.GetSectionInformaiton(new List<string>(envUtils.JavaEnvList), "Java Vars");
+                    EnvUtils.GetSectionInformaiton(new List<string>(envUtils.JtsdkEnvList), "JTSDK Vars");
                     EnvUtils.GetSectionInformaiton(new List<string>(envUtils.SystemEnvList), "System Vars");
                     Environment.Exit(0);
                     break;
@@ -66,6 +71,11 @@ namespace JTEnv
                     PrintAssemblyHeader();
                     EnvUtils.GetSectionInformaiton(new List<string>(envUtils.SystemEnvList), "System Vars");
                     break;
+                case "-z":
+                    Common.ClearScreen();
+                    PrintAssemblyHeader();
+                    EnvUtils.GetSectionInformaiton(new List<string>(envUtils.JtsdkEnvList), "JTSDK Vars");
+                    break;
                 default:
                     Common.ClearScreen();
                     EnvUtils.JTEnvHelpMessage();
@@ -79,7 +89,8 @@ namespace JTEnv
         // METHODS
         //---------------------------------------------------------------------
 
-        /* pring assembly header */
+        #region PrintAssemblyHeader
+        /* print assembly header */
         private static void PrintAssemblyHeader()
         {
             Console.WriteLine("\n");
@@ -87,7 +98,8 @@ namespace JTEnv
             Console.WriteLine($"Version     : {Assembly.GetExecutingAssembly().GetName().Version}");
 
         } /* End PrintAssemblyHeader() */
+        #endregion
 
-    } /* End - Main Class */
+    } /* End - Class Program */
 
 } /* End namespace JTEnv */

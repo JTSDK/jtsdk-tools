@@ -1,21 +1,20 @@
 #!/bin/bash
 #
-# Title ........: msys-build-hamlib.sh
-# Version ......: snapshot
-# Description ..: Build G4WJS Hammlib3 from source
-# Project URL ..: Git: git://git.code.sf.net/u/bsomervi/hamlib
-# Usage ........: ./build-hamlib.sh
+# Title ........: build-hamlib.sh
+# Version ......: 3.0.1
+# Description ..: Build Hamlib from G4WJS Hamlib Integration Branch
+# Project URL ..: git://git.code.sf.net/u/bsomervi/hamlib
 #
 # Author .......: Greg, Beam, KI7MT, <ki7mt@yahoo.com>
 # Copyright ....: Copyright (C) 2018 Greg Beam, KI7MT
 # License ......: GPLv3
 #
-# msys-build-hamlib.sh is free software: you can redistribute it
+# build-hamlib.sh is free software: you can redistribute it
 # and/or modify it under the terms of the GNU General Public License
 # as published by the Free Software Foundation either version 3 of the
 # License, or (at your option) any later version. 
 #
-# msys-build-hamlib.sh is distributed in the hope that it will be
+# build-hamlib.sh is distributed in the hope that it will be
 # useful, but WITHOUT ANY WARRANTY; without even the implied warranty
 # of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 # GNU General Public License for more details.
@@ -25,7 +24,7 @@
 ################################################################################
 
 # Exit on errors
-#set -e
+set -e
 
 # General use Vars and colour
 PKG_NAME=Hamlib
@@ -33,13 +32,11 @@ today=$(date +"%d-%m-%Y")
 timestamp=$(date +"%d-%m-%Y at %R")
 builder=$(whoami)
 
-# Sets the path using Cygwin Style: /c/JTSDK or whatever %JTSDK_HOME% is set to
+# Sets JTSDK_HOME and CONFIG using Cygwin Style: /c/JTSDK or whatever
 JTSDK_CYG_BASE=`cygpath.exe -u $JTSDK_HOME`
-
-# Sets LocalAppData CygwinStyle: /c/User/$USER/AppData/Local/JTSDK/config
 JTSDK_CYG_CONFIG=`cygpath.exe -u $JTSDK_CONFIG`
 
-# Set the Tool Chain based on User Config Selection
+# Set the Tool Chain based on User Config Selection: jtconfig -e qt59 | -d qt59
 if [[ -f $JTSDK_CYG_CONFIG/qt59 ]]
 then
     export PATH="$JTSDK_CYG_BASE/tools/Qt/Tools/mingw530_32/bin:$PATH"
@@ -49,12 +46,13 @@ else
     TC="$JTSDK_CYG_BASE/tools/Qt/Tools/mingw492_32/bin"
 fi
 
-# set remaing path variables
-SRCD="$JTSDK_CYG_BASE/src/hamlib"
+# Set remaing path variables: -m = D:/xyy, -w = D:\xyz
+# Note: the PREFIX path gets passed to pkg-config for inclusion.
+SRCD="$HOME/src/hamlib"
 BUILDD="$SRCD/build"
-PREFIX="$JTSDK_CYG_BASE/tools/hamlib/qt/$QTV"
-LIBINC="$JTSDK_CYG_BASE/tools/libusb/1.0.22/include"
-LIBDLL="$JTSDK_CYG_BASE/tools/libusb/1.0.22/MinGW32/dll"
+PREFIX=`cygpath -m "$JTSDK_CYG_BASE/tools/hamlib/qt/$QTV"`
+LIBINC=`cygpath -w "$JTSDK_CYG_BASE/tools/libusb/1.0.22/include/libusb-1.0"`
+LIBDLL=`cygpath -w "$JTSDK_CYG_BASE/tools/libusb/1.0.22/MinGW32/dll"`
 
 # Foreground colours
 C_R='\033[01;31m'		# red
@@ -63,51 +61,54 @@ C_Y='\033[01;33m'		# yellow
 C_C='\033[01;36m'		# cyan
 C_NC='\033[01;37m'		# no color
 
+# Add required directories
+mkdir -p $HOME/src/hamlib/{build,src} >/dev/null 2>&1
+
 # Tool Check Function ----------------------------------------------------------
 tool_check() {
-echo ''
-echo '---------------------------------------------------------------'
-echo -e ${C_Y}" CHECKING TOOL-CHAIN ( QT $QTV Enabled )"${C_NC}
-echo '---------------------------------------------------------------'
+	echo ''
+	echo '---------------------------------------------------------------'
+	echo -e ${C_Y}" CHECKING TOOL-CHAIN ( QT $QTV Enabled )"${C_NC}
+	echo '---------------------------------------------------------------'
 
-# Setup array and perform simple version checks
-echo ''
-array=( 'ar' 'nm' 'ld' 'gcc' 'g++' 'ranlib' )
+	# Setup array and perform simple version checks
+	echo ''
+	array=( 'ar' 'nm' 'ld' 'gcc' 'g++' 'ranlib' )
 
-for i in "${array[@]}"
-do
-	"$i" --version >/dev/null 2>&1
-	
-	if [ "$?" = "1" ];
-	then 
-		echo -en " $i check" && echo -e ${C_R}' FAILED'${C_NC}
-		echo ''
-		echo ' If you have not sourced one of the two options, try'
-		echo ' that first, otherwise set you path correctly:'
-		echo ''
-		echo ' [ 1 ] For the QT5 Tool Chain type, ..: source-qt5'
-		echo ' [ 2 ] For MinGW Tool-Chain, type ....: source-mingw32'
-		echo ''
-		exit 1
-	else
-		echo -en " $i .." && echo -e ${C_G}' OK'${C_NC}
-	fi
-done
+	for i in "${array[@]}"
+	do
+		"$i" --version >/dev/null 2>&1
+		
+		if [ "$?" = "1" ];
+		then 
+			echo -en " $i check" && echo -e ${C_R}' FAILED'${C_NC}
+			echo ''
+			echo ' If you have not sourced one of the two options, try'
+			echo ' that first, otherwise set you path correctly:'
+			echo ''
+			echo ' [ 1 ] For the QT5 Tool Chain type, ..: source-qt5'
+			echo ' [ 2 ] For MinGW Tool-Chain, type ....: source-mingw32'
+			echo ''
+			exit 1
+		else
+			echo -en " $i .." && echo -e ${C_G}' OK'${C_NC}
+		fi
+	done
 
-# List tools versions
-echo -e ' Compiler ...... '${C_G}"$(gcc --version |awk 'FNR==1')"${C_NC}
-echo -e ' Bin Utils ..... '${C_G}"$(ranlib --version |awk 'FNR==1')"${C_NC}
-echo -e ' Libtool ....... '${C_G}"$(libtool --version |awk 'FNR==1')"${C_NC}
-echo -e ' Pkg-Config  ... '${C_G}"$(pkg-config --version)"${C_NC}
-echo -e ' Source Path ... '${C_G}"$SRCD"${C_NC}
-echo -e ' Build Path .... '${C_G}"$BUILDD"${C_NC}
-echo -e ' Install Path .. '${C_G}"$PREFIX"${C_NC}
+	# List tools versions
+	echo -e ' Compiler ...... '${C_G}"$(gcc --version |awk 'FNR==1')"${C_NC}
+	echo -e ' Bin Utils ..... '${C_G}"$(ranlib --version |awk 'FNR==1')"${C_NC}
+	echo -e ' Libtool ....... '${C_G}"$(libtool --version |awk 'FNR==1')"${C_NC}
+	echo -e ' Pkg-Config  ... '${C_G}"$(pkg-config --version)"${C_NC}
+	echo -e ' Source Path ... '${C_G}"$SRCD"${C_NC}
+	echo -e ' Build Path .... '${C_G}"$BUILDD"${C_NC}
+	echo -e ' Install Path .. '${C_G}"$PREFIX"${C_NC}
 }
 # Tool Check End Function ------------------------------------------------------
 
-#--------------------------------------------------------------------#
-# START MAIN SCRIPT                                                  #
-#--------------------------------------------------------------------#
+#------------------------------------------------------------------------------#
+# START MAIN SCRIPT                                                            #
+#------------------------------------------------------------------------------#
 
 # Run Tool Check
 cd
@@ -140,14 +141,18 @@ then
 	git pull
 else
 	cd "$SRCD"
-	
+		
+	# ensure the directory is removed first
     if [[ -d $SRCD/src ]]
     then
         rm -rf "$SRCD/src"
     fi
-    
+
+	# clone the repository
     git clone git://git.code.sf.net/u/bsomervi/hamlib src
 	cd "$SRCD/src"
+
+	# checkout the integration branch
 	git checkout integration
 fi
 
@@ -173,19 +178,24 @@ echo '.. This may take a several minutes to complete'
 # Build Static Only
 echo -en ".. Build Type: " && echo -e ${C_G}'Static'${C_NC}
 echo ''
-../src/configure --prefix=$PREFIX \
+../src/configure --prefix="$PREFIX" \
 --disable-shared \
 --enable-static \
 --disable-winradio \
 --without-cxx-binding \
 CC="$TC/gcc.exe" \
 CXX="$TC/g++.exe" \
-CFLAGS="-g -O2 -fdata-sections -ffunction-sections -I$LIBINC" \
-LDFLAGS='-Wl,--gc-sections' \
-LIBUSB_LIBS="-L$LIBDLL -llibusb-1.0" \
+CFLAGS="-g -O2 -fdata-sections -ffunction-sections" \
+LDFLAGS='-Wl,--gc-sections'
+
+# TODO - ./configure is not finding the libusb-1.0 header file
+# This is not working yet with MSYS2 paths
+#CFLAGS="-g -O2 -fdata-sections -ffunction-sections -I$LIBINC" \
+#LDFLAGS='-Wl,--gc-sections' \
+#LIBUSB_LIBS="-L$LIBDLL -llibusb-1.0"
 
 # Make clean check
-if [[ -f $BUILDD/tests/rigctld.exe ]];
+if [[ -f $BUILDD/tests/rigctld.exe ]] && [[ -f $JTSDK_CYG_CONFIG/clean ]];
 then
 	echo ''
 	echo '---------------------------------------------------------------'
@@ -243,16 +253,15 @@ Git URL......: git://git.code.sf.net/u/bsomervi/hamlib
 Git Extra....: git checkout integration'
 
 # Configure Options <for Static>
---prefix=$PREFIX \
+--prefix="$PREFIX" \
 --disable-shared \
 --enable-static \
 --disable-winradio \
 --without-cxx-binding \
-CC=$TC/gcc.exe \
-CXX=$TC/g++.exe \
-CFLAGS="-g -O2 -fdata-sections -ffunction-sections -I$LIBINC" \
-LDFLAGS='-Wl,--gc-sections' \
-LIBUSB_LIBS="-L$LIBDLL -llibusb-1.0" \
+CC="$TC/gcc.exe" \
+CXX="$TC/g++.exe" \
+CFLAGS="-g -O2 -fdata-sections -ffunction-sections" \
+LDFLAGS='-Wl,--gc-sections'
 
 # Build Commands
 make -j$NUMBER_OF_PROCESSORS

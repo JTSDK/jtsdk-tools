@@ -213,6 +213,12 @@ SET "svn_dir_f=%svn_dir:\=/%"
 SET JTSDK_PATH=%JTSDK_PATH%;%svn_dir%
 
 :: UNIX TOOLS
+IF EXIST "%JTSDK_CONFIG%\unix" (
+GOTO SET_UNIX
+)
+GOTO SET_CMAKE
+
+:SET_UNIX
 SET unix_dir=%JTSDK_HOME%\tools\msys2\usr\bin
 SET JTSDK_PATH=%JTSDK_PATH%;%unix_dir%
 
@@ -224,6 +230,7 @@ SET JTSDK_PATH=%JTSDK_PATH%;%unix_dir%
 ::       if the first point release ugrades this version, JTSDK should
 ::       follow suit.
 
+:SET_CMAKE
 IF EXIST "%JTSDK_CONFIG%\cmake310" (
 SET cmakev=3.10.3
 ) ELSE (
@@ -272,7 +279,7 @@ GOTO SET_FINAL
 :PY_TOOLS
 ECHO ^*^* Setting Python Tool Paths
 SET PYTOOLS=Installed
-call %JTSDK_HOME%\tools\Anaconda3\Scripts\activate.bat D:\JTSDK-Tools\tools\Anaconda3
+call %JTSDK_HOME%\tools\Anaconda3\Scripts\activate.bat %JTSDK_HOME%\tools\Anaconda3
 GOTO SET_FINAL
 
 ::------------------------------------------------------------------------------
@@ -288,13 +295,13 @@ SET PATH=%JTSDK_PATH%;%PATH%
 :: GENERATE DOSKEY's
 ::------------------------------------------------------------------------------
 ECHO ^*^* Generating Doskey^'s
-call %JTSDK_HOME%\scripts\cmd\utils\gen-doskey.cmd
+call %JTSDK_HOME%\tools\scripts\cmd\utils\gen-doskey.cmd
 
 ::------------------------------------------------------------------------------
 :: AUTO GENERATE QT Tool Chain Files (safety feature)
 ::------------------------------------------------------------------------------
 ECHO ^*^* Generating Generating Tool Chain Files
-call %JTSDK_HOME%\scripts\cmd\utils\qt-gen-tc.cmd >NUL 2>&1
+call %JTSDK_HOME%\tools\scripts\cmd\utils\qt-gen-tc.cmd >NUL 2>&1
 
 ::------------------------------------------------------------------------------
 :: PRINT ENVIRONMENT MESSAGE

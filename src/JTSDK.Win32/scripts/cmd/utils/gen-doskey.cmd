@@ -20,6 +20,9 @@
 :: along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ::-----------------------------------------------------------------------------::
 
+:: Add ClassPath for JTEnvJV
+SET jtenv_cp=%JTSDK_HOME%\tools\scripts\java\jtenv\lib
+
 ::------------------------------------------------------------------------------
 :: DOSKEY for JTSDK Core Applications
 ::------------------------------------------------------------------------------
@@ -28,10 +31,10 @@ DOSKEY jtconfig = dotnet %JTSDK_APPS%\JTConfig.dll $*
 ::------------------------------------------------------------------------------
 :: DOSKEY -for Generating QT Tool Chain Files
 ::------------------------------------------------------------------------------
-DOSKEY gen-tc = PUSHD %JTSDK_HOME%\scripts\cmd\utils $T call qt-gen-tc.cmd $T POPD
+DOSKEY gen-tc = PUSHD %JTSDK_HOME%\tools\scripts\cmd\utils $T call qt-gen-tc.cmd $T POPD
 
 ::------------------------------------------------------------------------------
-:: DOSKEY for MSYS2 related using Ruby ridk
+:: DOSKEY's for MSYS2
 ::------------------------------------------------------------------------------
 :: DOSKEY update-msys2 = cls $T ridk exec pacman -Syuu
 :: DOSKEY search-msys2 = ridk exec pacman -Ss $*
@@ -39,19 +42,21 @@ DOSKEY gen-tc = PUSHD %JTSDK_HOME%\scripts\cmd\utils $T call qt-gen-tc.cmd $T PO
 DOSKEY msys2 = %JTSDK_HOME%\tools\msys2\msys2_shell.cmd
 
 ::------------------------------------------------------------------------------
-:: DOSKEY for Java JIT (just in time) Apps
-::------------------------------------------------------------------------------
-DOSKEY javaenv = java ^-cp %JTSDK_HOME%\scripts\java JavaEnv
-
-::------------------------------------------------------------------------------
-:: DOSKEY for JTEnv Command
+:: DOSKEY for JTEnv Commands
 ::------------------------------------------------------------------------------
 DOSKEY jtenv = dotnet %JTSDK_APPS%\JTEnv.dll $*
+DOSKEY jtenv-jv = java -cp %jtenv_cp% -jar %jtenv_cp%\jtenv-3.0.2.jar $*
+DOSKEY jtenv-py = python %JTSDK_HOME%\tools\scripts\python\JTEnvPY.py $*
+
+::------------------------------------------------------------------------------
+:: DOSKEY for JTBuild--cm.cmd
+::------------------------------------------------------------------------------
+DOSKEY jtbuild = call %JTSDK_HOME%\tools\scripts\cmd\utils\JTBuild-cm.cmd $*
 
 ::------------------------------------------------------------------------------
 :: DOSKEY GENERAL PURPOSE
 ::------------------------------------------------------------------------------
-DOSKEY version-check = call %JTSDK_HOME%\scripts\cmd\utils\version-check.cmd
+DOSKEY version-check = call %JTSDK_HOME%\tools\scripts\cmd\utils\version-check.cmd
 DOSKEY srcd = CD %JTSDK_HOME%/src
 DOSKEY home = CD %JTSDK_HOME%
 DOSKEY clear=cls

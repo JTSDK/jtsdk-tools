@@ -5,10 +5,9 @@ namespace JTCore.Library
 {
     public class EnvUtils
     {
-        // Java Environment Variables List
+        // Java Environment Variable List
         public readonly List<string> JavaEnvList = new List<string>
         {
-            "JTSDK_HOME",
             "JAVA_HOME",
             "JAVA_TOOL_OPTIONS",
             "MAVEN_HOME",
@@ -16,7 +15,16 @@ namespace JTCore.Library
             "GRADLE_HOME"
         };
 
-        // User Environment Variables List
+        // JTSDK Environment Variable List
+        public readonly List<string> JtsdkEnvList = new List<string>
+        {
+            "JTSDK_HOME",
+            "JTSDK_APPS",
+            "JTSDK_CONFIG",
+            "JTSDK_DATA"
+        };
+
+        // User Environment Variable List
         public readonly List<string> UserEnvList = new List<string>
         {
             "USERNAME",
@@ -25,7 +33,7 @@ namespace JTCore.Library
             "TEMP"
         };
 
-        // System Environment Variables List
+        // System Environment Variable List
         public readonly List<string> SystemEnvList = new List<string>
         {
             "COMPUTERNAME",
@@ -56,7 +64,7 @@ namespace JTCore.Library
         /* Section header */
         private static void EnvSectionHeader(string text)
         {
-            Console.WriteLine(String.Format("\n{0,-23}{1,-40}", text, "Path"));
+            Console.WriteLine(String.Format("\n{0,-24}{1,-40}", text, "Path"));
             Console.WriteLine("------------------------------------------------------");
         }
 

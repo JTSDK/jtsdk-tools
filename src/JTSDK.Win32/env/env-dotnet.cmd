@@ -1,3 +1,6 @@
+::
+:: DEPRECATED - .Net Core SDK is installed at the system-level
+::
 ::-----------------------------------------------------------------------------::
 :: Name .........: env-dotnet.cmd
 :: Project ......: Part of the JTSDK Version 3.0.0 Project
@@ -24,7 +27,7 @@
 :: along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ::-----------------------------------------------------------------------------::
 @ECHO OFF
-SET dotnetv=2.1.300
+SET dotnetv=2.1.500
 
 :: If anything is in %1 it should set debug to ON
 if [%1]==[] (

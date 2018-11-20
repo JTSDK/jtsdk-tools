@@ -24,7 +24,7 @@
 :: along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ::-----------------------------------------------------------------------------::
 @ECHO OFF
-SET scriptd=%JTSDK_HOME%\scripts\cmd
+SET scriptd=%JTSDK_HOME%\tools\scripts\cmd
 
 :: If anything is in %1 it should set debug to ON
 if [%1]==[] (
