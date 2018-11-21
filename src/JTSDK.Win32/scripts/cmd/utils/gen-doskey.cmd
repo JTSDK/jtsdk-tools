@@ -49,9 +49,9 @@ DOSKEY jtenv-jv = java -cp %jtenv_cp% -jar %jtenv_cp%\jtenv-3.0.2.jar $*
 DOSKEY jtenv-py = python %JTSDK_HOME%\tools\scripts\python\JTEnvPY.py $*
 
 ::------------------------------------------------------------------------------
-:: DOSKEY for JTBuild--cm.cmd
+:: DOSKEY for jtbuild.cmd
 ::------------------------------------------------------------------------------
-DOSKEY jtbuild = call %JTSDK_HOME%\tools\scripts\cmd\utils\JTBuild-cm.cmd $*
+DOSKEY jtbuild = call %JTSDK_HOME%\tools\scripts\cmd\utils\jtbuild.cmd $*
 
 ::------------------------------------------------------------------------------
 :: DOSKEY GENERAL PURPOSE
