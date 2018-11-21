@@ -23,6 +23,22 @@
 ::-----------------------------------------------------------------------------::
 @ECHO OFF
 
+:: Returns ERRORLEVEL=1 is %JTSDK_HOME% does not exist
+IF [%JTSDK_HOME%]==[] (
+ECHO.
+ECHO  Make Error
+ECHO.
+ECHO  JTSDK_HOME Variable was not found.
+ECHO  Ensure you running from the JTSDK Tools Environment
+ECHO.
+ECHO  If installing or upgrading from a Windows Console,
+ECHO  please set the JTSDK_HOME variable before running make.
+ECHO.
+exit /b 1
+)
+GOTO _START
+
+:_START
 :: Set the Git tag into a file
 >%JTSDK_HOME%\ver.git (
 git rev-parse --short HEAD
