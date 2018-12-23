@@ -4,9 +4,9 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.1</TargetFramework>
     <Product>JTConfig</Product>
-    <Version>3.0.1</Version>
-    <VersionPrefix>3.0.1.0</VersionPrefix>
-    <AssemblyVersion>3.0.1.0</AssemblyVersion>
+    <Version>3.0.2.1</Version>
+    <VersionPrefix>3.0.2.1</VersionPrefix>
+    <AssemblyVersion>3.0.2.1</AssemblyVersion>
     <Description>JTSDK User Configuration Options</Description>
     <LangVersion>Latest</LangVersion>
     <Authors>Greg Beam, KI7MT</Authors>
