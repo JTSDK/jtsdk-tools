@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # Title ........: build-hamlib.sh
-# Version ......: 3.0.1
+# Version ......: 3.0.2.1
 # Description ..: Build Hamlib from G4WJS Hamlib Integration Branch
 # Project URL ..: git://git.code.sf.net/u/bsomervi/hamlib
 #
