@@ -1,6 +1,7 @@
 #!/bin/bash
 #
 # Title ........: install-pkg-list.sh
+# Version ......: 3.0.2.1
 # Description ..: Install list of packages for use with JTSDK v3
 # Project URL ..: https://github.com/KI7MT/jtsdk-dotnet-core
 # Usage ........: From MSYS2 console - install-pkg-list.sh
