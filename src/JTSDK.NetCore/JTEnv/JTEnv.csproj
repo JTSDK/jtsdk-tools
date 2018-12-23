@@ -12,7 +12,7 @@
     <Authors>Greg Beam, KI7MT</Authors>
     <Copyright>GPLv3</Copyright>
 
-  <!-- New License Requirement: warning NU5125 -->
+    <!-- New License Requirement: fixes warning NU5125 -->
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
 
@@ -27,7 +27,6 @@
     <PackAsTool>true</PackAsTool>
     <ToolCommandName>jtenv</ToolCommandName>
     <PackageOutputPath>./nupkg</PackageOutputPath>
-
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -39,7 +38,7 @@
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0-beta-63102-01" PrivateAssets="All" />
   </ItemGroup>
 
-  <!-- New License Requirement: warning NU5125 -->
+  <!-- New License Requirement: fixes warning NU5125 -->
   <ItemGroup>
     <None Include="licenses\..\..\..\..\LICENSE" Pack="true" PackagePath=""/>
   </ItemGroup>

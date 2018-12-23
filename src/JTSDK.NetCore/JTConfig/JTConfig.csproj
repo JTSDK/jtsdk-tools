@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
 
     <Product>JTConfig</Product>
     <Version>3.0.2.1</Version>
@@ -13,7 +13,7 @@
     <Authors>Greg Beam, KI7MT</Authors>
     <Copyright>GPLv3</Copyright>
     
-    <!-- New License Requirement: warning NU5125 -->
+    <!-- New License Requirement: fixes warning NU5125 -->
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
 
@@ -29,7 +29,6 @@
     <PackAsTool>true</PackAsTool>
     <ToolCommandName>jtconfig</ToolCommandName>
     <PackageOutputPath>./nupkg</PackageOutputPath>
-
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -41,11 +40,10 @@
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0-beta-63102-01" PrivateAssets="All" />
   </ItemGroup>
 
-  <!-- New License Requirement: warning NU5125 -->
+  <!-- New License Requirement: fixes warning NU5125 -->
   <ItemGroup>
     <None Include="licenses\..\..\..\..\LICENSE" Pack="true" PackagePath=""/>
   </ItemGroup>
-
 
   <ItemGroup>
     <ProjectReference Include="..\JTCore.Library\JTCore.Library.csproj" />
