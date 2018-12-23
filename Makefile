@@ -5,6 +5,7 @@
 PROGRAM		:=	JTSDK.NetCore
 VERSION		:=	3.0.2.1
 AUTHOR		:=	Greg Beam, KI7MT
+LICENSE		:=	GPLv3
 BUGS		:=	https://github.com/KI7MT/jtsdk-dotnet-core/issues
 WEB			:=	https://groups.io/g/JTSDK
 
@@ -61,7 +62,6 @@ install:
 	@echo 'Installing JTConfig'
 	$(COMMAND) src/${PROGRAM}/JTConfig/nupkg jtconfig
 	@echo
-
 
 uninstall:
 	@echo ''
