@@ -212,16 +212,6 @@ SET svn_dir=%JTSDK_HOME%\tools\subversion\%svnv%\bin
 SET "svn_dir_f=%svn_dir:\=/%"
 SET JTSDK_PATH=%JTSDK_PATH%;%svn_dir%
 
-:: UNIX TOOLS
-IF EXIST "%JTSDK_CONFIG%\unix" (
-GOTO SET_UNIX
-)
-GOTO SET_CMAKE
-
-:SET_UNIX
-SET unix_dir=%JTSDK_HOME%\tools\msys2\usr\bin
-SET JTSDK_PATH=%JTSDK_PATH%;%unix_dir%
-
 ::------------------------------------------------------------------------------
 :: CONDITIONAL PATHS for Multiple versions of Cmake
 ::------------------------------------------------------------------------------
@@ -291,6 +281,17 @@ ECHO ^*^* Set Final Paths and headers
 TITLE %title-string%
 SET PATH=%JTSDK_PATH%;%PATH%
 
+:: UNIX TOOLS
+IF EXIST "%JTSDK_CONFIG%\unix" (
+GOTO SET_UNIX
+)
+GOTO SET_DOSKEYS
+
+:SET_UNIX
+SET unix_dir=%JTSDK_HOME%\tools\msys2\usr\bin
+SET PATH=%PATH%;%unix_dir%
+
+:SET_DOSKEYS
 ::------------------------------------------------------------------------------
 :: GENERATE DOSKEY's
 ::------------------------------------------------------------------------------
