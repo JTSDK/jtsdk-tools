@@ -22,7 +22,7 @@ import os
 import sys
 import argparse
 
-__version__ = '3.0.1'
+__version__ = '3.0.2.1'
 __name__ = 'JTEnv-py'
 
 # parser setup
