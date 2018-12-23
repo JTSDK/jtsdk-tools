@@ -3,6 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.1</TargetFramework>
+
     <Product>JTConfig</Product>
     <Version>3.0.2.1</Version>
     <VersionPrefix>3.0.2.1</VersionPrefix>
@@ -10,15 +11,21 @@
     <LangVersion>Latest</LangVersion>
     <Authors>Greg Beam, KI7MT</Authors>
     <Copyright>GPLv3</Copyright>
+
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageLicenseUrl>https://github.com/KI7MT/jtsdk-dotnet-core/blob/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/KI7MT/jtsdk-dotnet-core/blob/master/README.md</PackageProjectUrl>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <RepositoryType>Git</RepositoryType>    
-    <IsPackable>true</IsPackable>
-    <PackAsTool>true</PackAsTool>    
     <TieredCompilation>true</TieredCompilation>    
     <PackageTags>dotnet core</PackageTags>
+
+    <!-- Package as Global Tool -->
+    <IsPackable>true</IsPackable>
+    <PackAsTool>true</PackAsTool>
+    <ToolCommandName>jtenv</ToolCommandName>
+    <PackageOutputPath>./nupkg</PackageOutputPath>
+
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
