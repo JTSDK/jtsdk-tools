@@ -12,16 +12,19 @@
     <LangVersion>Latest</LangVersion>
     <Authors>Greg Beam, KI7MT</Authors>
     <Copyright>GPLv3</Copyright>
+    
+    <!-- New License Requirement: warning NU5125 -->
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <PackageLicenseUrl>https://github.com/KI7MT/jtsdk-dotnet-core/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+
     <PackageProjectUrl>https://github.com/KI7MT/jtsdk-dotnet-core/blob/master/README.md</PackageProjectUrl>
     <RepositoryType>Git</RepositoryType>    
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <TieredCompilation>true</TieredCompilation>    
     <RepositoryUrl>https://github.com/KI7MT/jtsdk-dotnet-core.git</RepositoryUrl>    
-    <PackageTags>dotnet core</PackageTags>
 
     <!-- Package as Global Tool -->
+    <PackageTags>dotnet core</PackageTags>
     <IsPackable>true</IsPackable>
     <PackAsTool>true</PackAsTool>
     <ToolCommandName>jtconfig</ToolCommandName>
@@ -37,6 +40,12 @@
   <ItemGroup Condition="'$(ContinuousIntegrationBuild)'=='true'">
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0-beta-63102-01" PrivateAssets="All" />
   </ItemGroup>
+
+  <!-- New License Requirement: warning NU5125 -->
+  <ItemGroup>
+    <None Include="licenses\..\..\..\..\LICENSE" Pack="true" PackagePath=""/>
+  </ItemGroup>
+
 
   <ItemGroup>
     <ProjectReference Include="..\JTCore.Library\JTCore.Library.csproj" />
