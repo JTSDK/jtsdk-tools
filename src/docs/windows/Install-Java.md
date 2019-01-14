@@ -13,19 +13,24 @@
 - [JTSDK Third Party Installer Package](https://sourceforge.net/projects/jtsdk/files/win32/3.0.0/release/)
 
 - Both downloads provide the same installer, and reflect the installation 
-steps below. Which to use is entirely up to the end-user.
+steps below. If the official download is a later version qithin the `1.8` series,
+use it instead.
+- If you are downloading from the Oracle site, make sure you you select the
+`JDK` version for example:
 
-- If you are downloading from the Oracle site, make sure you you select the `JDK` version for example:
-
-``` shell
+```bash
+# Versions at the time of writing
 jdk-8u172-windows-x64
 jdk-8u181-windows-x64
 ```
 
 You should use the latest patch release version. In the example above,
-`jdk-8u181-windows-x64` would be the latest available. Once installed, the Java installer has a real-time update service that will alert you when Oracle has released an update. The same service will also download/update the the instance for you if you allow it to.
+`jdk-8u181-windows-x64` would be the latest available. Once installed, the Java
+installer has a real-time update service that will alert you when Oracle has
+released an update. The same service will also download/update the the instance
+for you if you allow it to.
 
-## Installation Walk-Through
+## Installation
 
 Browse to, then `double-click` the downloaded `Java Installer`, and
 follow the steps below.
@@ -106,13 +111,11 @@ No action required. Read docs if desired.
 
 Open Windows Command Prompt, and test that `Java` returns properly.
 
-``` shell
+```bash
 # In the Windows Command Prompt, test the following commands
-
 java -d64 -version
 
 # Check JAVA_HOME
-
 echo. && echo JAVA_HOME: %JAVA_HOME%
 ```
 
@@ -133,7 +136,7 @@ Using the same process as you did with JAVA_HOME, set GRADLE_HOME and M2_HOME.
 
 `Set GRADLE_HOME`
 
-``` shell
+```bash
 (C|D):\JTSDK-Tools\tools\gradle\4.9
 ```
 
@@ -151,7 +154,7 @@ Using the same process as you did with JAVA_HOME, set GRADLE_HOME and M2_HOME.
 
 `Set MAVEN_HOME`
 
-``` shell
+```bash
 (C|D):\JTSDK-Tools\tools\maven\3.5.4
 ```
 
@@ -169,13 +172,12 @@ Using the same process as you did with JAVA_HOME, set GRADLE_HOME and M2_HOME.
 
 In the Windows Command Prompt window, check Gradle Version
 
-``` shell
+```bash
 # Check Gradle Version
 gradle --version
 
 # Check Maven Version
 mvn --version
-
 ```
 
 | ![Gradle Version](images/java/java.17.PNG?raw=true) |
@@ -183,3 +185,7 @@ mvn --version
 | *Gradle Version* |
 
 This concludes the [Java Installation](Install-Java).
+
+## Next Step
+
+Proceed to ==> [PostgreSQL Installation](Install-PostgreSQL.md)
