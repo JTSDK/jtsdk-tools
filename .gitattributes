@@ -1,5 +1,6 @@
-*.cs linguist-language=c#
+*.cs linguist-language=C#
 src/JTSDK.Pgsql/* linguist-vendored
 src/JTSDK.Win32/* linguist-vendored
-*.sln linguist-vendored=c#
+*.sln linguist-vendored=C#
 *.py linguist-vendored=python
+*.java linguist-language=Java
