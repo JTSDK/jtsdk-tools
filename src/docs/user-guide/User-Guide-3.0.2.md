@@ -1,3 +1,4 @@
+# JTSDK Tools User Guide
 
 | Application Data ||
 | ---| --- |
@@ -23,14 +24,14 @@ to be installed before use.
 |[jtenv-py](../tools/jtenvpy.md)| Python Version for Checking Environment Information
 
 >NOTE: `jtenv`, `jtenv-jv`, and `jtenv-py` all perform the same task, but use
-different frameworks. There is "NO" requirment for either the Java or Python
+different frameworks. There is "NO" requirement for either the Java or Python
 version, as the `jtenv` (CSharp version) is installed by default.
 
 ## JTConfig
-`jtconfig` is primary application for configuring build options for compling
+`jtconfig` is primary application for configuring build options for compiling
 `WSJT-X` through the use of `jtbuild`. Use the help-options to list available commands
 
-``` shell
+```bash
 # To list available commands
 jtconfig -h
 ```
@@ -39,22 +40,24 @@ jtconfig -h
 |:--:|
 | *Help Screen* |
 
-### Recommended Options
+## Recommended Options
 
-For ease of use, a default option command is available that will set the 
+For ease of use, a default option command is available that will set standard
+options for you.
 
-### Configuration Options
+## Configuration Options
 
 | ![JTConfig Options](../windows/images/3.0.2/jtconfig-options.PNG?raw=true) |
 |:--:|
-| *Configuraiton Options* |
-
+| *Configuration Options* |
 
 ## JTEnv
-`jtenv` is used to check a number of environmental variables that can be helpful in troubleshooting the installation, or to simply provide additional
+
+`jtenv` is used to check a number of environmental variables that can be helpful
+in troubleshooting the installation, or to simply provide additional
 information to the user.
 
-``` shell
+```bash
 # To list available commands
 jtenv -h
 ```
@@ -62,4 +65,20 @@ jtenv -h
 | ![JTEnv Help Screen](../windows/images/3.0.2/jtenv-help.PNG?raw=true) |
 |:--:|
 | *Help Screen* |
+
+## JTBuildcm
+
+For building `WSJT-X`, See: [jtbuildcm](../tools/jtbuildcm.md) page for usage.
+
+## WSPR CSV Utility
+
+For using the `wsprcsv` conversion utility, See: [wsprcsv](../tools/wsprcsv.md)
+for details.
+
+## JTEnv Python
+
+For using the `jtenvpy` environment script, See: [wsprcsv](../tools/jtenvpy.md)
+for details.
+
+
 
