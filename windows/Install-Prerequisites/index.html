@@ -110,55 +110,55 @@
     <ul class="dropdown-menu">
             
 <li >
-    <a href="../Install-DB-Tools/">* Database Tools</a>
+    <a href="../Install-DB-Tools/">Database Tools</a>
 </li>
             
 <li >
-    <a href="../Install-Doc-Tools/">* Doc Tools</a>
+    <a href="../Install-Doc-Tools/">Doc Tools</a>
 </li>
             
 <li >
-    <a href="../Install-Java-Tools/">* Java Tools</a>
+    <a href="../Install-Java-Tools/">Java Tools</a>
 </li>
             
 <li >
-    <a href="../Install-Java/">* Java</a>
+    <a href="../Install-Java/">Java</a>
 </li>
             
 <li >
-    <a href="../Install-PostgreSQL/">* PostgreSQL</a>
+    <a href="../Install-PostgreSQL/">PostgreSQL</a>
 </li>
             
 <li >
-    <a href="../Install-Redis/">* Redis</a>
+    <a href="../Install-Redis/">Redis</a>
 </li>
             
 <li >
-    <a href="../Install-WSL/">* WSL</a>
+    <a href="../Install-WSL/">WSL</a>
 </li>
             
 <li >
-    <a href="../Install-Misc-Tools/">* Misc Tools</a>
+    <a href="../Install-Misc-Tools/">Misc Tools</a>
 </li>
             
 <li >
-    <a href="../Install-Eclipse/">* Eclipse</a>
+    <a href="../Install-Eclipse/">Eclipse</a>
 </li>
             
 <li >
-    <a href="../Install-MSSQL-Server/">* MSSQL</a>
+    <a href="../Install-MSSQL-Server/">MSSQL</a>
 </li>
             
 <li >
-    <a href="../Install-MongoDB/">* MongoDB</a>
+    <a href="../Install-MongoDB/">MongoDB</a>
 </li>
             
 <li >
-    <a href="../Install-MSSQL-Server/">* MSSQL</a>
+    <a href="../Install-MSSQL-Server/">MSSQL</a>
 </li>
             
 <li >
-    <a href="../Install-Visual-Studio/">* Visual Stuidio</a>
+    <a href="../Install-Visual-Studio/">Visual Stuidio</a>
 </li>
     </ul>
   </li>
@@ -196,16 +196,6 @@
   </li>
     </ul>
   </li>
-                                    
-  <li class="dropdown-submenu">
-    <a href="#">Linux</a>
-    <ul class="dropdown-menu">
-            
-<li >
-    <a href="../../linux/Home/">Overview</a>
-</li>
-    </ul>
-  </li>
                                 </ul>
                             </li>
                             <li class="dropdown">
@@ -217,15 +207,15 @@
 </li>
                                     
 <li >
-    <a href="../../tools/jtenv.md">JTEnv</a>
+    <a href="../../tools/jtenv.md">jtenv</a>
 </li>
                                     
 <li >
-    <a href="../../tools/jtconfig.md">JTConfig</a>
+    <a href="../../tools/jtconfig/">jtconfig</a>
 </li>
                                     
 <li >
-    <a href="../../tools/jtbuildcm.md">JTBuildcm</a>
+    <a href="../../tools/jtbuildcm.md">jtbuildcm</a>
 </li>
                                     
   <li class="dropdown-submenu">
@@ -237,7 +227,7 @@
 </li>
             
 <li >
-    <a href="../../tools/jtenvpy.md">jtenvpy</a>
+    <a href="../../tools/jtenvpy/">jtenvpy</a>
 </li>
             
 <li >
@@ -286,12 +276,14 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#install-considerations">Install Considerations</a></li>
-        <li class="main "><a href="#installation-order">Installation Order</a></li>
+        <li class="main active"><a href="#prerequisites">Prerequisites</a></li>
+            <li><a href="#considerations">Considerations</a></li>
+            <li><a href="#installation-order">Installation Order</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
+<h1 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h1>
 <table>
 <thead>
 <tr>
@@ -314,7 +306,7 @@
 </tr>
 </tbody>
 </table>
-<h2 id="install-considerations">Install Considerations<a class="headerlink" href="#install-considerations" title="Permanent link">&para;</a></h2>
+<h2 id="considerations">Considerations<a class="headerlink" href="#considerations" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
 <p>In order to checkout and compile the <code>JTSDK Net Core Utilities</code>, users must have
@@ -328,7 +320,7 @@ guides are followed.</p>
 </li>
 </ul>
 <blockquote>
-<p>IMPORTANT - It is up to the user where these packages are installed. However, 
+<p>IMPORTANT - It is up to the user where these packages are installed. However,
 unless there are specific reasons to <em>NOT</em> use a default install location,
 its <code>highly advisable</code> to use the recommended installer location(s).</p>
 </blockquote>
@@ -336,15 +328,15 @@ its <code>highly advisable</code> to use the recommended installer location(s).<
 <li>All three packages must be available from a standard Windows / Linux Console. If
 not, users should add--either locally or system wide--the path location(s) which
 allows access from the command-line. Using the commands <code>git --version</code>,
-<code>dotnet --info</code>, and <code>code --version</code> should all render without error from their 
+<code>dotnet --info</code>, and <code>code --version</code> should all render without error from their
 respective console.</li>
 </ul>
 <h2 id="installation-order">Installation Order<a class="headerlink" href="#installation-order" title="Permanent link">&para;</a></h2>
 <p>While not critical, the order below should be followed:</p>
 <ol>
-<li><a href="Install-Net-Core-SDK">Install .Net Core SDK</a></li>
-<li><a href="Install-VS-Code">Install VS Code Editor</a></li>
-<li><a href="Install-Git-Client">Install Git</a></li>
+<li><a href="../Install-Net-Core-SDK/">Install .Net Core SDK</a></li>
+<li><a href="../Install-VS-Code/">Install VS Code Editor</a></li>
+<li><a href="../Install-Git-Client/">Install Git</a></li>
 </ol></div>
         </div>
 

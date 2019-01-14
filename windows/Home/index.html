@@ -110,55 +110,55 @@
     <ul class="dropdown-menu">
             
 <li >
-    <a href="../Install-DB-Tools/">* Database Tools</a>
+    <a href="../Install-DB-Tools/">Database Tools</a>
 </li>
             
 <li >
-    <a href="../Install-Doc-Tools/">* Doc Tools</a>
+    <a href="../Install-Doc-Tools/">Doc Tools</a>
 </li>
             
 <li >
-    <a href="../Install-Java-Tools/">* Java Tools</a>
+    <a href="../Install-Java-Tools/">Java Tools</a>
 </li>
             
 <li >
-    <a href="../Install-Java/">* Java</a>
+    <a href="../Install-Java/">Java</a>
 </li>
             
 <li >
-    <a href="../Install-PostgreSQL/">* PostgreSQL</a>
+    <a href="../Install-PostgreSQL/">PostgreSQL</a>
 </li>
             
 <li >
-    <a href="../Install-Redis/">* Redis</a>
+    <a href="../Install-Redis/">Redis</a>
 </li>
             
 <li >
-    <a href="../Install-WSL/">* WSL</a>
+    <a href="../Install-WSL/">WSL</a>
 </li>
             
 <li >
-    <a href="../Install-Misc-Tools/">* Misc Tools</a>
+    <a href="../Install-Misc-Tools/">Misc Tools</a>
 </li>
             
 <li >
-    <a href="../Install-Eclipse/">* Eclipse</a>
+    <a href="../Install-Eclipse/">Eclipse</a>
 </li>
             
 <li >
-    <a href="../Install-MSSQL-Server/">* MSSQL</a>
+    <a href="../Install-MSSQL-Server/">MSSQL</a>
 </li>
             
 <li >
-    <a href="../Install-MongoDB/">* MongoDB</a>
+    <a href="../Install-MongoDB/">MongoDB</a>
 </li>
             
 <li >
-    <a href="../Install-MSSQL-Server/">* MSSQL</a>
+    <a href="../Install-MSSQL-Server/">MSSQL</a>
 </li>
             
 <li >
-    <a href="../Install-Visual-Studio/">* Visual Stuidio</a>
+    <a href="../Install-Visual-Studio/">Visual Stuidio</a>
 </li>
     </ul>
   </li>
@@ -196,16 +196,6 @@
   </li>
     </ul>
   </li>
-                                    
-  <li class="dropdown-submenu">
-    <a href="#">Linux</a>
-    <ul class="dropdown-menu">
-            
-<li >
-    <a href="../../linux/Home/">Overview</a>
-</li>
-    </ul>
-  </li>
                                 </ul>
                             </li>
                             <li class="dropdown">
@@ -217,15 +207,15 @@
 </li>
                                     
 <li >
-    <a href="../../tools/jtenv.md">JTEnv</a>
+    <a href="../../tools/jtenv.md">jtenv</a>
 </li>
                                     
 <li >
-    <a href="../../tools/jtconfig.md">JTConfig</a>
+    <a href="../../tools/jtconfig/">jtconfig</a>
 </li>
                                     
 <li >
-    <a href="../../tools/jtbuildcm.md">JTBuildcm</a>
+    <a href="../../tools/jtbuildcm.md">jtbuildcm</a>
 </li>
                                     
   <li class="dropdown-submenu">
@@ -237,7 +227,7 @@
 </li>
             
 <li >
-    <a href="../../tools/jtenvpy.md">jtenvpy</a>
+    <a href="../../tools/jtenvpy/">jtenvpy</a>
 </li>
             
 <li >
@@ -286,7 +276,7 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#jtsdk-tools-installation">JTSDK-Tools Installation</a></li>
+        <li class="main active"><a href="#jtsdk-tools-windows-installation">JTSDK Tools Windows Installation</a></li>
             <li><a href="#prerequisite-installation">Prerequisite Installation</a></li>
             <li><a href="#required-installation-and-configuration">Required Installation and Configuration</a></li>
             <li><a href="#optional-installs">Optional Installs</a></li>
@@ -311,7 +301,7 @@
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="jtsdk-tools-installation">JTSDK-Tools Installation<a class="headerlink" href="#jtsdk-tools-installation" title="Permanent link">&para;</a></h1>
+<h1 id="jtsdk-tools-windows-installation">JTSDK Tools Windows Installation<a class="headerlink" href="#jtsdk-tools-windows-installation" title="Permanent link">&para;</a></h1>
 <blockquote>
 <p>NOTE: This document is still <code>Under Development</code>, and may be subject to frequent
 updates. Hard linking to specific URL's is <em>not advised</em> at this time. To prevent
@@ -319,37 +309,37 @@ unexpected issues, the installation order below should be firmly adhered to.</p>
 </blockquote>
 <h2 id="prerequisite-installation">Prerequisite Installation<a class="headerlink" href="#prerequisite-installation" title="Permanent link">&para;</a></h2>
 <p>While not critical, the following packages should be installed in the order
-listed to prevent unexpected results. See <a href="Install-Prerequisites">Prerequisite Overview</a>
+listed to prevent unexpected results. See <a href="../Install-Prerequisites/">Prerequisite Overview</a>
 for further details.</p>
 <ol>
-<li><a href="Install-Net-Core-Sdk">Net Core SDK</a></li>
-<li><a href="Install-VS-Code">VS Code</a></li>
-<li><a href="Install-Git-Client">Git Client</a></li>
+<li><a href="../Install-Net-Core-SDK/">Net Core SDK</a></li>
+<li><a href="../Install-VS-Code/">VS Code</a></li>
+<li><a href="../Install-Git-Client/">Git Client</a></li>
 </ol>
 <h2 id="required-installation-and-configuration">Required Installation and Configuration<a class="headerlink" href="#required-installation-and-configuration" title="Permanent link">&para;</a></h2>
 <p><code>MSYS2</code> is the last of the required installation and configuration sections.
-It follows the <a href="Install-Core-Apps">Core Apps Install</a> guide as several
+It follows the <a href="../Install-Core-Apps/">Core Apps Install</a> guide as several
 scripts--most notably, the <code>Hamlib Build</code> script--are part of this package. The
-<a href="Install-Core-Apps">Core Apps Install</a> package also provides the <code>MSYS2</code> dependency
+<a href="../Install-Core-Apps/">Core Apps Install</a> package also provides the <code>MSYS2</code> dependency
 list which users will need to install <code>MSYS2</code> required dependencies.</p>
 <ol>
-<li><a href="Install-Python">Python</a></li>
-<li><a href="Install-Core-Tools">Core Tools</a></li>
-<li><a href="Install-Asciidoctor">AsciiDoctor Configuration</a></li>
-<li><a href="Install-Qt">Qt Tools</a></li>
-<li><a href="Install-Core-Apps">Core Apps</a></li>
-<li><a href="Install-Msys2">MSYS2 Configuration</a></li>
+<li><a href="../Install-Python/">Python</a></li>
+<li><a href="../Install-Core-Tools/">Core Tools</a></li>
+<li><a href="../Install-Asciidoctor/">AsciiDoctor Configuration</a></li>
+<li><a href="../Install-Qt/">Qt Tools</a></li>
+<li><a href="../Install-Core-Apps/">Core Apps</a></li>
+<li><a href="../Install-Msys2/">MSYS2 Configuration</a></li>
 </ol>
 <h2 id="optional-installs">Optional Installs<a class="headerlink" href="#optional-installs" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="Install-DB-Tools">Database Tools (non-PostgreSQL)</a></li>
-<li><a href="Install-Doc-Tools">Doc Tools</a></li>
-<li><a href="Install-Java-Tools">Java Tools</a></li>
-<li><a href="Install-Java">Java</a></li>
-<li><a href="Install-PostgreSQL">PostgreSQL</a></li>
-<li><a href="Install-Redis">Redis</a></li>
-<li><a href="Install-WSL">WSL</a></li>
-<li><a href="Install-Misc-Tools">Misc Tools</a> - under development</li>
+<li><a href="../Install-DB-Tools/">Database Tools (non-PostgreSQL)</a></li>
+<li><a href="../Install-Doc-Tools/">Doc Tools</a></li>
+<li><a href="../Install-Java-Tools/">Java Tools</a></li>
+<li><a href="../Install-Java/">Java</a></li>
+<li><a href="../Install-PostgreSQL/">PostgreSQL</a></li>
+<li><a href="../Install-Redis/">Redis</a></li>
+<li><a href="../Install-WSL/">WSL</a></li>
+<li><a href="../Install-Misc-Tools/">Misc Tools</a> - under development</li>
 </ul>
 <h2 id="sections">Sections<a class="headerlink" href="#sections" title="Permanent link">&para;</a></h2>
 <blockquote>
@@ -378,7 +368,7 @@ list which users will need to install <code>MSYS2</code> required dependencies.<
 <ul>
 <li><a href="#prerequisite-tools">Prerequisite Tools</a></li>
 <li><a href="#core-tools">Core Tools</a></li>
-<li><a href="https://github.com/KI7MT/jtsdk-dotnet-core">JTSDK Net Core Package</a></li>
+<li><a href="https://github.com/KI7MT/jtsdk-tools">JTSDK Net Core Package</a></li>
 </ul>
 <p>In addition to the required tools and frameworks, there are a number of additional
 components the <code>JTSDK Tools Environment</code> will be supporting:</p>
@@ -392,7 +382,7 @@ components the <code>JTSDK Tools Environment</code> will be supporting:</p>
 followed to prevent missing critical steps, or, missing out on a particular
 feature from another installation process.</p>
 <h2 id="net-core-usage">Net Core Usage<a class="headerlink" href="#net-core-usage" title="Permanent link">&para;</a></h2>
-<p>At present, <a href="https://docs.microsoft.com/en-us/dotnet/core/index">Net Core Applicaitons</a>
+<p>At present, <a href="https://docs.microsoft.com/en-us/dotnet/core/index">Net Core Applications</a>
 are only used in setting environment , paths and configuration variable. Its the
 long term goal to convert all <code>Bash</code> and Windows <code>Batch/CMD</code> scripts over to 
 <a href="https://docs.microsoft.com/en-us/dotnet/core/index">Net Core</a>.</p>
@@ -475,7 +465,7 @@ item, following the links provided.</p>
 <p>In order to checkout and compile the <code>JTSDK Net Core Package</code>, users must have
 three applications installed at the <code>system level</code>.</p>
 <blockquote>
-<p>See <a href="Install-Prerequisites">Prereq Install Instructions</a> for details.</p>
+<p>See <a href="../Install-Prerequisites/">Prereq Install Instructions</a> for details.</p>
 </blockquote>
 <table>
 <thead>
@@ -564,7 +554,7 @@ considered the bare minimum installation.</p>
 <h2 id="documentation-tools">Documentation Tools<a class="headerlink" href="#documentation-tools" title="Permanent link">&para;</a></h2>
 <p>The following Document utilities can be installed in addition to the <code>JTSDK Core Tool Chain</code></p>
 <blockquote>
-<p>See <a href="Install-Doc-Tools">Install Doc Tools</a> for details.</p>
+<p>See <a href="../Install-Doc-Tools/">Install Doc Tools</a> for details.</p>
 </blockquote>
 <table>
 <thead>
@@ -591,13 +581,13 @@ considered the bare minimum installation.</p>
 <h2 id="database-tools">Database Tools<a class="headerlink" href="#database-tools" title="Permanent link">&para;</a></h2>
 <p>The following tools are general purpose database applications and / or servers.</p>
 <blockquote>
-<p>See <a href="Install-PostgreSQL">Install-PostgreSQL</a>, and <a href="Install-DB-Tools">Install-DB-Tools</a>
+<p>See <a href="../Install-PostgreSQL/">Install-PostgreSQL</a>, and <a href="../Install-DB-Tools/">Install-DB-Tools</a>
 for details.</p>
 </blockquote>
 <p><code>PostgreSQL</code> is a stand-alone guide, where as <code>SQLite3</code> is a simply installed
-from the <a href="Install-DB-Tools">Install-DB-Tools Guide</a>. As more database
+from the <a href="../Install-DB-Tools/">Install-DB-Tools Guide</a>. As more database
 tools are added, and provided they <em>do not</em> need a stand alone guide, they will
-be added to the <a href="Install-DB-Tools">Install-DB-Tools</a> installer.</p>
+be added to the <a href="../Install-DB-Tools/">Install-DB-Tools</a> installer.</p>
 <table>
 <thead>
 <tr>
@@ -619,7 +609,7 @@ be added to the <a href="Install-DB-Tools">Install-DB-Tools</a> installer.</p>
 <h2 id="python-tools">Python Tools<a class="headerlink" href="#python-tools" title="Permanent link">&para;</a></h2>
 <p>The following Python Tools can be installed in addition to the <code>JTSDK Core Tool Chain</code>.</p>
 <blockquote>
-<p>See <a href="Install-Python">Install Python</a> for details.</p>
+<p>See <a href="../Install-Python/">Install Python</a> for details.</p>
 </blockquote>
 <table>
 <thead>
@@ -639,10 +629,10 @@ be added to the <a href="Install-DB-Tools">Install-DB-Tools</a> installer.</p>
 <p>The following tools are generally related to <code>Java</code> and associated build activities.
 While applications such as <a href="https://gradle.org/">Gradle</a> and <a href="https://www.eclipse.org/downloads/">Eclipse</a>
 may very well apply to other programming languages, they are most commonly used
-in <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java</a> 
+in <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java</a>
 related application development.</p>
 <blockquote>
-<p>See <a href="Install-Java">Install Java</a>, and <a href="Install-Java-Tools">Install Java Tools</a>
+<p>See <a href="../Install-Java/">Install Java</a>, and <a href="../Install-Java-Tools/">Install Java Tools</a>
 for more details.</p>
 </blockquote>
 <table>
@@ -678,7 +668,7 @@ for more details.</p>
 <h2 id="miscellaneous">Miscellaneous<a class="headerlink" href="#miscellaneous" title="Permanent link">&para;</a></h2>
 <p>The following tools can be installed in addition to the <code>JTSDK Core Tool Chain</code>.</p>
 <blockquote>
-<p>See <a href="Install-Misc-Tools">Miscellaneous Tools Install Instructions</a> for details.</p>
+<p>See <a href="../Install-Misc-Tools/">Miscellaneous Tools Install Instructions</a> for details.</p>
 </blockquote>
 <table>
 <thead>

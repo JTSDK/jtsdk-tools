@@ -110,55 +110,55 @@
     <ul class="dropdown-menu">
             
 <li >
-    <a href="../Install-DB-Tools/">* Database Tools</a>
+    <a href="../Install-DB-Tools/">Database Tools</a>
 </li>
             
 <li >
-    <a href="../Install-Doc-Tools/">* Doc Tools</a>
+    <a href="../Install-Doc-Tools/">Doc Tools</a>
 </li>
             
 <li >
-    <a href="../Install-Java-Tools/">* Java Tools</a>
+    <a href="../Install-Java-Tools/">Java Tools</a>
 </li>
             
 <li >
-    <a href="../Install-Java/">* Java</a>
+    <a href="../Install-Java/">Java</a>
 </li>
             
 <li >
-    <a href="../Install-PostgreSQL/">* PostgreSQL</a>
+    <a href="../Install-PostgreSQL/">PostgreSQL</a>
 </li>
             
 <li >
-    <a href="../Install-Redis/">* Redis</a>
+    <a href="../Install-Redis/">Redis</a>
 </li>
             
 <li >
-    <a href="../Install-WSL/">* WSL</a>
+    <a href="../Install-WSL/">WSL</a>
 </li>
             
 <li >
-    <a href="../Install-Misc-Tools/">* Misc Tools</a>
+    <a href="../Install-Misc-Tools/">Misc Tools</a>
 </li>
             
 <li >
-    <a href="../Install-Eclipse/">* Eclipse</a>
+    <a href="../Install-Eclipse/">Eclipse</a>
 </li>
             
 <li >
-    <a href="../Install-MSSQL-Server/">* MSSQL</a>
+    <a href="../Install-MSSQL-Server/">MSSQL</a>
 </li>
             
 <li >
-    <a href="../Install-MongoDB/">* MongoDB</a>
+    <a href="../Install-MongoDB/">MongoDB</a>
 </li>
             
 <li >
-    <a href="../Install-MSSQL-Server/">* MSSQL</a>
+    <a href="../Install-MSSQL-Server/">MSSQL</a>
 </li>
             
 <li >
-    <a href="../Install-Visual-Studio/">* Visual Stuidio</a>
+    <a href="../Install-Visual-Studio/">Visual Stuidio</a>
 </li>
     </ul>
   </li>
@@ -196,16 +196,6 @@
   </li>
     </ul>
   </li>
-                                    
-  <li class="dropdown-submenu">
-    <a href="#">Linux</a>
-    <ul class="dropdown-menu">
-            
-<li >
-    <a href="../../linux/Home/">Overview</a>
-</li>
-    </ul>
-  </li>
                                 </ul>
                             </li>
                             <li class="dropdown">
@@ -217,15 +207,15 @@
 </li>
                                     
 <li >
-    <a href="../../tools/jtenv.md">JTEnv</a>
+    <a href="../../tools/jtenv.md">jtenv</a>
 </li>
                                     
 <li >
-    <a href="../../tools/jtconfig.md">JTConfig</a>
+    <a href="../../tools/jtconfig/">jtconfig</a>
 </li>
                                     
 <li >
-    <a href="../../tools/jtbuildcm.md">JTBuildcm</a>
+    <a href="../../tools/jtbuildcm.md">jtbuildcm</a>
 </li>
                                     
   <li class="dropdown-submenu">
@@ -237,7 +227,7 @@
 </li>
             
 <li >
-    <a href="../../tools/jtenvpy.md">jtenvpy</a>
+    <a href="../../tools/jtenvpy/">jtenvpy</a>
 </li>
             
 <li >
@@ -289,9 +279,10 @@
         <li class="main active"><a href="#install-git-client">Install Git Client</a></li>
             <li><a href="#helpful-links">Helpful Links</a></li>
             <li><a href="#pre-installation">Pre-Installation</a></li>
-            <li><a href="#notes-and-considerations">Notes and Considerations</a></li>
-            <li><a href="#installation-walk-through">Installation Walk-Through</a></li>
+            <li><a href="#notes">Notes</a></li>
+            <li><a href="#installation">Installation</a></li>
             <li><a href="#git-configuration">Git Configuration</a></li>
+            <li><a href="#next-step">Next Step</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
@@ -334,7 +325,7 @@
 <p><a href="https://git-scm.com/">Git-SCM</a> has an option to use <a href="https://code.visualstudio.com/docs/supporting/faq#_what-is-the-difference-between-vs-code-and-vs-community">Visual Studio Code</a>
 as the default editor. If you'd like to select this feature during installation,
 ensure you've installed <a href="https://code.visualstudio.com/docs/supporting/faq#_what-is-the-difference-between-vs-code-and-vs-community">Visual Studio Code</a> <em>before</em> installing <a href="https://git-scm.com/">Git</a>.</p>
-<h2 id="notes-and-considerations">Notes and Considerations<a class="headerlink" href="#notes-and-considerations" title="Permanent link">&para;</a></h2>
+<h2 id="notes">Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
 <ul>
 <li>The installation location of Git can be set to the default installer location,</li>
 <li>or anywhere on the system a user prefers. The only stipulation for JTSDK is, 
@@ -348,7 +339,7 @@ system. If the system is 64bit, that is what will be downloaded.</li>
 available form the command line, there is <em>no need</em> to re-install it for <code>JTSDK</code>
 usage.</li>
 </ul>
-<h2 id="installation-walk-through">Installation Walk-Through<a class="headerlink" href="#installation-walk-through" title="Permanent link">&para;</a></h2>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
 <p>The following walks through the steps known to work with <code>JTSDK</code>.</p>
 <ul>
 <li>IMPORTANT - The steps below are mere recommendations, and not set in stone. If
@@ -372,7 +363,9 @@ below.</li>
 </tr>
 </tbody>
 </table>
-<h3 id="install-location-default-recommended">Install Location (default recommended)<a class="headerlink" href="#install-location-default-recommended" title="Permanent link">&para;</a></h3>
+<h3 id="install-location">Install Location<a class="headerlink" href="#install-location" title="Permanent link">&para;</a></h3>
+<p>Unless you have a specific need to install elsewhere, the default location
+provided by the installer is recommended.</p>
 <table>
 <thead>
 <tr>
@@ -446,7 +439,7 @@ However, if you want a select number of items available outside of
 <p>This is not a critical component of <code>JTSDK</code>, but for consistency, choosing
 OpenSSL has worked well in the past. It's up to the user. If you choose Windows
 Secure Channel Library, you will need to configure the certificates and Git to
-use them seperately.</p>
+use them separately.</p>
 <table>
 <thead>
 <tr>
@@ -459,7 +452,7 @@ use them seperately.</p>
 </tr>
 </tbody>
 </table>
-<h3 id="configure-line-ending-preference">Configure Line Ending Preference<a class="headerlink" href="#configure-line-ending-preference" title="Permanent link">&para;</a></h3>
+<h3 id="line-ending-preference">Line Ending Preference<a class="headerlink" href="#line-ending-preference" title="Permanent link">&para;</a></h3>
 <p>This option is again up to the user. However, for use with <code>JTSDK</code> projects,
 selecting the first option <code>Checkout Windows-Style, commit Unix-Style endings</code>
 should work for the project. If you're a developer and need other endings,
@@ -467,12 +460,12 @@ choose what best suits your needs.</p>
 <table>
 <thead>
 <tr>
-<th align="center"><img alt="Line Endings" src="../images/git/git-bash.8.PNG?raw=true" /></th>
+<th align="center"><img alt="Line Ending Preference" src="../images/git/git-bash.8.PNG?raw=true" /></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center"><em>Line Endings</em></td>
+<td align="center"><em>Line Endings Preference</em></td>
 </tr>
 </tbody>
 </table>
@@ -539,8 +532,9 @@ close the <code>Git Bash</code> console.</p>
 <p>If you plan to check-in code, or perform other repository activity, review
 the <a href="https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup">First Time Setup</a>
 documentation paying particular attention to <code>username</code> and <code>email</code> settings.</p>
-<p>This concludes the <a href="Install-Git-Client">Git Client Install</a>.</p>
-<h3 id="proceed-to-next-step-install-core-tools">Proceed to Next Step =&gt; <a href="Install-Core-Tools">Install Core Tools</a><a class="headerlink" href="#proceed-to-next-step-install-core-tools" title="Permanent link">&para;</a></h3></div>
+<p>This concludes the <a href="./">Git Client Install</a>.</p>
+<h2 id="next-step">Next Step<a class="headerlink" href="#next-step" title="Permanent link">&para;</a></h2>
+<p>Proceed to ==&gt; <a href="../Install-Core-Tools/">Install Core Tools</a></p></div>
         </div>
 
         <footer class="col-md-12">

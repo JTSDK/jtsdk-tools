@@ -110,55 +110,55 @@
     <ul class="dropdown-menu">
             
 <li >
-    <a href="../Install-DB-Tools/">* Database Tools</a>
+    <a href="../Install-DB-Tools/">Database Tools</a>
 </li>
             
 <li >
-    <a href="../Install-Doc-Tools/">* Doc Tools</a>
+    <a href="../Install-Doc-Tools/">Doc Tools</a>
 </li>
             
 <li >
-    <a href="../Install-Java-Tools/">* Java Tools</a>
+    <a href="../Install-Java-Tools/">Java Tools</a>
 </li>
             
 <li >
-    <a href="../Install-Java/">* Java</a>
+    <a href="../Install-Java/">Java</a>
 </li>
             
 <li >
-    <a href="../Install-PostgreSQL/">* PostgreSQL</a>
+    <a href="../Install-PostgreSQL/">PostgreSQL</a>
 </li>
             
 <li >
-    <a href="../Install-Redis/">* Redis</a>
+    <a href="../Install-Redis/">Redis</a>
 </li>
             
 <li >
-    <a href="../Install-WSL/">* WSL</a>
+    <a href="../Install-WSL/">WSL</a>
 </li>
             
 <li >
-    <a href="../Install-Misc-Tools/">* Misc Tools</a>
+    <a href="../Install-Misc-Tools/">Misc Tools</a>
 </li>
             
 <li >
-    <a href="../Install-Eclipse/">* Eclipse</a>
+    <a href="../Install-Eclipse/">Eclipse</a>
 </li>
             
 <li >
-    <a href="../Install-MSSQL-Server/">* MSSQL</a>
+    <a href="../Install-MSSQL-Server/">MSSQL</a>
 </li>
             
 <li >
-    <a href="../Install-MongoDB/">* MongoDB</a>
+    <a href="../Install-MongoDB/">MongoDB</a>
 </li>
             
 <li >
-    <a href="../Install-MSSQL-Server/">* MSSQL</a>
+    <a href="../Install-MSSQL-Server/">MSSQL</a>
 </li>
             
 <li >
-    <a href="../Install-Visual-Studio/">* Visual Stuidio</a>
+    <a href="../Install-Visual-Studio/">Visual Stuidio</a>
 </li>
     </ul>
   </li>
@@ -196,16 +196,6 @@
   </li>
     </ul>
   </li>
-                                    
-  <li class="dropdown-submenu">
-    <a href="#">Linux</a>
-    <ul class="dropdown-menu">
-            
-<li >
-    <a href="../../linux/Home/">Overview</a>
-</li>
-    </ul>
-  </li>
                                 </ul>
                             </li>
                             <li class="dropdown">
@@ -217,15 +207,15 @@
 </li>
                                     
 <li >
-    <a href="../../tools/jtenv.md">JTEnv</a>
+    <a href="../../tools/jtenv.md">jtenv</a>
 </li>
                                     
 <li >
-    <a href="../../tools/jtconfig.md">JTConfig</a>
+    <a href="../../tools/jtconfig/">jtconfig</a>
 </li>
                                     
 <li >
-    <a href="../../tools/jtbuildcm.md">JTBuildcm</a>
+    <a href="../../tools/jtbuildcm.md">jtbuildcm</a>
 </li>
                                     
   <li class="dropdown-submenu">
@@ -237,7 +227,7 @@
 </li>
             
 <li >
-    <a href="../../tools/jtenvpy.md">jtenvpy</a>
+    <a href="../../tools/jtenvpy/">jtenvpy</a>
 </li>
             
 <li >
@@ -288,8 +278,9 @@
     <ul class="nav bs-sidenav">
         <li class="main active"><a href="#install-core-applications">Install Core Applications</a></li>
             <li><a href="#supported-operating-systems">Supported Operating Systems</a></li>
-            <li><a href="#installation-walkthrough">Installation Walkthrough</a></li>
+            <li><a href="#installation">Installation</a></li>
             <li><a href="#upgrade">Upgrade</a></li>
+            <li><a href="#next-step">Next Step</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
@@ -335,15 +326,15 @@ generic Linux support, and additional Ubuntu / Debian specific artifacts.</p>
 <li>Linux - Unsupported at this time.</li>
 <li>Arm Devices - Unsupported at this time.</li>
 </ul>
-<h2 id="installation-walkthrough">Installation Walkthrough<a class="headerlink" href="#installation-walkthrough" title="Permanent link">&para;</a></h2>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
 <p>Installation of this package should follow the tool-chain installation and
 setup. If you've not already done so, review the following guides <strong>before</strong>
 checking out and compiling the source code.</p>
 <ul>
-<li><a href="Install-Prerequisites">Prerequisite Tools Installation</a></li>
-<li><a href="Install-Jtsdk-Core">Core Tool Installation</a></li>
+<li><a href="../Install-Prerequisites/">Prerequisite Tools Installation</a></li>
+<li><a href="../Install-Core-Tools/">Core Tool Installation</a></li>
 </ul>
-<pre><code class="shell"># Open a Windows Console, then change directories to the JTSDK-Tools installation
+<pre><code class="bash"># Open a Windows Console, then change directories to the JTSDK-Tools installation
 cd /d (C|D):\JTSDK-Tools
 
 # Set Temporary JTSDK_HOME variable
@@ -365,7 +356,7 @@ make install
 <p>If the source clone is still present on the system, upgrading is the same as
 installation, with an additional pull command. If not, use the installation steps
 from above.</p>
-<pre><code class="shell"># Change directories to the JTSDK-Tools installation
+<pre><code class="bash"># Change directories to the JTSDK-Tools installation
 cd /d (C|D):\JTSDK-Tools
 
 # Set Temporary JTSDK_HOME variable
@@ -385,7 +376,8 @@ make install
 </code></pre>
 
 <p>This concludes the installation and / or upgrade for <code>JTSDK Core Applications</code>.</p>
-<h3 id="proceed-to-next-step-msys2-configuration">Proceed to Next Step =&gt; <a href="Install-Msys2">MSYS2 Configuration</a><a class="headerlink" href="#proceed-to-next-step-msys2-configuration" title="Permanent link">&para;</a></h3></div>
+<h2 id="next-step">Next Step<a class="headerlink" href="#next-step" title="Permanent link">&para;</a></h2>
+<p>Proceed to =&gt; <a href="../Install-Msys2/">MSYS2 Configuration</a></p></div>
         </div>
 
         <footer class="col-md-12">

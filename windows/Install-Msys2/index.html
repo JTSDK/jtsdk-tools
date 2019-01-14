@@ -110,55 +110,55 @@
     <ul class="dropdown-menu">
             
 <li >
-    <a href="../Install-DB-Tools/">* Database Tools</a>
+    <a href="../Install-DB-Tools/">Database Tools</a>
 </li>
             
 <li >
-    <a href="../Install-Doc-Tools/">* Doc Tools</a>
+    <a href="../Install-Doc-Tools/">Doc Tools</a>
 </li>
             
 <li >
-    <a href="../Install-Java-Tools/">* Java Tools</a>
+    <a href="../Install-Java-Tools/">Java Tools</a>
 </li>
             
 <li >
-    <a href="../Install-Java/">* Java</a>
+    <a href="../Install-Java/">Java</a>
 </li>
             
 <li >
-    <a href="../Install-PostgreSQL/">* PostgreSQL</a>
+    <a href="../Install-PostgreSQL/">PostgreSQL</a>
 </li>
             
 <li >
-    <a href="../Install-Redis/">* Redis</a>
+    <a href="../Install-Redis/">Redis</a>
 </li>
             
 <li >
-    <a href="../Install-WSL/">* WSL</a>
+    <a href="../Install-WSL/">WSL</a>
 </li>
             
 <li >
-    <a href="../Install-Misc-Tools/">* Misc Tools</a>
+    <a href="../Install-Misc-Tools/">Misc Tools</a>
 </li>
             
 <li >
-    <a href="../Install-Eclipse/">* Eclipse</a>
+    <a href="../Install-Eclipse/">Eclipse</a>
 </li>
             
 <li >
-    <a href="../Install-MSSQL-Server/">* MSSQL</a>
+    <a href="../Install-MSSQL-Server/">MSSQL</a>
 </li>
             
 <li >
-    <a href="../Install-MongoDB/">* MongoDB</a>
+    <a href="../Install-MongoDB/">MongoDB</a>
 </li>
             
 <li >
-    <a href="../Install-MSSQL-Server/">* MSSQL</a>
+    <a href="../Install-MSSQL-Server/">MSSQL</a>
 </li>
             
 <li >
-    <a href="../Install-Visual-Studio/">* Visual Stuidio</a>
+    <a href="../Install-Visual-Studio/">Visual Stuidio</a>
 </li>
     </ul>
   </li>
@@ -196,16 +196,6 @@
   </li>
     </ul>
   </li>
-                                    
-  <li class="dropdown-submenu">
-    <a href="#">Linux</a>
-    <ul class="dropdown-menu">
-            
-<li >
-    <a href="../../linux/Home/">Overview</a>
-</li>
-    </ul>
-  </li>
                                 </ul>
                             </li>
                             <li class="dropdown">
@@ -217,15 +207,15 @@
 </li>
                                     
 <li >
-    <a href="../../tools/jtenv.md">JTEnv</a>
+    <a href="../../tools/jtenv.md">jtenv</a>
 </li>
                                     
 <li >
-    <a href="../../tools/jtconfig.md">JTConfig</a>
+    <a href="../../tools/jtconfig/">jtconfig</a>
 </li>
                                     
 <li >
-    <a href="../../tools/jtbuildcm.md">JTBuildcm</a>
+    <a href="../../tools/jtbuildcm.md">jtbuildcm</a>
 </li>
                                     
   <li class="dropdown-submenu">
@@ -237,7 +227,7 @@
 </li>
             
 <li >
-    <a href="../../tools/jtenvpy.md">jtenvpy</a>
+    <a href="../../tools/jtenvpy/">jtenvpy</a>
 </li>
             
 <li >
@@ -288,8 +278,9 @@
     <ul class="nav bs-sidenav">
         <li class="main active"><a href="#install-msys2">Install MSYS2</a></li>
             <li><a href="#helpful-links">Helpful Links</a></li>
-            <li><a href="#installation-walk-through">Installation Walk-Through</a></li>
-            <li><a href="#install-msys2-packages-for-hamlib">Install MSYS2 Packages For Hamlib</a></li>
+            <li><a href="#installation">Installation</a></li>
+            <li><a href="#install-msys2-packages">Install MSYS2 Packages</a></li>
+            <li><a href="#next-step">Next Step</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
@@ -317,17 +308,17 @@
 </tr>
 <tr>
 <td>Description</td>
-<td>Collention of GNU Applications including Bash</td>
+<td>Collection of GNU Applications including Bash</td>
 </tr>
 </tbody>
 </table>
 <blockquote>
-<p>At its core is an independent rewrite of MSYS, based on modern Cygwin (POSIX 
-compatibility layer) and MinGW-w64 with the aim of better interoperability with 
-native Windows software. It provides a bash shell, Autotools, revision control 
-systems and the like for building native Windows applications using MinGW-w64 
-toolchains.</p>
-<p>-- <cite>Alexey Pavlov (@alexpux)</cite></p>
+<p>At its core is an independent rewrite of MSYS, based on modern Cygwin (POSIX
+compatibility layer) and MinGW-w64 with the aim of better interoperability with
+native Windows software. It provides a bash shell, Autotools, revision control
+systems and the like for building native Windows applications using MinGW-w64
+tool-chains.</p>
+<p>-- *Alexey Pavlov (@alexpux)</p>
 </blockquote>
 <p>In terms of <code>JTSDK</code> usage, MSYS2 provides the means in which to build Hamlib,
 in addition to commonly used file-system utilities.</p>
@@ -339,7 +330,7 @@ in addition to commonly used file-system utilities.</p>
 <li><a href="https://github.com/msys2/msys2/wiki/Using-packages">MSYS2 - Package Management</a></li>
 <li><a href="https://wiki.archlinux.org/index.php/Pacman">Pacman - MSYS2 Package Manager</a></li>
 </ul>
-<h2 id="installation-walk-through">Installation Walk-Through<a class="headerlink" href="#installation-walk-through" title="Permanent link">&para;</a></h2>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
 <ul>
 <li><code>MSYS2</code> is installed as part of the JTSDK Core Tools Installer. However, each
 instance needs to be updated on a per system basis. The following steps walk
@@ -347,10 +338,9 @@ though the process of configuring and updating the provided instance.</li>
 <li>Use the programs menu or any means of opening a standard (non-administrator)
 Command Prompt.</li>
 </ul>
-<h3 id="update-msys2-instance">Update MSYS2 Instance<a class="headerlink" href="#update-msys2-instance" title="Permanent link">&para;</a></h3>
+<h3 id="update-msys2">Update MSYS2<a class="headerlink" href="#update-msys2" title="Permanent link">&para;</a></h3>
 <p>At the Windows Command Prompt opened from above, type the following</p>
-<pre><code class="shell"># Change directories, and open the MSYS2 Shell:
-
+<pre><code class="bash"># Change directories, and open the MSYS2 Shell:
 cd /d (C|D):\JTSDK-Tools\tools\msys2
 msys2_shell.cmd
 </code></pre>
@@ -380,8 +370,7 @@ prompted with <code>Proceed with installation? [Y/n]</code>, type <code>Y</code>
 <li>At the conclusion of the <code>Initial Update</code>, close the window using the
 <code>X</code> at the top right on the MSYS2 console window.</li>
 </ul>
-<pre><code class="shell"># In the MSYS2 Console, type:
-
+<pre><code class="bash"># In the MSYS2 Console, type:
 pacman -Syuu
 </code></pre>
 
@@ -403,13 +392,11 @@ pacman -Syuu
 console, and perform a second update with the following command:</li>
 <li>When prompted with <code>Proceed with installation? [Y/n]</code>, type <code>Y</code>.</li>
 </ul>
-<pre><code class="shell"># In the Windows Console, type the following:
-
+<pre><code class="bash"># In the Windows Console, type the following:
 msys2_shell.cmd
 </code></pre>
 
-<pre><code class="shell"># In the MSYS2 Console, type the following:
-
+<pre><code class="bash"># In the MSYS2 Console, type the following:
 pacman -Syuu
 </code></pre>
 
@@ -429,8 +416,7 @@ pacman -Syuu
 <ul>
 <li>Continue updating <code>MSYS2</code> until no additional updates are presented.</li>
 </ul>
-<pre><code class="shell"># In the MSYS2 Console, type the following:
-
+<pre><code class="bash"># In the MSYS2 Console, type the following:
 pacman -Syuu
 </code></pre>
 
@@ -446,17 +432,15 @@ pacman -Syuu
 </tr>
 </tbody>
 </table>
-<h2 id="install-msys2-packages-for-hamlib">Install MSYS2 Packages For Hamlib<a class="headerlink" href="#install-msys2-packages-for-hamlib" title="Permanent link">&para;</a></h2>
+<h2 id="install-msys2-packages">Install MSYS2 Packages<a class="headerlink" href="#install-msys2-packages" title="Permanent link">&para;</a></h2>
 <p>In addition to the default installation, Hamlib has a number of build
 dependencies that user must install be for compiling.</p>
 <p>After the final update of MSYS, issue the following command in the terminal.</p>
 <blockquote>
 <p>NOTE: You must have installed JTSDK-Core-Apps before running the install command below.</p>
 </blockquote>
-<pre><code class="shell"># In the MSYS2 Terminal, type the following:
-
+<pre><code class="bash"># In the MSYS2 Terminal, type the following:
 install-pkg-list.sh
-
 </code></pre>
 
 <p>If the installation completes without error, you can test build Hamlib3</p>
@@ -466,12 +450,12 @@ install-pkg-list.sh
 that are open.</p>
 </blockquote>
 <p>Open a Windows Console, type the following:</p>
-<pre><code class="shell"># Change directories, and open the MSYS2 Shell:
+<pre><code class="bash"># Change directories, and open the MSYS2 Shell:
 cd /d (C|D):\JTSDK-Tools
 msys2
 </code></pre>
 
-<pre><code class="shell"># In the MSYS2 Console, tyep:
+<pre><code class="bash"># In the MSYS2 Console, tyep:
 build-hamlib.sh
 
 # Watch for errors. If none, the results should be as follows.
@@ -493,18 +477,19 @@ build-hamlib.sh
 <ul>
 <li>After test building hamlib3, exit the <code>MSYS2</code> console using:</li>
 </ul>
-<pre><code class="shell">exit
+<pre><code class="bash">exit
 </code></pre>
 
 <h3 id="exit-windows-console">Exit Windows Console<a class="headerlink" href="#exit-windows-console" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Exit the Windows Command Prompt Console using:</li>
 </ul>
-<pre><code class="shell">exit
+<pre><code class="bash">exit
 </code></pre>
 
 <p>This concludes configuration of <code>MSYS2</code></p>
-<h3 id="proceed-to-next-step-python-installation">Proceed to Next Step =&gt; <a href="Install-Python">Python Installation</a><a class="headerlink" href="#proceed-to-next-step-python-installation" title="Permanent link">&para;</a></h3></div>
+<h2 id="next-step">Next Step<a class="headerlink" href="#next-step" title="Permanent link">&para;</a></h2>
+<p>Proceed to ==&gt; <a href="../Install-Python/">Python Installation</a></p></div>
         </div>
 
         <footer class="col-md-12">

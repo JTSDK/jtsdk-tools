@@ -110,55 +110,55 @@
     <ul class="dropdown-menu">
             
 <li >
-    <a href="../Install-DB-Tools/">* Database Tools</a>
+    <a href="../Install-DB-Tools/">Database Tools</a>
 </li>
             
 <li >
-    <a href="../Install-Doc-Tools/">* Doc Tools</a>
+    <a href="../Install-Doc-Tools/">Doc Tools</a>
 </li>
             
 <li >
-    <a href="../Install-Java-Tools/">* Java Tools</a>
+    <a href="../Install-Java-Tools/">Java Tools</a>
 </li>
             
 <li >
-    <a href="../Install-Java/">* Java</a>
+    <a href="../Install-Java/">Java</a>
 </li>
             
 <li >
-    <a href="../Install-PostgreSQL/">* PostgreSQL</a>
+    <a href="../Install-PostgreSQL/">PostgreSQL</a>
 </li>
             
 <li >
-    <a href="../Install-Redis/">* Redis</a>
+    <a href="../Install-Redis/">Redis</a>
 </li>
             
 <li >
-    <a href="../Install-WSL/">* WSL</a>
+    <a href="../Install-WSL/">WSL</a>
 </li>
             
 <li >
-    <a href="../Install-Misc-Tools/">* Misc Tools</a>
+    <a href="../Install-Misc-Tools/">Misc Tools</a>
 </li>
             
 <li >
-    <a href="../Install-Eclipse/">* Eclipse</a>
+    <a href="../Install-Eclipse/">Eclipse</a>
 </li>
             
 <li >
-    <a href="../Install-MSSQL-Server/">* MSSQL</a>
+    <a href="../Install-MSSQL-Server/">MSSQL</a>
 </li>
             
 <li >
-    <a href="../Install-MongoDB/">* MongoDB</a>
+    <a href="../Install-MongoDB/">MongoDB</a>
 </li>
             
 <li >
-    <a href="../Install-MSSQL-Server/">* MSSQL</a>
+    <a href="../Install-MSSQL-Server/">MSSQL</a>
 </li>
             
 <li >
-    <a href="../Install-Visual-Studio/">* Visual Stuidio</a>
+    <a href="../Install-Visual-Studio/">Visual Stuidio</a>
 </li>
     </ul>
   </li>
@@ -196,16 +196,6 @@
   </li>
     </ul>
   </li>
-                                    
-  <li class="dropdown-submenu">
-    <a href="#">Linux</a>
-    <ul class="dropdown-menu">
-            
-<li >
-    <a href="../../linux/Home/">Overview</a>
-</li>
-    </ul>
-  </li>
                                 </ul>
                             </li>
                             <li class="dropdown">
@@ -217,15 +207,15 @@
 </li>
                                     
 <li >
-    <a href="../../tools/jtenv.md">JTEnv</a>
+    <a href="../../tools/jtenv.md">jtenv</a>
 </li>
                                     
 <li >
-    <a href="../../tools/jtconfig.md">JTConfig</a>
+    <a href="../../tools/jtconfig/">jtconfig</a>
 </li>
                                     
 <li >
-    <a href="../../tools/jtbuildcm.md">JTBuildcm</a>
+    <a href="../../tools/jtbuildcm.md">jtbuildcm</a>
 </li>
                                     
   <li class="dropdown-submenu">
@@ -237,7 +227,7 @@
 </li>
             
 <li >
-    <a href="../../tools/jtenvpy.md">jtenvpy</a>
+    <a href="../../tools/jtenvpy/">jtenvpy</a>
 </li>
             
 <li >
@@ -288,10 +278,11 @@
     <ul class="nav bs-sidenav">
         <li class="main active"><a href="#install-netcore-sdk">Install NetCore SDK</a></li>
             <li><a href="#helpful-links">Helpful Links</a></li>
-            <li><a href="#installation-walkthrough">Installation Walkthrough</a></li>
+            <li><a href="#installation">Installation</a></li>
             <li><a href="#download">Download</a></li>
             <li><a href="#installation-steps">Installation Steps</a></li>
             <li><a href="#verify-installation">Verify Installation</a></li>
+            <li><a href="#next-step">Next Step</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
@@ -329,7 +320,7 @@
 <li><a href="https://docs.microsoft.com/en-us/dotnet/core/index">Reference, Documentation, and Videos</a></li>
 <li><a href="https://docs.microsoft.com/en-us/dotnet/core/get-started?tabs=windows">Getting Started Tutorials</a></li>
 </ul>
-<h2 id="installation-walkthrough">Installation Walkthrough<a class="headerlink" href="#installation-walkthrough" title="Permanent link">&para;</a></h2>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://www.microsoft.com/net/download/windows">Download Net Core SDK</a></li>
 <li><a href="#installation-steps">Installation Steps</a></li>
@@ -338,7 +329,7 @@
 </ul>
 <h2 id="download">Download<a class="headerlink" href="#download" title="Permanent link">&para;</a></h2>
 <p>At the time of writing, the <a href="https://www.microsoft.com/net/download/windows">Net Core SDK</a>
-version is <code>2.2.101</code>. Follow the <a href="#installation-walkthrough">download link</a> listed above.
+version is <code>2.2.101</code>. Follow the <a href="#installation">download link</a> listed above.
 Select the latest version available. Also, <code>ensure</code> you are using the SDK
 installer and <em>NOT</em> the Runtime installer, and it is 64-bit.</p>
 <h2 id="installation-steps">Installation Steps<a class="headerlink" href="#installation-steps" title="Permanent link">&para;</a></h2>
@@ -390,7 +381,7 @@ installer and <em>NOT</em> the Runtime installer, and it is 64-bit.</p>
 <h2 id="verify-installation">Verify Installation<a class="headerlink" href="#verify-installation" title="Permanent link">&para;</a></h2>
 <p>After closing the installer, open a <code>Windows Command Prompt</code>. Test the
 installation using the following command:</p>
-<pre><code class="shell">dotnet --info
+<pre><code class="bash">dotnet --info
 </code></pre>
 
 <table>
@@ -410,8 +401,9 @@ installation using the following command:</p>
 occurred. This is <code>OK</code>, and only adds additional frameworks to your system. This
 is the normal release method for <code>Net Core SDK</code> and Run-Times.</p>
 </blockquote>
-<p>This concludes the <a href="Install-Net-Core-Sdk">Net Core SDK Installation</a>.</p>
-<h3 id="proceed-to-next-step-install-vs-code">Proceed to Next Step =&gt; <a href="Install-VS-Code">Install VS Code</a><a class="headerlink" href="#proceed-to-next-step-install-vs-code" title="Permanent link">&para;</a></h3></div>
+<p>This concludes the <a href="./">Net Core SDK Installation</a>.</p>
+<h2 id="next-step">Next Step<a class="headerlink" href="#next-step" title="Permanent link">&para;</a></h2>
+<p>Proceed to ==&gt; <a href="../Install-VS-Code/">Install VS Code</a></p></div>
         </div>
 
         <footer class="col-md-12">

@@ -8,7 +8,7 @@
         <meta name="author" content="Greg Beam, KI7MT">
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>* Java - JTSDK Tools</title>
+        <title>Java - JTSDK Tools</title>
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -110,55 +110,55 @@
     <ul class="dropdown-menu">
             
 <li >
-    <a href="../Install-DB-Tools/">* Database Tools</a>
+    <a href="../Install-DB-Tools/">Database Tools</a>
 </li>
             
 <li >
-    <a href="../Install-Doc-Tools/">* Doc Tools</a>
+    <a href="../Install-Doc-Tools/">Doc Tools</a>
 </li>
             
 <li >
-    <a href="../Install-Java-Tools/">* Java Tools</a>
+    <a href="../Install-Java-Tools/">Java Tools</a>
 </li>
             
 <li class="active">
-    <a href="./">* Java</a>
+    <a href="./">Java</a>
 </li>
             
 <li >
-    <a href="../Install-PostgreSQL/">* PostgreSQL</a>
+    <a href="../Install-PostgreSQL/">PostgreSQL</a>
 </li>
             
 <li >
-    <a href="../Install-Redis/">* Redis</a>
+    <a href="../Install-Redis/">Redis</a>
 </li>
             
 <li >
-    <a href="../Install-WSL/">* WSL</a>
+    <a href="../Install-WSL/">WSL</a>
 </li>
             
 <li >
-    <a href="../Install-Misc-Tools/">* Misc Tools</a>
+    <a href="../Install-Misc-Tools/">Misc Tools</a>
 </li>
             
 <li >
-    <a href="../Install-Eclipse/">* Eclipse</a>
+    <a href="../Install-Eclipse/">Eclipse</a>
 </li>
             
 <li >
-    <a href="../Install-MSSQL-Server/">* MSSQL</a>
+    <a href="../Install-MSSQL-Server/">MSSQL</a>
 </li>
             
 <li >
-    <a href="../Install-MongoDB/">* MongoDB</a>
+    <a href="../Install-MongoDB/">MongoDB</a>
 </li>
             
 <li >
-    <a href="../Install-MSSQL-Server/">* MSSQL</a>
+    <a href="../Install-MSSQL-Server/">MSSQL</a>
 </li>
             
 <li >
-    <a href="../Install-Visual-Studio/">* Visual Stuidio</a>
+    <a href="../Install-Visual-Studio/">Visual Stuidio</a>
 </li>
     </ul>
   </li>
@@ -196,16 +196,6 @@
   </li>
     </ul>
   </li>
-                                    
-  <li class="dropdown-submenu">
-    <a href="#">Linux</a>
-    <ul class="dropdown-menu">
-            
-<li >
-    <a href="../../linux/Home/">Overview</a>
-</li>
-    </ul>
-  </li>
                                 </ul>
                             </li>
                             <li class="dropdown">
@@ -217,15 +207,15 @@
 </li>
                                     
 <li >
-    <a href="../../tools/jtenv.md">JTEnv</a>
+    <a href="../../tools/jtenv.md">jtenv</a>
 </li>
                                     
 <li >
-    <a href="../../tools/jtconfig.md">JTConfig</a>
+    <a href="../../tools/jtconfig/">jtconfig</a>
 </li>
                                     
 <li >
-    <a href="../../tools/jtbuildcm.md">JTBuildcm</a>
+    <a href="../../tools/jtbuildcm.md">jtbuildcm</a>
 </li>
                                     
   <li class="dropdown-submenu">
@@ -237,7 +227,7 @@
 </li>
             
 <li >
-    <a href="../../tools/jtenvpy.md">jtenvpy</a>
+    <a href="../../tools/jtenvpy/">jtenvpy</a>
 </li>
             
 <li >
@@ -288,9 +278,10 @@
     <ul class="nav bs-sidenav">
         <li class="main active"><a href="#optional-install-java">Optional - Install Java</a></li>
             <li><a href="#download">Download</a></li>
-            <li><a href="#installation-walk-through">Installation Walk-Through</a></li>
+            <li><a href="#installation">Installation</a></li>
             <li><a href="#set-gradle_home-and-m2_home">Set GRADLE_HOME and M2_HOME</a></li>
             <li><a href="#check-gradle-version">Check Gradle Version</a></li>
+            <li><a href="#next-step">Next Step</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
@@ -330,19 +321,23 @@
 </li>
 <li>
 <p>Both downloads provide the same installer, and reflect the installation 
-steps below. Which to use is entirely up to the end-user.</p>
+steps below. If the official download is a later version qithin the <code>1.8</code> series,
+use it instead.</p>
 </li>
-<li>
-<p>If you are downloading from the Oracle site, make sure you you select the <code>JDK</code> version for example:</p>
-</li>
+<li>If you are downloading from the Oracle site, make sure you you select the
+<code>JDK</code> version for example:</li>
 </ul>
-<pre><code class="shell">jdk-8u172-windows-x64
+<pre><code class="bash"># Versions at the time of writing
+jdk-8u172-windows-x64
 jdk-8u181-windows-x64
 </code></pre>
 
 <p>You should use the latest patch release version. In the example above,
-<code>jdk-8u181-windows-x64</code> would be the latest available. Once installed, the Java installer has a real-time update service that will alert you when Oracle has released an update. The same service will also download/update the the instance for you if you allow it to.</p>
-<h2 id="installation-walk-through">Installation Walk-Through<a class="headerlink" href="#installation-walk-through" title="Permanent link">&para;</a></h2>
+<code>jdk-8u181-windows-x64</code> would be the latest available. Once installed, the Java
+installer has a real-time update service that will alert you when Oracle has
+released an update. The same service will also download/update the the instance
+for you if you allow it to.</p>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
 <p>Browse to, then <code>double-click</code> the downloaded <code>Java Installer</code>, and
 follow the steps below.</p>
 <h3 id="initial-screen">Initial Screen<a class="headerlink" href="#initial-screen" title="Permanent link">&para;</a></h3>
@@ -483,12 +478,10 @@ follow the steps below.</p>
 </table>
 <h3 id="check-java">Check Java<a class="headerlink" href="#check-java" title="Permanent link">&para;</a></h3>
 <p>Open Windows Command Prompt, and test that <code>Java</code> returns properly.</p>
-<pre><code class="shell"># In the Windows Command Prompt, test the following commands
-
+<pre><code class="bash"># In the Windows Command Prompt, test the following commands
 java -d64 -version
 
 # Check JAVA_HOME
-
 echo. &amp;&amp; echo JAVA_HOME: %JAVA_HOME%
 </code></pre>
 
@@ -513,7 +506,7 @@ echo. &amp;&amp; echo JAVA_HOME: %JAVA_HOME%
 <li>Change Maven (M2) version to : <code>3.5.4</code></li>
 </ul>
 <p><code>Set GRADLE_HOME</code></p>
-<pre><code class="shell">(C|D):\JTSDK-Tools\tools\gradle\4.9
+<pre><code class="bash">(C|D):\JTSDK-Tools\tools\gradle\4.9
 </code></pre>
 
 <table>
@@ -543,7 +536,7 @@ echo. &amp;&amp; echo JAVA_HOME: %JAVA_HOME%
 </table>
 <h3 id="maven-settings">Maven Settings<a class="headerlink" href="#maven-settings" title="Permanent link">&para;</a></h3>
 <p><code>Set MAVEN_HOME</code></p>
-<pre><code class="shell">(C|D):\JTSDK-Tools\tools\maven\3.5.4
+<pre><code class="bash">(C|D):\JTSDK-Tools\tools\maven\3.5.4
 </code></pre>
 
 <table>
@@ -573,12 +566,11 @@ echo. &amp;&amp; echo JAVA_HOME: %JAVA_HOME%
 </table>
 <h2 id="check-gradle-version">Check Gradle Version<a class="headerlink" href="#check-gradle-version" title="Permanent link">&para;</a></h2>
 <p>In the Windows Command Prompt window, check Gradle Version</p>
-<pre><code class="shell"># Check Gradle Version
+<pre><code class="bash"># Check Gradle Version
 gradle --version
 
 # Check Maven Version
 mvn --version
-
 </code></pre>
 
 <table>
@@ -593,7 +585,9 @@ mvn --version
 </tr>
 </tbody>
 </table>
-<p>This concludes the <a href="Install-Java">Java Installation</a>.</p></div>
+<p>This concludes the <a href="Install-Java">Java Installation</a>.</p>
+<h2 id="next-step">Next Step<a class="headerlink" href="#next-step" title="Permanent link">&para;</a></h2>
+<p>Proceed to ==&gt; <a href="../Install-PostgreSQL/">PostgreSQL Installation</a></p></div>
         </div>
 
         <footer class="col-md-12">

@@ -8,7 +8,7 @@
         <meta name="author" content="Greg Beam, KI7MT">
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>* Java Tools - JTSDK Tools</title>
+        <title>Java Tools - JTSDK Tools</title>
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -110,55 +110,55 @@
     <ul class="dropdown-menu">
             
 <li >
-    <a href="../Install-DB-Tools/">* Database Tools</a>
+    <a href="../Install-DB-Tools/">Database Tools</a>
 </li>
             
 <li >
-    <a href="../Install-Doc-Tools/">* Doc Tools</a>
+    <a href="../Install-Doc-Tools/">Doc Tools</a>
 </li>
             
 <li class="active">
-    <a href="./">* Java Tools</a>
+    <a href="./">Java Tools</a>
 </li>
             
 <li >
-    <a href="../Install-Java/">* Java</a>
+    <a href="../Install-Java/">Java</a>
 </li>
             
 <li >
-    <a href="../Install-PostgreSQL/">* PostgreSQL</a>
+    <a href="../Install-PostgreSQL/">PostgreSQL</a>
 </li>
             
 <li >
-    <a href="../Install-Redis/">* Redis</a>
+    <a href="../Install-Redis/">Redis</a>
 </li>
             
 <li >
-    <a href="../Install-WSL/">* WSL</a>
+    <a href="../Install-WSL/">WSL</a>
 </li>
             
 <li >
-    <a href="../Install-Misc-Tools/">* Misc Tools</a>
+    <a href="../Install-Misc-Tools/">Misc Tools</a>
 </li>
             
 <li >
-    <a href="../Install-Eclipse/">* Eclipse</a>
+    <a href="../Install-Eclipse/">Eclipse</a>
 </li>
             
 <li >
-    <a href="../Install-MSSQL-Server/">* MSSQL</a>
+    <a href="../Install-MSSQL-Server/">MSSQL</a>
 </li>
             
 <li >
-    <a href="../Install-MongoDB/">* MongoDB</a>
+    <a href="../Install-MongoDB/">MongoDB</a>
 </li>
             
 <li >
-    <a href="../Install-MSSQL-Server/">* MSSQL</a>
+    <a href="../Install-MSSQL-Server/">MSSQL</a>
 </li>
             
 <li >
-    <a href="../Install-Visual-Studio/">* Visual Stuidio</a>
+    <a href="../Install-Visual-Studio/">Visual Stuidio</a>
 </li>
     </ul>
   </li>
@@ -196,16 +196,6 @@
   </li>
     </ul>
   </li>
-                                    
-  <li class="dropdown-submenu">
-    <a href="#">Linux</a>
-    <ul class="dropdown-menu">
-            
-<li >
-    <a href="../../linux/Home/">Overview</a>
-</li>
-    </ul>
-  </li>
                                 </ul>
                             </li>
                             <li class="dropdown">
@@ -217,15 +207,15 @@
 </li>
                                     
 <li >
-    <a href="../../tools/jtenv.md">JTEnv</a>
+    <a href="../../tools/jtenv.md">jtenv</a>
 </li>
                                     
 <li >
-    <a href="../../tools/jtconfig.md">JTConfig</a>
+    <a href="../../tools/jtconfig/">jtconfig</a>
 </li>
                                     
 <li >
-    <a href="../../tools/jtbuildcm.md">JTBuildcm</a>
+    <a href="../../tools/jtbuildcm.md">jtbuildcm</a>
 </li>
                                     
   <li class="dropdown-submenu">
@@ -237,7 +227,7 @@
 </li>
             
 <li >
-    <a href="../../tools/jtenvpy.md">jtenvpy</a>
+    <a href="../../tools/jtenvpy/">jtenvpy</a>
 </li>
             
 <li >
@@ -289,9 +279,10 @@
         <li class="main active"><a href="#optional-install-java-tools">Optional - Install Java Tools</a></li>
             <li><a href="#download">Download</a></li>
             <li><a href="#version-matrix">Version Matrix</a></li>
-            <li><a href="#environment-variables">Environment Variables</a></li>
+            <li><a href="#overview">Overview</a></li>
             <li><a href="#location-data">Location Data</a></li>
-            <li><a href="#installation-walk-through">Installation Walk-Through</a></li>
+            <li><a href="#installation">Installation</a></li>
+            <li><a href="#next-step">Next Step</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
@@ -331,8 +322,8 @@ should be more than adequate. <code>JTSDK</code> will be using all <code>64 Bit<
 possible.</p>
 <p>For example: <code>Eclipse</code>, <code>NetBeans</code>, and <code>InteliJ</code> IDE's should all be 64 bit
 if your using 64 bit <code>Java</code>.</p>
-<p>NOTE: Exceptions to this would be <code>Apache Ant</code>, <code>Apache Maven</code>, and <code>Gradle</code>, as
-they are only provided in 32 bit.</p>
+<p>NOTE: Exceptions to this would be <code>Apache Ant</code>, <code>Apache Maven</code>, and <code>Gradle</code>,
+as they are only provided in 32 bit.</p>
 </blockquote>
 <h2 id="download">Download<a class="headerlink" href="#download" title="Permanent link">&para;</a></h2>
 <ul>
@@ -369,17 +360,17 @@ subject to change with each update of <code>Install-Java-Tools</code>.</p>
 </tr>
 </tbody>
 </table>
-<h2 id="environment-variables">Environment Variables<a class="headerlink" href="#environment-variables" title="Permanent link">&para;</a></h2>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
 <p>The packages within this installer will not require individual guides. However,
 most framework applications within the Java sphere require setting of environment
 variables that point to the install location. The matrix below describes those
 variables. It is up to the end-user how to accomplish this, but the matrix points
-to several <a href="#environment-variables-how-to">How-To</a> articles to perform the task.</p>
+to several <a href="#environment-variables">How-To</a> articles to perform the task.</p>
 <p><a href="http://www.oracle.com/technetwork/java/javase/overview/index.html">Java</a>, 
 <a href="https://maven.apache.org/">Maven</a> and <a href="https://ant.apache.org/">Ant</a>
 are are particularly sensitive to these variables. If not set properly, there
 will be no end to problems down the road.</p>
-<h3 id="environment-variables-hot-to">Environment Variables Hot-To<a class="headerlink" href="#environment-variables-hot-to" title="Permanent link">&para;</a></h3>
+<h3 id="environment-variables">Environment Variables<a class="headerlink" href="#environment-variables" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -412,13 +403,13 @@ will be no end to problems down the road.</p>
 </tbody>
 </table>
 <h2 id="location-data">Location Data<a class="headerlink" href="#location-data" title="Permanent link">&para;</a></h2>
-<p>With <a href="Install-Java-Tools">Install-Java-Tools</a>, the following paths are used at
+<p>With <a href="./">Install-Java-Tools</a>, the following paths are used at
 for installation.:</p>
 <blockquote>
-<p>NOTE Java is a seperate instalaliton (<a href="Install-Java">Install-Java</a>) from the <code>Install-Java-Tools</code>. However, <code>JAVA_HOME</code> is still required.</p>
+<p>NOTE Java is a separate installation (<a href="../Install-Java/">Install-Java</a>) from the
+<code>Install-Java-Tools</code>. However, <code>JAVA_HOME</code> is still required.</p>
 </blockquote>
-<pre><code class="shell">
-Java (assuming 64 bit System Install):
+<pre><code class="bash">Java (assuming 64 bit System Install):
   C:\Program Files\Java\jdk1.8.0_172  &lt;-- JDK with compiler
   C:\Program Files\Java\jre1.8.0_172  &lt;-- Java Runtime
 
@@ -434,10 +425,9 @@ Gradle:
 
 Ant
  (C|D:\JTSDK-Tools\tools\ant\&lt;VERSION&gt;\bin
-
 </code></pre>
 
-<h2 id="installation-walk-through">Installation Walk-Through<a class="headerlink" href="#installation-walk-through" title="Permanent link">&para;</a></h2>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
 <p>Browse to, and <code>double-click</code> the downloaded <a href="https://sourceforge.net/projects/jtsdk/files/win32/3.0.0/release/">JTSDK-Java-Tools</a>
 Installer, then follow the steps below.</p>
 <h3 id="accept-license">Accept License<a class="headerlink" href="#accept-license" title="Permanent link">&para;</a></h3>
@@ -458,12 +448,12 @@ Installer, then follow the steps below.</p>
 <table>
 <thead>
 <tr>
-<th align="center"><img alt="Install Location" src="../images/jtsdk-java-install/jtsdk-java-install.2.PNG?raw=true" /></th>
+<th align="center"><img alt="Select Install Location" src="../images/jtsdk-java-install/jtsdk-java-install.2.PNG?raw=true" /></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center"><em>Install Location</em></td>
+<td align="center"><em>Select Install Location</em></td>
 </tr>
 </tbody>
 </table>
@@ -508,7 +498,8 @@ Installer, then follow the steps below.</p>
 </table>
 <p>This concludes the <a href="https://sourceforge.net/projects/jtsdk/files/win32/3.0.0/release/">JTSDK-Java-Tools</a>
 installation.</p>
-<h3 id="proceed-to-next-step-java-installation">Proceed to Next Step =&gt; <a href="Install-Java">Java Installation</a><a class="headerlink" href="#proceed-to-next-step-java-installation" title="Permanent link">&para;</a></h3></div>
+<h2 id="next-step">Next Step<a class="headerlink" href="#next-step" title="Permanent link">&para;</a></h2>
+<p>Proceed to ==&gt; <a href="../Install-Java/">Java Installation</a></p></div>
         </div>
 
         <footer class="col-md-12">

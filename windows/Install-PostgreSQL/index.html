@@ -8,7 +8,7 @@
         <meta name="author" content="Greg Beam, KI7MT">
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>* PostgreSQL - JTSDK Tools</title>
+        <title>PostgreSQL - JTSDK Tools</title>
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -110,55 +110,55 @@
     <ul class="dropdown-menu">
             
 <li >
-    <a href="../Install-DB-Tools/">* Database Tools</a>
+    <a href="../Install-DB-Tools/">Database Tools</a>
 </li>
             
 <li >
-    <a href="../Install-Doc-Tools/">* Doc Tools</a>
+    <a href="../Install-Doc-Tools/">Doc Tools</a>
 </li>
             
 <li >
-    <a href="../Install-Java-Tools/">* Java Tools</a>
+    <a href="../Install-Java-Tools/">Java Tools</a>
 </li>
             
 <li >
-    <a href="../Install-Java/">* Java</a>
+    <a href="../Install-Java/">Java</a>
 </li>
             
 <li class="active">
-    <a href="./">* PostgreSQL</a>
+    <a href="./">PostgreSQL</a>
 </li>
             
 <li >
-    <a href="../Install-Redis/">* Redis</a>
+    <a href="../Install-Redis/">Redis</a>
 </li>
             
 <li >
-    <a href="../Install-WSL/">* WSL</a>
+    <a href="../Install-WSL/">WSL</a>
 </li>
             
 <li >
-    <a href="../Install-Misc-Tools/">* Misc Tools</a>
+    <a href="../Install-Misc-Tools/">Misc Tools</a>
 </li>
             
 <li >
-    <a href="../Install-Eclipse/">* Eclipse</a>
+    <a href="../Install-Eclipse/">Eclipse</a>
 </li>
             
 <li >
-    <a href="../Install-MSSQL-Server/">* MSSQL</a>
+    <a href="../Install-MSSQL-Server/">MSSQL</a>
 </li>
             
 <li >
-    <a href="../Install-MongoDB/">* MongoDB</a>
+    <a href="../Install-MongoDB/">MongoDB</a>
 </li>
             
 <li >
-    <a href="../Install-MSSQL-Server/">* MSSQL</a>
+    <a href="../Install-MSSQL-Server/">MSSQL</a>
 </li>
             
 <li >
-    <a href="../Install-Visual-Studio/">* Visual Stuidio</a>
+    <a href="../Install-Visual-Studio/">Visual Stuidio</a>
 </li>
     </ul>
   </li>
@@ -196,16 +196,6 @@
   </li>
     </ul>
   </li>
-                                    
-  <li class="dropdown-submenu">
-    <a href="#">Linux</a>
-    <ul class="dropdown-menu">
-            
-<li >
-    <a href="../../linux/Home/">Overview</a>
-</li>
-    </ul>
-  </li>
                                 </ul>
                             </li>
                             <li class="dropdown">
@@ -217,15 +207,15 @@
 </li>
                                     
 <li >
-    <a href="../../tools/jtenv.md">JTEnv</a>
+    <a href="../../tools/jtenv.md">jtenv</a>
 </li>
                                     
 <li >
-    <a href="../../tools/jtconfig.md">JTConfig</a>
+    <a href="../../tools/jtconfig/">jtconfig</a>
 </li>
                                     
 <li >
-    <a href="../../tools/jtbuildcm.md">JTBuildcm</a>
+    <a href="../../tools/jtbuildcm.md">jtbuildcm</a>
 </li>
                                     
   <li class="dropdown-submenu">
@@ -237,7 +227,7 @@
 </li>
             
 <li >
-    <a href="../../tools/jtenvpy.md">jtenvpy</a>
+    <a href="../../tools/jtenvpy/">jtenvpy</a>
 </li>
             
 <li >
@@ -288,9 +278,10 @@
     <ul class="nav bs-sidenav">
         <li class="main active"><a href="#optional-install-postgresql">Optional - Install PostgreSQL</a></li>
             <li><a href="#background">Background</a></li>
-            <li><a href="#helpfull-links">Helpfull Links</a></li>
+            <li><a href="#helpful-links">Helpful Links</a></li>
             <li><a href="#download">Download</a></li>
-            <li><a href="#installation-walk-through">Installation Walk-Through</a></li>
+            <li><a href="#installation">Installation</a></li>
+            <li><a href="#next-step">Next Step</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
@@ -326,7 +317,7 @@
 <p>PostgreSQL is a powerful, open source object-relational database system with
 over 30 years of active development that has earned it a strong reputation for
 reliability, feature robustness, and performance.</p>
-<p>-- <cite>The PostgreSQL Global Development Group, Postgres.org</cite></p>
+<p>-- <em>The PostgreSQL Global Development Group, Postgres.org</em></p>
 </blockquote>
 <h2 id="background">Background<a class="headerlink" href="#background" title="Permanent link">&para;</a></h2>
 <ul>
@@ -338,7 +329,7 @@ activity, the defualt installaiton procedure will suffice for most needs.</li>
 <li>If users find themselves in need of advanced features, the installed instance
 can easily be extended to accomodate many advanced features without a great deal of difficulity.</li>
 </ul>
-<h2 id="helpfull-links">Helpfull Links<a class="headerlink" href="#helpfull-links" title="Permanent link">&para;</a></h2>
+<h2 id="helpful-links">Helpful Links<a class="headerlink" href="#helpful-links" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://www.postgresql.org/">Website</a></li>
 <li><a href="https://www.postgresql.org/docs/10/static/index.html">Documentation</a></li>
@@ -353,7 +344,7 @@ can easily be extended to accomodate many advanced features without a great deal
 </ul>
 <p>Both downloads provide the same installer, and reflect the installation
 steps below. Which to use is entirely up to the end-user.</p>
-<h2 id="installation-walk-through">Installation Walk-Through<a class="headerlink" href="#installation-walk-through" title="Permanent link">&para;</a></h2>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
 <p>Browse to, then <code>double-click</code> the downloaded <code>PostgreSQL EDB Installer</code>, and follow the steps below.</p>
 <h3 id="welcome-screen">Welcome Screen<a class="headerlink" href="#welcome-screen" title="Permanent link">&para;</a></h3>
 <p>Select next to continue.</p>
@@ -374,17 +365,16 @@ steps below. Which to use is entirely up to the end-user.</p>
 <p>IMPORTANT: The Installation Directory is critical. Use the table below to set
 the location.</p>
 </blockquote>
-<pre><code class="shell"># For C-Drive Installation, set path to:
+<pre><code class="bash"># For C-Drive Installation, set path to:
 
 C:\JTSDK-Tools\tools\PostgreSQL\10
 
-For D-Drive installation, set path to:
+# For D-Drive installation, set path to:
 
 D:\JTSDK-Tools\tools\PostgreSQL\10
 
 # If another drive is used, substitute the drive letter for one
 # of the examples above.
-
 </code></pre>
 
 <table>
@@ -400,7 +390,9 @@ D:\JTSDK-Tools\tools\PostgreSQL\10
 </tbody>
 </table>
 <h3 id="select-components">Select Components<a class="headerlink" href="#select-components" title="Permanent link">&para;</a></h3>
-<p>Stack Builder provides a number of advanced application tools and <strong>is not recommended</strong> for the first time user, nor first run installation. Advanced tooling can always be added later.</p>
+<p>Stack Builder provides a number of advanced application tools and <strong>is not
+recommended</strong> for the first time user, nor first run installation. Advanced
+tooling can always be added later.</p>
 <ul>
 <li>[X] PostgreSQL Server (required)</li>
 <li>[X] pgAdmin4 (required)</li>
@@ -427,17 +419,16 @@ D:\JTSDK-Tools\tools\PostgreSQL\10
 <li>The database can be moved procedurally post-install if the size grows to an unmanageable level for the current drive space. For most users, the locations listed below should be adequate.</li>
 <li>When <em>uninstalling</em> PostgreSQL, this folder <em>does not</em> get removed, thus your data will remain safe.</li>
 </ul>
-<pre><code class="shell"># For C-Drive Installation, set path to:
+<pre><code class="bash"># For C-Drive Installation, set path to:
 
 C:\JTSDK-Tools\tools\PostgreSQL\10\data
 
-For D-Drive installation, set path to:
+# For D-Drive installation, set path to:
 
 D:\JTSDK-Tools\tools\PostgreSQL\10\data
 
 # If another drive is used, substitute the drive letter for one
 # of the examples above.
-
 </code></pre>
 
 <table>
@@ -453,14 +444,16 @@ D:\JTSDK-Tools\tools\PostgreSQL\10\data
 </tbody>
 </table>
 <h3 id="postgres-password">Postgres Password<a class="headerlink" href="#postgres-password" title="Permanent link">&para;</a></h3>
-<p>The default user in a new PostgreSQL installation is named <code>postgres</code>. The default database is also named <code>postgres</code>. For local development purposes,
-there is little need for high-security. To make things easy for development and testing, most use a default password of <code>postgres</code> also. This setup results in the following:</p>
-<pre><code>Host.......: localhost
+<p>The default user in a new PostgreSQL installation is named <code>postgres</code>. The
+default database is also named <code>postgres</code>. For local development purposes,
+there is little need for high-security. To make things easy for development and
+testing, most use a default password of <code>postgres</code> also. This setup results in
+the following:</p>
+<pre><code class="bash">Host.......: localhost
 Port.......: 5432
 Username...: postgres
 Password...: postgres
 Database...: postgres
-
 </code></pre>
 
 <table>
@@ -476,7 +469,8 @@ Database...: postgres
 </tbody>
 </table>
 <h3 id="server-port">Server Port<a class="headerlink" href="#server-port" title="Permanent link">&para;</a></h3>
-<p>Unless you intend to run multiple servers on multiple ports, it's <code>highly recommended</code> to use the default <code>PostgreSQL Port of: 5432</code>.</p>
+<p>Unless you intend to run multiple servers on multiple ports, it's
+<code>highly recommended</code> to use the default <code>PostgreSQL Port of: 5432</code>.</p>
 <table>
 <thead>
 <tr>
@@ -490,7 +484,8 @@ Database...: postgres
 </tbody>
 </table>
 <h3 id="advanced-options">Advanced Options<a class="headerlink" href="#advanced-options" title="Permanent link">&para;</a></h3>
-<p>Unless you are familiar with <code>PostgreSQL Advanced Options</code>, it's recommended to leave this setting as <code>[Default locale]</code></p>
+<p>Unless you are familiar with <code>PostgreSQL Advanced Options</code>, it's recommended
+to leave this setting as <code>[Default locale]</code></p>
 <table>
 <thead>
 <tr>
@@ -518,13 +513,14 @@ Database...: postgres
 </tbody>
 </table>
 <h3 id="finish-installation">Finish Installation<a class="headerlink" href="#finish-installation" title="Permanent link">&para;</a></h3>
-<p>If the installation finished without error, you now have a PostgreSQL database running on your system with the same parameters as mentioned in the <a href="#postgres-password">Postgres Password Section</a>.</p>
-<pre><code class="shell">Host.......: localhost
+<p>If the installation finished without error, you now have a PostgreSQL database
+running on your system with the same parameters as mentioned in the
+<a href="#postgres-password">Postgres Password Section</a>.</p>
+<pre><code class="bash">Host.......: localhost
 Port.......: 5432
 Username...: postgres
 Password...: postgres
 Database...: postgres
-
 </code></pre>
 
 <table>
@@ -539,10 +535,11 @@ Database...: postgres
 </tr>
 </tbody>
 </table>
-<p>This concludes the <a href="Install-PostgreSQL">PostgreSQL Installation</a>. Additional
+<p>This concludes the <a href="./">PostgreSQL Installation</a>. Additional
 database information, tests, and additional code snippet information will be
-posted at <a href="https://groups.io/g/JTSDK">JTSDK@Groups.io</a>.</p>
-<h3 id="proceed-to-next-step-database-tools-installation">Proceed to Next Step =&gt; <a href="Install-DB-Tools">Database Tools Installation</a><a class="headerlink" href="#proceed-to-next-step-database-tools-installation" title="Permanent link">&para;</a></h3></div>
+posted at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#74;&#84;&#83;&#68;&#75;&#64;&#71;&#114;&#111;&#117;&#112;&#115;&#46;&#105;&#111;">&#74;&#84;&#83;&#68;&#75;&#64;&#71;&#114;&#111;&#117;&#112;&#115;&#46;&#105;&#111;</a>.</p>
+<h2 id="next-step">Next Step<a class="headerlink" href="#next-step" title="Permanent link">&para;</a></h2>
+<p>Proceed to ==&gt; <a href="../Install-DB-Tools/">Database Tools Installation</a></p></div>
         </div>
 
         <footer class="col-md-12">
