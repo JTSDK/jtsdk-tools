@@ -1,4 +1,4 @@
-# JTConfig - Configuration Using C-Sharp
+# Option Configuration
 
 | Application Data ||
 | :---|:---        |

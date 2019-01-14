@@ -1,4 +1,4 @@
-# JTEnv Using CSharp
+# Environment
 
 | Application Data ||
 | ---| --- |
@@ -57,11 +57,9 @@ dotnet JTEnv -a
 
 ``` shell
 # In the JTSDK-Tools Environment
-
 jtenv -u
 
 # From Windows Command Prompt: cd /d (C|D):\JTSDK-Tools\tools\apps
-
 dotnet JTEnv -u
 ```
 
@@ -73,11 +71,9 @@ dotnet JTEnv -u
 
 ``` shell
 # In the JTSDK-Tools Environment
-
 jtenv -j
 
 # From Windows Command Prompt: cd /d (C|D):\JTSDK-Tools\tools\apps
-
 dotnet JTEnv -j
 ```
 
@@ -89,11 +85,9 @@ dotnet JTEnv -j
 
 ``` shell
 # In the JTSDK-Tools Environment
-
 jtenv -s
 
 # From Windows Command Prompt: cd /d (C|D):\JTSDK-Tools\tools\apps
-
 dotnet JTEnv -s
 ```
 

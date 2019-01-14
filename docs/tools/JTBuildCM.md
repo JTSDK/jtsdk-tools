@@ -1,4 +1,4 @@
-# JTBuild - Compile WSJT-X
+# Build WSJT-X
 
 The following is a short walkthrough in building the new
 [WSJT-X Git Repository][] using `jtbuild`.
@@ -16,7 +16,7 @@ path.
 >- Target specific custom builds have been ommitted from this release. If
 >deemed required, it will be added to the `.Net Core` replacement application.
 
-## Available Options
+## Build Targets
 
 ```bash
 # In JTSDK-Tools Environment
@@ -44,7 +44,7 @@ The actions are the same as within the standard SVN build script.
 
 ----
 
-## Default Profiles
+## Default Profile
 
 Source and Destination directories are provided by the `built.txt`, located
 at `(C|D):\JTSDK-Tools\tmp\build.txt` The `build.txt` file contains just two lines
@@ -71,7 +71,7 @@ DEST D:\JTSDK-Tools\tmp\wsjtx-output
 If you wish to use a different checkout location, update the SRD path. If
 you would like a different Destination directory, update the DEST path.
 
-## Building WSJT-X From Sourceforge
+## Using Sourceforge
 
 It should not matter which repository service is used. For this example, we'll
 being using `Sourceforge` and the [WSJT-X Master Branch][].
@@ -80,7 +80,7 @@ As noted earlier, `jtbuild` does not know of, nor is it concerned with
 Git. All repository management should be performed outside of the
 `jtbuild` script by using an appropriate Git Client.
 
-### Clone WSJT-X Repository
+### Clone Repository
 
 You can use any Git Client you like. The only things that are of concern to the
 `jtbuild` script is the full path including the checkout-name, and the
@@ -130,33 +130,33 @@ we'll build the Master Release Install target.
 # In a Windows Command Prompt or Git-Bash Terminal, change directory to the
 # source location
 
-Windows CMD
+#Windows CMD
 cd /d (C|D):\JTSDK-Tools\tmp\wsjtx
 
-Git-Bash:
+#Git-Bash:
 cd /(c|d)/JTSDK/tmp/wsjtx
 
-Check which branch you're on with:
+#Check which branch you're on with:
 git branch
 
 Git should return:
 * master
 
-Open JTSDK-Tools Config
-- Ensure your're on QT55
-- Ensure you've built Hamlib3, then type:
+#Open JTSDK-Tools Config
+# - Ensure your're on QT55
+# - Ensure you've built Hamlib3, then type:
 
 jtbuild rinstall
 
 Note: you can use any of the following commands:
    rinstall   Builds the Release Install target
-   dinstall   Builds the Debug Instll target
+   dinstall   Builds the Debug Install target
    rconfig    Configure Only Release Install target
    dconfig    Configure Only Debug Install target
    package    Release Install Win32 Installer Package
    docs       Compiles the documentation
 
-The Output should be located at or near:
+# The Output should be located at or near:
 
 Source : (C|D):\JTSDK-Tools\tmp\wsjtx
 Output : (C|D):\JTSDK-Tools\tmp\wsjtx-output\qt\5.5\1.9.2\Release\{build, install, package}
