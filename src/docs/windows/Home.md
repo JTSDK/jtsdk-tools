@@ -81,14 +81,14 @@ While not absolute, the order of installation an configuration should be
 followed to prevent missing critical steps, or, missing out on a particular
 feature from another installation process.
 
-## Net Core Usage
+### Net Core Usage
 
 At present, [Net Core Applications](https://docs.microsoft.com/en-us/dotnet/core/index)
 are only used in setting environment , paths and configuration variable. Its the
 long term goal to convert all `Bash` and Windows `Batch/CMD` scripts over to 
 [Net Core](https://docs.microsoft.com/en-us/dotnet/core/index).
 
-## Language and Syntax
+### Language and Syntax
 
 Throughout this guide you will often see the use of `(C|D):\JTSDK-Tools` or
 reference to `JTSDK_HOME`
@@ -106,7 +106,7 @@ JTSDK_HOME = C:\JTSDK-Tools
 JTSDK_HOME = D:\JTSDK-Tools
 ```
 
-## Setting JTSDK_HOME Variable
+### Setting JTSDK_HOME Variable
 
 On several occasions, you will be required to set `JTSDK_HOME` temporarily. The
 following shows how to do this for either `(C|D)` installation locations.
@@ -131,7 +131,7 @@ if the current console is closed. Likewise, if you have two consoles open,
 setting the variable in Console-1 will *NOT* make the variable known too nor
 available in Console-2.
 
-## Individual Guides
+### Individual Guides
 
 Each activity in regards to installation or configuration has its own guide.
 Every effort has been made to make each guide informative, yet direct and to the
@@ -139,7 +139,7 @@ point. The guides are *NOT* intended to be a tutorial covering the the subject
 area. Most tools have extensive documentation by the original authors, often
 located within the applicaiton folder structure.
 
-## Choosing 64-bit or 32-bit
+### Choosing 64-bit or 32-bit
 
 For the most part, any tool that is used to compile--either in-part or whole--
 WSJT applications should be 32-bit on Windows. Tools such as Git, Dotnet, 7-Zip,
@@ -147,7 +147,7 @@ RapidEE, and others, can be 64-bit as they are tools to help users with
 non-compiling tasks. Each guide will have the `Required` arch-type and indicate
 whether it is acceptable to use 64-bit or not.
 
-## System Level Installation
+### System Level Installation
 
 The JTSDK Tool Chain requires thhree packages to be installed at the System Level:
 
@@ -161,13 +161,13 @@ Windows Console. Many application installers use the system folders by default.
 However, there are no guarantees, and users should verify the location for
 any System Level application requirement.
 
-## Third Party Installers
+### Third Party Installers
 
 >One or more of the tool chain components may be provided by Third Party
 Installers. Users should always check for the latest version of the respective
 installer before installation unless advised otherwise.
 
-## Tool Chain Matrix
+### Tool Chain Matrix
 
 The [Tool Chain Matrix(s)](#tool-chain-matrix) provides a brief description and
 links to each application or framework used within `JTSDK-Tools`. `Installation`,
@@ -177,7 +177,7 @@ application or framework documents as appropriate. Collections such as
 that are not outlined specifically in this document. For more information a given
 item, following the links provided.
 
-## Prerequisite Tools
+### Prerequisite Tools
 
 In order to checkout and compile the `JTSDK Net Core Package`, users must have
 three applications installed at the `system level`.
@@ -190,7 +190,7 @@ three applications installed at the `system level`.
 | [Visual Studio Code](https://code.visualstudio.com/docs) | Powerful Cross-Platform Editor |
 | [Git Client](https://git-scm.com/) | Distributed Version Control System Client |
 
-## Core Tools
+### Core Tools
 
 The following tools are required and comprise the `Core Tool Chain`.
 All of the tools in this group are required to buolw `WSJT-X`, and should be
@@ -211,7 +211,7 @@ considered the bare minimum installation.
 | [Ruby](https://www.ruby-lang.org/en/) | Open source programming language |
 | [Subversion](http://svnbook.red-bean.com/en/1.6/svn.intro.whatis.html) | Cross-Platform Version Control System |
 
-## Documentation Tools
+### Documentation Tools
 
 The following Document utilities can be installed in addition to the `JTSDK Core Tool Chain`
 
@@ -223,8 +223,7 @@ The following Document utilities can be installed in addition to the `JTSDK Core
 | [DocFX](https://dotnet.github.io/docfx/) | Generates documentation directly from source code |
 | [Pandoc](https://pandoc.org/index.html) | Cross-Platform document conversion utility |
 
-
-## Database Tools
+### Database Tools
 
 The following tools are general purpose database applications and / or servers.
 
@@ -241,8 +240,7 @@ be added to the [Install-DB-Tools](Install-DB-Tools.md) installer.
 | [PostgreSQL](https://www.postgresql.org/download/windows/) | Advanced High Performance Relational Database  |
 | [Sqlite](https://sqlite.org/about.html) | A powerful In-Process SQL Database Engine  |
 
-
-## Python Tools
+### Python Tools
 
 The following Python Tools can be installed in addition to the `JTSDK Core Tool Chain`.
 
@@ -252,7 +250,7 @@ The following Python Tools can be installed in addition to the `JTSDK Core Tool 
 | :--- | :--- |
 | [Anaconda Python](https://www.anaconda.com/) | Python data science platform |
 
-## Java Tools
+### Java Tools
 
 The following tools are generally related to `Java` and associated build activities.
 While applications such as [Gradle](https://gradle.org/) and [Eclipse](https://www.eclipse.org/downloads/)
