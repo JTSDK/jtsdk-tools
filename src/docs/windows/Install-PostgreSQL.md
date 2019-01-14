@@ -11,7 +11,7 @@
 > over 30 years of active development that has earned it a strong reputation for
 > reliability, feature robustness, and performance.
 >
-> -- <cite>The PostgreSQL Global Development Group, Postgres.org</cite>
+> -- *The PostgreSQL Global Development Group, Postgres.org*
 
 ## Background
 
@@ -23,7 +23,7 @@ activity, the defualt installaiton procedure will suffice for most needs.
 - If users find themselves in need of advanced features, the installed instance
 can easily be extended to accomodate many advanced features without a great deal of difficulity.
 
-## Helpfull Links
+## Helpful Links
 
 - [Website](https://www.postgresql.org/)
 - [Documentation](https://www.postgresql.org/docs/10/static/index.html)
@@ -39,7 +39,7 @@ can easily be extended to accomodate many advanced features without a great deal
 Both downloads provide the same installer, and reflect the installation
 steps below. Which to use is entirely up to the end-user.
 
-## Installation Walk-Through
+## Installation
 
 Browse to, then `double-click` the downloaded `PostgreSQL EDB Installer`, and follow the steps below.
 
@@ -56,18 +56,17 @@ Select next to continue.
 >IMPORTANT: The Installation Directory is critical. Use the table below to set
 the location.
 
-``` shell
+```bash
 # For C-Drive Installation, set path to:
 
 C:\JTSDK-Tools\tools\PostgreSQL\10
 
-For D-Drive installation, set path to:
+# For D-Drive installation, set path to:
 
 D:\JTSDK-Tools\tools\PostgreSQL\10
 
 # If another drive is used, substitute the drive letter for one
 # of the examples above.
-
 ```
 
 | ![Installation Directory](images/postgres/postgres.2.PNG?raw=true) |
@@ -76,7 +75,9 @@ D:\JTSDK-Tools\tools\PostgreSQL\10
 
 ### Select Components
 
-Stack Builder provides a number of advanced application tools and **is not recommended** for the first time user, nor first run installation. Advanced tooling can always be added later.
+Stack Builder provides a number of advanced application tools and **is not
+recommended** for the first time user, nor first run installation. Advanced
+tooling can always be added later.
 
 - [X] PostgreSQL Server (required)
 - [X] pgAdmin4 (required)
@@ -87,7 +88,6 @@ Stack Builder provides a number of advanced application tools and **is not recom
 |:--:|
 | *Select Components* |
 
-
 ### Data Directory
 
 >IMPORTANT: The Data Directory is critical. Use the table below to set the location.
@@ -95,18 +95,17 @@ Stack Builder provides a number of advanced application tools and **is not recom
 - The database can be moved procedurally post-install if the size grows to an unmanageable level for the current drive space. For most users, the locations listed below should be adequate.
 - When *uninstalling* PostgreSQL, this folder *does not* get removed, thus your data will remain safe.
 
-``` shell
+```bash
 # For C-Drive Installation, set path to:
 
 C:\JTSDK-Tools\tools\PostgreSQL\10\data
 
-For D-Drive installation, set path to:
+# For D-Drive installation, set path to:
 
 D:\JTSDK-Tools\tools\PostgreSQL\10\data
 
 # If another drive is used, substitute the drive letter for one
 # of the examples above.
-
 ```
 
 | ![Data Directory](images/postgres/postgres.4.PNG?raw=true) |
@@ -115,25 +114,28 @@ D:\JTSDK-Tools\tools\PostgreSQL\10\data
 
 ### Postgres Password
 
-The default user in a new PostgreSQL installation is named `postgres`. The default database is also named `postgres`. For local development purposes,
-there is little need for high-security. To make things easy for development and testing, most use a default password of `postgres` also. This setup results in the following:
+The default user in a new PostgreSQL installation is named `postgres`. The
+default database is also named `postgres`. For local development purposes,
+there is little need for high-security. To make things easy for development and
+testing, most use a default password of `postgres` also. This setup results in
+the following:
 
-```
+```bash
 Host.......: localhost
 Port.......: 5432
 Username...: postgres
 Password...: postgres
 Database...: postgres
-
 ```
 
 | ![Postgres Password](images/postgres/postgres.5.PNG?raw=true) | 
-|:--:| 
+|:--:|
 | *Postgres Password* |
 
 ### Server Port
 
-Unless you intend to run multiple servers on multiple ports, it's `highly recommended` to use the default `PostgreSQL Port of: 5432`.
+Unless you intend to run multiple servers on multiple ports, it's
+`highly recommended` to use the default `PostgreSQL Port of: 5432`.
 
 | ![Server Port](images/postgres/postgres.6.PNG?raw=true) |
 |:--:|
@@ -141,7 +143,8 @@ Unless you intend to run multiple servers on multiple ports, it's `highly recomm
 
 ### Advanced Options
 
-Unless you are familiar with `PostgreSQL Advanced Options`, it's recommended to leave this setting as `[Default locale]`
+Unless you are familiar with `PostgreSQL Advanced Options`, it's recommended
+to leave this setting as `[Default locale]`
 
 | ![Advanced Options](images/postgres/postgres.7.PNG?raw=true) |
 |:--:|
@@ -157,23 +160,26 @@ Verify the installation parameters are what you intend, then next to continue.
 
 ### Finish Installation
 
-If the installation finished without error, you now have a PostgreSQL database running on your system with the same parameters as mentioned in the [Postgres Password Section](#postgres-password).
+If the installation finished without error, you now have a PostgreSQL database
+running on your system with the same parameters as mentioned in the
+[Postgres Password Section](#postgres-password).
 
-``` shell
+```bash
 Host.......: localhost
 Port.......: 5432
 Username...: postgres
 Password...: postgres
 Database...: postgres
-
 ```
 
 | ![Finish Installation](images/postgres/postgres.9.PNG?raw=true) |
 |:--:|
 | *Finish Installation* |
 
-This concludes the [PostgreSQL Installation](Install-PostgreSQL). Additional
+This concludes the [PostgreSQL Installation](Install-PostgreSQL.md). Additional
 database information, tests, and additional code snippet information will be
-posted at [JTSDK@Groups.io](https://groups.io/g/JTSDK).
+posted at <JTSDK@Groups.io>.
 
-### Proceed to Next Step => [Database Tools Installation](Install-DB-Tools)
+## Next Step
+
+Proceed to ==> [Database Tools Installation](Install-DB-Tools.md)
