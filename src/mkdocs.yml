@@ -43,8 +43,6 @@ nav:
           - '3.0.1': 'windows/upgrades/Upgrade-3.0.1.md'
           - '3.0.2': 'windows/upgrades/Upgrade-3.0.2.md'
           - 'PostgreSQL-10.6': 'windows/upgrades/Postgresql-10.6.md'        
-      - Linux:
-        - 'Overview': 'linux/Home.md'      
     - Tools:
       - 'Overview': 'tools/cli-tools-overview.md'
       - 'jtenv': 'tools/jtenv.md'
