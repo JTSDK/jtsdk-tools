@@ -11,8 +11,8 @@ numbers as releases by the installers or subsequent upgrades.
 
 ## Prerequisite Tools
 
-These tools are installed by the user, but are required for proper functionality
-of the JTSDK Tool Chain. The versions listed are "current" versions and may not
+These tools are installed by the user, but, are required for proper functionality
+of the JTSDK Tool Chain. The versions listed are "current" and may not
 represent what the users installed initially.
 
 |Name         | Version | Arch  | Description
@@ -46,7 +46,7 @@ should also be 32bit.
 ## Database Tools
 
 These tools can either be in-process applications such as `SQLite3`, or full
-server based applications.  As such, they are classed as `Optional`. PostgreSQL,
+server based applications. As such, they are classed as `Optional`. PostgreSQL,
 Redis and MongoDB are not automatically installed on Windows. ALl three require
 manual installation by the user.
 
@@ -60,16 +60,17 @@ manual installation by the user.
 ## Java Tools
 
 While `Java`, and `Java Tools` are related, they can both operate independent of
-each other. `Java-Tool` are primarily build tools, where `Java` is the language
+one another. `Java-Tools` are primarily build tools, where `Java` is the language
 itself. For consistency, it's best to keep all Java related tools at the same
 bit-ness, and in this case, all were 32bit.
 
-Eclipse is an IDE for Java projects. They roll the versions often as it's best
-to keep up to date with the latest releases.
+Eclipse is an IDE for Java projects. They (developers) roll the versions often
+as it's best to keep up to date with the latest releases.
 
->JAVA version represents the current release of the 1.8 series from Oracle.
+>The JAVA version below represents the current 1.8 series release from Oracle.
 > As of September 2018, `JTSDK-Tools` will be moving to OpenJDK due to support
-> limitations changes by Oracle. 
+> limitation changes by Oracle. Most in the OpenSource community are doing the
+> same due to Long Term Support (LTS) limitations for non-commercial users.
 
 |Name        | Version   | Arch  | Description
 |:---        |:---       |:---   | :---
@@ -77,12 +78,12 @@ to keep up to date with the latest releases.
 | Maven      | 3.5.4     | 32bit | A build automation tool used primarily for Java projects
 | Gradle     | 0.18.4    | 32bit | Open-source build automation system
 | Java       | 1.8.0_192 | 32bit | Open-source build automation system
-| Eclipse    | 2018-12 R | 32bit |An Java integrated development environment
+| Eclipse    | 2018-12 R | 32bit | An Java integrated development environment
 
 ## Doc Tools
 
 These tools are in-addition-to those provided by AsciiDoc, and AsciiDoctor.
-They provide a full range of document create and conversion utilities.
+They provide a full range of document creation and conversion utilities.
 
 |Name        | Version | Arch  | Description
 |:---        |:---     |:---   | :---
