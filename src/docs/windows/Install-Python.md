@@ -14,28 +14,6 @@
 >
 >-- *Anaconda, Inc., www.anaconda.com*
 
-## Page Index
-
-1. [Background](#background)
-1. [Helpful Links](#helpful-links)
-1. [Download](#download)
-1. [Installation](#installation)
-   - [Welcome Screen](#welcome-screen)
-   - [License Agreement](#license-agreement)
-   - [Select Installation Type](#select-installation-type)
-   - [Choose Installation Location](#choose-installation-location)
-   - [Advanced Installation Options](#advanced-installation-options)
-   - [Installation Progress](#installation-progress)
-   - [Install Complete](#install-complete)
-   - [Install VS Code](#install-vs-code)
-   - [Optional Reading](#optional-reading)
-1. [Upgrading Anaconda](#upgrading-anaconda)
-   - [Update Package Manager](#update-package-manager)
-   - [Update All Packages](#update-all-packages)
-1. [Check Python Version](#check-python-version)
-1. [Create Virtual Environment](#create-virtual-environment)
-1. [List Environments](#list-environments)
-
 ## Background
 
 The `JTSDK-Tools` no longer supports building WSJT, or WSPR
@@ -95,7 +73,7 @@ Just Me, and continue.
 |:--:|
 | *Select Installation Type* |
 
-### Choose Installation Location
+### Installation Location
 
 >IMPORTANT: The Installation Directory is critical. Use the data below to set
 the location.
@@ -117,7 +95,7 @@ D:\JTSDK-Tools\tools\Anaconda3
 |:--:|
 | *Choose Installation Location* |
 
-### Advanced Installation Options
+### Advanced Options
 
 - [ ] Add Anaconda to my PATH Environment Variable (*Not Recommended*)
 - [X] Register Anaconda as my default Python 3.6 (*Recommended*)
@@ -164,7 +142,7 @@ select `Anaconda3 (64-bit)`.
 
 ### Update Package Manager
 
-``` shell
+```bash
 # At the Anaconda Prompt, type:
 conda update conda
 ```
@@ -195,7 +173,7 @@ conda upgrade --all
 
 In the same Anaconda Prompt, check the default (base) Python version.
 
-``` shell
+```bash
 python -V
 ```
 
@@ -207,7 +185,7 @@ python -V
 
 In the same Anaconda Prompt, create a `jtsdk-Py` virtual environment.
 
-``` shell
+```bash
 conda create -n jtsdk-py
 ```
 
@@ -217,9 +195,10 @@ conda create -n jtsdk-py
 
 ## List Environments
 
-In the same Anaconda Prompt, list all available virtual environments, switch to (jtsdk-py), then back to (base) environment.
+In the same Anaconda Prompt, list all available virtual environments, switch to
+(`jtsdk-py`), then back to (`base`) environment.
 
-``` shell
+```bash
 # LList the environments, then activate jtsdk-py
 conda env list
 
@@ -241,7 +220,7 @@ This concludes the `Anaconda3 Python` installation.
 
 ## Next Step
 
-Proceed to ==> [AsciiDoctor Installation](Install-Asciidoctor)
+Proceed to ==> [AsciiDoctor Installation](Install-Asciidoctor.md)
 
 [Anaconda Documentation]: https://enterprise-docs.anaconda.com/en/latest/
 [Managing Environments]: https://conda.io/docs/user-guide/tasks/manage-environments.html

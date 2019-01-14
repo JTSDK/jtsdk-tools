@@ -58,7 +58,7 @@ to the following when finished:
 * Save pg_env.bat and exit VS Code.
 ```
 
-### Step-5 - Verify PostgreSQL Server Version
+### Step-5 - Verify Server Version
 After editing the `pg_env.bat` file, check the server is working properly by validating the new version.
 
 ``` shell

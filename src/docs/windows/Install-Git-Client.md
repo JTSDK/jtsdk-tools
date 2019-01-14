@@ -16,11 +16,11 @@
 
 ## Pre-Installation
 
-[Git-SCM](https://git-scm.com/) has an option to use [Visual Studio Code](https://code.visualstudio.com/docs/supporting/faq#_what-is-the-difference-between-vs-code-and-vs-community)
+[Git-SCM](https://git-scm.com/) has an option to use [Visual Studio Code][]
 as the default editor. If you'd like to select this feature during installation,
-ensure you've installed [Visual Studio Code](https://code.visualstudio.com/docs/supporting/faq#_what-is-the-difference-between-vs-code-and-vs-community) *before* installing [Git](https://git-scm.com/).
+ensure you've installed [Visual Studio Code][] *before* installing [Git](https://git-scm.com/).
 
-## Notes and Considerations
+## Notes
 
 - The installation location of Git can be set to the default installer location,
 - or anywhere on the system a user prefers. The only stipulation for JTSDK is, 
@@ -34,7 +34,7 @@ system. If the system is 64bit, that is what will be downloaded.
 available form the command line, there is *no need* to re-install it for `JTSDK`
 usage.
 
-## Installation Walk-Through
+## Installation
 
 The following walks through the steps known to work with `JTSDK`.
 
@@ -49,13 +49,16 @@ below.
 ### Accept License
 
 | ![License Agreement](images/git/git-bash.1.PNG?raw=true) |
-|:--:| 
+|:--:|
 | *GNU Public License* |
 
-### Install Location (default recommended)
+### Install Location
+
+Unless you have a specific need to install elsewhere, the default location
+provided by the installer is recommended.
 
 | ![Install Location](images/git/git-bash.2.PNG?raw=true) |
-|:--:| 
+|:--:|
 | *Use Default Installation Location* |
 
 ### Select Options
@@ -67,7 +70,7 @@ below.
 ### Start Menu
 
 | ![Start Menu](images/git/git-bash.4.PNG?raw=true) | 
-|:--:| 
+|:--:|
 | *Start Menu Selection* |
 
 ### VS Code Editor
@@ -94,23 +97,22 @@ However, if you want a select number of items available outside of
 This is not a critical component of `JTSDK`, but for consistency, choosing
 OpenSSL has worked well in the past. It's up to the user. If you choose Windows
 Secure Channel Library, you will need to configure the certificates and Git to
-use them seperately.
+use them separately.
 
-
-| ![OpenSSL](images/git/git-bash.7.PNG?raw=true) | 
+| ![OpenSSL](images/git/git-bash.7.PNG?raw=true) |
 |:--:|
 | *SSL Option Selection* |
 
-### Configure Line Ending Preference
+### Line Ending Preference
 
 This option is again up to the user. However, for use with `JTSDK` projects,
 selecting the first option `Checkout Windows-Style, commit Unix-Style endings`
 should work for the project. If you're a developer and need other endings,
 choose what best suits your needs.
 
-| ![Line Endings](images/git/git-bash.8.PNG?raw=true) |
+| ![Line Ending Preference](images/git/git-bash.8.PNG?raw=true) |
 |:--:|
-| *Line Endings* |
+| *Line Endings Preference* |
 
 ### Console Selection
 
@@ -152,6 +154,10 @@ If you plan to check-in code, or perform other repository activity, review
 the [First Time Setup](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup)
 documentation paying particular attention to `username` and `email` settings.
 
-This concludes the [Git Client Install](Install-Git-Client).
+This concludes the [Git Client Install](Install-Git-Client.md).
 
-### Proceed to Next Step => [Install Core Tools](Install-Core-Tools)
+## Next Step
+
+Proceed to ==> [Install Core Tools](Install-Core-Tools.md)
+
+[Visual Studio Code]: https://code.visualstudio.com/docs/supporting/faq#_what-is-the-difference-between-vs-code-and-vs-community

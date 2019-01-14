@@ -55,22 +55,13 @@ Open a Windows Command Prompt, and type the following:
 JTConfig -h
 ```
 
-See Results in [JTConfig Docs][].
-
 ## Uninstall
 
 ```bash
 dotnet tool uninstall -g JTConfig
 ```
 
-## Additional Artifacts
-
-As additional applications are published in the [JTSDK Tools][], they will be
-added to the [Main Page Matrix][].
-
 <!-- Page Links --------------------------------------------------------------->
 [Microsoft Documentation Project]: https://docs.microsoft.com/en-us/dotnet/core/tools/global-tools
-[JTConfig Docs]: https://github.com/KI7MT/jtsdk-tools/blob/master/docs/tools/jtconfig.md#usage
 [JTSDK Tools]: https://github.com/KI7MT/jtsdk-tools
 [Main Page Matrix]: https://github.com/KI7MT/jtsdk-tools#global-tool-matrix
-[JTConfig Docs]: https://github.com/KI7MT/jtsdk-tools/blob/master/docs/tools/jtconfig.md#usage

@@ -27,7 +27,7 @@ given time. However, the items listed are of particular interest to `JTSDK-Tools
 
 ### List Help
 
-``` shell
+```bash
 # In the JTSDK-Tools Environment
 jtenv -h
 
@@ -41,7 +41,7 @@ dotnet JTEnv -h
 
 ### List All Option Groups
 
-``` shell
+```bash
 # In the JTSDK-Tools Environment
 jtenv -a
 
@@ -55,7 +55,7 @@ dotnet JTEnv -a
 
 ### List User Group
 
-``` shell
+```bash
 # In the JTSDK-Tools Environment
 jtenv -u
 
@@ -69,7 +69,7 @@ dotnet JTEnv -u
 
 ### List Java Group
 
-``` shell
+```bash
 # In the JTSDK-Tools Environment
 jtenv -j
 
@@ -83,7 +83,7 @@ dotnet JTEnv -j
 
 ### List System Group
 
-``` shell
+```bash
 # In the JTSDK-Tools Environment
 jtenv -s
 

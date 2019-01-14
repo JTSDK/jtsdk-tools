@@ -13,7 +13,7 @@
 - [Reference, Documentation, and Videos](https://docs.microsoft.com/en-us/dotnet/core/index)
 - [Getting Started Tutorials](https://docs.microsoft.com/en-us/dotnet/core/get-started?tabs=windows)
 
-## Installation Walkthrough
+## Installation
 
 - [Download Net Core SDK](https://www.microsoft.com/net/download/windows)
 - [Installation Steps](#installation-steps)
@@ -23,7 +23,7 @@
 ## Download
 
 At the time of writing, the [Net Core SDK](https://www.microsoft.com/net/download/windows)
-version is `2.2.101`. Follow the [download link](#installation-walkthrough) listed above.
+version is `2.2.101`. Follow the [download link](#installation) listed above.
 Select the latest version available. Also, `ensure` you are using the SDK
 installer and *NOT* the Runtime installer, and it is 64-bit.
 
@@ -52,11 +52,11 @@ installer and *NOT* the Runtime installer, and it is 64-bit.
 After closing the installer, open a `Windows Command Prompt`. Test the
 installation using the following command:
 
-``` shell
+```bash
 dotnet --info
 ```
 
-| ![Image3](images/dotnet-sdk/2.2.101/dotnet-sdk.4.PNG?raw=true) | 
+| ![Image3](images/dotnet-sdk/2.2.101/dotnet-sdk.4.PNG?raw=true) |
 |:--:|
 | *Validate Results* |
 
@@ -64,6 +64,8 @@ dotnet --info
 occurred. This is `OK`, and only adds additional frameworks to your system. This
 is the normal release method for `Net Core SDK` and Run-Times.
 
-This concludes the [Net Core SDK Installation](Install-Net-Core-Sdk).
+This concludes the [Net Core SDK Installation](Install-Net-Core-SDK.md).
 
-### Proceed to Next Step => [Install VS Code](Install-VS-Code)
+## Next Step
+
+Proceed to ==> [Install VS Code](Install-VS-Code.md)

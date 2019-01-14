@@ -5,10 +5,11 @@
 | Name        | Doc Tools |
 | Version     | 3.0.0 |
 | Arch        | 64 bit |
-| Description | Various documentation build frameworks |
+| Description | Various Documentation Build Frameworks |
 
-The Doc tools are for generating, and / or converting many types of documentation
-inputs and outputs.
+Doc tools are for generating, and / or converting many types of documentation
+inputs and outputs. If you need documentation conversion tools, install this
+package.
 
 ## Download
 
@@ -24,7 +25,7 @@ subject to change with each update of `Install-Doc-Tools`.
 | DocFX  | 2.37 |
 | Pandoc | 2.2.1 |
 
-## Installation Walkthrough
+## Installation
 
 Browse to, and `double-click` the downloaded [JTSDK-Doc-Tools](https://sourceforge.net/projects/jtsdk/files/win32/3.0.0/release/)
 Installer, then follow the steps below.
@@ -61,6 +62,8 @@ Select which drive you you installed `JTSDK-Tools` to.
 |:--:|
 | *Finish Installation* |
 
-This concludes the [JTSDK-Doc-Tools](Install-Doc-Tools) installation.
+This concludes the [JTSDK-Doc-Tools](Install-Doc-Tools.md) installation.
 
-### Proceed to Next Step => [Java Tools Installation](Install-Java-Tools)
+## Next Step
+
+Proceed to ==> [Java Tools Installation](Install-Java-Tools.md)
