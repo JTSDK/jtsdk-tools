@@ -20,7 +20,7 @@ At the time of writing, the [VS Code](https://code.visualstudio.com/) version
 is `1.25.1`. Follow the [download link](#install-vs-code) listed above. Select
 the latest version available. Also, `ensure` you are using the 64-bit installer.
 
-## Installation Walk-Through
+## Installation
 
 1. Browse to the installer download location, `double-click` the installer, then
 click the `install button`.
@@ -35,7 +35,10 @@ click the `install button`.
 |:--:|
 | *Accept License* |
 
-### Install Path  (default recommended)
+### Install Path
+
+Unless you have a specific reason to install elsewhere, the default install
+location is recommended.
 
 | ![Install Path](images/vscode/vscode.3.PNG?raw=true) |
 |:--:|
