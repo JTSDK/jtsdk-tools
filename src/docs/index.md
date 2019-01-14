@@ -1,7 +1,7 @@
-# JTSDK Development Tools
+# JTSDK Tools
 
 This repository is designed to work specifically with the
-[JTSDK Tools Version 3][] tool-chain. It would be of little use elsewhere.
+[JTSDK Tools Version 3][] tool-chain.
 
 ## Software Delivery
 
@@ -14,10 +14,13 @@ artifacts that can be tested as [NetCore Global Tools][].
 ## Community Support
 
 To assist users with installation, usage, compiling applications, and
-general discussion, use <JTSDK@Group.io>.
+general discussion, use:
 
-- Post: <JTSDK@groups.io>
-- Subscribe: <JTSDK+subscribe@groups.io>
+- Post: JTSDK@groups.io
+- Subscribe: JTSDK+subscribe@groups.io
+- Unsubscribe: JTSDK+unsubscribe@groups.io
+- Group Owner: JTSDK+owner@groups.io
+- Help: JTSDK+help@groups.io
 
 ## Installation
 
@@ -25,7 +28,7 @@ Installation of this package should follow the tool-chain installation and
 setup. If you've not already done so, review the following guides **before**
 checking out and compiling the source code.
 
-See [JTSDK Tools Wiki][] for detailed installation instructions.
+See [JTSDK Tools Website][] for detailed installation instructions.
 
 ## Bug Reports
 
@@ -68,5 +71,5 @@ mind, the following should be considered the bare-minimum requirements:
 [Net Core Global Tools]: https://github.com/dotnet/core/tree/master/samples/dotnetsay
 [JTSDK Tools Version 3]: https://sourceforge.net/projects/jtsdk/files/win32/3.0.0/release/
 [NetCore Global Tools]: https://github.com/dotnet/core/tree/master/samples/dotnetsay
-[JTSDK Tools Wiki]: https://github.com/KI7MT/jtsdk-tools/wiki
+[JTSDK Tools Website]: https://ki7mt.github.io/jtsdk-tools/
 [Issue Tracker]: https://github.com/KI7MT/jtsdk-tools/issues
