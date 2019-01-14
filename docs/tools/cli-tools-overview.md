@@ -21,6 +21,7 @@ explains the meanings used:
 |:-----|:------|
 | Release      | fully functional for it's intended purpose
 | Development  | still a work in progress, not ready for production use
+| Test App     | application for testing alternative frameworks
 | Deferred     | while technically viable, work has not begun
 | Incompatible | not applicable for the given Language
 
@@ -33,9 +34,9 @@ will be displayed in path section.
 
 |Name | Command | Language | Status | Description |
 |:-----|:-----|:-----|:------|:-----|
-[jtenv](jtenv.md)      | jtenv -h    | C-Sharp | Release | Show environment variables using C# / .Net Core
-[jtenvjv](jtenvjv.md)  | jtenv-jv -h | Java    | Release | same as above using Java
-[jtenvpy](jtenvpy.md) | jtenv-py -h | Python  | Release | same as above using Python
+[jtenv](jtenv.md)      | jtenv -h  | C-Sharp | Release  | Show environment variables using C# / .Net Core
+[jtenvjv](jtenvjv.md)  | jtenv -h  | Java    | Test App | same as above using Java
+[jtenvpy](jtenvpy.md)  | jtenv -h  | Python  | Test App | same as above using Python
 
 ## Configuration
 
@@ -64,5 +65,5 @@ matrix.
 
 |Name | Command | Language | Status| Description |
 |:-----|:-----|:-----|:-----|:-----|
-|`build-hamlib.sh` | build-hamlib -h | Bash | Release | Compile Hamlib Library for Windows
-|`build-hamlib-py` | build-hamlib -h | Bash | Deferred | Investigating use with MSYS2
+|`build-hamlib.sh` | build-hamlib -h | Bash | Release    | Compile Hamlib Library for Windows
+|`build-hamlib-py` | build-hamlib -h | Bash | Development| Investigating use with MSYS2

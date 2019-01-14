@@ -14,10 +14,12 @@ nav:
     - Tools:
       - 'Overview': 'tools/cli-tools-overview.md'
       - 'JTEnv': 'tools/jtenv.md'
-      - 'JTEnvjv': 'tools/jtenvjv.md'
-      - 'JTEnvpy': 'tools/jtenvpy.md'
       - 'JTConfig': 'tools/jtconfig.md'
       - 'JTBuildcm': 'tools/jtbuildcm.md'
+    - Test Apps:
+      - 'jtenvjv': 'tools/jtenvjv.md'
+      - 'jtenvpy': 'tools/jtenvpy.md'
+      - 'wsprcsv': 'tools/wsprcsv.md'
       - 'NetCore Global Tools': 'tools/global-tools-overview.md'
 
 # Configuration
