@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Greg Beam, KI7MT">
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>* Java - JTSDK Tools</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/docco.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../..">JTSDK Tools</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../..">Home</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Installation <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Windows</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../Home/">Overview</a>
+</li>
+            
+<li >
+    <a href="../Install-Prerequisites/">Prerequisites</a>
+</li>
+            
+<li >
+    <a href="../Third-Party-Installers/">Third Party Installers</a>
+</li>
+            
+<li >
+    <a href="../Install-Net-Core-SDK/">1. NetCore</a>
+</li>
+            
+<li >
+    <a href="../Install-VS-Code/">2. VS Code</a>
+</li>
+            
+<li >
+    <a href="../Install-Git-Client/">3. Git Client</a>
+</li>
+            
+<li >
+    <a href="../Install-Python/">4. Python</a>
+</li>
+            
+<li >
+    <a href="../Install-Core-Tools/">5. Core Tools</a>
+</li>
+            
+<li >
+    <a href="../Install-Asciidoctor/">6. AsciiDoctor</a>
+</li>
+            
+<li >
+    <a href="../Install-Qt/">7. Qt Tools</a>
+</li>
+            
+<li >
+    <a href="../Install-Core-Apps/">8. Core Apps</a>
+</li>
+            
+<li >
+    <a href="../Install-Msys2/">9. MSYS2</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Optional Installs</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../Install-DB-Tools/">* Database Tools</a>
+</li>
+            
+<li >
+    <a href="../Install-Doc-Tools/">* Doc Tools</a>
+</li>
+            
+<li >
+    <a href="../Install-Java-Tools/">* Java Tools</a>
+</li>
+            
+<li class="active">
+    <a href="./">* Java</a>
+</li>
+            
+<li >
+    <a href="../Install-PostgreSQL/">* PostgreSQL</a>
+</li>
+            
+<li >
+    <a href="../Install-Redis/">* Redis</a>
+</li>
+            
+<li >
+    <a href="../Install-WSL/">* WSL</a>
+</li>
+            
+<li >
+    <a href="../Install-Misc-Tools/">* Misc Tools</a>
+</li>
+            
+<li >
+    <a href="../Install-Eclipse/">* Eclipse</a>
+</li>
+            
+<li >
+    <a href="../Install-MSSQL-Server/">* MSSQL</a>
+</li>
+            
+<li >
+    <a href="../Install-MongoDB/">* MongoDB</a>
+</li>
+            
+<li >
+    <a href="../Install-MSSQL-Server/">* MSSQL</a>
+</li>
+            
+<li >
+    <a href="../Install-Visual-Studio/">* Visual Stuidio</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Release Notes</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../release-notes/Release-Notes-3.0.1/">3.0.1</a>
+</li>
+            
+<li >
+    <a href="../release-notes/Release-Notes-3.0.2/">3.0.2</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Upgrades</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../upgrades/Upgrade-3.0.1/">3.0.1</a>
+</li>
+            
+<li >
+    <a href="../upgrades/Upgrade-3.0.2/">3.0.2</a>
+</li>
+            
+<li >
+    <a href="../upgrades/Postgresql-10.6/">PostgreSQL-10.6</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Linux</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../linux/Home/">Overview</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tools <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../tools/cli-tools-overview/">Overview</a>
+</li>
+                                    
+<li >
+    <a href="../../tools/jtenv.md">JTEnv</a>
+</li>
+                                    
+<li >
+    <a href="../../tools/jtconfig.md">JTConfig</a>
+</li>
+                                    
+<li >
+    <a href="../../tools/jtbuildcm.md">JTBuildcm</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Bets Testing</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../tools/jtenvjv.md">jtenvjv</a>
+</li>
+            
+<li >
+    <a href="../../tools/jtenvpy.md">jtenvpy</a>
+</li>
+            
+<li >
+    <a href="../../tools/wsprcsv/">wsprcsv</a>
+</li>
+            
+<li >
+    <a href="../../tools/global-tools-overview/">NetCore Global Tools</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Gude <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../user-guide/User-Guide-3.0.2/">User Guide</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../Install-Java-Tools/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../Install-PostgreSQL/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#optional-install-java">Optional - Install Java</a></li>
+            <li><a href="#download">Download</a></li>
+            <li><a href="#installation-walk-through">Installation Walk-Through</a></li>
+            <li><a href="#set-gradle_home-and-m2_home">Set GRADLE_HOME and M2_HOME</a></li>
+            <li><a href="#check-gradle-version">Check Gradle Version</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="optional-install-java">Optional - Install Java<a class="headerlink" href="#optional-install-java" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Application Data</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>Java</td>
+</tr>
+<tr>
+<td>Version</td>
+<td>1.8 u172+</td>
+</tr>
+<tr>
+<td>Arch</td>
+<td>64 bit</td>
+</tr>
+<tr>
+<td>Description</td>
+<td>Cross-Platform High Performance Development Framework</td>
+</tr>
+</tbody>
+</table>
+<h2 id="download">Download<a class="headerlink" href="#download" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Oracle JavaSE Installer</a></li>
+<li>
+<p><a href="https://sourceforge.net/projects/jtsdk/files/win32/3.0.0/release/">JTSDK Third Party Installer Package</a></p>
+</li>
+<li>
+<p>Both downloads provide the same installer, and reflect the installation 
+steps below. Which to use is entirely up to the end-user.</p>
+</li>
+<li>
+<p>If you are downloading from the Oracle site, make sure you you select the <code>JDK</code> version for example:</p>
+</li>
+</ul>
+<pre><code class="shell">jdk-8u172-windows-x64
+jdk-8u181-windows-x64
+</code></pre>
+
+<p>You should use the latest patch release version. In the example above,
+<code>jdk-8u181-windows-x64</code> would be the latest available. Once installed, the Java installer has a real-time update service that will alert you when Oracle has released an update. The same service will also download/update the the instance for you if you allow it to.</p>
+<h2 id="installation-walk-through">Installation Walk-Through<a class="headerlink" href="#installation-walk-through" title="Permanent link">&para;</a></h2>
+<p>Browse to, then <code>double-click</code> the downloaded <code>Java Installer</code>, and
+follow the steps below.</p>
+<h3 id="initial-screen">Initial Screen<a class="headerlink" href="#initial-screen" title="Permanent link">&para;</a></h3>
+<p>Select next to continue.</p>
+<table>
+<thead>
+<tr>
+<th align="center"><img alt="Initial Screen" src="../images/java/java.1.PNG?raw=true" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><em>Initial Screen</em></td>
+</tr>
+</tbody>
+</table>
+<h3 id="install-selections">Install Selections<a class="headerlink" href="#install-selections" title="Permanent link">&para;</a></h3>
+<p>Leave the defaults selected, and click next.</p>
+<table>
+<thead>
+<tr>
+<th align="center"><img alt="Install Selections" src="../images/java/java.2.PNG?raw=true" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><em>Install Selections</em></td>
+</tr>
+</tbody>
+</table>
+<h3 id="install-extraction">Install Extraction<a class="headerlink" href="#install-extraction" title="Permanent link">&para;</a></h3>
+<p>No action required.</p>
+<table>
+<thead>
+<tr>
+<th align="center"><img alt="Install Extraction" src="../images/java/java.3.PNG?raw=true" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><em>Install Extraction</em></td>
+</tr>
+</tbody>
+</table>
+<h3 id="install-location">Install Location<a class="headerlink" href="#install-location" title="Permanent link">&para;</a></h3>
+<p>Use default install location: (highly recommended)</p>
+<table>
+<thead>
+<tr>
+<th align="center"><img alt="Install Location" src="../images/java/java.4.PNG?raw=true" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><em>Install Location</em></td>
+</tr>
+</tbody>
+</table>
+<h3 id="install-progress">Install Progress<a class="headerlink" href="#install-progress" title="Permanent link">&para;</a></h3>
+<p>No action required.</p>
+<table>
+<thead>
+<tr>
+<th align="center"><img alt="Install Progress" src="../images/java/java.5.PNG?raw=true" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><em>Install Progress</em></td>
+</tr>
+</tbody>
+</table>
+<h3 id="finish-installation">Finish Installation<a class="headerlink" href="#finish-installation" title="Permanent link">&para;</a></h3>
+<p>No action required. Read docs if desired.</p>
+<table>
+<thead>
+<tr>
+<th align="center"><img alt="Install Progress" src="../images/java/java.6.PNG?raw=true" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><em>Finish Installation</em></td>
+</tr>
+</tbody>
+</table>
+<h3 id="set-java_home">Set JAVA_HOME<a class="headerlink" href="#set-java_home" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th align="center"><img alt="Select System Settings" src="../images/java/java.7.png?raw=true" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><em>Select System Settings</em></td>
+</tr>
+</tbody>
+</table>
+<p><code>Select Environment Variables</code></p>
+<table>
+<thead>
+<tr>
+<th align="center"><img alt="Select Environment Variables" src="../images/java/java.8.PNG?raw=true" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><em>Select Environment Variables</em></td>
+</tr>
+</tbody>
+</table>
+<p><code>Add New System Variable</code></p>
+<table>
+<thead>
+<tr>
+<th align="center"><img alt="New System Variable" src="../images/java/java.9.PNG?raw=true" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><em>New System Variable</em></td>
+</tr>
+</tbody>
+</table>
+<p><code>Add The New Path</code></p>
+<table>
+<thead>
+<tr>
+<th align="center"><img alt="Add The New Path" src="../images/java/java.10.PNG?raw=true" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><em>Add The New Path</em></td>
+</tr>
+</tbody>
+</table>
+<h3 id="check-java">Check Java<a class="headerlink" href="#check-java" title="Permanent link">&para;</a></h3>
+<p>Open Windows Command Prompt, and test that <code>Java</code> returns properly.</p>
+<pre><code class="shell"># In the Windows Command Prompt, test the following commands
+
+java -d64 -version
+
+# Check JAVA_HOME
+
+echo. &amp;&amp; echo JAVA_HOME: %JAVA_HOME%
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th align="center"><img alt="Check Java" src="../images/java/java.11.PNG?raw=true" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><em>Check Java</em></td>
+</tr>
+</tbody>
+</table>
+<h2 id="set-gradle_home-and-m2_home">Set GRADLE_HOME and M2_HOME<a class="headerlink" href="#set-gradle_home-and-m2_home" title="Permanent link">&para;</a></h2>
+<p>Using the same process as you did with JAVA_HOME, set GRADLE_HOME and M2_HOME.</p>
+<h3 id="gradle-settings">Gradle Settings<a class="headerlink" href="#gradle-settings" title="Permanent link">&para;</a></h3>
+<p><code>GRADLE_HOME</code></p>
+<ul>
+<li>Change Gradle version to : <code>4.9</code></li>
+<li>Change Maven (M2) version to : <code>3.5.4</code></li>
+</ul>
+<p><code>Set GRADLE_HOME</code></p>
+<pre><code class="shell">(C|D):\JTSDK-Tools\tools\gradle\4.9
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th align="center"><img alt="Set GRADLE_HOME" src="../images/java/java.12.PNG?raw=true" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><em>Set GRADLE_HOME</em></td>
+</tr>
+</tbody>
+</table>
+<p><code>Set Gradle Path</code></p>
+<table>
+<thead>
+<tr>
+<th align="center"><img alt="Gradle Path" src="../images/java/java.13.PNG?raw=true" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><em>Set Gradle Path</em></td>
+</tr>
+</tbody>
+</table>
+<h3 id="maven-settings">Maven Settings<a class="headerlink" href="#maven-settings" title="Permanent link">&para;</a></h3>
+<p><code>Set MAVEN_HOME</code></p>
+<pre><code class="shell">(C|D):\JTSDK-Tools\tools\maven\3.5.4
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th align="center"><img alt="Set MAVEN_HOME" src="../images/java/java.14.PNG?raw=true" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><em>Set MAVEN_HOME</em></td>
+</tr>
+</tbody>
+</table>
+<p><code>Set Maven path</code></p>
+<table>
+<thead>
+<tr>
+<th align="center"><img alt="Set Maven path" src="../images/java/java.15.PNG?raw=true" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><em>Set Maven Path</em></td>
+</tr>
+</tbody>
+</table>
+<h2 id="check-gradle-version">Check Gradle Version<a class="headerlink" href="#check-gradle-version" title="Permanent link">&para;</a></h2>
+<p>In the Windows Command Prompt window, check Gradle Version</p>
+<pre><code class="shell"># Check Gradle Version
+gradle --version
+
+# Check Maven Version
+mvn --version
+
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th align="center"><img alt="Gradle Version" src="../images/java/java.17.PNG?raw=true" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><em>Gradle Version</em></td>
+</tr>
+</tbody>
+</table>
+<p>This concludes the <a href="Install-Java">Java Installation</a>.</p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright &copy; 2018 - 2019 Greg Beam, KI7MT</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

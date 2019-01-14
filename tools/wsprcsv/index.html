@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Greg Beam, KI7MT">
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>wsprcsv - JTSDK Tools</title>
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/docco.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../..">JTSDK Tools</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../..">Home</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Installation <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Windows</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../windows/Home/">Overview</a>
+</li>
+            
+<li >
+    <a href="../../windows/Install-Prerequisites/">Prerequisites</a>
+</li>
+            
+<li >
+    <a href="../../windows/Third-Party-Installers/">Third Party Installers</a>
+</li>
+            
+<li >
+    <a href="../../windows/Install-Net-Core-SDK/">1. NetCore</a>
+</li>
+            
+<li >
+    <a href="../../windows/Install-VS-Code/">2. VS Code</a>
+</li>
+            
+<li >
+    <a href="../../windows/Install-Git-Client/">3. Git Client</a>
+</li>
+            
+<li >
+    <a href="../../windows/Install-Python/">4. Python</a>
+</li>
+            
+<li >
+    <a href="../../windows/Install-Core-Tools/">5. Core Tools</a>
+</li>
+            
+<li >
+    <a href="../../windows/Install-Asciidoctor/">6. AsciiDoctor</a>
+</li>
+            
+<li >
+    <a href="../../windows/Install-Qt/">7. Qt Tools</a>
+</li>
+            
+<li >
+    <a href="../../windows/Install-Core-Apps/">8. Core Apps</a>
+</li>
+            
+<li >
+    <a href="../../windows/Install-Msys2/">9. MSYS2</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Optional Installs</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../windows/Install-DB-Tools/">* Database Tools</a>
+</li>
+            
+<li >
+    <a href="../../windows/Install-Doc-Tools/">* Doc Tools</a>
+</li>
+            
+<li >
+    <a href="../../windows/Install-Java-Tools/">* Java Tools</a>
+</li>
+            
+<li >
+    <a href="../../windows/Install-Java/">* Java</a>
+</li>
+            
+<li >
+    <a href="../../windows/Install-PostgreSQL/">* PostgreSQL</a>
+</li>
+            
+<li >
+    <a href="../../windows/Install-Redis/">* Redis</a>
+</li>
+            
+<li >
+    <a href="../../windows/Install-WSL/">* WSL</a>
+</li>
+            
+<li >
+    <a href="../../windows/Install-Misc-Tools/">* Misc Tools</a>
+</li>
+            
+<li >
+    <a href="../../windows/Install-Eclipse/">* Eclipse</a>
+</li>
+            
+<li >
+    <a href="../../windows/Install-MSSQL-Server/">* MSSQL</a>
+</li>
+            
+<li >
+    <a href="../../windows/Install-MongoDB/">* MongoDB</a>
+</li>
+            
+<li >
+    <a href="../../windows/Install-MSSQL-Server/">* MSSQL</a>
+</li>
+            
+<li >
+    <a href="../../windows/Install-Visual-Studio/">* Visual Stuidio</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Release Notes</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../windows/release-notes/Release-Notes-3.0.1/">3.0.1</a>
+</li>
+            
+<li >
+    <a href="../../windows/release-notes/Release-Notes-3.0.2/">3.0.2</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Upgrades</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../windows/upgrades/Upgrade-3.0.1/">3.0.1</a>
+</li>
+            
+<li >
+    <a href="../../windows/upgrades/Upgrade-3.0.2/">3.0.2</a>
+</li>
+            
+<li >
+    <a href="../../windows/upgrades/Postgresql-10.6/">PostgreSQL-10.6</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Linux</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../linux/Home/">Overview</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tools <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../cli-tools-overview/">Overview</a>
+</li>
+                                    
+<li >
+    <a href="../jtenv.md">JTEnv</a>
+</li>
+                                    
+<li >
+    <a href="../jtconfig.md">JTConfig</a>
+</li>
+                                    
+<li >
+    <a href="../jtbuildcm.md">JTBuildcm</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Bets Testing</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../jtenvjv.md">jtenvjv</a>
+</li>
+            
+<li >
+    <a href="../jtenvpy.md">jtenvpy</a>
+</li>
+            
+<li class="active">
+    <a href="./">wsprcsv</a>
+</li>
+            
+<li >
+    <a href="../global-tools-overview/">NetCore Global Tools</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Gude <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../user-guide/User-Guide-3.0.2/">User Guide</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../cli-tools-overview/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../global-tools-overview/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#wspr-csv-conversion-utility">WSPR CSV Conversion Utility</a></li>
+            <li><a href="#about-anaconda-python">About Anaconda Python</a></li>
+            <li><a href="#about-pandas">About Pandas</a></li>
+            <li><a href="#development-status">Development Status</a></li>
+            <li><a href="#description">Description</a></li>
+            <li><a href="#requirements">Requirements</a></li>
+            <li><a href="#installation">Installation</a></li>
+            <li><a href="#validate-installation">Validate Installation</a></li>
+            <li><a href="#example-usage">Example Usage</a></li>
+            <li><a href="#uninstall">Uninstall</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="wspr-csv-conversion-utility">WSPR CSV Conversion Utility<a class="headerlink" href="#wspr-csv-conversion-utility" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Application Data</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Package</td>
+<td><a href="https://github.com/KI7MT/python-pypi-packages/tree/master/wsprcsv/">wsprcsv</a></td>
+</tr>
+<tr>
+<td>Version</td>
+<td>3.0.14</td>
+</tr>
+<tr>
+<td>Topic</td>
+<td>Science/Research, Utilities</td>
+</tr>
+<tr>
+<td>Development Status</td>
+<td>4 - Beta</td>
+</tr>
+<tr>
+<td>Compatibility</td>
+<td>Windows, Linux, MacOS</td>
+</tr>
+<tr>
+<td>Arch</td>
+<td>Any (x86-64 recommended)</td>
+</tr>
+<tr>
+<td>Python</td>
+<td>Version &gt;= 3.5</td>
+</tr>
+<tr>
+<td>Dependencies</td>
+<td><a href="https://pandas.pydata.org/">Pandas</a></td>
+</tr>
+<tr>
+<td>Virtual Environment</td>
+<td>Anaconda Python 2018.12</td>
+</tr>
+<tr>
+<td>----</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="about-anaconda-python">About Anaconda Python<a class="headerlink" href="#about-anaconda-python" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Anaconda Python is a free, easy-to-install, package manager, environment
+manager and Python distribution with a collection of 1,000+ open source packages
+with free community support. Anaconda is platform-agnostic, so you can use it
+whether you are on Windows, MacOS or Linux.</p>
+<p>-- <em>Anaconda, Inc., www.anaconda.com</em></p>
+</blockquote>
+<h2 id="about-pandas">About Pandas<a class="headerlink" href="#about-pandas" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>pandas is an open source, BSD-licensed library providing high-performance,
+easy-to-use data structures and data analysis tools for the Python programming
+language. pandas is a NumFOCUS sponsored project. This will help ensure the
+success of development of pandas as a world-class open-source project, and makes
+it possible to donate to the project.</p>
+<p>--<a href="https://pandas.pydata.org/">The Pandas Project</a></p>
+</blockquote>
+<h2 id="development-status">Development Status<a class="headerlink" href="#development-status" title="Permanent link">&para;</a></h2>
+<p>This package is in <code>Beta</code>. The package was tested using
+<a href="https://www.anaconda.com/">Anaconda Python 2018.12</a> with a default virtual environment creation e.g.
+(<code>conda create -n jtsdk-py</code>).</p>
+<h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h2>
+<p><code>wsprcsv</code> is a collection of Python scripts used to manage <code>WSPR</code> data-files using
+<a href="https://pandas.pydata.org/">Pandas</a>. It takes an original <a href="http://wsprnet.org/drupal/downloads">WSPR Spots CSV</a> and converts Epoch times to
+<code>Date</code> and <code>Time</code> columns, then removes <code>Spot_Id</code> and epoch <code>timestamp</code> columns.</p>
+<p>On smaller files (100K to 500K rows), it could be argued that looping through
+the files with native Python functions could be faster. However, when processing 
+<code>40+ Million Rows</code>, <a href="https://pandas.pydata.org/">Pandas</a> is your friend. <a href="#conversion-results-two">Example Two</a>
+below is the most resent full-month archive from <a href="http://wsprnet.org">WSPRnet</a>. Processing was
+intense to say the least:</p>
+<h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h2>
+<p>The following are the minimal requirements to run <code>wsprcsv</code>.</p>
+<ul>
+<li>System running <a href="https://www.python.org/">Python(3)</a>, preferably in a Virtual Environment</li>
+<li>Python <a href="https://pandas.pydata.org/">Pandas</a></li>
+<li>Multi-Core CPU</li>
+<li>At least 2GB free memory, more is preferable</li>
+<li>5 GB Free disk space minimum</li>
+</ul>
+<p>If you use <a href="https://www.anaconda.com/">Anaconda Python 2018.12</a>, creating a basic environment satisfies
+all the package needs. By default, <a href="https://pandas.pydata.org/">Pandas</a> is part of a default env install.</p>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
+<p>Installing <code>wsprcsv</code> from a package is, by far, the easiest and fastest way to
+get up running.</p>
+<blockquote>
+<p>NOTE: This process is only valid for pre-releases versions of <code>wsprcsv</code>. Once
+formally released, you will not need to specify the URL at.</p>
+</blockquote>
+<pre><code class="bash"># If using JTSDK-Tools, activate jtsdk-py
+
+conda activate jtsdk-py
+
+# Otherwise, create a Python Virtual Environment for testing:
+conda create -n wsprcsv
+conda activate wsprcsv
+
+# Install wsprcsv package
+pip install -i https://test.pypi.org/simple/ wsprcsv
+</code></pre>
+
+<h2 id="validate-installation">Validate Installation<a class="headerlink" href="#validate-installation" title="Permanent link">&para;</a></h2>
+<p>In the same terminal, verify <a href="https://github.com/KI7MT/python-pypi-packages/tree/master/wsprcsv/">wsprcsv</a> is functional.</p>
+<pre><code class="bash"># In the terminal type
+wsprcsv -h
+
+# You should see the following. (wsprcsv) is the Python Virtual Environment
+# I created used for this with installation test run.
+
+(wsprcsv) (QT-5.5) d:\JTSDK-Tools\tmp &gt;wsprcsv -h
+usage: wsprcsv [-h] -n NAME -s SRCD -c CSVD
+
+Pandas script to convert WSPRnet CSV files
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -n NAME, --name NAME  name of file to convert
+  -s SRCD, --srcd SRCD  source directory of the file
+  -c CSVD, --csvd CSVD  output directory for file
+
+(wsprcsv) (QT-5.5) d:\JTSDK-Tools\tmp &gt;
+</code></pre>
+
+<h2 id="example-usage">Example Usage<a class="headerlink" href="#example-usage" title="Permanent link">&para;</a></h2>
+<p>The location for the <code>source</code> and <code>output</code> directories is up to the user. I used
+<a href="https://github.com/KI7MT/jtsdk-dotnet-core/wiki">JTSDK-Tools Env</a> for the example(s) after having created a Virtual Environment
+named <code>wpsrcsv</code>.</p>
+<h3 id="download-source-csv">Download Source CSV<a class="headerlink" href="#download-source-csv" title="Permanent link">&para;</a></h3>
+<p>I used <a href="http://wsprnet.org/archive/wsprspots-2009-09.csv.zip">wsprspots-2009-01.csv.zip</a> for the first example, however, you can use
+any file you like from the <a href="http://wsprnet.org/drupal/downloads">Download Page</a>.</p>
+<blockquote>
+<p>IMPORTANT: If you are using Windows, download a <code>*.zip</code> file. Linux
+or Unix based platforms, pick a <code>*.gz</code> file.</p>
+<p>CAUTION: The newer the file, the longer the conversion process will take.
+<code>2009-01</code> comes in at <strong>1.5 minutes</strong> &gt;where <code>2018-12</code> takes <strong>20 minutes</strong>
+and has <code>~40+ Million rows</code>.</p>
+<p>NOTE: I find it easier to set variables for each of the three elements, but,
+you can type them is is desired. Also, using variables allows you too loop
+through several archive files at once using a separate script that calls as
+<code>wsprcsv</code> as a conversion utility.</p>
+</blockquote>
+<p>In the same Virtual Environment as the installation, run the following commands:</p>
+<pre><code class="bash"># Set the input variables (change the names and paths to meet your needs).
+# You can enter the commands directly with --csvd and --srcd options.
+# I elected to use variables.
+
+# Win32|64
+set name=wsprspots-2009-01.csv.zip
+set srcd=D:\JTSDK-Tool\tmp
+set csvd=D:\JTSDK-Tools\tmp
+
+# Linux
+name=&quot;$HOME/tmp/wsprspots-2009-01.csv.zip&quot;
+srcd=&quot;$HOME/tmp&quot;
+csvd=&quot;$HOME/tmp&quot;
+
+# Run the wsprcsv command
+
+# Windows
+wsprcsv -n %name% -s %srcd% -c %csvd%
+
+# Linux
+wsprcsv -n $name -s $srcd -c $csvd
+</code></pre>
+
+<h3 id="set-process-variables">Set Process Variables<a class="headerlink" href="#set-process-variables" title="Permanent link">&para;</a></h3>
+<pre><code class="bash"># Commands, as typed in Windows JTSDK-Tools Env.
+
+set name=wsprspots-2009-01.csv.zip
+set srcd=D:\JTSDK-Tools\tmp
+set csvd=D:\JTSDK-Tools\tmp
+wsprcsv -n %name% -s %srcd% -c %csvd%
+</code></pre>
+
+<h3 id="conversion-results">Conversion Results<a class="headerlink" href="#conversion-results" title="Permanent link">&para;</a></h3>
+<p>If all went as expected, you should see the following results.</p>
+<pre><code class="bash">----------------------------------------
+CSV Conversion using Pandas
+----------------------------------------
+
+DATA
+ In-File ...: D:\JTSDK-Tools\tmp\wsprspots-2009-01.csv.zip
+ Out-File ..: D:\JTSDK-Tools\tmp\df-wsprspots-2009-01.csv
+
+ACTIONS
+ * Import CSV
+ * Convert Date
+ * Convert Time
+ * Re-Index Dataframe
+ * Generate DF-CSV
+
+STATS
+ * CSV File Size ....: 7.14 MB
+ * DF-CSV File Size .: 50.14 MB
+ * Import ...........: 2.63 sec
+ * Convert Date .....: 3.27 sec
+ * Convert Time .....: 2.95 sec
+ * Re-Index .........: 0.14 sec
+ * Generate DF-CSV ..: 5.51 sec
+ * Row Count ........: 577,169
+----------------------------------------
+          Total Time : 14.569 sec
+
+Dataframe (first 5 rows)
+
+         date  time    rptr   rgrid  snr       freq    call    grid  pwr  drift  dist   az  band         ver  code
+0  2009-01-01  0000   RA6AS  KN93vn    6  10.140166   DL6NL  JO50cb   20      0  2347   97    10   1.1_r1042     0
+1  2009-01-01  0000    W3HH  EL89vb  -27  10.140166   DL6NL  JO50cb   20      0  7738  291    10  1.01_r1023     0
+2  2009-01-01  0000  PA3GYK  JO21qq  -21  10.140130  EA1FAQ  IN71op   27      0  1357   31    10  1.01_r1023     0
+3  2009-01-01  0000    PD4U  JO22xe  -11   7.040029  EA1FAQ  IN71op   27      0  1425   31     7  1.01_r1023     0
+4  2009-01-01  0000   VK6DI  OF88cd  -26  10.140177  JE5FLM  PM74ah   37      1  7590  196    10  1.01_r1023     0
+
+(wsprcsv) (QT-5.5) d:\JTSDK-Tools\tmp &gt;
+</code></pre>
+
+<h3 id="conversion-results-two">Conversion Results Two<a class="headerlink" href="#conversion-results-two" title="Permanent link">&para;</a></h3>
+<p>This set of results is from the latest full-month archive (<code>2018-12</code>). It
+boasts a staggering <code>43+ Million Rows</code>.</p>
+<pre><code class="bash">----------------------------------------
+CSV Conversion using Pandas
+----------------------------------------
+
+DATA
+ In-File ...: D:\JTSDK-Tools\tmp\wsprspots-2018-12.csv.zip
+ Out-File ..: D:\JTSDK-Tools\tmp\df-wsprspots-2018-12.csv
+
+ACTIONS
+ * Import CSV
+ * Convert Date
+ * Convert Time
+ * Re-Index Dataframe
+ * Generate DF-CSV
+
+STATS
+ * CSV File Size ....: 820.52 MB
+ * DF-CSV File Size .: 3,642.12 MB
+ * Import ...........: 214.58 sec
+ * Convert Date .....: 279.73 sec
+ * Convert Time .....: 243.00 sec
+ * Re-Index .........: 55.26 sec
+ * Generate DF-CSV ..: 449.30 sec
+ * Row Count ........: 43,804,393
+----------------------------------------
+          Total Time : 1285.742 sec
+
+Dataframe (first 5 rows)
+
+         date  time       rptr   rgrid  snr     freq   call    grid  pwr  drift  dist   az  band        ver  code
+0  2018-12-01  0000  2E0ILY/15  IO82qv   -9  0.13762  DK7FC  JN49ik   30      0   878  300    -1  0.8_r3058     0
+1  2018-12-01  0000      DF2IC  JN49jo    2  0.13762  DK7FC  JN49ik   30      0    19   18    -1  0.8_r3058     0
+2  2018-12-01  0000      DF6NM  JN59nj    3  0.13762  DK7FC  JN49ik   30      0   175   91    -1  0.8_r3058     0
+3  2018-12-01  0000   DK7FC/15  JN49ik   11  0.13762  DK7FC  JN49ik   30      0     0    0    -1  0.8_r3058     0
+4  2018-12-01  0000   DL0AO/15  JN59vk    3  0.13762  DK7FC  JN49ik   30      0   223   89    -1  0.8_r3058     0
+
+(wsprcsv) (QT-5.5) d:\JTSDK-Tools\tmp &gt;
+</code></pre>
+
+<h2 id="uninstall">Uninstall<a class="headerlink" href="#uninstall" title="Permanent link">&para;</a></h2>
+<p>To uninstall the script, remembering to use the same Virtual Environment, type
+the following:</p>
+<pre><code class="bash"># Windows and Linux
+make uninstall
+</code></pre>
+
+<p>That should do it. Thanks for testing the script. Be sure to check back often
+as additional features will be added to enhance the current capability.</p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright &copy; 2018 - 2019 Greg Beam, KI7MT</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

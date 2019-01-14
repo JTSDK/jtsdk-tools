@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Greg Beam, KI7MT">
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>PostgreSQL-10.6 - JTSDK Tools</title>
+        <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/docco.min.css">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+        <script src="../../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../../js/bootstrap-3.0.3.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../../..">JTSDK Tools</a>
+                </div>
+
+                <!-- Expanded navigation -->
+                <div class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li >
+                                <a href="../../..">Home</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Installation <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Windows</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Home/">Overview</a>
+</li>
+            
+<li >
+    <a href="../../Install-Prerequisites/">Prerequisites</a>
+</li>
+            
+<li >
+    <a href="../../Third-Party-Installers/">Third Party Installers</a>
+</li>
+            
+<li >
+    <a href="../../Install-Net-Core-SDK/">1. NetCore</a>
+</li>
+            
+<li >
+    <a href="../../Install-VS-Code/">2. VS Code</a>
+</li>
+            
+<li >
+    <a href="../../Install-Git-Client/">3. Git Client</a>
+</li>
+            
+<li >
+    <a href="../../Install-Python/">4. Python</a>
+</li>
+            
+<li >
+    <a href="../../Install-Core-Tools/">5. Core Tools</a>
+</li>
+            
+<li >
+    <a href="../../Install-Asciidoctor/">6. AsciiDoctor</a>
+</li>
+            
+<li >
+    <a href="../../Install-Qt/">7. Qt Tools</a>
+</li>
+            
+<li >
+    <a href="../../Install-Core-Apps/">8. Core Apps</a>
+</li>
+            
+<li >
+    <a href="../../Install-Msys2/">9. MSYS2</a>
+</li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Optional Installs</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../Install-DB-Tools/">* Database Tools</a>
+</li>
+            
+<li >
+    <a href="../../Install-Doc-Tools/">* Doc Tools</a>
+</li>
+            
+<li >
+    <a href="../../Install-Java-Tools/">* Java Tools</a>
+</li>
+            
+<li >
+    <a href="../../Install-Java/">* Java</a>
+</li>
+            
+<li >
+    <a href="../../Install-PostgreSQL/">* PostgreSQL</a>
+</li>
+            
+<li >
+    <a href="../../Install-Redis/">* Redis</a>
+</li>
+            
+<li >
+    <a href="../../Install-WSL/">* WSL</a>
+</li>
+            
+<li >
+    <a href="../../Install-Misc-Tools/">* Misc Tools</a>
+</li>
+            
+<li >
+    <a href="../../Install-Eclipse/">* Eclipse</a>
+</li>
+            
+<li >
+    <a href="../../Install-MSSQL-Server/">* MSSQL</a>
+</li>
+            
+<li >
+    <a href="../../Install-MongoDB/">* MongoDB</a>
+</li>
+            
+<li >
+    <a href="../../Install-MSSQL-Server/">* MSSQL</a>
+</li>
+            
+<li >
+    <a href="../../Install-Visual-Studio/">* Visual Stuidio</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Release Notes</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../release-notes/Release-Notes-3.0.1/">3.0.1</a>
+</li>
+            
+<li >
+    <a href="../../release-notes/Release-Notes-3.0.2/">3.0.2</a>
+</li>
+    </ul>
+  </li>
+            
+  <li class="dropdown-submenu">
+    <a href="#">Upgrades</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../Upgrade-3.0.1/">3.0.1</a>
+</li>
+            
+<li >
+    <a href="../Upgrade-3.0.2/">3.0.2</a>
+</li>
+            
+<li class="active">
+    <a href="./">PostgreSQL-10.6</a>
+</li>
+    </ul>
+  </li>
+    </ul>
+  </li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Linux</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../linux/Home/">Overview</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tools <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../tools/cli-tools-overview/">Overview</a>
+</li>
+                                    
+<li >
+    <a href="../../../tools/jtenv.md">JTEnv</a>
+</li>
+                                    
+<li >
+    <a href="../../../tools/jtconfig.md">JTConfig</a>
+</li>
+                                    
+<li >
+    <a href="../../../tools/jtbuildcm.md">JTBuildcm</a>
+</li>
+                                    
+  <li class="dropdown-submenu">
+    <a href="#">Bets Testing</a>
+    <ul class="dropdown-menu">
+            
+<li >
+    <a href="../../../tools/jtenvjv.md">jtenvjv</a>
+</li>
+            
+<li >
+    <a href="../../../tools/jtenvpy.md">jtenvpy</a>
+</li>
+            
+<li >
+    <a href="../../../tools/wsprcsv/">wsprcsv</a>
+</li>
+            
+<li >
+    <a href="../../../tools/global-tools-overview/">NetCore Global Tools</a>
+</li>
+    </ul>
+  </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Gude <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li >
+    <a href="../../../user-guide/User-Guide-3.0.2/">User Guide</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li >
+                                <a rel="next" href="../Upgrade-3.0.2/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../../../linux/Home/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#overview">Overview</a></li>
+            <li><a href="#step-1-downlod-installer">Step-1 - Downlod Installer</a></li>
+            <li><a href="#step-2-stop-postgresql-server">Step-2 - Stop PostgreSQL Server</a></li>
+            <li><a href="#step-3-run-postgresql-installer">Step-3 - Run PostgreSQL Installer</a></li>
+            <li><a href="#step-4-post-install-bug-fix">Step-4 - Post Install Bug Fix</a></li>
+            <li><a href="#step-5-verify-postgresql-server-version">Step-5 - Verify PostgreSQL Server Version</a></li>
+            <li><a href="#feedback-bug-reports">Feedback / Bug Reports</a></li>
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<table>
+<thead>
+<tr>
+<th>Application Data</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Installer Download</td>
+<td><a href="https://www.enterprisedb.com/downloads/postgres-postgresql-downloads">EDB v10.6 Win-x86-64</a></td>
+</tr>
+<tr>
+<td>Documentation</td>
+<td><a href="https://www.postgresql.org/docs/10/index.html">PostgreSQL 10.6</a></td>
+</tr>
+<tr>
+<td>Release Notes</td>
+<td><a href="https://www.postgresql.org/docs/10/release-10-6.html">PostgreSQL 10.6</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>The following guide is for upgrading to <code>PostgreSQL-10.6</code>. It
+is assumed you have performed the initial installation as outlined in
+<a href="../../Install-PostgreSQL/">PostgreSQL Installation Documentation</a>.</p>
+<h3 id="step-1-downlod-installer">Step-1 - Downlod Installer<a class="headerlink" href="#step-1-downlod-installer" title="Permanent link">&para;</a></h3>
+<p>Download the <a href="https://www.enterprisedb.com/downloads/postgres-postgresql-downloads">EDB v10.6 Win-x86-64</a> installer, ensuring you select the <code>Version 10.6</code> under <code>Win-x86-64 bit</code>.</p>
+<h3 id="step-2-stop-postgresql-server">Step-2 - Stop PostgreSQL Server<a class="headerlink" href="#step-2-stop-postgresql-server" title="Permanent link">&para;</a></h3>
+<p>There are a number of ways to stop the PostgreSQL server instance. For this
+example, I'll be using the <code>Windows Task Manager</code>.</p>
+<pre><code class="shell">* Right-Click the Windows Task Bar, then select Task Manager.
+* Select the Services Tab
+* Scroll down to: postgresql-x64-10
+* Right-Click postgresql-x64-10 and select Stop.
+* Close Windows Task manager
+</code></pre>
+
+<table>
+<thead>
+<tr>
+<th align="center"><img alt="Task Manager" src="../../images/3.0.2/pg-task-manager.PNG?raw=true" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><em>Windows Task Manager</em></td>
+</tr>
+</tbody>
+</table>
+<h3 id="step-3-run-postgresql-installer">Step-3 - Run PostgreSQL Installer<a class="headerlink" href="#step-3-run-postgresql-installer" title="Permanent link">&para;</a></h3>
+<p>Browse to the location where the <code>EDB v10.6 Win-x86-64</code> was saved, and run it. You should not need to change any options, with the exception of <code>Deselecting Stack Builder</code>.</p>
+<blockquote>
+<p>NOTE: During the installation process, the new server version will be started. There is no need to use Windows Task Manager to control the
+re-start.</p>
+</blockquote>
+<h3 id="step-4-post-install-bug-fix">Step-4 - Post Install Bug Fix<a class="headerlink" href="#step-4-post-install-bug-fix" title="Permanent link">&para;</a></h3>
+<p>There is a bug in the installer environment script (<code>pg_env.bat</code>) that adds double-quotes around a critical path variable. This is easily fixed editing the file manually after installation.</p>
+<pre><code class="shell">* Using Windows File Explorer, browse to:
+
+(C|D):\JTSDK-Tools\tools\PostgreSQL\10
+
+* Right-Click on pg_env.bat and select Open with Code (VS Code).
+* Remove the Double-Quotes in Line (4). It should look similar
+to the following when finished:
+
+@SET PATH=D:\JTSDK-Tools\tools\PostgreSQL\10\bin;%PATH%
+
+* Save pg_env.bat and exit VS Code.
+</code></pre>
+
+<h3 id="step-5-verify-postgresql-server-version">Step-5 - Verify PostgreSQL Server Version<a class="headerlink" href="#step-5-verify-postgresql-server-version" title="Permanent link">&para;</a></h3>
+<p>After editing the <code>pg_env.bat</code> file, check the server is working properly by validating the new version.</p>
+<pre><code class="shell">* Browse to and open JTSDK-Env
+* At the prompt, type: psql --version
+</code></pre>
+
+<p>You should see <code>Version 10.6</code> render.</p>
+<table>
+<thead>
+<tr>
+<th align="center"><img alt="PostgreSQL version" src="../../images/3.0.2/pg-version-10.6.PNG?raw=true" /></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><em>PostgreSQL v10.6 Check</em></td>
+</tr>
+</tbody>
+</table>
+<h3 id="feedback-bug-reports">Feedback / Bug Reports<a class="headerlink" href="#feedback-bug-reports" title="Permanent link">&para;</a></h3>
+<p>If you run into problems with the upgrade, submit a ticket on the
+<a href="https://github.com/KI7MT/jtsdk-dotnet-core/issues">Issue Trracker</a>.</p></div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright &copy; 2018 - 2019 Greg Beam, KI7MT</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js" defer></script>
+        <script src="../../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form role="form">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
