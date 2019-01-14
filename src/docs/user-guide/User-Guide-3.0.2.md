@@ -70,15 +70,17 @@ jtenv -h
 
 For building `WSJT-X`, See: [jtbuildcm](../tools/jtbuildcm.md) page for usage.
 
-## WSPR CSV Utility
+## JTEnv Python
+
+For using the `jtenvpy` environment script, See: [jtenvpy](../tools/jtenvpy.md)
+for details.
+
+## WSPR Utility
 
 For using the `wsprcsv` conversion utility, See: [wsprcsv](../tools/wsprcsv.md)
 for details.
 
-## JTEnv Python
 
-For using the `jtenvpy` environment script, See: [wsprcsv](../tools/jtenvpy.md)
-for details.
 
 
 
