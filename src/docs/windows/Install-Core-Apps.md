@@ -30,7 +30,7 @@ setup. If you've not already done so, review the following guides **before**
 checking out and compiling the source code.
 
 - [Prerequisite Tools Installation](Install-Prerequisites.md)
-- [Core Tool Installation](Install-Jtsdk-Core.md)
+- [Core Tool Installation](Install-Core-Tools.md)
 
 ```bash
 # Open a Windows Console, then change directories to the JTSDK-Tools installation
