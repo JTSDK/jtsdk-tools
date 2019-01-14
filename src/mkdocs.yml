@@ -1,0 +1,68 @@
+# Project information
+site_name: 'JTSDK Tools'
+site_description: 'Development Frameworks, Librarys and CLI Appllications'
+site_author: 'Greg Beam, KI7MT'
+
+# Copyright
+copyright: 'Copyright &copy; 2018 - 2019 Greg Beam, KI7MT'
+
+nav:
+    - Home: 'index.md'
+    - Installation:
+      - Windows:
+        - 'Overview': 'windows/Home.md'
+        - 'Prerequisites': 'windows/Install-Prerequisites.md'      
+        - 'Third Party Installers': 'windows/Third-Party-Installers.md'
+        - '1. NetCore': 'windows/Install-Net-Core-SDK.md'
+        - '2. VS Code': 'windows/Install-VS-Code.md'
+        - '3. Git Client': 'windows/Install-Git-Client.md'
+        - '4. Python': 'windows/Install-Python.md'
+        - '5. Core Tools': 'windows/Install-Core-Tools.md'
+        - '6. AsciiDoctor': 'windows/Install-Asciidoctor.md'
+        - '7. Qt Tools': 'windows/Install-Qt.md'
+        - '8. Core Apps': 'windows/Install-Core-Apps.md'
+        - '9. MSYS2': 'windows/Install-Msys2.md'
+        - Optional Installs:
+          - '* Database Tools': 'windows/Install-DB-Tools.md'
+          - '* Doc Tools': 'windows/Install-Doc-Tools.md'
+          - '* Java Tools': 'windows/Install-Java-Tools.md'
+          - '* Java': 'windows/Install-Java.md'
+          - '* PostgreSQL': 'windows/Install-PostgreSQL.md'
+          - '* Redis': 'windows/Install-Redis.md'
+          - '* WSL': 'windows/Install-WSL.md'
+          - '* Misc Tools': 'windows/Install-Misc-Tools.md'
+          - '* Eclipse': 'windows/Install-Eclipse.md'
+          - '* MSSQL': 'windows/Install-MSSQL-Server.md'
+          - '* MongoDB': 'windows/Install-MongoDB.md'
+          - '* MSSQL': 'windows/Install-MSSQL-Server.md'
+          - '* Visual Stuidio': 'windows/Install-Visual-Studio.md'
+        - Release Notes:
+          - '3.0.1': 'windows/release-notes/Release-Notes-3.0.1.md'
+          - '3.0.2': 'windows/release-notes/Release-Notes-3.0.2.md'
+        - Upgrades:
+          - '3.0.1': 'windows/upgrades/Upgrade-3.0.1.md'
+          - '3.0.2': 'windows/upgrades/Upgrade-3.0.2.md'
+          - 'PostgreSQL-10.6': 'windows/upgrades/Postgresql-10.6.md'        
+      - Linux:
+        - 'Overview': 'linux/Home.md'      
+    - Tools:
+      - 'Overview': 'tools/cli-tools-overview.md'
+      - 'JTEnv': 'tools/jtenv.md'
+      - 'JTConfig': 'tools/jtconfig.md'
+      - 'JTBuildcm': 'tools/jtbuildcm.md'
+      - Bets Testing:
+        - 'jtenvjv': 'tools/jtenvjv.md'
+        - 'jtenvpy': 'tools/jtenvpy.md'
+        - 'wsprcsv': 'tools/wsprcsv.md' 
+        - 'NetCore Global Tools': 'tools/global-tools-overview.md'
+    - User Gude:
+      - 'User Guide': 'user-guide/User-Guide-3.0.2.md'    
+# Configuration
+theme:
+  name: 'flatly'
+  language: 'en'
+
+# Extensions
+markdown_extensions:
+  - toc:
+        permalink: true
