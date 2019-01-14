@@ -145,7 +145,7 @@ set srcd=D:\JTSDK-Tool\tmp
 set csvd=D:\JTSDK-Tools\tmp
 
 # Linux
-name="$HOME/tmp/wsprspots-2009-01.csv.zip"
+name="wsprspots-2009-01.csv.zip"
 srcd="$HOME/tmp"
 csvd="$HOME/tmp"
 
@@ -278,7 +278,7 @@ as additional features will be added to enhance the current capability.
 [Python(3)]: https://www.python.org/
 [The Pandas Project]: https://pandas.pydata.org/
 [source-code]: https://github.com/KI7MT/python-pypi-packages.git
-[JTSDK-Tools Env]: https://github.com/KI7MT/jtsdk-dotnet-core/wiki
+[JTSDK-Tools Env]: https://github.com/KI7MT/github.io/jtsdk-tools/
 [wsprspots-2009-01.csv.zip]: http://wsprnet.org/archive/wsprspots-2009-09.csv.zip
 [Download Page]: http://wsprnet.org/drupal/downloads
 [WSPR Spots CSV]: http://wsprnet.org/drupal/downloads
