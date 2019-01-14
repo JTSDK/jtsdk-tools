@@ -8,7 +8,7 @@
 | Description | Various database tools |
 
 The Database tools installation adds a small number of tools used in accessing,
-storing, and managing data storage activity. Ass additional tools are integrated,
+storing, and managing data storage activity. As additional tools are integrated,
 they will be added to the list.
 
 ## Download
@@ -24,14 +24,14 @@ subject to change with each update of `Install-DB-Tools`.
 | :---   | :--- |
 | Sqlite3 | 1.8.0_172 |
 
-## Installation Walkthrough
+## Installation
 
-Browse to, and `double-click` the downloaded [JTSDK-DB-Tools](https://sourceforge.net/projects/jtsdk/files/win32/3.0.0/release/)
-Installer, then follow the steps below.
+Browse to, and `double-click` the downloaded [JTSDK-DB-Tools][] Installer,
+then follow the steps below.
 
 ### Accept License
 
-| ![Accept License](images/jtsdk-db-install/jtsdk-db-install.1.PNG?raw=true) | 
+| ![Accept License](images/jtsdk-db-install/jtsdk-db-install.1.PNG?raw=true) |
 |:--:|
 | *Accept License* |
 
@@ -39,22 +39,26 @@ Installer, then follow the steps below.
 
 Select which drive you you installed `JTSDK-Tools` to. 
 
-| ![Install Location](images/jtsdk-db-install/jtsdk-db-install.2.PNG?raw=true) | 
+| ![Select Install Location](images/jtsdk-db-install/jtsdk-db-install.2.PNG?raw=true) |
 |:--:|
-| *Install Location* |
+| *Select Install Location* |
 
 ### Proceed to Install
 
-| ![Proceed to Install](images/jtsdk-db-install/jtsdk-db-install.3.PNG?raw=true) | 
+| ![Proceed to Install](images/jtsdk-db-install/jtsdk-db-install.3.PNG?raw=true) |
 |:--:|
 | *Proceed to Install* |
 
 ### Finish Installation
 
-| ![Finish Installation](images/jtsdk-db-install/jtsdk-db-install.4.PNG?raw=true) | 
+| ![Finish Installation](images/jtsdk-db-install/jtsdk-db-install.4.PNG?raw=true) |
 |:--:|
 | *Finish Installation* |
 
-This concludes the [JTSDK-DB-Tools](Install-DB-Tools) installation.
+This concludes the [JTSDK-DB-Tools](Install-DB-Tools.md) installation.
 
-### Proceed to Next Step => [Documentation Tools Installation](Install-Doc-Tools)
+## Next Step
+
+Proceed to ==> [Documentation Tools Installation](Install-Doc-Tools.md)
+
+[Sourceforge Release Files]: https://sourceforge.net/projects/jtsdk/files/win32/3.0.0/release/

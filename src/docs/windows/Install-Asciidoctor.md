@@ -2,7 +2,7 @@
 
 | Application Data ||
 | ---| --- |
-| Name        | Asciidoctor |
+| Name        | AsciiDoctor |
 | Version     | 1.5.7.1+ |
 | Arch        | 32 bit |
 | Description | [Ruby](https://www.ruby-lang.org/en/) Based Documentation System |
@@ -32,7 +32,7 @@ Command Prompt.
 
 In the Command Prompt window, type the following
 
-``` shell
+```bash
 cd /d (C|D):\JTSDK-Tools\tools\ruby\2.5.1-2\bin
 setrbvars.cmd
 ```
@@ -45,7 +45,7 @@ setrbvars.cmd
 
 In the Command Prompt window, type the following
 
-``` shell
+```bash
 gem install asciidoctor
 asciidoctor --version
 ```
@@ -58,7 +58,7 @@ asciidoctor --version
 
 In the Command Prompt window, type the following
 
-``` shell
+```bash
 gem install coderay
 ```
 
