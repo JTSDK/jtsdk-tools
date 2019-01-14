@@ -13,6 +13,7 @@ nav:
         - 'Overview': 'windows/Home.md'
         - 'Prerequisites': 'windows/Install-Prerequisites.md'      
         - 'Third Party Installers': 'windows/Third-Party-Installers.md'
+        - 'Version Matrix': 'windows/Version-Matrix.md'        
         - '1. NetCore': 'windows/Install-Net-Core-SDK.md'
         - '2. VS Code': 'windows/Install-VS-Code.md'
         - '3. Git Client': 'windows/Install-Git-Client.md'
