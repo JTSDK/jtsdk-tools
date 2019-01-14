@@ -15,6 +15,6 @@ Under Development
 
 Under Development
 
-## Installation Walk-Through
+## Installation
 
 Under Development
