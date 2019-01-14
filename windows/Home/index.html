@@ -282,20 +282,6 @@
             <li><a href="#optional-installs">Optional Installs</a></li>
             <li><a href="#sections">Sections</a></li>
             <li><a href="#general-overview">General Overview</a></li>
-            <li><a href="#net-core-usage">Net Core Usage</a></li>
-            <li><a href="#language-and-syntax">Language and Syntax</a></li>
-            <li><a href="#setting-jtsdk_home-variable">Setting JTSDK_HOME Variable</a></li>
-            <li><a href="#individual-guides">Individual Guides</a></li>
-            <li><a href="#choosing-64-bit-or-32-bit">Choosing 64-bit or 32-bit</a></li>
-            <li><a href="#system-level-installation">System Level Installation</a></li>
-            <li><a href="#third-party-installers">Third Party Installers</a></li>
-            <li><a href="#tool-chain-matrix">Tool Chain Matrix</a></li>
-            <li><a href="#prerequisite-tools">Prerequisite Tools</a></li>
-            <li><a href="#core-tools">Core Tools</a></li>
-            <li><a href="#documentation-tools">Documentation Tools</a></li>
-            <li><a href="#database-tools">Database Tools</a></li>
-            <li><a href="#python-tools">Python Tools</a></li>
-            <li><a href="#java-tools">Java Tools</a></li>
             <li><a href="#miscellaneous">Miscellaneous</a></li>
     </ul>
 </div></div>
@@ -381,12 +367,12 @@ components the <code>JTSDK Tools Environment</code> will be supporting:</p>
 <p>While not absolute, the order of installation an configuration should be
 followed to prevent missing critical steps, or, missing out on a particular
 feature from another installation process.</p>
-<h2 id="net-core-usage">Net Core Usage<a class="headerlink" href="#net-core-usage" title="Permanent link">&para;</a></h2>
+<h3 id="net-core-usage">Net Core Usage<a class="headerlink" href="#net-core-usage" title="Permanent link">&para;</a></h3>
 <p>At present, <a href="https://docs.microsoft.com/en-us/dotnet/core/index">Net Core Applications</a>
 are only used in setting environment , paths and configuration variable. Its the
 long term goal to convert all <code>Bash</code> and Windows <code>Batch/CMD</code> scripts over to 
 <a href="https://docs.microsoft.com/en-us/dotnet/core/index">Net Core</a>.</p>
-<h2 id="language-and-syntax">Language and Syntax<a class="headerlink" href="#language-and-syntax" title="Permanent link">&para;</a></h2>
+<h3 id="language-and-syntax">Language and Syntax<a class="headerlink" href="#language-and-syntax" title="Permanent link">&para;</a></h3>
 <p>Throughout this guide you will often see the use of <code>(C|D):\JTSDK-Tools</code> or
 reference to <code>JTSDK_HOME</code></p>
 <ul>
@@ -402,7 +388,7 @@ JTSDK_HOME = C:\JTSDK-Tools
 JTSDK_HOME = D:\JTSDK-Tools
 </code></pre>
 
-<h2 id="setting-jtsdk_home-variable">Setting JTSDK_HOME Variable<a class="headerlink" href="#setting-jtsdk_home-variable" title="Permanent link">&para;</a></h2>
+<h3 id="setting-jtsdk_home-variable">Setting JTSDK_HOME Variable<a class="headerlink" href="#setting-jtsdk_home-variable" title="Permanent link">&para;</a></h3>
 <p>On several occasions, you will be required to set <code>JTSDK_HOME</code> temporarily. The
 following shows how to do this for either <code>(C|D)</code> installation locations.</p>
 <pre><code class="shell"># To temporarily set the JTSDK_HOME variable inside a Windows Console
@@ -423,19 +409,19 @@ set JTSDK_HOME=D:\JTSDK-Tools
 if the current console is closed. Likewise, if you have two consoles open,
 setting the variable in Console-1 will <em>NOT</em> make the variable known too nor
 available in Console-2.</p>
-<h2 id="individual-guides">Individual Guides<a class="headerlink" href="#individual-guides" title="Permanent link">&para;</a></h2>
+<h3 id="individual-guides">Individual Guides<a class="headerlink" href="#individual-guides" title="Permanent link">&para;</a></h3>
 <p>Each activity in regards to installation or configuration has its own guide.
 Every effort has been made to make each guide informative, yet direct and to the
 point. The guides are <em>NOT</em> intended to be a tutorial covering the the subject
 area. Most tools have extensive documentation by the original authors, often
 located within the applicaiton folder structure.</p>
-<h2 id="choosing-64-bit-or-32-bit">Choosing 64-bit or 32-bit<a class="headerlink" href="#choosing-64-bit-or-32-bit" title="Permanent link">&para;</a></h2>
+<h3 id="choosing-64-bit-or-32-bit">Choosing 64-bit or 32-bit<a class="headerlink" href="#choosing-64-bit-or-32-bit" title="Permanent link">&para;</a></h3>
 <p>For the most part, any tool that is used to compile--either in-part or whole--
 WSJT applications should be 32-bit on Windows. Tools such as Git, Dotnet, 7-Zip,
 RapidEE, and others, can be 64-bit as they are tools to help users with
 non-compiling tasks. Each guide will have the <code>Required</code> arch-type and indicate
 whether it is acceptable to use 64-bit or not.</p>
-<h2 id="system-level-installation">System Level Installation<a class="headerlink" href="#system-level-installation" title="Permanent link">&para;</a></h2>
+<h3 id="system-level-installation">System Level Installation<a class="headerlink" href="#system-level-installation" title="Permanent link">&para;</a></h3>
 <p>The JTSDK Tool Chain requires thhree packages to be installed at the System Level:</p>
 <ul>
 <li>For 32-bit <code>C:\Program Files (x86)</code></li>
@@ -447,13 +433,13 @@ In either case, the applications must be available when opening a non-privileged
 Windows Console. Many application installers use the system folders by default.
 However, there are no guarantees, and users should verify the location for
 any System Level application requirement.</p>
-<h2 id="third-party-installers">Third Party Installers<a class="headerlink" href="#third-party-installers" title="Permanent link">&para;</a></h2>
+<h3 id="third-party-installers">Third Party Installers<a class="headerlink" href="#third-party-installers" title="Permanent link">&para;</a></h3>
 <blockquote>
 <p>One or more of the tool chain components may be provided by Third Party
 Installers. Users should always check for the latest version of the respective
 installer before installation unless advised otherwise.</p>
 </blockquote>
-<h2 id="tool-chain-matrix">Tool Chain Matrix<a class="headerlink" href="#tool-chain-matrix" title="Permanent link">&para;</a></h2>
+<h3 id="tool-chain-matrix">Tool Chain Matrix<a class="headerlink" href="#tool-chain-matrix" title="Permanent link">&para;</a></h3>
 <p>The <a href="#tool-chain-matrix">Tool Chain Matrix(s)</a> provides a brief description and
 links to each application or framework used within <code>JTSDK-Tools</code>. <code>Installation</code>,
 <code>Configuration</code> and <code>Removal</code> will be outlined in each of the respective
@@ -461,7 +447,7 @@ application or framework documents as appropriate. Collections such as
 <a href="http://www.msys2.org/">MSYS2</a> include many <a href="https://www.gnu.org/software/coreutils/coreutils.html">GNU Core Utils</a>
 that are not outlined specifically in this document. For more information a given
 item, following the links provided.</p>
-<h2 id="prerequisite-tools">Prerequisite Tools<a class="headerlink" href="#prerequisite-tools" title="Permanent link">&para;</a></h2>
+<h3 id="prerequisite-tools">Prerequisite Tools<a class="headerlink" href="#prerequisite-tools" title="Permanent link">&para;</a></h3>
 <p>In order to checkout and compile the <code>JTSDK Net Core Package</code>, users must have
 three applications installed at the <code>system level</code>.</p>
 <blockquote>
@@ -489,7 +475,7 @@ three applications installed at the <code>system level</code>.</p>
 </tr>
 </tbody>
 </table>
-<h2 id="core-tools">Core Tools<a class="headerlink" href="#core-tools" title="Permanent link">&para;</a></h2>
+<h3 id="core-tools">Core Tools<a class="headerlink" href="#core-tools" title="Permanent link">&para;</a></h3>
 <p>The following tools are required and comprise the <code>Core Tool Chain</code>.
 All of the tools in this group are required to buolw <code>WSJT-X</code>, and should be
 considered the bare minimum installation.</p>
@@ -551,7 +537,7 @@ considered the bare minimum installation.</p>
 </tr>
 </tbody>
 </table>
-<h2 id="documentation-tools">Documentation Tools<a class="headerlink" href="#documentation-tools" title="Permanent link">&para;</a></h2>
+<h3 id="documentation-tools">Documentation Tools<a class="headerlink" href="#documentation-tools" title="Permanent link">&para;</a></h3>
 <p>The following Document utilities can be installed in addition to the <code>JTSDK Core Tool Chain</code></p>
 <blockquote>
 <p>See <a href="../Install-Doc-Tools/">Install Doc Tools</a> for details.</p>
@@ -578,7 +564,7 @@ considered the bare minimum installation.</p>
 </tr>
 </tbody>
 </table>
-<h2 id="database-tools">Database Tools<a class="headerlink" href="#database-tools" title="Permanent link">&para;</a></h2>
+<h3 id="database-tools">Database Tools<a class="headerlink" href="#database-tools" title="Permanent link">&para;</a></h3>
 <p>The following tools are general purpose database applications and / or servers.</p>
 <blockquote>
 <p>See <a href="../Install-PostgreSQL/">Install-PostgreSQL</a>, and <a href="../Install-DB-Tools/">Install-DB-Tools</a>
@@ -606,7 +592,7 @@ be added to the <a href="../Install-DB-Tools/">Install-DB-Tools</a> installer.</
 </tr>
 </tbody>
 </table>
-<h2 id="python-tools">Python Tools<a class="headerlink" href="#python-tools" title="Permanent link">&para;</a></h2>
+<h3 id="python-tools">Python Tools<a class="headerlink" href="#python-tools" title="Permanent link">&para;</a></h3>
 <p>The following Python Tools can be installed in addition to the <code>JTSDK Core Tool Chain</code>.</p>
 <blockquote>
 <p>See <a href="../Install-Python/">Install Python</a> for details.</p>
@@ -625,7 +611,7 @@ be added to the <a href="../Install-DB-Tools/">Install-DB-Tools</a> installer.</
 </tr>
 </tbody>
 </table>
-<h2 id="java-tools">Java Tools<a class="headerlink" href="#java-tools" title="Permanent link">&para;</a></h2>
+<h3 id="java-tools">Java Tools<a class="headerlink" href="#java-tools" title="Permanent link">&para;</a></h3>
 <p>The following tools are generally related to <code>Java</code> and associated build activities.
 While applications such as <a href="https://gradle.org/">Gradle</a> and <a href="https://www.eclipse.org/downloads/">Eclipse</a>
 may very well apply to other programming languages, they are most commonly used
