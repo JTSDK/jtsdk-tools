@@ -53,7 +53,7 @@ such as the `RPI 2|3` or similar ARM based computers, performance for demanding
 applications will be sub-par. If you want to take advantage of `Redis`
 capabilities, using embedded devices is not the preferred approach.
 
-## Redis Installation on Windows via Docker Container
+## Install via Docker Container
 
 By far, the easiest way to test applications with Redis on Windows is by
 using a pre-build Docker Container. It's quick, easy, and maintained
@@ -67,7 +67,7 @@ your account, and install docker
 1. [Install Docker Community Edition (CE) for Windows](https://docs.docker.com/docker-for-windows/install/)
 
 >NOTE: This is a good time to check out the [Getting Started](https://docs.docker.com/docker-for-windows/)
->and read through thier [FAQ](https://docs.docker.com/docker-for-windows/faqs/).
+>and read through their [FAQ](https://docs.docker.com/docker-for-windows/faqs/).
 
 Now that you've [Installed Docker](https://docs.docker.com/docker-for-windows/install/),
 you are ready to pull and run the `5.0-Alpine` Docker image. There are many
@@ -81,7 +81,7 @@ testing.
 
 >NOTE: make sure Docker is running before issuing the following command(s).
 
-```shell
+```bash
 # In Windows Powershell or CMD Console, type:
 # 
 # Note: 5.0.3 may not be the latest revision. Always check for the latest version
@@ -95,14 +95,14 @@ checks, run the following commands.
 
 In Windows Powershell or CMD Console:
 
-```shell
+```bash
 # Check Docker disk usage, type
 docker system df
 ```
 
 #### Get the Redis Alpine Container Information
 
-```shell
+```bash
 # Grab the Container Information, type"
 docker ps
 
@@ -117,10 +117,10 @@ Name.....: 5.0.3-alpine
 This concludes the `Docker Redis Installation` section. If you reboot your system.
 re-run the install command from able to re-start the instance.
 
-## Native Linux and WSL Installation
+## Linux and WSL Installation
 
 This installation process describes using [Ubuntu 16.04 thru 18.04](https://www.ubuntu.com/)
-or [Windows Subsystem Linux](Install-WSL). Other Linux based distributions will
+or [Windows Subsystem Linux](Install-WSL.md). Other Linux based distributions will
 be similar. There is `NO` need for a Password, Port re-assignment, IP address
 re-assignment, nor HTTPS setup. A default, out-of-box install, is all that is required for testing.
 
@@ -128,7 +128,7 @@ re-assignment, nor HTTPS setup. A default, out-of-box install, is all that is re
 
 Open `WSL` or `Linux Terminal` and type the following in the shell:
 
-```shell
+```bash
 # In the bash terminal (for Debian|Ubuntu based systems)
 sudo apt update
 sudo apt install redis-server
@@ -154,16 +154,14 @@ in the new `Redis Server`. All commands are in the terminal
 
 * At the command prompt type
 
-```shell
+```bash
 redis-cli
 ```
 
 * At the redis prompt type:
 
-```shell
-
+```bash
 # Note: 127.0.0.1:6379> is the redis prompt, you do not type that part.
-
 127.0.0.1:6379> ping
 
 # Output should be: pong
@@ -171,7 +169,7 @@ redis-cli
 
 * Add a `<key>:<value>` pair
 
-```shell
+```bash
 127.0.0.1:6379> set test "Redis Is Working!!"
 
 # Output should be: OK
@@ -179,7 +177,7 @@ redis-cli
 
 * Retrieve the `<key>:<value>` pair with:
 
-```shell
+```bash
 127.0.0.1:6379> get test
 
 # Output should be: "Redis Is Working!!"
@@ -187,7 +185,7 @@ redis-cli
 
 * Exit the `redis-cli` client
 
-```shell
+```bash
 127.0.0.1:6379> exit
 
 # You should now be back at the Linux prompt
@@ -195,7 +193,7 @@ redis-cli
 
 * Restart Redis Server
 
-```shell
+```bash
 # At the Linux prompt, type
 
 sudo service redis-server restart
@@ -203,7 +201,7 @@ sudo service redis-server restart
 
 * Open Redis Client and Check previous data
 
-```shell
+```bash
 redis-cli
 127.0.0.1:6379> get test
 
@@ -212,9 +210,8 @@ redis-cli
 
 * Exit the Redis CLI
 
-```shell
+```bash
 # Exit redis-cli
-
 127.0.0.1:6379> exit
 
 # You should now be back at the Linux prompt
@@ -228,7 +225,9 @@ redis-cli
 
 ## Conclusion
 
-This concludes the basic installation and testing of the `redis-server`. `Redis` is a highly capable `<key>:<value>` store used by thousands of enterprise applications. For further learning, checkout the following resources:
+This concludes the basic installation and testing of the `redis-server`. `Redis`
+is a highly capable `<key>:<value>` store used by thousands of enterprise
+applications. For further learning, checkout the following resources:
 
 * [Redis explained in 5 minutes](https://www.credera.com/blog/technology-insights/java/redis-explained-5-minutes-less/)
 * [Zero to Master in 30 minutes](https://www.openmymind.net/2011/11/8/Redis-Zero-To-Master-In-30-Minutes-Part-1/)

@@ -12,7 +12,7 @@
 > maintain software while delivering a seamless user experience across all
 > devices.
 >
-> -- <cite>The Qt Company, www.qt.io</cite>
+> -- *The Qt Company, www.qt.io*
 
 ## Background
 
@@ -29,7 +29,7 @@ downloaded during the installation process, but only for selected components.
 
 In an effort to minimize the `initial` download size for users, option-2 
 (the Online Installer) is the preferred method used for setting up `JTSDK`, and
-the installer used for the [Installation Walk-Through](installation-walkthrough).
+the installer used for the [Installation Walk-Through](#installation).
 
 ## Download
 
@@ -41,7 +41,7 @@ provided by this project. Either installer is acceptable.
 - [Download from Qt.io](https://download.qt.io/official_releases/online_installers/qt-unified-windows-x86-online.exe.mirrorlist)
 - [JTSDK Third Party Installer Package](https://sourceforge.net/projects/jtsdk/files/win32/3.0.0/release/)
 
-## Installation Walk-Through
+## Installation
 
 Browse to, then `double-click` the downloaded `Qt Online Installer`, and follow
 the steps below.
@@ -78,23 +78,26 @@ No action required.
 |:--:|
 | *Qt Update Meta Data* |
 
-### Qt Installaiton Folder
+### Qt Installation Folder
 
 >IMPORTANT: The Installation Folder is critical. Use the table below to set the location.
 
-- File Association: This option is up to the end-user. If this instance of `Qt` is the only `Qt` installation on the system, there should be no harm in associating file types. If not, it's up to the user as to whether or not to associate file types.
+File Association: This option is up to the end-user. If this instance of `Qt`
+is the only `Qt` installation on the system, there should be no harm in
+associating file types. If not, it's up to the user as to whether or not to
+associate file types.
 
 ``` shell
 # For C-Drive Installation, set path to:
 
 C:\JTSDK-Tools\tools\Qt
 
-For D-Drive installation, set path to:
+# For D-Drive installation, set path to:
 
 D:\JTSDK-Tools\tools\Qt
 
 # If another drive is used, substitute the drive letter for one
-# of the exmaples above.
+# of the examples above.
 ```
 
 | ![Qt Update Meta Data](images/qt/qt.6.PNG?raw=true) |
@@ -160,13 +163,13 @@ Select next to continue.
 |:--:|
 | *Qt Ready to Install* |
 
-### Qt Install and Maintenance Tool Configuration
+### Maintenance Tool Configuration
 
 Select next to continue.
 
 | ![Qt Install and Configure](images/qt/qt.13.PNG?raw=true) |
 |:--:|
-| *Qt Install and Maintenance Tool Configuration* |
+| *Maintenance Tool Configuration* |
 
 ### Qt Launch
 
@@ -184,4 +187,6 @@ To Ensure `Qt` is functioning properly, launch then close `Qt`.
 
 This concludes the `Qt Tools Installation`.
 
-### Proceed to Next Step => [Core Apps Installatoin](Install-Core-Apps)
+## Next Step
+
+Proceed to ==> [Core Apps Installation](Install-Core-Apps.md)
