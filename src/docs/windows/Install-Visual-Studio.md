@@ -1,4 +1,4 @@
-# Optional - Install Vistual Studio
+# Optional - Install Visual Studio
 
 | Application Data ||
 | ---| --- |
@@ -7,7 +7,7 @@
 | Arch        | 64 bit |
 | Description | Microsoft Visual Studio Integrated Development Environment |
 
-## Helpfull Links
+## Helpful Links
 
 Under Development
 
