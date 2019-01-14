@@ -1,14 +1,14 @@
-# Publishing Global Tools
+# Global Tools
 
 Starting with Dotnet Core SDK 2.1.300, users can publish dotnet core apps to
 their home user sapce, which enables access globally from within.
 
-## Publish Location
+## Publish Locations
 
 - Windows Path: `%USERPROFILE%\.dotnet\tools`
 - Linux / MacOS path: `$HOME/.dotnet/tools`
 
-## From Microsoft
+## About .Net Core
 
 > A .NET Core Global Tool is a special NuGet package that contains a console
 > application. A Global Tool can be installed on your machine on a default
@@ -22,47 +22,55 @@ their home user sapce, which enables access globally from within.
 > - Update the tool.
 > - Uninstall the tool.
 >
-> -- <cite>[Microsoft Documentation Project](https://docs.microsoft.com/en-us/dotnet/core/tools/global-tools)</cite>
+> -- *[Microsoft Documentation Project][]*
 
-## JTSDK Global Tools
+## Description
 
 Where possible, all JTSDK Net Core Applications will support Global Tool
-Installation. The following example shows how to publish `JTConfig`
+Installation. The following example shows how to publish `jtconfig`
 artifacts globally.
 
-### Clone the repository
+## Clone Repository
 
-``` shell
+```bash
 mkdir (C|D):\JTSDK-Tools\tmp
 cd (C|D):\JTSDK-Tools\tmp
-git clone https://github.com/KI7MT/jtsdk-dotnet-core.git
+git clone https://github.com/KI7MT/jtsdk-tools.git
 ```
 
-### Build and Install Artifacts
+## Build and Install
 
-``` shell
+```bash
 dotnet pack -c release -o nupkg
 dotnet tool install --add-source .\nupkg -g JTConfig
 ```
 
-### Run the Application
+## Run Application
 
 Open a Windows Command Prompt, and type the following:
 
 >NOTE: You do not need to be in the `JTSDK Environment`:
 
-``` shell
+```bash
 JTConfig -h
 ```
 
-See Results in [JTConfig Docs](https://github.com/KI7MT/jtsdk-dotnet-core/blob/master/docs/tools/JTConfig.md#usage).
+See Results in [JTConfig Docs][].
 
-### Uninstall The Application
+## Uninstall
 
-``` shell
+```bash
 dotnet tool uninstall -g JTConfig
 ```
 
 ## Additional Artifacts
 
-As additional applications are published in the [JTSDK Net Core Project](https://github.com/KI7MT/jtsdk-dotnet-core), they will be added to the [Main Page Matrix](https://github.com/KI7MT/jtsdk-dotnet-core#global-tool-matrix).
+As additional applications are published in the [JTSDK Tools][], they will be
+added to the [Main Page Matrix][].
+
+<!-- Page Links --------------------------------------------------------------->
+[Microsoft Documentation Project]: https://docs.microsoft.com/en-us/dotnet/core/tools/global-tools
+[JTConfig Docs]: https://github.com/KI7MT/jtsdk-tools/blob/master/docs/tools/JTConfig.md#usage
+[JTSDK Tools]: https://github.com/KI7MT/jtsdk-tools
+[Main Page Matrix]: https://github.com/KI7MT/jtsdk-tools#global-tool-matrix
+[JTConfig Docs]: https://github.com/KI7MT/jtsdk-tools/blob/master/docs/tools/JTConfig.md#usage

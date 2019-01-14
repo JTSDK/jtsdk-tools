@@ -1,4 +1,4 @@
-# Command Line Tools and Status
+# Command Line Tools
 
 The following lists the command line tools available in `JTSDK-Tools v3`. Each
 tool has it's own documentation. To view the documentation for a particular

@@ -1,8 +1,7 @@
-# JTBuild - Compile WSJT-X using Windows Batch
+# JTBuild - Compile WSJT-X
 
 The following is a short walkthrough in building the new
-[WSJT-X Git Repository](https://sourceforge.net/p/wsjt/wsjtx/ci/stable/tree/)
-using `JTBuild`.
+[WSJT-X Git Repository][] using `JTBuild`.
 
 The build script does not depend on Git, nor has any interaction with Git. If the
 user wishes to build from different URL / Repository, all that is
@@ -19,7 +18,7 @@ path.
 
 ## Available Options
 
-``` shell
+```bash
 # In JTSDK-Tools Environment
 JTBuild rinstall
 JTBuild dinstall
@@ -167,3 +166,5 @@ Output : (C|D):\JTSDK-Tools\tmp\wsjtx-output\qt\5.5\1.9.2\Release\{build, instal
 In theory, you should be able to build any `Recent (1.8 - 1.9)` branch or tag
 as long as the `build.txt` file is updated with the correct Source and
 Destination locations.
+
+[WSJT-X Git Repository]: https://sourceforge.net/p/wsjt/wsjtx/ci/stable/tree/
