@@ -59,7 +59,6 @@ options.
 |:--:|
 | *Additional Tasks* |
 
-
 ### Ready to Install
 
 | ![Start Installer](images/vscode/vscode.6.PNG?raw=true) |
@@ -101,6 +100,8 @@ needs
 There are hundreds of powerful extensions. Learning them can take a fair amount
 of time, but, it is well worth the effort in the long run.
 
-This concludes the [VS Code Installation](Install-VS-Code).
+This concludes the [VS Code Installation](Install-VS-Code.md).
 
-### Proceed to Next Step => [Git Client Install](Install-Git-Client)
+## Next Step
+
+Proceed to ==> [Git Client Install](Install-Git-Client.md)
