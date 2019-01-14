@@ -24,9 +24,4 @@ nav:
 theme:
   name: 'flatly'
   language: 'en'
-  palette:
-    primary: 'indigo'
-    accent: 'indigo'
-  font:
-    text: 'Ubuntu'
-    code: 'Ubuntu Mono'
+
