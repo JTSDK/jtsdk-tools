@@ -1,4 +1,4 @@
-# Global Tools
+# .Net Core Global Tools
 
 Starting with Dotnet Core SDK 2.1.300, users can publish dotnet core apps to
 their home user sapce, which enables access globally from within.
@@ -70,7 +70,7 @@ added to the [Main Page Matrix][].
 
 <!-- Page Links --------------------------------------------------------------->
 [Microsoft Documentation Project]: https://docs.microsoft.com/en-us/dotnet/core/tools/global-tools
-[JTConfig Docs]: https://github.com/KI7MT/jtsdk-tools/blob/master/docs/tools/JTConfig.md#usage
+[JTConfig Docs]: https://github.com/KI7MT/jtsdk-tools/blob/master/docs/tools/jtconfig.md#usage
 [JTSDK Tools]: https://github.com/KI7MT/jtsdk-tools
 [Main Page Matrix]: https://github.com/KI7MT/jtsdk-tools#global-tool-matrix
-[JTConfig Docs]: https://github.com/KI7MT/jtsdk-tools/blob/master/docs/tools/JTConfig.md#usage
+[JTConfig Docs]: https://github.com/KI7MT/jtsdk-tools/blob/master/docs/tools/jtconfig.md#usage

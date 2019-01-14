@@ -4,25 +4,21 @@ site_description: 'Development Frameworks, Librarys and CLI Appllications'
 site_author: 'Greg Beam, KI7MT'
 
 # Repository
-repo_name: 'jysdk-tools/docs'
 repo_url: 'https://github.com/ki7mt/jtsdk-tools'
 
 # Copyright
 copyright: 'Copyright &copy; 2018 - 2019 Greg Beam, KI7MT'
 
 nav:
-    - Home: 'README.md'
+    - Home: 'index.md'
     - Tools:
-      - 'Global Tools': 'tools/global-tools-overview.md'    
-      - 'JTBuildcm': 'tools/jtbuildcm.md'
-      - 'JTBuildjv': 'tools/jtbuildjv.md'
-      - 'JTBuildpy': 'tools/jtbuildpy.md'
-      - 'JTConfig': 'tools/jtconfig.md'
-      - 'JTConfigjv': 'tools/jtconfigjv.md'
-      - 'JTConfigpy': 'tools/jtconfigpy.md'
+      - 'Overview': 'tools/cli-tools-overview.md'
       - 'JTEnv': 'tools/jtenv.md'
       - 'JTEnvjv': 'tools/jtenvjv.md'
       - 'JTEnvpy': 'tools/jtenvpy.md'
+      - 'JTConfig': 'tools/jtconfig.md'
+      - 'JTBuildcm': 'tools/jtbuildcm.md'
+      - 'NetCore Global Tools': 'tools/global-tools-overview.md'
 
 # Configuration
 theme:
@@ -34,12 +30,3 @@ theme:
   font:
     text: 'Ubuntu'
     code: 'Ubuntu Mono'
-
-# Extensions
-markdown_extensions:
-  - admonition
-#  - pymdownx.superfences
-  - codehilite:
-      guess_lang: false
-  - toc:
-      permalink: false

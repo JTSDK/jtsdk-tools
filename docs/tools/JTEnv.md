@@ -1,4 +1,4 @@
-# JTEnv - Environment Application using C-Charp
+# JTEnv - Environment Using C#
 
 | Application Data ||
 | ---| --- |
@@ -19,7 +19,8 @@
 
 ## Usage
 
-There are three groups of options available through this small app: `User`, `Java`, and `System`.
+There are three groups of options available through this small app: `User`,
+`Java`, and `System`.
 
 >NOTE: the options listed are but a small subset of what is available at any
 given time. However, the items listed are of particular interest to `JTSDK-Tools`.

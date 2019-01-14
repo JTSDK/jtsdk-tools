@@ -1,4 +1,4 @@
-# Command Line Tools
+# CLI Tools Overview
 
 The following lists the command line tools available in `JTSDK-Tools v3`. Each
 tool has it's own documentation. To view the documentation for a particular
@@ -33,20 +33,18 @@ will be displayed in path section.
 
 |Name | Command | Language | Status | Description |
 |:-----|:-----|:-----|:------|:-----|
-[JTEnv](tools/JTEnv.md)      | jtenv -h    | C-Sharp | Release | Show environment variables using C# / .Net Core
-[JTEnvJV](tools/JTEnvJV.md)  | jtenv-jv -h | Java    | Release | same as above using Java
-[JTEnvPY ](tools/JTEnvPY.md) | jtenv-py -h | Pyython | Release | same as above using Python
+[jtenv](jtenv.md)      | jtenv -h    | C-Sharp | Release | Show environment variables using C# / .Net Core
+[jtenvjv](jtenvjv.md)  | jtenv-jv -h | Java    | Release | same as above using Java
+[jtenvpy](jtenvpy.md) | jtenv-py -h | Python  | Release | same as above using Python
 
 ## Configuration
 
 The configuration scripts set various options for controlling the environment,
 changing tool-chains, and other runtime activities.
 
-|Name | Command | Language | Status | Description |
+|Name | Command | Language  | Status | Description |
 |:-----|:-----|:-----|:-----|:-----|
-[JTConfig.dll](tools/JTConfig.md)  | jtconfig -h    | C-Sharp | Release     | Configure runtime variables
-[JTConfigJV](tools/JTConfigJV.md ) | jtconfig-jv -h | Java    | Development | same as above using Java
-[JTConfigPY](tools/JTConfigPY.md)  | jtconfig-py -h | Python  | Development | same as above using Python
+[jtconfig](jtconfig.md)     | jtconfig -h    | C-Sharp | Release     | Configure runtime variables
 
 ## WSJT-X Compiling
 
@@ -54,10 +52,7 @@ These applications are used to compile `WSJT-X` from source code.
 
 |Name | Command | Language | Status | Description |
 |:-----|:-----|:-----|:-----|:-----|
-[JTBuild](tools/JTBuild.md)     | jtbuild-cs -h | C-Sharp | Development | same as above using C-Sharp
-[JTBuildCM](tools/JTBuildCM.md) | jtbuild-cm -h | Batch   | Release     | Compile WSJT-X using Windows Batch
-[JTBuildJV](tools/JTBuildJV.md) | jtbuild-jv -h | Java    | Development | same as above using Java
-[JTBuildPY](tools/JTBuildPY.md) | jtbuild-py -h | Python  | Development | same as above using Python
+[jtbuildcm](jtbuildcm.md)   | jtbuild-cm -h | Batch   | Release     | Compile WSJT-X using Windows Batch
 
 ## Hamlib Compiling
 
@@ -68,7 +63,6 @@ If and when this is made possible, the appropriate scripts will be added to the
 matrix.
 
 |Name | Command | Language | Status| Description |
-:-----|:-----|:-----|:-----|:-----|
-[build-hamlib.sh]()  | build-hamlib -h | Bash | Release | Compile Hamlib Library for Windows
-[build-hamlib-jv]()  | build-hamlib -h | Bash | Deferred | Investigation use with MSYS2
-[build-hamlib-py]()  | build-hamlib -h | Bash | Deferred | Investigating use with MSYS2
+|:-----|:-----|:-----|:-----|:-----|
+|`build-hamlib.sh` | build-hamlib -h | Bash | Release | Compile Hamlib Library for Windows
+|`build-hamlib-py` | build-hamlib -h | Bash | Deferred | Investigating use with MSYS2

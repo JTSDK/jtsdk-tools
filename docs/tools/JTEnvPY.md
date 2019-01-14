@@ -1,8 +1,8 @@
-# JTEnv-py-jv - Environment Application using Python
+# JTEnvpy - Environment Using Python
 
 | Application Data ||
 | ---| --- |
-| Name        | JTEnv-py |
+| Name        | jtenvpy |
 | Version     | 3.0.1 |
 | Arch        | 64 bit preferred |
 | Status | Release |

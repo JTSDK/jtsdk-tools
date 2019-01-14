@@ -8,7 +8,7 @@ user wishes to build from different URL / Repository, all that is
 required is to update the `build.txt` file with the new checkout
 path.
 
->IMPORTANT
+>IMPORTANT:
 >- This script is temporary, and may be removed at any time. The
 >script will persist until an appropriate `.Net Core` application can replace
 >the functionality.
@@ -29,7 +29,9 @@ JTBuild docs
 ```
 
 ## Build Options
-Only four options are available in this script. Use `jtconfig -h` for assistance with setting these options.
+
+Only four options are available in this script. Use `jtconfig -h` for assistance
+with setting these options.
 
 | Item        | Action             | Description   |
 | :-----------|--------------------|---------------|
@@ -50,7 +52,7 @@ of interest, SRCD and DEST. Only the paths should change, do not change the pref
 
 For this example, the file contains the following:
 
-``` shell
+```bash
 # For use with JTBuild only
 # - Only the paths need to be changed
 # - Do not use spaces in the paths as the build will fail
@@ -74,7 +76,7 @@ you would like a different Destination directory, update the DEST path.
 ## Building WSJT-X From Sourceforge
 
 It should not matter which repository service is used. For this example, we'll
-being using `Sourceforge` and the [WSJT-X Master Branch](https://sourceforge.net/p/wsjt/wsjtx/ci/master/tree/)
+being using `Sourceforge` and the [WSJT-X Master Branch][].
 
 As noted earlier, `JTBuild` does not know of, nor is it concerned with
 Git. All repository management should be performed outside of the
@@ -86,7 +88,7 @@ You can use any Git Client you like. The only things that are of concern to the
 `JTBuild` script is the full path including the checkout-name, and the
 destination directory. For this build example, we'll be using the following:
 
-``` shell
+```bash
 Checkout Type ..........: Anonymous
 Git Repo URL ...........: https://git.code.sf.net/p/wsjt/wsjtx 
 Git Client .............: Git-Bash or Git-CMD
@@ -102,7 +104,7 @@ following command:
 >Note - You can change the final folder name if you wish. However, make sure to
 update the `build.txt` file if you do.
 
-``` shell
+```bash
 # Clone WSJT-X
 
 * Using Windows Console:
@@ -126,8 +128,9 @@ destination locations.
 You can use any of the items in `Available Build Commands`. For this example
 we'll build the Master Release Install target.
 
-``` shell
-# In a Windows Command Prompt or Git-Bash Terminal, change directory to the source location
+```bash
+# In a Windows Command Prompt or Git-Bash Terminal, change directory to the
+# source location
 
 Windows CMD
 cd /d (C|D):\JTSDK-Tools\tmp\wsjtx
@@ -168,3 +171,4 @@ as long as the `build.txt` file is updated with the correct Source and
 Destination locations.
 
 [WSJT-X Git Repository]: https://sourceforge.net/p/wsjt/wsjtx/ci/stable/tree/
+[WSJT-X Master Branch]: https://sourceforge.net/p/wsjt/wsjtx/ci/master/tree/

@@ -1,4 +1,4 @@
-# JTConfig - CLI Configuration Application using C-Sharp
+# JTConfig - Configuration Uing C-Sharp
 
 | Application Data ||
 | ---| --- |
