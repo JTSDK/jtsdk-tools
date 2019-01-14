@@ -23,16 +23,16 @@ generic Linux support, and additional Ubuntu / Debian specific artifacts.
 - Linux - Unsupported at this time.
 - Arm Devices - Unsupported at this time.
 
-## Installation Walkthrough
+## Installation
 
 Installation of this package should follow the tool-chain installation and
 setup. If you've not already done so, review the following guides **before**
 checking out and compiling the source code.
 
-- [Prerequisite Tools Installation](Install-Prerequisites)
-- [Core Tool Installation](Install-Jtsdk-Core)
+- [Prerequisite Tools Installation](Install-Prerequisites.md)
+- [Core Tool Installation](Install-Jtsdk-Core.md)
 
-``` shell
+```bash
 # Open a Windows Console, then change directories to the JTSDK-Tools installation
 cd /d (C|D):\JTSDK-Tools
 
@@ -57,7 +57,7 @@ If the source clone is still present on the system, upgrading is the same as
 installation, with an additional pull command. If not, use the installation steps
 from above.
 
-``` shell
+```bash
 # Change directories to the JTSDK-Tools installation
 cd /d (C|D):\JTSDK-Tools
 
@@ -79,4 +79,6 @@ make install
 
 This concludes the installation and / or upgrade for `JTSDK Core Applications`.
 
-### Proceed to Next Step => [MSYS2 Configuration](Install-Msys2)
+## Next Step
+
+Proceed to => [MSYS2 Configuration](Install-Msys2.md)

@@ -5,9 +5,10 @@
 | Name        | Asciidoctor |
 | Version     | 1.5.7.1+ |
 | Arch        | 32 bit |
-| Description | [Ruby](https://www.ruby-lang.org/en/) Documentation System |
+| Description | [Ruby](https://www.ruby-lang.org/en/) Based Documentation System |
 
-> [AsciiDoctor](https://asciidoctor.org/) is a fast text processor and publishing tool-chain for converting AsciiDoc content to HTML5, DocBook, PDF, and other formats.
+>[AsciiDoctor](https://asciidoctor.org/) is a fast text processor and publishing
+>tool-chain for converting AsciiDoc content to HTML5, DocBook, PDF, and other formats.
 >
 > --*The AsciiDoctor Project, AsciiDoctor.org*
 

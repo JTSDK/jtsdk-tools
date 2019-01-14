@@ -7,16 +7,6 @@
 | Arch        | 64 Bit |
 | Description | Applications and Frameworks used in JTSDK v3 |
 
-## Page Index
-
-1. [Download](#download)
-1. [Installation](#installation)
-   - [Accept License](#accept-license)
-   - [Select Install Location](#select-install-location)
-   - [Proceed to Install]($proceed-to-install)
-   - [Finish Installation](#finish-installation)
-1. [Proceed to Next Step](#proceed-to-next-step)
-
 ## Download
 
 `Required`: From [release folder][], download the latest version of
@@ -38,27 +28,27 @@ Browse to, then `double-click` the downloaded JTSDK Core Tools Installer.
 
 ### Select Install Location
 
-Select which drive you wish the installer to use. 
+Select which drive you wish the installer to use.
 
 >NOTE: The base install folder is fixed to `JTSDK-Tools`, and cannot be changed.
 >Only the drive location `(C|D|E)` and so on, can be changed.
 
-| ![Install Location](images/jtsdk-core-install/jtsdk-core-install.2.PNG?raw=true) | 
+| ![Select Install Location](images/jtsdk-core-install/jtsdk-core-install.2.PNG?raw=true) |
 |:--:|
-| *Install Location* |
+| *Select Install Location* |
 
 ### Proceed to Install
 
-| ![Proceed to Install](images/jtsdk-core-install/jtsdk-core-install.3.PNG?raw=true) | 
+| ![Proceed to Install](images/jtsdk-core-install/jtsdk-core-install.3.PNG?raw=true) |
 |:--:|
 | *Proceed to Install* |
 
 ### Install Progress
 
->NOTE: Depending on overall system speed, the isntallation can take several
+>NOTE: Depending on overall system speed, the installation can take several
 minutes to complete.
 
-| ![Install Progress](images/jtsdk-core-install/jtsdk-core-install.4.PNG?raw=true) | 
+| ![Install Progress](images/jtsdk-core-install/jtsdk-core-install.4.PNG?raw=true) |
 |:--:|
 | *Install Progress* |
 
@@ -72,7 +62,7 @@ This concludes the `Core Tools` portion of the installation.
 
 ## Proceed to Next Step
 
-Next Step => [Python Installation](Install-Python)
+Next Step => [Python Installation](Install-Python.md)
 
 [Sourceforge Release Files]: https://sourceforge.net/projects/jtsdk/files/win32/3.0.0/release/
 [release folder]: https://sourceforge.net/projects/jtsdk/files/win32/3.0.0/release/
