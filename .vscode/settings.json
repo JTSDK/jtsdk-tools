@@ -1,0 +1,24 @@
+{
+    "cSpell.words": [
+        "autorun",
+        "build",
+        "dconfig",
+        "dinstall",
+        "hamlib",
+        "jtbuild",
+        "jtbuildcm",
+        "jtbuildpy",
+        "jtconfig",
+        "jtenv",
+        "jtenvjv",
+        "jtenvpy",
+        "jv",
+        "mkdir",
+        "nupkg",
+        "rconfig",
+        "rinstall",
+        "sh",
+        "srcd",
+        "wsjtx"
+    ]
+}
