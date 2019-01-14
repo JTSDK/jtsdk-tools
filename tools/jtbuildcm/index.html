@@ -8,7 +8,7 @@
         <meta name="author" content="Greg Beam, KI7MT">
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Environment - JTSDK Tools</title>
+        <title>jtbuildcm - JTSDK Tools</title>
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -198,7 +198,7 @@
   </li>
                                 </ul>
                             </li>
-                            <li class="dropdown">
+                            <li class="dropdown active">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tools <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
@@ -207,15 +207,15 @@
 </li>
                                     
 <li >
-    <a href="../jtenv.md">jtenv</a>
+    <a href="../jtenv/">jtenv</a>
 </li>
                                     
 <li >
     <a href="../jtconfig/">jtconfig</a>
 </li>
                                     
-<li >
-    <a href="../jtbuildcm.md">jtbuildcm</a>
+<li class="active">
+    <a href="./">jtbuildcm</a>
 </li>
                                     
   <li class="dropdown-submenu">
@@ -223,7 +223,7 @@
     <ul class="dropdown-menu">
             
 <li >
-    <a href="../jtenvjv.md">jtenvjv</a>
+    <a href="../jtenvjv/">jtenvjv</a>
 </li>
             
 <li >
@@ -258,6 +258,16 @@
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
+                            <li >
+                                <a rel="next" href="../jtconfig/">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li >
+                                <a rel="prev" href="../jtenvjv/">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
                     </ul>
                 </div>
             </div>
@@ -266,160 +276,183 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#environment">Environment</a></li>
-            <li><a href="#available-options">Available Options</a></li>
-            <li><a href="#usage">Usage</a></li>
+        <li class="main active"><a href="#build-wsjt-x">Build WSJT-X</a></li>
+            <li><a href="#build-targets">Build Targets</a></li>
+            <li><a href="#build-options">Build Options</a></li>
+            <li><a href="#default-profile">Default Profile</a></li>
+            <li><a href="#using-sourceforge">Using Sourceforge</a></li>
+            <li><a href="#summary">Summary</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="environment">Environment<a class="headerlink" href="#environment" title="Permanent link">&para;</a></h1>
-<table>
-<thead>
-<tr>
-<th>Application Data</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Name</td>
-<td>JTEnv</td>
-</tr>
-<tr>
-<td>Version</td>
-<td>3.0.1</td>
-</tr>
-<tr>
-<td>Arch</td>
-<td>64 bit preferred</td>
-</tr>
-<tr>
-<td>Status</td>
-<td>Release</td>
-</tr>
-<tr>
-<td>Description</td>
-<td>C-Sharp application to list environment variables</td>
-</tr>
-</tbody>
-</table>
-<h2 id="available-options">Available Options<a class="headerlink" href="#available-options" title="Permanent link">&para;</a></h2>
-<ul>
-<li><code>JTEnv</code> is a quick-check utility to used to verify environment variables.</li>
-<li>There are three groups currently supported:</li>
-<li>User - lists basic user path variables</li>
-<li>Java - lists commonly used / required Java related variables</li>
-<li>System - common system variables such as <code>OS, ARCH</code>, etc.</li>
-<li>JTSDK - variable applicable to the JTSDK-Tools environment</li>
-</ul>
-<h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
-<p>There are three groups of options available through this small app: <code>User</code>,
-<code>Java</code>, and <code>System</code>.</p>
+<h1 id="build-wsjt-x">Build WSJT-X<a class="headerlink" href="#build-wsjt-x" title="Permanent link">&para;</a></h1>
+<p>The following is a short walkthrough in building the new
+<a href="https://sourceforge.net/p/wsjt/wsjtx/ci/stable/tree/">WSJT-X Git Repository</a> using <code>jtbuild</code>.</p>
+<p>The build script does not depend on Git, nor has any interaction with Git. If the
+user wishes to build from different URL / Repository, all that is
+required is to update the <code>build.txt</code> file with the new checkout
+path.</p>
 <blockquote>
-<p>NOTE: the options listed are but a small subset of what is available at any
-given time. However, the items listed are of particular interest to <code>JTSDK-Tools</code>.</p>
+<p>IMPORTANT:
+- This script is temporary, and may be removed at any time. The
+script will persist until an appropriate <code>.Net Core</code> application can replace
+the functionality.</p>
+<ul>
+<li>Target specific custom builds have been ommitted from this release. If
+deemed required, it will be added to the <code>.Net Core</code> replacement application.</li>
+</ul>
 </blockquote>
-<h3 id="list-help">List Help<a class="headerlink" href="#list-help" title="Permanent link">&para;</a></h3>
-<pre><code class="bash"># In the JTSDK-Tools Environment
-jtenv -h
-
-# From Windows Command Prompt: cd /d (C|D):\JTSDK-Tools\tools\apps
-dotnet JTEnv -h
+<h2 id="build-targets">Build Targets<a class="headerlink" href="#build-targets" title="Permanent link">&para;</a></h2>
+<pre><code class="bash"># In JTSDK-Tools Environment
+jtbuild rinstall
+jtbuild dinstall
+jtbuild rconfig
+jtbuild dconfig
+jtbuild package
+jtbuild docs
 </code></pre>
 
+<h2 id="build-options">Build Options<a class="headerlink" href="#build-options" title="Permanent link">&para;</a></h2>
+<p>Only four options are available in this script. Use <code>jtconfig -h</code> for assistance
+with setting these options.</p>
 <table>
 <thead>
 <tr>
-<th align="center"><img alt="Help Menu" src="../images/JTEnv/jtenv.1.PNG?raw=true" /></th>
+<th align="left">Item</th>
+<th>Action</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center"><em>Help Menu</em></td>
+<td align="left">qt59</td>
+<td>enable or disable</td>
+<td>Use QT 5.9.5</td>
+</tr>
+<tr>
+<td align="left">clean</td>
+<td>enable or disable</td>
+<td>Clean Build tree before compile</td>
+</tr>
+<tr>
+<td align="left">reconfigure</td>
+<td>enable or disable</td>
+<td>Reconfigure source tree before compile</td>
+</tr>
+<tr>
+<td align="left">autorun</td>
+<td>enable or disable</td>
+<td>Run WSJT-X after compiling</td>
 </tr>
 </tbody>
 </table>
-<h3 id="list-all-option-groups">List All Option Groups<a class="headerlink" href="#list-all-option-groups" title="Permanent link">&para;</a></h3>
-<pre><code class="bash"># In the JTSDK-Tools Environment
-jtenv -a
+<p>The actions are the same as within the standard SVN build script.</p>
+<hr />
+<h2 id="default-profile">Default Profile<a class="headerlink" href="#default-profile" title="Permanent link">&para;</a></h2>
+<p>Source and Destination directories are provided by the <code>built.txt</code>, located
+at <code>(C|D):\JTSDK-Tools\tmp\build.txt</code> The <code>build.txt</code> file contains just two lines
+of interest, SRCD and DEST. Only the paths should change, do not change the prefix.</p>
+<p>For this example, the file contains the following:</p>
+<pre><code class="bash"># For use with jtbuild only
+# - Only the paths need to be changed
+# - Do not use spaces in the paths as the build will fail
+# - Ensure there is only one space between the prefix and path
 
-# From Windows Command Prompt: cd /d (C|D):\JTSDK-Tools\tools\apps
-dotnet JTEnv -a
+# Edit the next line to set Source Location
+SRCD D:\JTSDK-Tools\tmp\wsjtx
+
+# Edit the next line to set Destination Directory
+DEST D:\JTSDK-Tools\tmp\wsjtx-output
 </code></pre>
 
-<table>
-<thead>
-<tr>
-<th align="center"><img alt="All Variable Groups" src="../images/JTEnv/jtenv.2.PNG?raw=true" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center"><em>All Groups</em></td>
-</tr>
-</tbody>
-</table>
-<h3 id="list-user-group">List User Group<a class="headerlink" href="#list-user-group" title="Permanent link">&para;</a></h3>
-<pre><code class="bash"># In the JTSDK-Tools Environment
-jtenv -u
-
-# From Windows Command Prompt: cd /d (C|D):\JTSDK-Tools\tools\apps
-dotnet JTEnv -u
+<ul>
+<li>SRCD represents the location and name of the of the repository checkout</li>
+<li>DEST is the root location where the artifacts will be located.</li>
+</ul>
+<p>If you wish to use a different checkout location, update the SRD path. If
+you would like a different Destination directory, update the DEST path.</p>
+<h2 id="using-sourceforge">Using Sourceforge<a class="headerlink" href="#using-sourceforge" title="Permanent link">&para;</a></h2>
+<p>It should not matter which repository service is used. For this example, we'll
+being using <code>Sourceforge</code> and the <a href="https://sourceforge.net/p/wsjt/wsjtx/ci/master/tree/">WSJT-X Master Branch</a>.</p>
+<p>As noted earlier, <code>jtbuild</code> does not know of, nor is it concerned with
+Git. All repository management should be performed outside of the
+<code>jtbuild</code> script by using an appropriate Git Client.</p>
+<h3 id="clone-repository">Clone Repository<a class="headerlink" href="#clone-repository" title="Permanent link">&para;</a></h3>
+<p>You can use any Git Client you like. The only things that are of concern to the
+<code>jtbuild</code> script is the full path including the checkout-name, and the
+destination directory. For this build example, we'll be using the following:</p>
+<pre><code class="bash">Checkout Type ..........: Anonymous
+Git Repo URL ...........: https://git.code.sf.net/p/wsjt/wsjtx 
+Git Client .............: Git-Bash or Git-CMD
+Source Directory .......: (C|D):\JTSDK-Tools\tmp\wsjtx
+Destination Directory ..: (C|D):\JTSDK-Tools\wsjtx-output
 </code></pre>
 
-<table>
-<thead>
-<tr>
-<th align="center"><img alt="User Group" src="../images/JTEnv/jtenv.3.PNG?raw=true" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center"><em>User Group</em></td>
-</tr>
-</tbody>
-</table>
-<h3 id="list-java-group">List Java Group<a class="headerlink" href="#list-java-group" title="Permanent link">&para;</a></h3>
-<pre><code class="bash"># In the JTSDK-Tools Environment
-jtenv -j
+<h4 id="step-1-clone-repository"><strong>Step-1: Clone Repository</strong><a class="headerlink" href="#step-1-clone-repository" title="Permanent link">&para;</a></h4>
+<p>Open a Windows Command Prompt or Git-Bash terminal, and checkout WSJT-X with the
+following command:</p>
+<blockquote>
+<p>Note - You can change the final folder name if you wish. However, make sure to
+update the <code>build.txt</code> file if you do.</p>
+</blockquote>
+<pre><code class="bash"># Clone WSJT-X
 
-# From Windows Command Prompt: cd /d (C|D):\JTSDK-Tools\tools\apps
-dotnet JTEnv -j
+* Using Windows Console:
+git clone https://git.code.sf.net/p/wsjt/wsjtx (C|D):\JTSDK-Tools\tmp\wsjtx
+
+* Using Git-Bash
+git clone https://git.code.sf.net/p/wsjt/wsjtx /(c|d)/JTSDK-Tools/tmp/wsjtx
+
+Both commands should yield the same results, a new checkout in: (C|D):\JTSDK-Tools\tmp\wsjtx
 </code></pre>
 
-<table>
-<thead>
-<tr>
-<th align="center"><img alt="Java Group" src="../images/JTEnv/jtenv.3.PNG?raw=true" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center"><em>Java Group</em></td>
-</tr>
-</tbody>
-</table>
-<h3 id="list-system-group">List System Group<a class="headerlink" href="#list-system-group" title="Permanent link">&para;</a></h3>
-<pre><code class="bash"># In the JTSDK-Tools Environment
-jtenv -s
+<h4 id="step-2-update-buildtxt-file"><strong>Step-2: Update build.txt File</strong><a class="headerlink" href="#step-2-update-buildtxt-file" title="Permanent link">&para;</a></h4>
+<p>At this point, ensure you have updated both the SRCD and DEST path locations
+in <code>(C|D):\JTSDK-Tools\tmp\build.txt</code> with your choices in checkout and
+destination locations.</p>
+<h4 id="step-3-build-master-branch"><strong>Step-3: Build Master Branch</strong><a class="headerlink" href="#step-3-build-master-branch" title="Permanent link">&para;</a></h4>
+<p>You can use any of the items in <code>Available Build Commands</code>. For this example
+we'll build the Master Release Install target.</p>
+<pre><code class="bash"># In a Windows Command Prompt or Git-Bash Terminal, change directory to the
+# source location
 
-# From Windows Command Prompt: cd /d (C|D):\JTSDK-Tools\tools\apps
-dotnet JTEnv -s
+#Windows CMD
+cd /d (C|D):\JTSDK-Tools\tmp\wsjtx
+
+#Git-Bash:
+cd /(c|d)/JTSDK/tmp/wsjtx
+
+#Check which branch you're on with:
+git branch
+
+Git should return:
+* master
+
+#Open JTSDK-Tools Config
+# - Ensure your're on QT55
+# - Ensure you've built Hamlib3, then type:
+
+jtbuild rinstall
+
+Note: you can use any of the following commands:
+   rinstall   Builds the Release Install target
+   dinstall   Builds the Debug Install target
+   rconfig    Configure Only Release Install target
+   dconfig    Configure Only Debug Install target
+   package    Release Install Win32 Installer Package
+   docs       Compiles the documentation
+
+# The Output should be located at or near:
+
+Source : (C|D):\JTSDK-Tools\tmp\wsjtx
+Output : (C|D):\JTSDK-Tools\tmp\wsjtx-output\qt\5.5\1.9.2\Release\{build, install, package}
 </code></pre>
 
-<table>
-<thead>
-<tr>
-<th align="center"><img alt="System Group" src="../images/JTEnv/jtenv.3.PNG?raw=true" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center"><em>System Group</em></td>
-</tr>
-</tbody>
-</table></div>
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h2>
+<p>In theory, you should be able to build any <code>Recent (1.8 - 1.9)</code> branch or tag
+as long as the <code>build.txt</code> file is updated with the correct Source and
+Destination locations.</p></div>
         </div>
 
         <footer class="col-md-12">
