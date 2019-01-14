@@ -112,7 +112,6 @@ git clone https://git.code.sf.net/p/wsjt/wsjtx (C|D):\JTSDK-Tools\tmp\wsjtx
 git clone https://git.code.sf.net/p/wsjt/wsjtx /(c|d)/JTSDK-Tools/tmp/wsjtx
 
 Both commands should yield the same results, a new checkout in: (C|D):\JTSDK-Tools\tmp\wsjtx
-
 ```
 
 #### **Step-2: Update build.txt File**
