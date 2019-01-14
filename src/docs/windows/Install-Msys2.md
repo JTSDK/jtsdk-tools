@@ -1,18 +1,19 @@
 # Install MSYS2
+
 | Application Data ||
 | ---| --- |
 | Name        | MSYS2 |
 | Version     | Rolling |
 | Arch        | 32 bit |
-| Description | Collention of GNU Applications including Bash |
+| Description | Collection of GNU Applications including Bash |
 
-> At its core is an independent rewrite of MSYS, based on modern Cygwin (POSIX 
-> compatibility layer) and MinGW-w64 with the aim of better interoperability with 
-> native Windows software. It provides a bash shell, Autotools, revision control 
-> systems and the like for building native Windows applications using MinGW-w64 
-> toolchains.
+> At its core is an independent rewrite of MSYS, based on modern Cygwin (POSIX
+> compatibility layer) and MinGW-w64 with the aim of better interoperability with
+> native Windows software. It provides a bash shell, Autotools, revision control
+> systems and the like for building native Windows applications using MinGW-w64
+> tool-chains.
 >
-> -- <cite>Alexey Pavlov (@alexpux)</cite>
+> -- *Alexey Pavlov (@alexpux)
 
 In terms of `JTSDK` usage, MSYS2 provides the means in which to build Hamlib,
 in addition to commonly used file-system utilities.
@@ -25,7 +26,7 @@ in addition to commonly used file-system utilities.
 - [MSYS2 - Package Management](https://github.com/msys2/msys2/wiki/Using-packages)
 - [Pacman - MSYS2 Package Manager](https://wiki.archlinux.org/index.php/Pacman)
 
-## Installation Walk-Through
+## Installation
 
 - `MSYS2` is installed as part of the JTSDK Core Tools Installer. However, each
 instance needs to be updated on a per system basis. The following steps walk
@@ -33,13 +34,12 @@ though the process of configuring and updating the provided instance.
 - Use the programs menu or any means of opening a standard (non-administrator)
 Command Prompt.
 
-### Update MSYS2 Instance
+### Update MSYS2
 
 At the Windows Command Prompt opened from above, type the following
 
-``` shell
+```bash
 # Change directories, and open the MSYS2 Shell:
-
 cd /d (C|D):\JTSDK-Tools\tools\msys2
 msys2_shell.cmd
 ```
@@ -60,9 +60,8 @@ prompted with `Proceed with installation? [Y/n]`, type `Y`.
 - At the conclusion of the `Initial Update`, close the window using the
 `X` at the top right on the MSYS2 console window.
 
-``` shell
+```bash
 # In the MSYS2 Console, type:
-
 pacman -Syuu
 ```
 
@@ -76,15 +75,13 @@ pacman -Syuu
 console, and perform a second update with the following command:
 - When prompted with `Proceed with installation? [Y/n]`, type `Y`.
 
-``` shell
+```bash
 # In the Windows Console, type the following:
-
 msys2_shell.cmd
 ```
 
-``` shell
+```bash
 # In the MSYS2 Console, type the following:
-
 pacman -Syuu
 ```
 
@@ -96,9 +93,8 @@ pacman -Syuu
 
 - Continue updating `MSYS2` until no additional updates are presented.
 
-``` shell
+```bash
 # In the MSYS2 Console, type the following:
-
 pacman -Syuu
 ```
 
@@ -106,7 +102,7 @@ pacman -Syuu
 |:--:|
 | *Continue Updates* |
 
-## Install MSYS2 Packages For Hamlib
+## Install MSYS2 Packages
 
 In addition to the default installation, Hamlib has a number of build
 dependencies that user must install be for compiling.
@@ -115,28 +111,27 @@ After the final update of MSYS, issue the following command in the terminal.
 
 > NOTE: You must have installed JTSDK-Core-Apps before running the install command below.
 
-``` shell
+```bash
 # In the MSYS2 Terminal, type the following:
-
 install-pkg-list.sh
-
 ```
 
 If the installation completes without error, you can test build Hamlib3
 
 ### Test Build Hamlib
+
 >IMPORTANT: Before building `Hamlib`, exit all MSYS2 and JTSDK-Tool consoles
 that are open.
 
 Open a Windows Console, type the following:
 
-``` shell
+```bash
 # Change directories, and open the MSYS2 Shell:
 cd /d (C|D):\JTSDK-Tools
 msys2
 ```
 
-``` shell
+```bash
 # In the MSYS2 Console, tyep:
 build-hamlib.sh
 
@@ -151,7 +146,7 @@ build-hamlib.sh
 
 - After test building hamlib3, exit the `MSYS2` console using:
 
-``` shell
+```bash
 exit
 ```
 
@@ -159,10 +154,12 @@ exit
 
 - Exit the Windows Command Prompt Console using:
 
-``` shell
+```bash
 exit
 ```
 
 This concludes configuration of `MSYS2`
 
-### Proceed to Next Step => [Python Installation](Install-Python)
+## Next Step
+
+Proceed to ==> [Python Installation](Install-Python.md)
