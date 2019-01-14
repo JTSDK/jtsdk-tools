@@ -1,4 +1,4 @@
-# Optional Install Redis
+# Optional - Install Redis
 
 | Application Data ||
 | ---| --- |
