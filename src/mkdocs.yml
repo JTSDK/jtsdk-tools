@@ -62,3 +62,7 @@ theme:
   name: 'flatly'
   language: 'en'
 
+# Extensions
+markdown_extensions:
+  - toc:
+        permalink: true
