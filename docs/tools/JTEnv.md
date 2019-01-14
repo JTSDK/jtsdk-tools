@@ -29,11 +29,9 @@ given time. However, the items listed are of particular interest to `JTSDK-Tools
 
 ``` shell
 # In the JTSDK-Tools Environment
-
 jtenv -h
 
 # From Windows Command Prompt: cd /d (C|D):\JTSDK-Tools\tools\apps
-
 dotnet JTEnv -h
 ```
 
@@ -45,11 +43,9 @@ dotnet JTEnv -h
 
 ``` shell
 # In the JTSDK-Tools Environment
-
 jtenv -a
 
 # From Windows Command Prompt: cd /d (C|D):\JTSDK-Tools\tools\apps
-
 dotnet JTEnv -a
 ```
 

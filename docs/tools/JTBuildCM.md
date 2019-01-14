@@ -1,7 +1,7 @@
 # JTBuild - Compile WSJT-X
 
 The following is a short walkthrough in building the new
-[WSJT-X Git Repository][] using `JTBuild`.
+[WSJT-X Git Repository][] using `jtbuild`.
 
 The build script does not depend on Git, nor has any interaction with Git. If the
 user wishes to build from different URL / Repository, all that is
@@ -20,12 +20,12 @@ path.
 
 ```bash
 # In JTSDK-Tools Environment
-JTBuild rinstall
-JTBuild dinstall
-JTBuild rconfig
-JTBuild dconfig
-JTBuild package
-JTBuild docs
+jtbuild rinstall
+jtbuild dinstall
+jtbuild rconfig
+jtbuild dconfig
+jtbuild package
+jtbuild docs
 ```
 
 ## Build Options
@@ -40,9 +40,9 @@ with setting these options.
 | reconfigure | enable or disable  | Reconfigure source tree before compile|
 | autorun     | enable or disable  | Run WSJT-X after compiling|
 
-The actions are the same as within the standard SVN build script. 
+The actions are the same as within the standard SVN build script.
 
----
+----
 
 ## Default Profiles
 
@@ -53,7 +53,7 @@ of interest, SRCD and DEST. Only the paths should change, do not change the pref
 For this example, the file contains the following:
 
 ```bash
-# For use with JTBuild only
+# For use with jtbuild only
 # - Only the paths need to be changed
 # - Do not use spaces in the paths as the build will fail
 # - Ensure there is only one space between the prefix and path
@@ -71,21 +71,19 @@ DEST D:\JTSDK-Tools\tmp\wsjtx-output
 If you wish to use a different checkout location, update the SRD path. If
 you would like a different Destination directory, update the DEST path.
 
----
-
 ## Building WSJT-X From Sourceforge
 
 It should not matter which repository service is used. For this example, we'll
 being using `Sourceforge` and the [WSJT-X Master Branch][].
 
-As noted earlier, `JTBuild` does not know of, nor is it concerned with
+As noted earlier, `jtbuild` does not know of, nor is it concerned with
 Git. All repository management should be performed outside of the
-`JTBuild` script by using an appropriate Git Client.
+`jtbuild` script by using an appropriate Git Client.
 
 ### Clone WSJT-X Repository
 
 You can use any Git Client you like. The only things that are of concern to the
-`JTBuild` script is the full path including the checkout-name, and the
+`jtbuild` script is the full path including the checkout-name, and the
 destination directory. For this build example, we'll be using the following:
 
 ```bash
@@ -148,7 +146,7 @@ Open JTSDK-Tools Config
 - Ensure your're on QT55
 - Ensure you've built Hamlib3, then type:
 
-JTBuild rinstall
+jtbuild rinstall
 
 Note: you can use any of the following commands:
    rinstall   Builds the Release Install target
