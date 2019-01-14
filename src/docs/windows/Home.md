@@ -1,4 +1,4 @@
-# JTSDK-Tools Installation
+# JTSDK Tools Windows Installation
 
 >NOTE: This document is still `Under Development`, and may be subject to frequent
 updates. Hard linking to specific URL's is *not advised* at this time. To prevent
@@ -7,38 +7,38 @@ unexpected issues, the installation order below should be firmly adhered to.
 ## Prerequisite Installation
 
 While not critical, the following packages should be installed in the order
-listed to prevent unexpected results. See [Prerequisite Overview](Install-Prerequisites)
+listed to prevent unexpected results. See [Prerequisite Overview](Install-Prerequisites.md)
 for further details.
 
-1. [Net Core SDK](Install-Net-Core-Sdk)
-1. [VS Code](Install-VS-Code)
-1. [Git Client](Install-Git-Client)
+1. [Net Core SDK](Install-Net-Core-SDK.md)
+1. [VS Code](Install-VS-Code.md)
+1. [Git Client](Install-Git-Client.md)
 
 ## Required Installation and Configuration
 
 `MSYS2` is the last of the required installation and configuration sections.
-It follows the [Core Apps Install](Install-Core-Apps) guide as several
+It follows the [Core Apps Install](Install-Core-Apps.md) guide as several
 scripts--most notably, the `Hamlib Build` script--are part of this package. The
-[Core Apps Install](Install-Core-Apps) package also provides the `MSYS2` dependency
+[Core Apps Install](Install-Core-Apps.md) package also provides the `MSYS2` dependency
 list which users will need to install `MSYS2` required dependencies.
 
-1. [Python](Install-Python)
-1. [Core Tools](Install-Core-Tools)
-1. [AsciiDoctor Configuration](Install-Asciidoctor)
-1. [Qt Tools](Install-Qt)
-1. [Core Apps](Install-Core-Apps)
-1. [MSYS2 Configuration](Install-Msys2)
+1. [Python](Install-Python.md)
+1. [Core Tools](Install-Core-Tools.md)
+1. [AsciiDoctor Configuration](Install-Asciidoctor.md)
+1. [Qt Tools](Install-Qt.md)
+1. [Core Apps](Install-Core-Apps.md)
+1. [MSYS2 Configuration](Install-Msys2.md)
 
 ## Optional Installs
 
-- [Database Tools (non-PostgreSQL)](Install-DB-Tools)
-- [Doc Tools](Install-Doc-Tools)
-- [Java Tools](Install-Java-Tools)
-- [Java](Install-Java)
-- [PostgreSQL](Install-PostgreSQL)
-- [Redis](Install-Redis)
-- [WSL](Install-WSL)
-- [Misc Tools](Install-Misc-Tools) - under development
+- [Database Tools (non-PostgreSQL)](Install-DB-Tools.md)
+- [Doc Tools](Install-Doc-Tools.md)
+- [Java Tools](Install-Java-Tools.md)
+- [Java](Install-Java.md)
+- [PostgreSQL](Install-PostgreSQL.md)
+- [Redis](Install-Redis.md)
+- [WSL](Install-WSL.md)
+- [Misc Tools](Install-Misc-Tools.md) - under development
 
 ## Sections
 
@@ -67,7 +67,7 @@ JTSDK Tools Version 3 is broken down into three primary install groups:
 
 - [Prerequisite Tools](#prerequisite-tools)
 - [Core Tools](#core-tools)
-- [JTSDK Net Core Package](https://github.com/KI7MT/jtsdk-dotnet-core)
+- [JTSDK Net Core Package](https://github.com/KI7MT/jtsdk-tools)
 
 In addition to the required tools and frameworks, there are a number of additional
 components the `JTSDK Tools Environment` will be supporting:
@@ -83,7 +83,7 @@ feature from another installation process.
 
 ## Net Core Usage
 
-At present, [Net Core Applicaitons](https://docs.microsoft.com/en-us/dotnet/core/index)
+At present, [Net Core Applications](https://docs.microsoft.com/en-us/dotnet/core/index)
 are only used in setting environment , paths and configuration variable. Its the
 long term goal to convert all `Bash` and Windows `Batch/CMD` scripts over to 
 [Net Core](https://docs.microsoft.com/en-us/dotnet/core/index).
@@ -182,7 +182,7 @@ item, following the links provided.
 In order to checkout and compile the `JTSDK Net Core Package`, users must have
 three applications installed at the `system level`.
 
-> See [Prereq Install Instructions](Install-Prerequisites) for details.
+> See [Prereq Install Instructions](Install-Prerequisites.md) for details.
 
 | Application | Purpose |
 | :--- | :--- |
@@ -215,7 +215,7 @@ considered the bare minimum installation.
 
 The following Document utilities can be installed in addition to the `JTSDK Core Tool Chain`
 
-> See [Install Doc Tools](Install-Doc-Tools) for details.
+> See [Install Doc Tools](Install-Doc-Tools.md) for details.
 
 | Application | Purpose |
 | :--- | :--- |
@@ -228,13 +228,13 @@ The following Document utilities can be installed in addition to the `JTSDK Core
 
 The following tools are general purpose database applications and / or servers.
 
-> See [Install-PostgreSQL](Install-PostgreSQL), and [Install-DB-Tools](Install-DB-Tools)
+> See [Install-PostgreSQL](Install-PostgreSQL.md), and [Install-DB-Tools](Install-DB-Tools.md)
 > for details.
 
 `PostgreSQL` is a stand-alone guide, where as `SQLite3` is a simply installed
-from the [Install-DB-Tools Guide](Install-DB-Tools). As more database
+from the [Install-DB-Tools Guide](Install-DB-Tools.md). As more database
 tools are added, and provided they *do not* need a stand alone guide, they will
-be added to the [Install-DB-Tools](Install-DB-Tools) installer.
+be added to the [Install-DB-Tools](Install-DB-Tools.md) installer.
 
 | Application | Purpose |
 | :--- | :--- |
@@ -246,7 +246,7 @@ be added to the [Install-DB-Tools](Install-DB-Tools) installer.
 
 The following Python Tools can be installed in addition to the `JTSDK Core Tool Chain`.
 
-> See [Install Python](Install-Python) for details.
+> See [Install Python](Install-Python.md) for details.
 
 | Application | Purpose |
 | :--- | :--- |
@@ -257,10 +257,10 @@ The following Python Tools can be installed in addition to the `JTSDK Core Tool 
 The following tools are generally related to `Java` and associated build activities.
 While applications such as [Gradle](https://gradle.org/) and [Eclipse](https://www.eclipse.org/downloads/)
 may very well apply to other programming languages, they are most commonly used
-in [Java](http://www.oracle.com/technetwork/java/javase/downloads/index.html) 
+in [Java](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 related application development.
 
-> See [Install Java](Install-Java), and [Install Java Tools](Install-Java-Tools)
+> See [Install Java](Install-Java.md), and [Install Java Tools](Install-Java-Tools.md)
 for more details.
 
 | Application | Purpose |
@@ -275,7 +275,7 @@ for more details.
 
 The following tools can be installed in addition to the `JTSDK Core Tool Chain`.
 
-> See [Miscellaneous Tools Install Instructions](Install-Misc-Tools) for details.
+> See [Miscellaneous Tools Install Instructions](Install-Misc-Tools.md) for details.
 
 | Application | Purpose |
 | :--- | :--- |

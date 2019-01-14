@@ -47,9 +47,9 @@ nav:
         - 'Overview': 'linux/Home.md'      
     - Tools:
       - 'Overview': 'tools/cli-tools-overview.md'
-      - 'JTEnv': 'tools/jtenv.md'
-      - 'JTConfig': 'tools/jtconfig.md'
-      - 'JTBuildcm': 'tools/jtbuildcm.md'
+      - 'jtenv': 'tools/jtenv.md'
+      - 'jtconfig': 'tools/jtconfig.md'
+      - 'jtbuildcm': 'tools/jtbuildcm.md'
       - Bets Testing:
         - 'jtenvjv': 'tools/jtenvjv.md'
         - 'jtenvpy': 'tools/jtenvpy.md'
