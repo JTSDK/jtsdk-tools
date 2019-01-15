@@ -13,7 +13,7 @@
 > systems and the like for building native Windows applications using MinGW-w64
 > tool-chains.
 >
-> -- *Alexey Pavlov (@alexpux)
+> -- *Alexey Pavlov (@alexpux)*
 
 In terms of `JTSDK` usage, MSYS2 provides the means in which to build Hamlib,
 in addition to commonly used file-system utilities.
@@ -56,7 +56,7 @@ process. According to the MSYS2 Dev group, this is expected, and not
 to be concerned about.
 
 - In the MSYS2 Command Window, type the following command, and when
-prompted with `Proceed with installation? [Y/n]`, type `Y`. 
+prompted with `Proceed with installation? [Y/n]`, type `Y`.
 - At the conclusion of the `Initial Update`, close the window using the
 `X` at the top right on the MSYS2 console window.
 
@@ -126,13 +126,18 @@ that are open.
 Open a Windows Console, type the following:
 
 ```bash
-# Change directories, and open the MSYS2 Shell:
+# Change directories, type:
 cd /d (C|D):\JTSDK-Tools
+
+# Run jtsdk-env.cmd, type:
+jtsdk-env.cmd
+
+# At the prompt, type:
 msys2
 ```
 
 ```bash
-# In the MSYS2 Console, tyep:
+# In the MSYS2 Console, type:
 build-hamlib.sh
 
 # Watch for errors. If none, the results should be as follows.
