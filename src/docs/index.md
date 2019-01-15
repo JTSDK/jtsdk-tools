@@ -1,15 +1,25 @@
 # JTSDK Tools
 
 This repository is designed to work specifically with the
-[JTSDK Tools Version 3][] tool-chain.
+[JTSDK Tools Version 3][] tool-chain, which can be used for a great many
+purposes on Windows, Linux and MacOS.
+
+## Documentation
+
+The project now has a new [Documentation Site][] hosted on <Github.io>.
+The documents cover all aspects of the project, from
+[installation](#installaiton) to beta testing. Going forward, the documentation
+site will be the most up to date information available.
+
+There will be short a grace period for the [JTSDK Tools Wiki][], after which, it
+will be disabled. Users should update their links accordingly.
 
 ## Software Delivery
 
 Delivery is directly from the `master` branch. `Branches` are used for development
 and testing, while reserving the `master` branch in a stable condition for end
 users. `Tags` are used to archive milestones, and will appear in the
-[release section][]. See the [Matrix](#global-tool-matrix) below for a list of
-artifacts that can be tested as [NetCore Global Tools][].
+[release section][].
 
 ## Community Support
 
@@ -28,7 +38,7 @@ Installation of this package should follow the tool-chain installation and
 setup. If you've not already done so, review the following guides **before**
 checking out and compiling the source code.
 
-See [JTSDK Tools Website][] for detailed installation instructions.
+See [Windows Installation][] for detailed instructions.
 
 ## Bug Reports
 
@@ -50,8 +60,7 @@ generic Linux support, and additional Ubuntu / Debian specific artifacts.
   - Win-XP and Vista are not supported.
 
 - Linux
-  - Linux - Unsupported at this time.
-  - Arm Devices - Unsupported at this time.
+  - Linux - Coming Soon!.
 
 ## System Requirements
 
@@ -73,3 +82,6 @@ mind, the following should be considered the bare-minimum requirements:
 [NetCore Global Tools]: https://github.com/dotnet/core/tree/master/samples/dotnetsay
 [JTSDK Tools Website]: https://ki7mt.github.io/jtsdk-tools/
 [Issue Tracker]: https://github.com/KI7MT/jtsdk-tools/issues
+[Documentation Site]: https://ki7mt.github.io/jtsdk-tools/
+[Windows Installation]: https://ki7mt.github.io/jtsdk-tools/windows/Home/
+[JTSDK Tools Wiki]: https://github.com/KI7MT/jtsdk-tools/wiki
