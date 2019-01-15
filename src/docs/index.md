@@ -6,7 +6,7 @@ purposes on Windows, Linux and MacOS.
 
 ## Documentation
 
-The project now has a new [Documentation Site][] hosted on <Github.io>.
+The project now has a new [Documentation Site][] hosted on `Github.io`.
 The documents cover all aspects of the project, from
 [installation](#installaiton) to beta testing. Going forward, the documentation
 site will be the most up to date information available.
