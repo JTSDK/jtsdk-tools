@@ -38,11 +38,13 @@ nav:
           - 'MSSQL': 'windows/Install-MSSQL-Server.md'
           - 'Visual Stuidio': 'windows/Install-Visual-Studio.md'
         - Release Notes:
-          - '3.0.1': 'windows/release-notes/Release-Notes-3.0.1.md'
+          - '3.0.3': 'windows/release-notes/Release-Notes-3.0.3.md'
           - '3.0.2': 'windows/release-notes/Release-Notes-3.0.2.md'
+          - '3.0.1': 'windows/release-notes/Release-Notes-3.0.1.md'
         - Upgrades:
-          - '3.0.1': 'windows/upgrades/Upgrade-3.0.1.md'
+          - '3.0.3': 'windows/upgrades/Upgrade-3.0.3.md'
           - '3.0.2': 'windows/upgrades/Upgrade-3.0.2.md'
+          - '3.0.1': 'windows/upgrades/Upgrade-3.0.1.md'
           - 'PostgreSQL-10.6': 'windows/upgrades/Postgresql-10.6.md'        
     - Tools:
       - 'Overview': 'tools/cli-tools-overview.md'

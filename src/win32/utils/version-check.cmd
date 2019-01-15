@@ -120,8 +120,8 @@ ECHO    DocFX          : %DFX%
 ECHO    Pandoc         : %PDV%
 ECHO.
 ECHO  Database Tools
-ECHO   PostgeSQL      : %PGV%
-ECHO   SQLite         : %SQ3V%
+ECHO   PostgeSQL       : %PGV%
+ECHO   SQLite          : %SQ3V%
 ECHO.
 ECHO  ^-^- end of version check ^-^-
 GOTO EOF

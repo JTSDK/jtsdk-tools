@@ -56,26 +56,30 @@ GOTO HELP
 :_CLEAN
 CLS
 ECHO ------------------------------
-ECHO  Clean JTSDK.NetCore
+ECHO  Clean Net Core Apps
 ECHO ------------------------------
 ECHO.
-PUSHD %CD%\src\JTSDK.NetCore
-ECHO  Cleaning All Release Files
-dotnet clean --configuration Release
+PUSHD %CD%\dotnet-core
+
+ECHO Cleaning All Release Files
+dotnet clean --verbosity minimal --configuration Release
+
 ECHO Cleaning All Debug Files
-dotnet clean --configuration Release
+dotnet clean --verbosity minimal --configuration Debug
+
 ECHO %JTSDK_HOME%\tools\apps ^=^> Published Files
 DEL /s /q %JTSDK_HOME%\tools\apps\J*
+
 POPD
 GOTO EOF
 
 :_BUILD
 CLS
 ECHO ------------------------------
-ECHO  Building JTSDK.NetCore
+ECHO  Building Net Core Apps
 ECHO ------------------------------
 ECHO.
-PUSHD %CD%\src\JTSDK.NetCore
+PUSHD %CD%\dotnet-core
 dotnet build -c release -o out
 POPD
 GOTO EOF
@@ -83,50 +87,33 @@ GOTO EOF
 :_PUBLISH
 CLS
 ECHO ------------------------------
-ECHO  Publishing JTSDK.NetCore
+ECHO  Publishing Net Core Apps
 ECHO ------------------------------
 ECHO.
-PUSHD %CD%\src\JTSDK.NetCore
+PUSHD %CD%\dotnet-core
 dotnet publish -c release -o %JTSDK_HOME%\tools\apps
 POPD
 GOTO EOF
 
 :_INSTALL
 CLS
-ECHO -------------------------------------------
-ECHO  Installing JTSDK Net Core Applications
-ECHO -------------------------------------------
+ECHO ------------------------------
+ECHO  Installing Net Core Apps
+ECHO ------------------------------
 ECHO.
-PUSHD %CD%\src\JTSDK.NetCore
+PUSHD %CD%\dotnet-core
 dotnet publish -c release -o %JTSDK_HOME%\tools\apps
 ECHO.
 POPD
 
-:: Publish JTConfig
-::PUSHD %CD%\src\JTSDK.NetCore\Jtsdk.Core.Library\out
-::ECHO   Install JTConfig
-::robocopy %CD%\ %JTSDK_HOME%\tools\apps /NFL /NDL /NJH /NJS /nc /ns /np Jtsdk*.*
-::POPD
-
-:: Publish JTConfig
-::PUSHD %CD%\src\JTSDK.NetCore\JTConfig\out
-::ECHO   Install JTConfig
-::robocopy %CD%\ %JTSDK_HOME%\tools\apps /NFL /NDL /NJH /NJS /nc /ns /np JTConfig*.*
-::POPD
-
-:: Publish JTEnv
-::PUSHD %CD%\src\JTSDK.NetCore\JTEnv\out
-::ECHO   Installing JTEnv
-::robocopy %CD%\ %JTSDK_HOME%\tools\apps /NFL /NDL /NJH /NJS /nc /ns /np JTEnv*.*
-::POPD
-
-:: Change Directories to JTSDK.Win32
-PUSHD %CD%\src\JTSDK.Win32
+:: Change Directories to src\win32
+PUSHD %CD%\win32
+rmdir /s /q %JTSDK_HOME%\tools\scripts >NUL 2>&1
 ECHO   Install Win32 Environment Files
 robocopy %CD%\env %JTSDK_HOME%\env /E /NFL /NDL /NJH /NJS /nc /ns /np
 
 ECHO   Install Win32 Scripts
-robocopy %CD%\scripts %JTSDK_HOME%\tools\scripts /E /NFL /NDL /NJH /NJS /nc /ns /np
+robocopy %CD%\utils %JTSDK_HOME%\tools\scripts\cmd\utils /E /NFL /NDL /NJH /NJS /nc /ns /np
 
 ECHO   Install MSYS2 ^/usr^/bin scripts
 robocopy %CD%\msys2\bin %JTSDK_HOME%\tools\msys2\usr\bin /NFL /NDL /NJH /NJS /nc /ns /np *.sh
@@ -136,16 +123,16 @@ robocopy %CD%\root %JTSDK_HOME% /NFL /NDL /NJH /NJS /nc /ns /np
 POPD
 
 :: Change Directories to JTSDK.Pgsql
-PUSHD %CD%\src\JTSDK.Pgsql
-ECHO   Install Pgsql Scipts
-robocopy %CD%\R-DaaS %JTSDK_HOME%\tools\scripts\sql\R-DaaS /E /NFL /NDL /NJH /NJS /nc /ns /np
-POPD
+::PUSHD %CD%\src\JTSDK.Pgsql
+::ECHO   Install Pgsql Scipts
+::robocopy %CD%\R-DaaS %JTSDK_HOME%\tools\scripts\sql\R-DaaS /E /NFL /NDL /NJH /NJS /nc /ns /np
+::POPD
 
 :: Change Directories to JTSDK.Python
-PUSHD %CD%\src\JTSDK.Python\scripts
-ECHO   Install Python Scipts
-robocopy %CD%\ %JTSDK_HOME%\tools\scripts\python /E /NFL /NDL /NJH /NJS /nc /ns /np *.py
-POPD
+::PUSHD %CD%\src\JTSDK.Python\scripts
+::ECHO   Install Python Scipts
+::robocopy %CD%\ %JTSDK_HOME%\tools\scripts\python /E /NFL /NDL /NJH /NJS /nc /ns /np *.py
+::POPD
 
 :: NO LONGER USED, See: jtsdk-java-utils project
 :: Conditional Build of Java Apps / Scripts

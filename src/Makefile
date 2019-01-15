@@ -3,10 +3,10 @@
 # Prerequsists : Microsoft Net Core SDK
 
 PROGRAM	:=	JTSDK.NetCore
-VERSION	:=	3.0.2.1
+VERSION	:=	3.0.3
 AUTHOR	:=	Greg Beam, KI7MT
 LICENSE	:=	GPLv3
-BUGS	:=	https://github.com/KI7MT/jtsdk-dotnet-core/issues
+BUGS	:=	https://github.com/KI7MT/jtsdk-tools/issues
 WEB	:=	https://groups.io/g/JTSDK
 
 # application list
