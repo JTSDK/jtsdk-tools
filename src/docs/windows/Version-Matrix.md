@@ -17,7 +17,7 @@ represent what the users installed initially.
 
 |Name         | Version | Arch  | Description
 |:---         |:---     |:---   | :---
-| NetCore SDK | 3.5.2   | 64bit | Set of libraries and tools to build .NET Core apps
+| NetCore SDK | 2.2.101 | 64bit | Set of libraries and tools to build .NET Core apps
 | Git Bash    | 2.19.1  | 64bit | CSV management tool suite
 | VS Code     | 1.30.2  | 64bit | Power cross-platform test editor
 
@@ -31,13 +31,13 @@ should also be 32bit.
 |:---        |:---     |:---   | :---
 | AsciiDoc   | 8.6.9   | 32bit | Python based document system
 | CMake      | 3.5.2   | 32bit | CMake is a cross-platform build tool
-| CMake      | 3.20.3  | 32bit | CMake is a cross-platform build tool
+| CMake      | 3.10.3  | 32bit | CMake is a cross-platform build tool
 | FFTW       | 3.3.5   | 32bit | Fastest Fourier Transform Library
 | InnoSetup  | 5.5.9   | 32bit | Free software script-driven installation system
 | Libusb     | 1.0.22  | 32bit | C library that for generic access to USB devices
-| MSYS2      | rolling | 32bit | Posix like environment for Windows
+| MSYS2      | 4.4.19  | 32bit | Posix like environment for Windows
 | NSIS       | 3.03    | 32bit | Nullsoft Scriptable Install System
-| Nuget      | 4.7     | 32bit | Free and open-source package manager
+| Nuget      | 4.7.0   | 32bit | Free and open-source package manager
 | Pkgconfig  | 0.28.1  | 32bit | Interface for querying installed libraries
 | Qt         | 3.0.5   | 32bit | Unified installer for Qt 5.5 and 5.9.5
 | Ruby       | 2.5.12  | 32bit | Dynamic, Object-Oriented Programming Language
@@ -76,8 +76,8 @@ as it's best to keep up to date with the latest releases.
 |:---        |:---       |:---   | :---
 | Ant        | 1.10.4    | 32bit | Software tool for automating software build processes
 | Maven      | 3.5.4     | 32bit | A build automation tool used primarily for Java projects
-| Gradle     | 0.18.4    | 32bit | Open-source build automation system
-| Java       | 1.8.0_192 | 32bit | Open-source build automation system
+| Gradle     | 4.9       | 32bit | Open-source build automation system
+| Java       | 1.8.0_192 | 32bit | General-purpose computer-programming language 
 | Eclipse    | 2018-12 R | 32bit | An Java integrated development environment
 
 ## Doc Tools
@@ -88,4 +88,4 @@ They provide a full range of document creation and conversion utilities.
 |Name        | Version | Arch  | Description
 |:---        |:---     |:---   | :---
 | DocFX      | 2.37.0  | 32bit | An API documentation generator for .NET
-| pandoc     | 0.7.0.2 | 32bit | A free and open-source software document converter
+| pandoc     | 2.2.1   | 32bit | A free and open-source software document converter
