@@ -55,7 +55,7 @@ manual installation by the user.
 | SQLite3    | 3.24.0  | 32bit | In-Process relational database management system
 | PostgreSQL | 10.4    | 64bit | Advanced High Performance Relational Database
 | MongoDB    | 4.05    | 64bit | Cross-platform document-oriented database
-| Redis      | 4.05    | 64bit | In-Memory High Performance key-value database
+| Redis      | 5.0     | 64bit | In-Memory High Performance key-value database
 
 ## Java Tools
 
