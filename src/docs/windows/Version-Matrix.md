@@ -41,7 +41,7 @@ should also be 32bit.
 | Pkgconfig  | 0.28.1  | 32bit | Interface for querying installed libraries
 | Qt         | 3.0.5   | 32bit | Unified installer for Qt 5.5 and 5.9.5
 | Ruby       | 2.5.12  | 32bit | Dynamic, Object-Oriented Programming Language
-| Subversion | 1.9.7   | 32bot | CSV management tool suite
+| Subversion | 1.9.7   | 32bit | CSV management tool suite
 
 ## Database Tools
 
