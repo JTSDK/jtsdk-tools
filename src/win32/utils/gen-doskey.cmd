@@ -21,7 +21,7 @@
 ::-----------------------------------------------------------------------------::
 
 :: Add ClassPath for JTEnvJV
-SET jtenv_cp=%JTSDK_HOME%\tools\scripts\java\jtenv\lib
+::SET jtenv_cp=%JTSDK_HOME%\tools\scripts\java\jtenv\lib
 
 ::------------------------------------------------------------------------------
 :: DOSKEY for JTSDK Core Applications
@@ -45,8 +45,8 @@ DOSKEY msys2 = %JTSDK_HOME%\tools\msys2\msys2_shell.cmd
 :: DOSKEY for JTEnv Commands
 ::------------------------------------------------------------------------------
 DOSKEY jtenv = dotnet %JTSDK_APPS%\JTEnv.dll $*
-DOSKEY jtenv-jv = java -cp %jtenv_cp% -jar %jtenv_cp%\jtenv-3.0.2.jar $*
-DOSKEY jtenv-py = python %JTSDK_HOME%\tools\scripts\python\JTEnvPY.py $*
+::DOSKEY jtenv-jv = java -cp %jtenv_cp% -jar %jtenv_cp%\jtenv-3.0.2.jar $*
+::DOSKEY jtenv-py = python %JTSDK_HOME%\tools\scripts\python\JTEnvPY.py $*
 
 ::------------------------------------------------------------------------------
 :: DOSKEY for jtbuild.cmd

@@ -571,7 +571,7 @@ REM  END QTENV-BUILD-WSJTX.CMD
 REM  ***************************************************************************
 
 :EOF
-popd
+POPD
 PUSHD %JTSDK_HOME%\tools\msys2\usr\bin
 ren sh-bak.exe sh.exe >NUL 2>&1
 POPD
