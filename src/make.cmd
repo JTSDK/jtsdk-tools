@@ -62,10 +62,10 @@ ECHO.
 PUSHD %CD%\dotnet-core
 
 ECHO  Cleaning All Release Files
-dotnet clean --configuration Release
+dotnet clean --verbosity minimal --configuration Release
 
 ECHO Cleaning All Debug Files
-dotnet clean --configuration Debug
+dotnet clean --verbosity minimal --configuration Debug
 
 ECHO %JTSDK_HOME%\tools\apps ^=^> Published Files
 DEL /s /q %JTSDK_HOME%\tools\apps\J*
@@ -107,13 +107,13 @@ ECHO.
 POPD
 
 :: Change Directories to src\win32
-PUSHD %CD%\src\win32
+PUSHD %CD%\win32
 rmdir /s /q %JTSDK_HOME%\tools\scripts >NUL 2>&1
 ECHO   Install Win32 Environment Files
 robocopy %CD%\env %JTSDK_HOME%\env /E /NFL /NDL /NJH /NJS /nc /ns /np
 
 ECHO   Install Win32 Scripts
-robocopy %CD%\utils %JTSDK_HOME%\tools\scripts\cmd /E /NFL /NDL /NJH /NJS /nc /ns /np
+robocopy %CD%\utils %JTSDK_HOME%\tools\scripts\cmd\utils /E /NFL /NDL /NJH /NJS /nc /ns /np
 
 ECHO   Install MSYS2 ^/usr^/bin scripts
 robocopy %CD%\msys2\bin %JTSDK_HOME%\tools\msys2\usr\bin /NFL /NDL /NJH /NJS /nc /ns /np *.sh
