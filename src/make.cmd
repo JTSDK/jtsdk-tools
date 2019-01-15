@@ -61,7 +61,7 @@ ECHO ------------------------------
 ECHO.
 PUSHD %CD%\dotnet-core
 
-ECHO  Cleaning All Release Files
+ECHO Cleaning All Release Files
 dotnet clean --verbosity minimal --configuration Release
 
 ECHO Cleaning All Debug Files
