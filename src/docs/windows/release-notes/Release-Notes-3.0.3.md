@@ -26,7 +26,7 @@ section at the following locations:
 - [jtenv][]
 - [jtconfig][]
 - [jtbuildcm][]
-- `version-check` doesn't need a manual, just type: `version-check` 
+- `version-check` doesn't need a manual, just type: `version-check`
 
 ## Beta Testing
 
@@ -42,4 +42,3 @@ please do so.
 [jtconfig]: https://ki7mt.github.io/jtsdk-tools/tools/jtconfig/
 [jtenv]: https://ki7mt.github.io/jtsdk-tools/tools/jtenv/
 [documentation site]: https://ki7mt.github.io/jtsdk-tools/
-

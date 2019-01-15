@@ -7,6 +7,7 @@
         "fftw",
         "hamlib",
         "inno",
+        "j",
         "jtbuild",
         "jtbuildcm",
         "jtbuildpy",
@@ -16,6 +17,7 @@
         "jtenvpy",
         "jv",
         "libusb",
+        "makefiles",
         "mkdir",
         "nupkg",
         "rconfig",
@@ -23,6 +25,7 @@
         "setup",
         "sh",
         "srcd",
+        "tenv",
         "wsjtx"
     ]
 }
