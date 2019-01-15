@@ -330,7 +330,7 @@ compatibility layer) and MinGW-w64 with the aim of better interoperability with
 native Windows software. It provides a bash shell, Autotools, revision control
 systems and the like for building native Windows applications using MinGW-w64
 tool-chains.</p>
-<p>-- *Alexey Pavlov (@alexpux)</p>
+<p>-- <em>Alexey Pavlov (@alexpux)</em></p>
 </blockquote>
 <p>In terms of <code>JTSDK</code> usage, MSYS2 provides the means in which to build Hamlib,
 in addition to commonly used file-system utilities.</p>
@@ -378,7 +378,7 @@ to be concerned about.</p>
 </blockquote>
 <ul>
 <li>In the MSYS2 Command Window, type the following command, and when
-prompted with <code>Proceed with installation? [Y/n]</code>, type <code>Y</code>. </li>
+prompted with <code>Proceed with installation? [Y/n]</code>, type <code>Y</code>.</li>
 <li>At the conclusion of the <code>Initial Update</code>, close the window using the
 <code>X</code> at the top right on the MSYS2 console window.</li>
 </ul>
@@ -462,12 +462,17 @@ install-pkg-list.sh
 that are open.</p>
 </blockquote>
 <p>Open a Windows Console, type the following:</p>
-<pre><code class="bash"># Change directories, and open the MSYS2 Shell:
+<pre><code class="bash"># Change directories, type:
 cd /d (C|D):\JTSDK-Tools
+
+# Run jtsdk-env.cmd, type:
+jtsdk-env.cmd
+
+# At the prompt, type:
 msys2
 </code></pre>
 
-<pre><code class="bash"># In the MSYS2 Console, tyep:
+<pre><code class="bash"># In the MSYS2 Console, type:
 build-hamlib.sh
 
 # Watch for errors. If none, the results should be as follows.
