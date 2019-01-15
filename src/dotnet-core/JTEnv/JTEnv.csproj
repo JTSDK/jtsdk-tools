@@ -5,8 +5,8 @@
     <TargetFramework>netcoreapp2.2</TargetFramework>
 
     <Product>JTConfig</Product>
-    <Version>3.0.2.1</Version>
-    <VersionPrefix>3.0.2.1</VersionPrefix>
+    <Version>3.0.3</Version>
+    <VersionPrefix>3.0.3</VersionPrefix>
     <Description>JTSDK List Environment Variables</Description>
     <LangVersion>Latest</LangVersion>
     <Authors>Greg Beam, KI7MT</Authors>
