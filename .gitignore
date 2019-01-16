@@ -6,6 +6,9 @@
 ## MkDOCS
 src/site/*
 
+## VS Code folder
+.vscode/*
+
 ### Java ###
 # Compiled class file
 *.class
