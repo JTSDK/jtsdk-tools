@@ -54,7 +54,8 @@ nav:
       - Bets Testing:
         - 'jtenvjv': 'tools/jtenvjv.md'
         - 'jtenvpy': 'tools/jtenvpy.md'
-        - 'wsprcsv': 'tools/wsprcsv.md' 
+        - 'wsprcsv': 'tools/wsprcsv.md'
+        - 'atcheck': 'tools/atcheck.md' 
         - 'NetCore Global Tools': 'tools/global-tools-overview.md'
     - User Gude:
       - 'User Guide': 'user-guide/User-Guide-3.0.2.md'    
