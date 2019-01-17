@@ -8,7 +8,7 @@
         <meta name="author" content="Greg Beam, KI7MT">
         
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>jtconfig - JTSDK Tools</title>
+        <title>atcheck - JTSDK Tools</title>
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -222,8 +222,8 @@
     <a href="../jtenv/">jtenv</a>
 </li>
                                     
-<li class="active">
-    <a href="./">jtconfig</a>
+<li >
+    <a href="../jtconfig/">jtconfig</a>
 </li>
                                     
 <li >
@@ -246,8 +246,8 @@
     <a href="../wsprcsv/">wsprcsv</a>
 </li>
             
-<li >
-    <a href="../atcheck/">atcheck</a>
+<li class="active">
+    <a href="./">atcheck</a>
 </li>
             
 <li >
@@ -275,12 +275,12 @@
                             </a>
                         </li>
                             <li >
-                                <a rel="next" href="../jtenv/">
+                                <a rel="next" href="../wsprcsv/">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li >
-                                <a rel="prev" href="../jtbuildcm/">
+                                <a rel="prev" href="../global-tools-overview/">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -292,139 +292,191 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#option-configuration">Option Configuration</a></li>
-            <li><a href="#available-options">Available Options</a></li>
+        <li class="main active"><a href="#jtsdk-tools-atcheck">JTSDK-Tools ( atcheck )</a></li>
+            <li><a href="#description">Description</a></li>
+            <li><a href="#development-status">Development Status</a></li>
+            <li><a href="#requirements">Requirements</a></li>
+            <li><a href="#installation">Installation</a></li>
             <li><a href="#usage">Usage</a></li>
+            <li><a href="#example-output">Example Output</a></li>
+            <li><a href="#upgrade">Upgrade</a></li>
+            <li><a href="#uninstall">Uninstall</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="option-configuration">Option Configuration<a class="headerlink" href="#option-configuration" title="Permanent link">&para;</a></h1>
+<h1 id="jtsdk-tools-atcheck">JTSDK-Tools ( atcheck )<a class="headerlink" href="#jtsdk-tools-atcheck" title="Permanent link">&para;</a></h1>
 <table>
 <thead>
 <tr>
-<th align="left">Application Data</th>
-<th align="left"></th>
+<th>Application Data</th>
+<th></th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">Name</td>
-<td align="left">JTConfig</td>
+<td>Package</td>
+<td><code>atcheck</code></td>
 </tr>
 <tr>
-<td align="left">Version</td>
-<td align="left">3.0.1</td>
+<td>Version</td>
+<td>0.0.1</td>
 </tr>
 <tr>
-<td align="left">Arch</td>
-<td align="left">64 bit preferred</td>
+<td>Topic</td>
+<td>Communications, Ham Radio</td>
 </tr>
 <tr>
-<td align="left">Status</td>
-<td align="left">Release</td>
+<td>Development Status</td>
+<td>2 - Pre-Alpha</td>
 </tr>
 <tr>
-<td align="left">Description</td>
-<td align="left">Used for configuring options in JTSDK-Tools</td>
+<td>Distributions</td>
+<td>Windows, Linux, MacOS</td>
+</tr>
+<tr>
+<td>Arch</td>
+<td>Any (x86-64 recommended)</td>
+</tr>
+<tr>
+<td>Python</td>
+<td>Version &gt;= 3.5</td>
+</tr>
+<tr>
+<td>Dependencies</td>
+<td>Standard Python Library</td>
+</tr>
+<tr>
+<td>Virtual Environment</td>
+<td>Anaconda Python 2018.12</td>
 </tr>
 </tbody>
 </table>
-<h2 id="available-options">Available Options<a class="headerlink" href="#available-options" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th align="left">Option</th>
-<th align="left">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">Autorun</td>
-<td align="left">Runs an application after compiling</td>
-</tr>
-<tr>
-<td align="left">Clean</td>
-<td align="left">Cleans the build tree</td>
-</tr>
-<tr>
-<td align="left">Cmake310</td>
-<td align="left">Enable CMake version 3.10 v.s. 3.5.2</td>
-</tr>
-<tr>
-<td align="left">Java</td>
-<td align="left">Indicates Java is enabled in the environment</td>
-</tr>
-<tr>
-<td align="left">PostgreSQL</td>
-<td align="left">Indicates PostgreSQL is enabled in the environment</td>
-</tr>
-<tr>
-<td align="left">QT59</td>
-<td align="left">Enable Qt 5.9 and associated GCC tool-chain</td>
-</tr>
-<tr>
-<td align="left">Quiet</td>
-<td align="left">Suppress screen display messages</td>
-</tr>
-<tr>
-<td align="left">Reconfigure</td>
-<td align="left">Re-Run Configure before compiling</td>
-</tr>
-<tr>
-<td align="left">Separate</td>
-<td align="left">Separate builds by versions and build type</td>
-</tr>
-<tr>
-<td align="left">SQLite3</td>
-<td align="left">Indicates Sqlite3 is enabled in the environment</td>
-</tr>
-<tr>
-<td align="left">Unix</td>
-<td align="left">Enable MSYS2 Unix Command Line Tools</td>
-</tr>
-</tbody>
-</table>
+<h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h2>
+<p>Simple <a href="https://www.python.org/">Python</a> script that checks <code>ALL.TXT</code> file produced by the <a href="https://physics.princeton.edu/pulsar/k1jt/wsjtx.html">WSJT-X</a>
+application.</p>
+<h2 id="development-status">Development Status<a class="headerlink" href="#development-status" title="Permanent link">&para;</a></h2>
+<p>This package is in <code>Pre-Alpha</code>. The package was tested using
+<a href="https://ki7mt.github.io/jtsdk-tools/windows/Install-Python/">Anaconda Python 2018.12</a> with a default virtual environment creation e.g.
+(<code>conda create -n jtsdk-py</code>).</p>
+<h2 id="requirements">Requirements<a class="headerlink" href="#requirements" title="Permanent link">&para;</a></h2>
+<ul>
+<li>If running <a href="https://ki7mt.github.io/jtsdk-tools/">JTSDK-Tools</a>, install <a href="https://ki7mt.github.io/jtsdk-tools/windows/Install-Python/">Install Anaconda Python</a> if you've not done so.</li>
+<li>Any <a href="https://www.python.org/">Python</a> version &gt;= 3.5, virtual or native installation</li>
+<li>No special modules or distributions are required.</li>
+<li>For Linux, Mac, or Posix systems, any Python version 3.5+</li>
+</ul>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
+<p>During <code>Pre-Alpha</code> testing, installation will pull the application from
+<a href="https://test.pypi.org/project/atcheck/">test.pypi.org</a>. After <code>Pre-Alpha</code> testing, the package will be moved to the
+main <a href="https://pypi.org/">PyPi</a> repository where it will remain. When this change occurs, drop
+the url (<code>https://test.pypi.org/simple/</code>) as it will no longer be needed.</p>
+<p>Open a condole, and type the following:</p>
+<pre><code class="bash"># If using JTSDK-Tools, active jtsdk-py first.
+# Note: for normal Python users, there is no hard requirement to use or create
+# a special environment as the package uses the Standard Python Library only.
+conda activate jtsdk-py
+
+# Install command: note the space after trailing /
+pip install -i https://test.pypi.org/simple/ atcheck
+
+</code></pre>
+
 <h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
-<h3 id="display-help-message-jtconfig-h">Display Help Message: <code>JTConfig -h</code><a class="headerlink" href="#display-help-message-jtconfig-h" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th align="center"><img alt="Option Help Menu" src="../images/JTConfig/options.1.PNG?raw=true" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center"><em>Display Help Menu</em></td>
-</tr>
-</tbody>
-</table>
-<h3 id="list-option-status-jtconfig-l">List Option Status: <code>JTConfig -l</code><a class="headerlink" href="#list-option-status-jtconfig-l" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th align="center"><img alt="Option Status" src="../images/JTConfig/options.2.PNG?raw=true" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center"><em>Option Status</em></td>
-</tr>
-</tbody>
-</table>
-<h3 id="enable-default-options-jtconfig-e-default">Enable Default Options: <code>JTConfig -e default</code><a class="headerlink" href="#enable-default-options-jtconfig-e-default" title="Permanent link">&para;</a></h3>
-<table>
-<thead>
-<tr>
-<th align="center"><img alt="Set Default Options" src="../images/JTConfig/options.2.PNG?raw=true" /></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center"><em>Enable Default Options</em></td>
-</tr>
-</tbody>
-</table></div>
+<p>You can entry a <code>ALL.TXT</code> file location or not. If not, the app will look in
+the <a href="https://physics.princeton.edu/pulsar/k1jt/wsjtx-doc/wsjtx-main-2.0.0.html#PLATFORM">Platform Dependency Locations</a> from the <a href="https://physics.princeton.edu/pulsar/k1jt/wsjtx-doc/wsjtx-main-2.0.0.html">WSJT-X v2.0.0 Manual</a></p>
+<pre><code class="bash">usage: atcheck [-h] [-f F] -mc MC -hc HC [-v]
+
+Parse WSJT-X ALL.TXT File for callsigns.
+
+optional arguments:
+  -h, --help  show this help message and exit
+  -f F        alternate location to ALL.TXT file
+  -mc MC      My callsign
+  -hc HC      His Callsign
+  -v          display module version
+
+atcheck [OPTION]
+</code></pre>
+
+<h2 id="example-output">Example Output<a class="headerlink" href="#example-output" title="Permanent link">&para;</a></h2>
+<p>The following is a typical QSO where both parties send their calls during an
+exchange.</p>
+<h3 id="using-default-wsjt-x-location">Using Default WSJT-X Location<a class="headerlink" href="#using-default-wsjt-x-location" title="Permanent link">&para;</a></h3>
+<pre><code class="bash">
+# Using the Default WSJT-X ALL.TXT Location
+# The callsigns are not case-sensitive. The app converts them
+# before parsing the file.
+
+# Command used: atcheck -mc w5vs -hc kd0vjo
+# Results:
+
+App Name ....:  atcheck
+Version .....:  0.0.1
+My Call .....:  W5VS
+His Call ....:  KD0VJO
+
+Processing Callsigns
+
+Line  Date        Time    Band   Mode   Call        Call        Message
+---------------------------------------------------------------------------
+5504  2018-12-22  124045  7.074  FT8    KD0VJO      W5VS        FM18
+5515  2018-12-22  124100  7.074  FT8    W5VS        KD0VJO      -13
+5549  2018-12-22  124115  7.074  FT8    KD0VJO      W5VS        R+08
+5563  2018-12-22  124130  7.074  FT8    W5VS        KD0VJO      RR73
+
+Line Count .....: 893,045
+Execution Time .: 9.22 sec
+</code></pre>
+
+<h3 id="using-custom-file-location">Using Custom File Location<a class="headerlink" href="#using-custom-file-location" title="Permanent link">&para;</a></h3>
+<p>This is handy if you run multiple instances of <a href="https://physics.princeton.edu/pulsar/k1jt/wsjtx.html">WSJT-X</a> and the <code>ALL.TXT</code> file
+resided in a different location to the <a href="https://physics.princeton.edu/pulsar/k1jt/wsjtx-doc/wsjtx-main-2.0.0.html#PLATFORM">Platform Dependency Locations</a>.</p>
+<pre><code class="bash"># The same two calls are used, however, the file is in a different location
+# Note the -f &lt;path&gt;
+
+# Command used : &gt;atcheck -f D:\JTSDK-Tools\tmp\ALL.TXT -mc W5VS -hc KD0VJO
+
+# Results
+App Name ....:  atcheck
+Version .....:  0.0.1
+My Call .....:  W5VS
+His Call ....:  KD0VJO
+
+Processing Callsigns
+
+Line  Date        Time    Band   Mode   Call        Call        Message
+---------------------------------------------------------------------------
+5504  2018-12-22  124045  7.074  FT8    KD0VJO      W5VS        FM18
+5515  2018-12-22  124100  7.074  FT8    W5VS        KD0VJO      -13
+5549  2018-12-22  124115  7.074  FT8    KD0VJO      W5VS        R+08
+5563  2018-12-22  124130  7.074  FT8    W5VS        KD0VJO      RR73
+
+Line Count .....: 893,045
+Execution Time .: 9.19 sec
+
+
+
+</code></pre>
+
+<h2 id="upgrade">Upgrade<a class="headerlink" href="#upgrade" title="Permanent link">&para;</a></h2>
+<p>To upgrade to the latest release, use <code>pip</code></p>
+<pre><code class="bash"># If using JTSDK-Tools, active jtsdk-py first. All others can enter directly.
+conda activate jtsdk-py
+
+# Upgrade Command
+pip install --upgrade atcheck
+</code></pre>
+
+<h2 id="uninstall">Uninstall<a class="headerlink" href="#uninstall" title="Permanent link">&para;</a></h2>
+<p>Open a condole, and type the following:</p>
+<pre><code class="bash"># If using JTSDK-Tools, active jtsdk-py first
+conda activate jtsdk-py
+
+# Uninstall command
+pip uninstall atcheck
+
+</code></pre></div>
         </div>
 
         <footer class="col-md-12">
