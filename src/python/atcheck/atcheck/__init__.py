@@ -3,10 +3,8 @@
 All text Check
 ==============
 
-TODO
-  1. Python application to parse WSJT-X All.TXT file
+1. Python application to parse WSJT-X All.TXT file
 
-TODO:
 usage: atcheck
 
 """

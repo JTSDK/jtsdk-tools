@@ -26,39 +26,36 @@ def is_time(instr):
 def check_infile(infile):
     """Check if atcheck can reach the file"""
     try:
-        with open('my_settings.dat') as file:
+        with open(infile) as file:
             pass
     except IOError as e:
-        print("Unable to open file. Check Path")
+        print_error_header(name,version,"File IOError")
+        print("Unable to open file. Please check the path.")
         print("File Path : ", infile)
         print("")
         sys.exit(1)
 
 
-def print_error_header(name, version, text):
+def print_error_header(name,version,text):
     """Print Header"""
-    print("\nApp Name ..........: ", name)
-    print("Version ...........: ", version)
-    print("\n{text}\n".format(text=text)
-    print("Arguments passed ..:  ", str(sys.argv))
-    print("\n")
+    print("\nApp Name ....: ", name)
+    print("Version .....: ", version)
+    print("\n{text}".format(text=text))
+    print("")
 
 
-def print_main_header(name, version, text):
+def print_main_header(name,version,text,mc,hc):
     """Print Header"""
-    print("\nApp Name ..........: ", name)
-    print("Version ..............: ", version)
-    print("\n{text}\n".format(text=text)
-    print("Number of Arguments ..: ", len(sys.argv))
-    print("My Call ..............: ", sys.argv[1].upper())
-    print("His Call .............: ", sys.argv[2].upper())
-    print("Looking for ..........: ", str(sys.argv))
-    print("\n")
+    print("\nApp Name ....: ", name)
+    print("Version .....: ", version)
+    print("My Call .....: ", mc)
+    print("His Call ....: ", hc)
+    print("\n{text}\n".format(text=text))
 
 
 def print_line_header():
     """Print decode line"""
-    print("{0:<6}  {1:<10}  {2:<6}  {3:<6}  {4:<5}  {5:<10}  {6:<10}  {7:<3}".format(
+    print("{0:<4}  {1:<10}  {2:<6}  {3:<5}  {4:<5}  {5:<10}  {6:<10}  {7:<3}".format(
                                                                     'Line',
                                                                     'Date',
                                                                     'Time',
@@ -89,17 +86,16 @@ def print_line(val1,val2,val3,val4,val5,val6,val7,val8):
                                                                     val8))
 
 
-def check_call(file,mc,hc):
+def check_call(file,text,mc,hc):
     """Check ALL.TXT file for MyCall and His Call"""
-
-    print_main_header(name, version,"")
-    print_line_header()
     mycall = mc.upper()
     hiscall = hc.upper()
+    print_main_header(name,version,text,mycall,hiscall)
+    print_line_header()
 
     # start processing ALL.TXT file
     start = time.time()
-    with open('ALL.TXT','r') as f:
+    with open(file,'r') as f:
         counter = 1
         tim=''
         hc=''
@@ -173,22 +169,23 @@ def main():
 
     # iterate through arg parse options
     if len(sys.argv) < 2:
-        print_error_header(name, version, "Argument Error")
+        print_error_header(name, version,"Argument Error")
         parser.print_help()
         print("")
         sys.exit(1)
     else:
         # user defined ALL.TXT file location
-        if args.infile:
-            check_infile(args.infile)
-            file = args.infile
+        if args.file:
+            check_infile(args.file)
+            file = args.file
         else:
             # default WSJT-X ALL.TXT file location
             file = os.path.join(__sharedir__,"ALL.TXT")
 
     # send path, and calls to call_check() function
-    print_main_header(name, version, "Process Callsigns")
-    check_call(file,mc,hc)
+    clear()
+    text = "Processing Callsigns"
+    check_call(file,text,mc,hc)
 
     sys.exit(0)
 
