@@ -35,11 +35,20 @@ def check_infile(infile):
         sys.exit(1)
 
 
+def print_error_header(name, version, text):
+    """Print Header"""
+    print("\nApp Name ..........: ", name)
+    print("Version ...........: ", version)
+    print("\n{text}\n".format(text=text)
+    print("Arguments passed ..:  ", str(sys.argv))
+    print("\n")
+
+
 def print_main_header(name, version, text):
     """Print Header"""
     print("\nApp Name ..........: ", name)
     print("Version ..............: ", version)
-    print("")
+    print("\n{text}\n".format(text=text)
     print("Number of Arguments ..: ", len(sys.argv))
     print("My Call ..............: ", sys.argv[1].upper())
     print("His Call .............: ", sys.argv[2].upper())
@@ -81,7 +90,7 @@ def print_line(val1,val2,val3,val4,val5,val6,val7,val8):
 
 
 def check_call(file,mc,hc):
-    """Check ALL.TXT file for MyCall and Hs Call"""
+    """Check ALL.TXT file for MyCall and His Call"""
 
     print_main_header(name, version,"")
     print_line_header()
@@ -124,8 +133,8 @@ def check_call(file,mc,hc):
             tag=''
             et1 = time.time() - start
 
-        print("\nLine Count .....: {:,}".format(counter))            
-        print("Execution Time .: {:.2f} sec".format(et1))
+        # print closing footer
+        print_footer(counter,et1)
         f.close()
 
 def main():
@@ -164,7 +173,7 @@ def main():
 
     # iterate through arg parse options
     if len(sys.argv) < 2:
-        print_main_header(name, version, "Argument Error")
+        print_error_header(name, version, "Argument Error")
         parser.print_help()
         print("")
         sys.exit(1)
@@ -178,6 +187,7 @@ def main():
             file = os.path.join(__sharedir__,"ALL.TXT")
 
     # send path, and calls to call_check() function
+    print_main_header(name, version, "Process Callsigns")
     check_call(file,mc,hc)
 
     sys.exit(0)
