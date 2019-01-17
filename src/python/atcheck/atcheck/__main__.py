@@ -11,6 +11,7 @@ from . import __sharedir__
 
 
 def clear():
+    """Clean screen"""
     os.system('cls' if os.name == 'nt' else 'clear ||:')
 
 
@@ -22,9 +23,24 @@ def is_time(instr):
         return False
 
 
-def print_main_header():
-    print("\nRunning Script .......: ", sys.argv[0])
-    print("Number of arguments ..: ", len(sys.argv))
+def check_infile(infile):
+    """Check if atcheck can reach the file"""
+    try:
+        with open('my_settings.dat') as file:
+            pass
+    except IOError as e:
+        print("Unable to open file. Check Path")
+        print("File Path : ", infile)
+        print("")
+        sys.exit(1)
+
+
+def print_main_header(name, version, text):
+    """Print Header"""
+    print("\nApp Name ..........: ", name)
+    print("Version ..............: ", version)
+    print("")
+    print("Number of Arguments ..: ", len(sys.argv))
     print("My Call ..............: ", sys.argv[1].upper())
     print("His Call .............: ", sys.argv[2].upper())
     print("Looking for ..........: ", str(sys.argv))
@@ -32,6 +48,7 @@ def print_main_header():
 
 
 def print_line_header():
+    """Print decode line"""
     print("{0:<6}  {1:<10}  {2:<6}  {3:<6}  {4:<5}  {5:<10}  {6:<10}  {7:<3}".format(
                                                                     'Line',
                                                                     'Date',
@@ -44,7 +61,14 @@ def print_line_header():
     print('-' * 75)
 
 
+def print_footer(linecount,timer):
+    """Print footer"""
+    print("\nLine Count .....: {:,}".format(linecount))            
+    print("Execution Time .: {:.2f} sec".format(timer))
+
+
 def print_line(val1,val2,val3,val4,val5,val6,val7,val8):
+    """Prints decode line"""
     print("{0:<3}  {1:<3}  {2:<3}  {3:<3}  {4:<5}  {5:<10}  {6:<10}  {7:<3}".format(
                                                                     val1,
                                                                     val2,
@@ -56,13 +80,15 @@ def print_line(val1,val2,val3,val4,val5,val6,val7,val8):
                                                                     val8))
 
 
-def check_call():
-    print_main_header()
+def check_call(file,mc,hc):
+    """Check ALL.TXT file for MyCall and Hs Call"""
+
+    print_main_header(name, version,"")
     print_line_header()
+    mycall = mc.upper()
+    hiscall = hc.upper()
 
-    mycall = str(sys.argv[1]).upper()
-    hiscall = str(sys.argv[2]).upper()
-
+    # start processing ALL.TXT file
     start = time.time()
     with open('ALL.TXT','r') as f:
         counter = 1
@@ -97,6 +123,7 @@ def check_call():
             mc=''
             tag=''
             et1 = time.time() - start
+
         print("\nLine Count .....: {:,}".format(counter))            
         print("Execution Time .: {:.2f} sec".format(et1))
         f.close()
@@ -108,71 +135,50 @@ def main():
     parser.description = "Parse WSJT-X ALL.TXT File for callsigns"
     parser.epilog = "atcheck [OPTION]"
 
-    parser.add_argument('-a', '--all',
-                        help="List all variables",
-                        action='store_true')
+    parser.add_argument('-f', '--file',
+                        action="store",
+                        type=str,
+                        help='Alternate location to ALL.TXT file')
 
-    parser.add_argument('-j', '--java',
-                        help="Java related variables",
-                        action='store_true')
+    parser.add_argument('-mc', '--mycall',
+                        action="store",
+                        required=True,
+                        type=str,
+                        help='My callsign')
 
-    parser.add_argument('-s', '--system',
-                        help="System variables and exit",
-                        action='store_true')
+    parser.add_argument('-hc', '--hiscall',
+                    action="store",
+                    required=True,
+                    type=str,
+                    help='His callsign')
 
-    parser.add_argument('-S', '--setup',
-                        help="Setup FSH Directories",
-                        action='store_true')
-
-    parser.add_argument('-u', '--user',
-                        help="User variables and exit",
-                        action='store_true')
-
-    parser.add_argument('-v', '--version',
-                        help="The application version number",
-                        action='version',
-                        version='%(prog)s {}'.format(version))
+    parser.add_argument('-v', '--version', 
+                    action='version',
+                    version='%(prog)s ' + version,
+                    help='display module version')
 
     # process cli sys.argv[**args, **kwargs]
     args = parser.parse_args()
+    mc = str(args.mycall).upper()
+    hc = str(args.hiscall).upper()
 
     # iterate through arg parse options
     if len(sys.argv) < 2:
-        print_header(name, version, "Argument Error")
+        print_main_header(name, version, "Argument Error")
         parser.print_help()
         print("")
         sys.exit(1)
-    elif args.java:
-        print_header(name, version, "Java Environment Variables")
-        print_list(JAVA_LIST)
-        print("")
-    elif args.jtsdk:
-        print_header(name, version, "JTSDK Environment Variables")
-        print_list(JTSDK_LIST)
-        print("")
-    elif args.system:
-        print_header(name, version, "System Environment Variables")
-        print_dict(system)
-        print("")
-    elif args.setup:
-        print_header(name, version, "Setup Directories")
-        create_directories(appdirs)
-        print("")
-    elif args.user:
-        print_header(name, version, "User Environment Variables")
-        print_dict(user)
-        print_dirs(appdirs)
-        print("")
-    elif args.all:
-        print_header(name, version, "All JTSDK Environment Variables")
-        print_dict(system)
-        print_dict(user)
-        print_dirs(appdirs)
-        print_list(ALL_LIST)
-        print("")
     else:
-        parser.print_help()
-        print("")
+        # user defined ALL.TXT file location
+        if args.infile:
+            check_infile(args.infile)
+            file = args.infile
+        else:
+            # default WSJT-X ALL.TXT file location
+            file = os.path.join(__sharedir__,"ALL.TXT")
+
+    # send path, and calls to call_check() function
+    check_call(file,mc,hc)
 
     sys.exit(0)
 
