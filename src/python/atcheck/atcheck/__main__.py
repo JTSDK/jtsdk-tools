@@ -29,9 +29,9 @@ def check_infile(infile):
         with open(infile) as file:
             pass
     except IOError as e:
-        print_error_header(name,version,"File IOError")
+        print_error_header(name,version,e)
         print("Unable to open file. Please check the path.")
-        print("File Path : ", infile)
+        print("File Path : ", file)
         print("")
         sys.exit(1)
 
@@ -134,38 +134,19 @@ def check_call(file,text,mc,hc):
         f.close()
 
 def main():
-   
+
     parser = argparse.ArgumentParser()
     parser.prog = 'atcheck'
-    parser.description = "Parse WSJT-X ALL.TXT File for callsigns"
-    parser.epilog = "atcheck [OPTION]"
-
-    parser.add_argument('-f', '--file',
-                        action="store",
-                        type=str,
-                        help='Alternate location to ALL.TXT file')
-
-    parser.add_argument('-mc', '--mycall',
-                        action="store",
-                        required=True,
-                        type=str,
-                        help='My callsign')
-
-    parser.add_argument('-hc', '--hiscall',
-                    action="store",
-                    required=True,
-                    type=str,
-                    help='His callsign')
-
-    parser.add_argument('-v', '--version', 
-                    action='version',
-                    version='%(prog)s ' + version,
-                    help='display module version')
+    parser = argparse.ArgumentParser(description="Parse WSJT-X ALL.TXT File for callsigns.")
+    parser.add_argument('-f',action="store",type=str,help='alternate location to ALL.TXT file')
+    parser.add_argument('-mc',action="store",required=True,help="my callsign")
+    parser.add_argument('-hc',action="store",required=True,help="his Callsign")
+    parser.add_argument('-v',action='version',version='%(prog)s ' + version,help='display module version')
 
     # process cli sys.argv[**args, **kwargs]
     args = parser.parse_args()
-    mc = str(args.mycall).upper()
-    hc = str(args.hiscall).upper()
+    mc = str(args.mc).upper()
+    hc = str(args.hc).upper()
 
     # iterate through arg parse options
     if len(sys.argv) < 2:
@@ -175,9 +156,9 @@ def main():
         sys.exit(1)
     else:
         # user defined ALL.TXT file location
-        if args.file:
-            check_infile(args.file)
-            file = args.file
+        if args.f:
+            check_infile(args.f)
+            file = args.f
         else:
             # default WSJT-X ALL.TXT file location
             file = os.path.join(__sharedir__,"ALL.TXT")
