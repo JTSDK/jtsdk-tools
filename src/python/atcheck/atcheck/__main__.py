@@ -1,4 +1,42 @@
 # -*- coding: utf-8 -*-
+""" 
+atcheck
+=======
+
+Provides
+--------
+    1. Searches the WSJT-X produced ALL.TXT file for a given combination
+       of callsigns and returns any matches it finds.
+
+    Parameters
+    ----------
+    path : string (optional)
+        Path to the The first parameter.
+    mycall : str
+        Callsign of the operator
+    hiscall : str
+        Callsign og the contacted station
+
+    Returns
+    -------
+        str: Lineno, Date, Time, Band, Mode, MyCall, HisCall, Tag
+
+    Usage
+    -----
+        atcheck [-h] [-f F] -mc MC -hc HC [-v]
+
+        Parse WSJT-X ALL.TXT File for callsigns.
+
+        optional arguments:
+        -h, --help  show this help message and exit
+        -f F        alternate location to ALL.TXT file
+        -mc MC      My callsign
+        -hc HC      His Callsign
+        -v          display module version
+
+        atcheck [OPTION]
+
+"""
 import os
 import sys
 import time
@@ -16,6 +54,14 @@ def clear():
 
 
 def is_time(instr):
+    """Check if string is actually a time string
+
+    Arguments:
+        instr {[type]} -- [description]
+    
+    Returns:
+        [type] -- [description]
+    """
     try:
         time.strptime(instr, '%H%M%S')
         return True
@@ -134,7 +180,7 @@ def check_call(file,text,mc,hc):
         f.close()
 
 def main():
-
+    """ Main atcheck function"""
     parser = argparse.ArgumentParser()
     parser.prog = 'atcheck'
     parser = argparse.ArgumentParser(description="Parse WSJT-X ALL.TXT File for callsigns.")
@@ -171,4 +217,5 @@ def main():
     sys.exit(0)
 
 if __name__ == '__main__':
+    """Call main function"""
     main()
