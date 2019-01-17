@@ -5,7 +5,7 @@
 | Package             | `atcheck`
 | Version             | 0.0.1
 | Topic               | Communications, Ham Radio
-| Development Status  | 4 - Pre-Alpha
+| Development Status  | 2 - Pre-Alpha
 | Distributions       | Windows, Linux, MacOS
 | Arch                | Any (x86-64 recommended)
 | Python              | Version >= 3.5

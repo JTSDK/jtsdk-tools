@@ -48,7 +48,7 @@ setuptools.setup(
     zip_safe=False,
     classifiers=[
         "Natural Language :: English",
-        "Development Status :: 4 - Pre-Alpha",
+        "Development Status :: 2 - Pre-Alpha",
         "Intended Audience :: Developers",
         "Topic :: Communications :: Ham Radio",
         "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
