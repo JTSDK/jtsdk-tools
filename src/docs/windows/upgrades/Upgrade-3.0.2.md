@@ -9,7 +9,7 @@ Installation of this package should follow the tool-chain installation and
 setup. If you've not already done so, review the following guides **before**
 checking out and compiling the source code.
 
-- [Prerequisite Tools Installation](../Install-Prerequisites.md)
+- [Prerequisite Tools Installation](../Home.md/#install-prerequisites.md)
 - [Core Tool Installation](../Install-Core-Tools.md)
 
 ## Remove Old Files and Folders

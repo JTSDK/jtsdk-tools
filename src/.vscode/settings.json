@@ -12,5 +12,6 @@
         "pandoc",
         "rconfig",
         "rinstall"
-    ]
+    ],
+    "python.pythonPath": "D:\\JTSDK-Tools\\tools\\Anaconda3\\python.exe"
 }
