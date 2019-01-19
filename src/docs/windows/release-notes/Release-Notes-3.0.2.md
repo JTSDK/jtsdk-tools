@@ -11,13 +11,13 @@ build for `WSJT-X`. As a result, several applications-name shortcuts have change
 - `msys2` launches the `MSYS2` console for building Hamlib
 
 ### Optioinal Environment Commands
-- `jtenv-py -h` if [Anaconda Python](https://github.com/KI7MT/jtsdk-dotnet-core/wiki/Install-Python) is installed. 
+- `jtenv-py -h` if [Anaconda Python](../Install-Python.md) is installed. 
 - `jtenv-jv -h` if [jtsdk-java-env](https://github.com/KI7MT/jtsdk-java-env) is installed.
 
 ## JTEnv Java Install
 
->NOTE - JTEnv Java requires both [Java Tools](Install-Java-Tools) and 
-[Java](Install-java) to be installed before building JTEnv Java.
+>NOTE - JTEnv Java requires both [Java Tools](../Install-Java-Tools.md) and 
+[Java](../Install-java.md) to be installed before building JTEnv Java.
 
 The `jtenv-jv` application has been converted to use to a stand-alone project
 [jtsdk-java-apps](https://github.com/KI7MT/jtsdk-java-apps) and is not longer

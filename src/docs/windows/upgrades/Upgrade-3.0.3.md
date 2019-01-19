@@ -15,7 +15,7 @@ checking out and compiling the source code.
 
 ## Installation
 
-Due to a repository name change, any previous checkout of `jtsdk-dotnet-core`
+Due to a repository name change, any previous checkout of `jtsdk-tools`
 should be removed before checking out the new repository `jtsdk-tools`.
 
 ``` shell

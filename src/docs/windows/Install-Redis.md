@@ -35,8 +35,8 @@
 Redis runs `best` on Linux | Unix based systems, and it is `NOT` recommended for Native
 Windows. See [Reasons Why Not Windows](https://redislabs.com/ebook/appendix-a/a-3-installing-on-windows/a-3-1-drawbacks-of-redis-on-windows/)
 for a more in-depth explanation. If you need assistance installing `WSL`, see
-Installing [Windows Subsystem for Linux Installation](https://github.com/KI7MT/jtsdk-dotnet-core/wiki/Install-WSL)
-from the [JTSDK Net Core Project Wiki](https://github.com/KI7MT/jtsdk-dotnet-core/wiki).
+Installing [Windows Subsystem for Linux Installation](Install-WSL.md)
+from the [JTSDK Net Core Project Wiki](https://ki7mt.github.io/jtsdk-tools/).
 
 ## Base System Hardware
 
