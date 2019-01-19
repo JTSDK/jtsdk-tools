@@ -302,11 +302,12 @@
             <li><a href="#step-3-run-postgresql-installer">Step-3 - Run PostgreSQL Installer</a></li>
             <li><a href="#step-4-post-install-bug-fix">Step-4 - Post Install Bug Fix</a></li>
             <li><a href="#step-5-verify-server-version">Step-5 - Verify Server Version</a></li>
-            <li><a href="#feedback-bug-reports">Feedback / Bug Reports</a></li>
+            <li><a href="#bug-reports">Bug Reports</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
+<h1 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h1>
 <table>
 <thead>
 <tr>
@@ -329,13 +330,12 @@
 </tr>
 </tbody>
 </table>
-<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
 <p>The following guide is for upgrading to <code>PostgreSQL-10.6</code>. It
 is assumed you have performed the initial installation as outlined in
 <a href="../../Install-PostgreSQL/">PostgreSQL Installation Documentation</a>.</p>
-<h3 id="step-1-downlod-installer">Step-1 - Downlod Installer<a class="headerlink" href="#step-1-downlod-installer" title="Permanent link">&para;</a></h3>
+<h2 id="step-1-downlod-installer">Step-1 - Downlod Installer<a class="headerlink" href="#step-1-downlod-installer" title="Permanent link">&para;</a></h2>
 <p>Download the <a href="https://www.enterprisedb.com/downloads/postgres-postgresql-downloads">EDB v10.6 Win-x86-64</a> installer, ensuring you select the <code>Version 10.6</code> under <code>Win-x86-64 bit</code>.</p>
-<h3 id="step-2-stop-postgresql-server">Step-2 - Stop PostgreSQL Server<a class="headerlink" href="#step-2-stop-postgresql-server" title="Permanent link">&para;</a></h3>
+<h2 id="step-2-stop-postgresql-server">Step-2 - Stop PostgreSQL Server<a class="headerlink" href="#step-2-stop-postgresql-server" title="Permanent link">&para;</a></h2>
 <p>There are a number of ways to stop the PostgreSQL server instance. For this
 example, I'll be using the <code>Windows Task Manager</code>.</p>
 <pre><code class="shell">* Right-Click the Windows Task Bar, then select Task Manager.
@@ -357,13 +357,15 @@ example, I'll be using the <code>Windows Task Manager</code>.</p>
 </tr>
 </tbody>
 </table>
-<h3 id="step-3-run-postgresql-installer">Step-3 - Run PostgreSQL Installer<a class="headerlink" href="#step-3-run-postgresql-installer" title="Permanent link">&para;</a></h3>
-<p>Browse to the location where the <code>EDB v10.6 Win-x86-64</code> was saved, and run it. You should not need to change any options, with the exception of <code>Deselecting Stack Builder</code>.</p>
+<h2 id="step-3-run-postgresql-installer">Step-3 - Run PostgreSQL Installer<a class="headerlink" href="#step-3-run-postgresql-installer" title="Permanent link">&para;</a></h2>
+<p>Browse to the location where the <code>EDB v10.6 Win-x86-64</code> was saved, and run it.
+You should not need to change any options, with the exception of
+<code>Deselecting Stack Builder</code>.</p>
 <blockquote>
-<p>NOTE: During the installation process, the new server version will be started. There is no need to use Windows Task Manager to control the
-re-start.</p>
+<p>NOTE: During the installation process, the new server version will be started.
+There is no need to use Windows Task Manager to control the re-start.</p>
 </blockquote>
-<h3 id="step-4-post-install-bug-fix">Step-4 - Post Install Bug Fix<a class="headerlink" href="#step-4-post-install-bug-fix" title="Permanent link">&para;</a></h3>
+<h2 id="step-4-post-install-bug-fix">Step-4 - Post Install Bug Fix<a class="headerlink" href="#step-4-post-install-bug-fix" title="Permanent link">&para;</a></h2>
 <p>There is a bug in the installer environment script (<code>pg_env.bat</code>) that adds double-quotes around a critical path variable. This is easily fixed editing the file manually after installation.</p>
 <pre><code class="shell">* Using Windows File Explorer, browse to:
 
@@ -378,7 +380,7 @@ to the following when finished:
 * Save pg_env.bat and exit VS Code.
 </code></pre>
 
-<h3 id="step-5-verify-server-version">Step-5 - Verify Server Version<a class="headerlink" href="#step-5-verify-server-version" title="Permanent link">&para;</a></h3>
+<h2 id="step-5-verify-server-version">Step-5 - Verify Server Version<a class="headerlink" href="#step-5-verify-server-version" title="Permanent link">&para;</a></h2>
 <p>After editing the <code>pg_env.bat</code> file, check the server is working properly by validating the new version.</p>
 <pre><code class="shell">* Browse to and open JTSDK-Env
 * At the prompt, type: psql --version
@@ -397,9 +399,9 @@ to the following when finished:
 </tr>
 </tbody>
 </table>
-<h3 id="feedback-bug-reports">Feedback / Bug Reports<a class="headerlink" href="#feedback-bug-reports" title="Permanent link">&para;</a></h3>
+<h2 id="bug-reports">Bug Reports<a class="headerlink" href="#bug-reports" title="Permanent link">&para;</a></h2>
 <p>If you run into problems with the upgrade, submit a ticket on the
-<a href="https://github.com/KI7MT/jtsdk-dotnet-core/issues">Issue Trracker</a>.</p></div>
+<a href="https://github.com/KI7MT/jtsdk-tools/issues">Issue Tracker</a>.</p></div>
         </div>
 
         <footer class="col-md-12">
