@@ -62,18 +62,6 @@
 </li>
             
 <li >
-    <a href="windows/Install-Prerequisites/">Prerequisites</a>
-</li>
-            
-<li >
-    <a href="windows/Third-Party-Installers/">Third Party Installers</a>
-</li>
-            
-<li >
-    <a href="windows/Version-Matrix/">Version Matrix</a>
-</li>
-            
-<li >
     <a href="windows/Install-Net-Core-SDK/">1. NetCore</a>
 </li>
             
@@ -107,6 +95,14 @@
             
 <li >
     <a href="windows/Install-Msys2/">9. MSYS2</a>
+</li>
+            
+<li >
+    <a href="windows/Third-Party-Installers/">Third Party Installers</a>
+</li>
+            
+<li >
+    <a href="windows/Version-Matrix/">Version Matrix</a>
 </li>
             
   <li class="dropdown-submenu">
@@ -172,6 +168,10 @@
     <ul class="dropdown-menu">
             
 <li >
+    <a href="windows/release-notes/Home/">Overview</a>
+</li>
+            
+<li >
     <a href="windows/release-notes/Release-Notes-3.0.3/">3.0.3</a>
 </li>
             
@@ -188,6 +188,10 @@
   <li class="dropdown-submenu">
     <a href="#">Upgrades</a>
     <ul class="dropdown-menu">
+            
+<li >
+    <a href="windows/upgrades/Home/">Overview</a>
+</li>
             
 <li >
     <a href="windows/upgrades/Upgrade-3.0.3/">3.0.3</a>
@@ -293,33 +297,37 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
         <li class="main active"><a href="#jtsdk-tools">JTSDK Tools</a></li>
-            <li><a href="#documentation">Documentation</a></li>
             <li><a href="#software-delivery">Software Delivery</a></li>
             <li><a href="#community-support">Community Support</a></li>
-            <li><a href="#installation">Installation</a></li>
-            <li><a href="#bug-reports">Bug Reports</a></li>
             <li><a href="#supported-os">Supported OS</a></li>
             <li><a href="#system-requirements">System Requirements</a></li>
+            <li><a href="#windows-installation">Windows Installation</a></li>
+            <li><a href="#linux-installation">Linux Installation</a></li>
+            <li><a href="#windows-release-notes">Windows Release Notes</a></li>
+            <li><a href="#windows-upgrades">Windows Upgrades</a></li>
+            <li><a href="#version-matrix">Version Matrix</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
 <h1 id="jtsdk-tools">JTSDK Tools<a class="headerlink" href="#jtsdk-tools" title="Permanent link">&para;</a></h1>
-<p>This repository is designed to work specifically with the
-<a href="https://sourceforge.net/projects/jtsdk/files/win32/3.0.0/release/">JTSDK Tools Version 3</a> tool-chain, which can be used for a great many
-purposes on Windows, Linux and MacOS.</p>
-<h2 id="documentation">Documentation<a class="headerlink" href="#documentation" title="Permanent link">&para;</a></h2>
-<p>The project now has a new <a href="https://ki7mt.github.io/jtsdk-tools/">Documentation Site</a> hosted on <code>Github.io</code>.
-The documents cover all aspects of the project, from
-<a href="#installaiton">installation</a> to beta testing. Going forward, the documentation
-site will be the most up to date information available.</p>
-<p>There will be short a grace period for the <a href="https://github.com/KI7MT/jtsdk-tools/wiki">JTSDK Tools Wiki</a>, after which, it
-will be disabled. Users should update their links accordingly.</p>
+<p>The main purpose of JTSDK-Tools is to take a group of otherwise independent
+library's, frameworks and applications and put them together into one
+environment.</p>
+<p>While the primary focus of JTSDK-Tools is to compile the many aspects of
+the <a href="https://physics.princeton.edu/pulsar/k1jt/wsjtx.html">WSJT-X</a> project, there is no reason it cannot be used for the  intended
+purpose of any given framework or application. For instance, you can develop
+your own Java, Qt, Python, C/C++ (just to name a few) projects all from the same
+environment.</p>
+<p>An added benefit to using JTSDK-Tools is the ability to select one or more Qt,
+Java or Python environments. Again, all from the same environment. Gone is the
+requirement to have multiple consoles open to perform specific tasks
+for a given framework.</p>
 <h2 id="software-delivery">Software Delivery<a class="headerlink" href="#software-delivery" title="Permanent link">&para;</a></h2>
 <p>Delivery is directly from the <code>master</code> branch. <code>Branches</code> are used for development
 and testing, while reserving the <code>master</code> branch in a stable condition for end
 users. <code>Tags</code> are used to archive milestones, and will appear in the
-<a href="https://github.com/KI7MT/jtsdk-tools/releases">release section</a>.</p>
+[release section][].</p>
 <h2 id="community-support">Community Support<a class="headerlink" href="#community-support" title="Permanent link">&para;</a></h2>
 <p>To assist users with installation, usage, compiling applications, and
 general discussion, use:</p>
@@ -330,17 +338,6 @@ general discussion, use:</p>
 <li>Group Owner: JTSDK+owner@groups.io</li>
 <li>Help: JTSDK+help@groups.io</li>
 </ul>
-<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
-<p>Installation of this package should follow the tool-chain installation and
-setup. If you've not already done so, review the following guides <strong>before</strong>
-checking out and compiling the source code.</p>
-<p>See <a href="https://ki7mt.github.io/jtsdk-tools/windows/Home/">Windows Installation</a> for detailed instructions.</p>
-<h2 id="bug-reports">Bug Reports<a class="headerlink" href="#bug-reports" title="Permanent link">&para;</a></h2>
-<p>For submitting bug reports and feature requests, use the <a href="https://github.com/KI7MT/jtsdk-tools/issues">Issue Tracker</a>.</p>
-<p>The aim of <code>JTSDK-Tools</code> is to use an Agile delivery approach to create a
-high-quality, yet flexible build system. Utilizing Github's <a href="https://github.com/KI7MT/jtsdk-tools/issues">Issue Tracker</a>.
-users can quickly see the status of any particular request, discuss the merits,
-and implement the final disposition.</p>
 <h2 id="supported-os">Supported OS<a class="headerlink" href="#supported-os" title="Permanent link">&para;</a></h2>
 <p>At present, this repository only supports Windows. Later releases with include
 generic Linux support, and additional Ubuntu / Debian specific artifacts.</p>
@@ -348,13 +345,7 @@ generic Linux support, and additional Ubuntu / Debian specific artifacts.</p>
 <li>Windows</li>
 <li>Win-10 x86-64 / x86-32</li>
 <li>Win-7|8 x86-64 / x86-32, in theory, but not tested.</li>
-<li>
-<p>Win-XP and Vista are not supported.</p>
-</li>
-<li>
-<p>Linux</p>
-</li>
-<li>Linux - Coming Soon!.</li>
+<li>Win-XP and Vista are not supported.</li>
 </ul>
 <h2 id="system-requirements">System Requirements<a class="headerlink" href="#system-requirements" title="Permanent link">&para;</a></h2>
 <p>This project creates a development-environment that supports many languages.
@@ -368,7 +359,22 @@ mind, the following should be considered the bare-minimum requirements:</p>
 <li>Disk Space: At least 25GB to 30GB of Free Space</li>
 <li>SSD - If you have them, use them!</li>
 </ul>
-<!--Page Links ----------------------------------------------------------------></div>
+<h2 id="windows-installation">Windows Installation<a class="headerlink" href="#windows-installation" title="Permanent link">&para;</a></h2>
+<p>The are three primary sections to the installation. Each have multiple
+subsections that must be installed for complete the core tool set. There are
+several <code>Optional</code> tools that can be installed on-top of the core requirements.</p>
+<p>For a full installation guide, see the <a href="https://ki7mt.github.io/jtsdk-tools/windows/Home/">Overview Section</a></p>
+<h2 id="linux-installation">Linux Installation<a class="headerlink" href="#linux-installation" title="Permanent link">&para;</a></h2>
+<p>JTSDK-Tools under Linux is much different process than for Windows. Documentation
+and packaging is still under development.</p>
+<p>The one similarity between Linux and Windows is, most all of the packages listed
+in the <a href="#version-matrix">Version Matrix</a> will also be installed.</p>
+<h2 id="windows-release-notes">Windows Release Notes<a class="headerlink" href="#windows-release-notes" title="Permanent link">&para;</a></h2>
+<p>See ==&gt; <a href="windows/release-notes/Home/">Windows Release Notes</a></p>
+<h2 id="windows-upgrades">Windows Upgrades<a class="headerlink" href="#windows-upgrades" title="Permanent link">&para;</a></h2>
+<p>See ==&gt; <a href="windows/upgrades/Home/">Windows Upgrades</a></p>
+<h2 id="version-matrix">Version Matrix<a class="headerlink" href="#version-matrix" title="Permanent link">&para;</a></h2>
+<p>For a list of library's, frameworks, and applications, see the <a href="https://ki7mt.github.io/jtsdk-tools/windows/Version-Matrix/">Version Matrix</a></p></div>
         </div>
 
         <footer class="col-md-12">
@@ -452,5 +458,5 @@ mind, the following should be considered the bare-minimum requirements:</p>
 
 <!--
 MkDocs version : 1.0.4
-Build Date UTC : 2019-01-17 02:41:01
+Build Date UTC : 2019-01-19 04:36:31
 -->

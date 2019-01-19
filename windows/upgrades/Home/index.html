@@ -8,7 +8,7 @@
         <meta name="author" content="Greg Beam, KI7MT">
         
         <link rel="shortcut icon" href="../../../img/favicon.ico">
-        <title>3.0.1 - JTSDK Tools</title>
+        <title>Overview - JTSDK Tools</title>
         <link href="../../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../../css/base.css" rel="stylesheet">
@@ -168,19 +168,19 @@
     <ul class="dropdown-menu">
             
 <li >
-    <a href="../Home/">Overview</a>
+    <a href="../../release-notes/Home/">Overview</a>
 </li>
             
 <li >
-    <a href="../Release-Notes-3.0.3/">3.0.3</a>
+    <a href="../../release-notes/Release-Notes-3.0.3/">3.0.3</a>
 </li>
             
 <li >
-    <a href="../Release-Notes-3.0.2/">3.0.2</a>
+    <a href="../../release-notes/Release-Notes-3.0.2/">3.0.2</a>
 </li>
             
-<li class="active">
-    <a href="./">3.0.1</a>
+<li >
+    <a href="../../release-notes/Release-Notes-3.0.1/">3.0.1</a>
 </li>
     </ul>
   </li>
@@ -189,24 +189,24 @@
     <a href="#">Upgrades</a>
     <ul class="dropdown-menu">
             
-<li >
-    <a href="../../upgrades/Home/">Overview</a>
+<li class="active">
+    <a href="./">Overview</a>
 </li>
             
 <li >
-    <a href="../../upgrades/Upgrade-3.0.3/">3.0.3</a>
+    <a href="../Upgrade-3.0.3/">3.0.3</a>
 </li>
             
 <li >
-    <a href="../../upgrades/Upgrade-3.0.2/">3.0.2</a>
+    <a href="../Upgrade-3.0.2/">3.0.2</a>
 </li>
             
 <li >
-    <a href="../../upgrades/Upgrade-3.0.1/">3.0.1</a>
+    <a href="../Upgrade-3.0.1/">3.0.1</a>
 </li>
             
 <li >
-    <a href="../../upgrades/Postgresql-10.6/">PostgreSQL-10.6</a>
+    <a href="../Postgresql-10.6/">PostgreSQL-10.6</a>
 </li>
     </ul>
   </li>
@@ -279,12 +279,12 @@
                             </a>
                         </li>
                             <li >
-                                <a rel="next" href="../Release-Notes-3.0.2/">
+                                <a rel="next" href="../../release-notes/Release-Notes-3.0.1/">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li >
-                                <a rel="prev" href="../../upgrades/Home/">
+                                <a rel="prev" href="../Upgrade-3.0.3/">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -296,62 +296,35 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#release-notes-301">Release Notes 3.0.1</a></li>
-        <li class="main "><a href="#upgrade">Upgrade</a></li>
+        <li class="main active"><a href="#jtsdk-tools-upgrades">JTSDK Tools Upgrades</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h2 id="release-notes-301">Release Notes 3.0.1<a class="headerlink" href="#release-notes-301" title="Permanent link">&para;</a></h2>
-<p>Installation of this package should follow the tool-chain installation and
-setup. If you've not already done so, review the following guides <strong>before</strong>
-checking out and compiling the source code.</p>
-<ul>
-<li><a href="Install-Prerequisites">Prerequisite Tools Installation</a></li>
-<li><a href="Install-Jtsdk-Core">Core Tool Installation</a></li>
-</ul>
-<pre><code class="shell"># Open a Windows Console, then change directories to the JTSDK-Tools installation
-cd /d (C|D):\JTSDK-Tools
-
-# Set Temporary JTSDK_HOME variable
-set JTSDK_HOME=%CD%
-
-# Make a Source Directory
-mkdir src
-
-# Change Directories and Clone
-cd src
-git clone https://github.com/KI7MT/jtsdk-dotnet-core.git
-
-# Change Directories and Make Install
-cd jtsdk-dotnet-core
-make install
-</code></pre>
-
-<h2 id="upgrade">Upgrade<a class="headerlink" href="#upgrade" title="Permanent link">&para;</a></h2>
-<p>If the source clone is still present on the system, upgrading is the same as
-installation, with an additional pull command. If not, use the installation steps
-from above.</p>
-<pre><code class="shell"># Change directories to the JTSDK-Tools installation
-cd /d (C|D):\JTSDK-Tools
-
-# Set Temporary JTSDK_HOME variable
-set JTSDK_HOME=%CD%
-
-# Change Directories To The Cloned Repository
-cd /d %JTSDK_HOME%\src\jtsdk-dotnet-core
-
-# Clean the build tree
-make clean
-
-# Update Source
-git pull origin master
-
-# Install New Update
-make install
-</code></pre>
-
-<p>This concludes the installation and / or upgrade for <code>JTSDK Core Applications</code>.</p></div>
+<h1 id="jtsdk-tools-upgrades">JTSDK Tools Upgrades<a class="headerlink" href="#jtsdk-tools-upgrades" title="Permanent link">&para;</a></h1>
+<p>The following are a list of upgrades for version 3.0.0 series.</p>
+<table>
+<thead>
+<tr>
+<th align="left">Release</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">3.0.3</td>
+<td align="left"><a href="../Upgrade-3.0.3/">Upgrade-3.0.3</a></td>
+</tr>
+<tr>
+<td align="left">3.0.2</td>
+<td align="left"><a href="../Upgrade-3.0.2/">Upgrade-3.0.2</a></td>
+</tr>
+<tr>
+<td align="left">3.0.1</td>
+<td align="left"><a href="../Upgrade-3.0.1/">Upgrade-3.0.3</a></td>
+</tr>
+</tbody>
+</table></div>
         </div>
 
         <footer class="col-md-12">

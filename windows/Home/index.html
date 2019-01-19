@@ -62,18 +62,6 @@
 </li>
             
 <li >
-    <a href="../Install-Prerequisites/">Prerequisites</a>
-</li>
-            
-<li >
-    <a href="../Third-Party-Installers/">Third Party Installers</a>
-</li>
-            
-<li >
-    <a href="../Version-Matrix/">Version Matrix</a>
-</li>
-            
-<li >
     <a href="../Install-Net-Core-SDK/">1. NetCore</a>
 </li>
             
@@ -107,6 +95,14 @@
             
 <li >
     <a href="../Install-Msys2/">9. MSYS2</a>
+</li>
+            
+<li >
+    <a href="../Third-Party-Installers/">Third Party Installers</a>
+</li>
+            
+<li >
+    <a href="../Version-Matrix/">Version Matrix</a>
 </li>
             
   <li class="dropdown-submenu">
@@ -172,6 +168,10 @@
     <ul class="dropdown-menu">
             
 <li >
+    <a href="../release-notes/Home/">Overview</a>
+</li>
+            
+<li >
     <a href="../release-notes/Release-Notes-3.0.3/">3.0.3</a>
 </li>
             
@@ -188,6 +188,10 @@
   <li class="dropdown-submenu">
     <a href="#">Upgrades</a>
     <ul class="dropdown-menu">
+            
+<li >
+    <a href="../upgrades/Home/">Overview</a>
+</li>
             
 <li >
     <a href="../upgrades/Upgrade-3.0.3/">3.0.3</a>
@@ -280,7 +284,7 @@
                                 </a>
                             </li>
                             <li >
-                                <a rel="prev" href="../Install-Prerequisites/">
+                                <a rel="prev" href="../Install-Net-Core-SDK/">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -292,33 +296,43 @@
         <div class="container">
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="main active"><a href="#jtsdk-tools-windows-installation">JTSDK Tools Windows Installation</a></li>
-            <li><a href="#prerequisite-installation">Prerequisite Installation</a></li>
-            <li><a href="#required-installation-and-configuration">Required Installation and Configuration</a></li>
-            <li><a href="#optional-installs">Optional Installs</a></li>
-            <li><a href="#sections">Sections</a></li>
-            <li><a href="#general-overview">General Overview</a></li>
-            <li><a href="#miscellaneous">Miscellaneous</a></li>
+        <li class="main active"><a href="#windows-installation">Windows Installation</a></li>
+            <li><a href="#prerequisites">Prerequisites</a></li>
+            <li><a href="#required-install">Required Install</a></li>
+            <li><a href="#optional-install">Optional Install</a></li>
+            <li><a href="#tool-chain-matrix">Tool Chain Matrix</a></li>
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="jtsdk-tools-windows-installation">JTSDK Tools Windows Installation<a class="headerlink" href="#jtsdk-tools-windows-installation" title="Permanent link">&para;</a></h1>
-<blockquote>
-<p>NOTE: This document is still <code>Under Development</code>, and may be subject to frequent
+<h1 id="windows-installation">Windows Installation<a class="headerlink" href="#windows-installation" title="Permanent link">&para;</a></h1>
+<p>This document is still <code>Under Development</code>, and may be subject to frequent
 updates. Hard linking to specific URL's is <em>not advised</em> at this time. To prevent
 unexpected issues, the installation order below should be firmly adhered to.</p>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<p>In order to checkout and compile the <code>JTSDK Net Core Utilities</code>, users must have 
+three applications  / frameworks installed at the <code>system level</code>.</p>
+<p>The <a href="#prerequisites-installation-order">guides listed below</a> are provided to
+assist users with installing the <code>JTSDK Tool Chain</code> prerequisite applications.
+All three components are installed to the <code>Default System Install Location(s)</code>
+if the guides are followed.</p>
+<p>All three packages must be available from a standard Windows or Linux Console.
+If not, users should add--either locally or system wide--the path location(s)
+which allows access from the command-line. Using the commands <code>git --version</code>,
+<code>dotnet --info</code>, and <code>code --version</code> should all render without error from their
+respective console.</p>
+<blockquote>
+<p>IMPORTANT - It is up to the user where these packages are installed. However,
+unless there are specific reasons to <em>NOT</em> use a default install location,
+its <code>highly advisable</code> to use the recommended installer location(s).</p>
 </blockquote>
-<h2 id="prerequisite-installation">Prerequisite Installation<a class="headerlink" href="#prerequisite-installation" title="Permanent link">&para;</a></h2>
-<p>While not critical, the following packages should be installed in the order
-listed to prevent unexpected results. See <a href="../Install-Prerequisites/">Prerequisite Overview</a>
-for further details.</p>
+<p>While not critical, the order below should be followed:</p>
 <ol>
-<li><a href="../Install-Net-Core-SDK/">Net Core SDK</a></li>
-<li><a href="../Install-VS-Code/">VS Code</a></li>
-<li><a href="../Install-Git-Client/">Git Client</a></li>
+<li><a href="../Install-Net-Core-SDK/">Install .Net Core SDK</a></li>
+<li><a href="../Install-VS-Code/">Install VS Code Editor</a></li>
+<li><a href="../Install-Git-Client/">Install Git</a></li>
 </ol>
-<h2 id="required-installation-and-configuration">Required Installation and Configuration<a class="headerlink" href="#required-installation-and-configuration" title="Permanent link">&para;</a></h2>
+<h2 id="required-install">Required Install<a class="headerlink" href="#required-install" title="Permanent link">&para;</a></h2>
 <p><code>MSYS2</code> is the last of the required installation and configuration sections.
 It follows the <a href="../Install-Core-Apps/">Core Apps Install</a> guide as several
 scripts--most notably, the <code>Hamlib Build</code> script--are part of this package. The
@@ -332,7 +346,7 @@ list which users will need to install <code>MSYS2</code> required dependencies.<
 <li><a href="../Install-Core-Apps/">Core Apps</a></li>
 <li><a href="../Install-Msys2/">MSYS2 Configuration</a></li>
 </ol>
-<h2 id="optional-installs">Optional Installs<a class="headerlink" href="#optional-installs" title="Permanent link">&para;</a></h2>
+<h2 id="optional-install">Optional Install<a class="headerlink" href="#optional-install" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="../Install-DB-Tools/">Database Tools (non-PostgreSQL)</a></li>
 <li><a href="../Install-Doc-Tools/">Doc Tools</a></li>
@@ -343,68 +357,7 @@ list which users will need to install <code>MSYS2</code> required dependencies.<
 <li><a href="../Install-WSL/">WSL</a></li>
 <li><a href="../Install-Misc-Tools/">Misc Tools</a> - under development</li>
 </ul>
-<h2 id="sections">Sections<a class="headerlink" href="#sections" title="Permanent link">&para;</a></h2>
-<blockquote>
-<p>NOTE: This section is under constant revision. As framework needs arise, they will be placed both in the side-bar and list here.</p>
-</blockquote>
-<ul>
-<li><a href="#overview">Overview</a></li>
-<li><a href="#net-core-usage">Net Core Usage</a></li>
-<li><a href="#language-and-syntax">Language and Syntax</a></li>
-<li><a href="#setting-jtsdk_home-variable">Setting JTSDK_HOME Variable</a></li>
-<li><a href="#individual-guides">Individual Guides</a></li>
-<li><a href="#choosing-64-bit-32-or-32-bit">Choosing 64-bit or 32-bit</a></li>
-<li><a href="#system-level-installation">System Level Installation</a></li>
-<li><a href="#third-part-installers">Third Party Installers</a></li>
-<li><a href="#tool-chain-matrix">Tool Chain Matrix</a></li>
-<li><a href="#prerequisite-tools">Prerequisite Tools</a></li>
-<li><a href="#core-tools">Core Tools</a></li>
-<li><a href="#documentation-tools">Documentation Tools</a></li>
-<li><a href="#database-tools">Database Tools</a></li>
-<li><a href="#python-tools">Python Tools</a></li>
-<li><a href="#java-tools">Java Tools</a></li>
-<li><a href="#miscellaneous-tools">Miscellaneous Tools</a></li>
-</ul>
-<h2 id="general-overview">General Overview<a class="headerlink" href="#general-overview" title="Permanent link">&para;</a></h2>
-<p>JTSDK Tools Version 3 is broken down into three primary install groups:</p>
-<ul>
-<li><a href="#prerequisite-tools">Prerequisite Tools</a></li>
-<li><a href="#core-tools">Core Tools</a></li>
-<li><a href="https://github.com/KI7MT/jtsdk-tools">JTSDK Net Core Package</a></li>
-</ul>
-<p>In addition to the required tools and frameworks, there are a number of additional
-components the <code>JTSDK Tools Environment</code> will be supporting:</p>
-<ul>
-<li><a href="#python-tools">Python Tools</a></li>
-<li><a href="#java-tools">Java Tools</a></li>
-<li><a href="#database-tools">Database Tools</a></li>
-<li><a href="#miscellaneous-tools">Miscellaneous Tools</a></li>
-</ul>
-<p>While not absolute, the order of installation an configuration should be
-followed to prevent missing critical steps, or, missing out on a particular
-feature from another installation process.</p>
-<h3 id="net-core-usage">Net Core Usage<a class="headerlink" href="#net-core-usage" title="Permanent link">&para;</a></h3>
-<p>At present, <a href="https://docs.microsoft.com/en-us/dotnet/core/index">Net Core Applications</a>
-are only used in setting environment , paths and configuration variable. Its the
-long term goal to convert all <code>Bash</code> and Windows <code>Batch/CMD</code> scripts over to 
-<a href="https://docs.microsoft.com/en-us/dotnet/core/index">Net Core</a>.</p>
-<h3 id="language-and-syntax">Language and Syntax<a class="headerlink" href="#language-and-syntax" title="Permanent link">&para;</a></h3>
-<p>Throughout this guide you will often see the use of <code>(C|D):\JTSDK-Tools</code> or
-reference to <code>JTSDK_HOME</code></p>
-<ul>
-<li>The syntax <code>(C|D)</code> referes to the drive letter, either C-Drive <code>C:</code> or
-D-Drive <code>D:</code>. In either case, <code>\JTSDK-Tools</code> will follow the drive letter.</li>
-<li><code>JTSDK_HOME</code> referes to the locaiton where JTSDK-Tools has been installed,
-for example:</li>
-</ul>
-<pre><code class="shell"># C-Drive Installation
-JTSDK_HOME = C:\JTSDK-Tools
-
-# D-Drive Installation
-JTSDK_HOME = D:\JTSDK-Tools
-</code></pre>
-
-<h3 id="setting-jtsdk_home-variable">Setting JTSDK_HOME Variable<a class="headerlink" href="#setting-jtsdk_home-variable" title="Permanent link">&para;</a></h3>
+<h3 id="setting-jtsdk_home">Setting JTSDK_HOME<a class="headerlink" href="#setting-jtsdk_home" title="Permanent link">&para;</a></h3>
 <p>On several occasions, you will be required to set <code>JTSDK_HOME</code> temporarily. The
 following shows how to do this for either <code>(C|D)</code> installation locations.</p>
 <pre><code class="shell"># To temporarily set the JTSDK_HOME variable inside a Windows Console
@@ -425,275 +378,11 @@ set JTSDK_HOME=D:\JTSDK-Tools
 if the current console is closed. Likewise, if you have two consoles open,
 setting the variable in Console-1 will <em>NOT</em> make the variable known too nor
 available in Console-2.</p>
-<h3 id="individual-guides">Individual Guides<a class="headerlink" href="#individual-guides" title="Permanent link">&para;</a></h3>
-<p>Each activity in regards to installation or configuration has its own guide.
-Every effort has been made to make each guide informative, yet direct and to the
-point. The guides are <em>NOT</em> intended to be a tutorial covering the the subject
-area. Most tools have extensive documentation by the original authors, often
-located within the applicaiton folder structure.</p>
-<h3 id="choosing-64-bit-or-32-bit">Choosing 64-bit or 32-bit<a class="headerlink" href="#choosing-64-bit-or-32-bit" title="Permanent link">&para;</a></h3>
-<p>For the most part, any tool that is used to compile--either in-part or whole--
-WSJT applications should be 32-bit on Windows. Tools such as Git, Dotnet, 7-Zip,
-RapidEE, and others, can be 64-bit as they are tools to help users with
-non-compiling tasks. Each guide will have the <code>Required</code> arch-type and indicate
-whether it is acceptable to use 64-bit or not.</p>
-<h3 id="system-level-installation">System Level Installation<a class="headerlink" href="#system-level-installation" title="Permanent link">&para;</a></h3>
-<p>The JTSDK Tool Chain requires thhree packages to be installed at the System Level:</p>
-<ul>
-<li>For 32-bit <code>C:\Program Files (x86)</code></li>
-<li>For 64-bit <code>C:\Program Files</code></li>
-</ul>
-<p>If the application in question is not installed to the Windows default system
-installation location, they must be added to the System or User path variables.
-In either case, the applications must be available when opening a non-privileged
-Windows Console. Many application installers use the system folders by default.
-However, there are no guarantees, and users should verify the location for
-any System Level application requirement.</p>
-<h3 id="third-party-installers">Third Party Installers<a class="headerlink" href="#third-party-installers" title="Permanent link">&para;</a></h3>
-<blockquote>
-<p>One or more of the tool chain components may be provided by Third Party
-Installers. Users should always check for the latest version of the respective
-installer before installation unless advised otherwise.</p>
-</blockquote>
-<h3 id="tool-chain-matrix">Tool Chain Matrix<a class="headerlink" href="#tool-chain-matrix" title="Permanent link">&para;</a></h3>
-<p>The <a href="#tool-chain-matrix">Tool Chain Matrix(s)</a> provides a brief description and
+<h2 id="tool-chain-matrix">Tool Chain Matrix<a class="headerlink" href="#tool-chain-matrix" title="Permanent link">&para;</a></h2>
+<p>The <a href="../Version-Matrix/">Tool Chain Matrix(s)</a> provides a brief description and
 links to each application or framework used within <code>JTSDK-Tools</code>. <code>Installation</code>,
 <code>Configuration</code> and <code>Removal</code> will be outlined in each of the respective
-application or framework documents as appropriate. Collections such as
-<a href="http://www.msys2.org/">MSYS2</a> include many <a href="https://www.gnu.org/software/coreutils/coreutils.html">GNU Core Utils</a>
-that are not outlined specifically in this document. For more information a given
-item, following the links provided.</p>
-<h3 id="prerequisite-tools">Prerequisite Tools<a class="headerlink" href="#prerequisite-tools" title="Permanent link">&para;</a></h3>
-<p>In order to checkout and compile the <code>JTSDK Net Core Package</code>, users must have
-three applications installed at the <code>system level</code>.</p>
-<blockquote>
-<p>See <a href="../Install-Prerequisites/">Prereq Install Instructions</a> for details.</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th align="left">Application</th>
-<th align="left">Purpose</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left"><a href="https://docs.microsoft.com/en-us/dotnet/core/index">Microsoft Net Core SDK</a></td>
-<td align="left">Cross Platform Framework based on <a href="https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/">C-Charp</a></td>
-</tr>
-<tr>
-<td align="left"><a href="https://code.visualstudio.com/docs">Visual Studio Code</a></td>
-<td align="left">Powerful Cross-Platform Editor</td>
-</tr>
-<tr>
-<td align="left"><a href="https://git-scm.com/">Git Client</a></td>
-<td align="left">Distributed Version Control System Client</td>
-</tr>
-</tbody>
-</table>
-<h3 id="core-tools">Core Tools<a class="headerlink" href="#core-tools" title="Permanent link">&para;</a></h3>
-<p>The following tools are required and comprise the <code>Core Tool Chain</code>.
-All of the tools in this group are required to buolw <code>WSJT-X</code>, and should be
-considered the bare minimum installation.</p>
-<table>
-<thead>
-<tr>
-<th align="left">Application</th>
-<th align="left">Purpose</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left"><a href="https://asciidoctor.org/docs/">Asciidoctor</a></td>
-<td align="left">General purpose documeatation system based on <a href="https://www.ruby-lang.org/en/">Ruby</a></td>
-</tr>
-<tr>
-<td align="left"><a href="https://cmake.org/">CMake</a></td>
-<td align="left">Cross-Platform tools to build, test and deploy software</td>
-</tr>
-<tr>
-<td align="left"><a href="http://fftw.org/">FFTW</a></td>
-<td align="left">Subroutine library for computing the discrete Fourier transform (DFT) in one or more dimensions</td>
-</tr>
-<tr>
-<td align="left"><a href="http://www.jrsoftware.org/isinfo.php">InnoSetup</a></td>
-<td align="left">Install and build system for Windows applications</td>
-</tr>
-<tr>
-<td align="left"><a href="https://libusb.info/">Libusb</a></td>
-<td align="left">C-Library providing access to USB devices on Windows</td>
-</tr>
-<tr>
-<td align="left"><a href="http://www.msys2.org/">MSYS2</a></td>
-<td align="left">A collection of GNU Tools for Windows with <a href="https://wiki.archlinux.org/index.php/Pacman">Pacman package manager</a></td>
-</tr>
-<tr>
-<td align="left"><a href="http://nsis.sourceforge.net/Main_Page">NSIS</a></td>
-<td align="left">Professional open source system to create Windows installers</td>
-</tr>
-<tr>
-<td align="left"><a href="https://www.nuget.org/">Nuget</a></td>
-<td align="left">NuGet is the package manager for .NET</td>
-</tr>
-<tr>
-<td align="left"><a href="https://sourceforge.net/projects/pkgconfiglite/">PKG-Config</a></td>
-<td align="left">Package Config built for Windows</td>
-</tr>
-<tr>
-<td align="left"><a href="https://www.qt.io/">Qt</a></td>
-<td align="left">Cross-Platform Development Framework</td>
-</tr>
-<tr>
-<td align="left"><a href="https://www.ruby-lang.org/en/">Ruby</a></td>
-<td align="left">Open source programming language</td>
-</tr>
-<tr>
-<td align="left"><a href="http://svnbook.red-bean.com/en/1.6/svn.intro.whatis.html">Subversion</a></td>
-<td align="left">Cross-Platform Version Control System</td>
-</tr>
-</tbody>
-</table>
-<h3 id="documentation-tools">Documentation Tools<a class="headerlink" href="#documentation-tools" title="Permanent link">&para;</a></h3>
-<p>The following Document utilities can be installed in addition to the <code>JTSDK Core Tool Chain</code></p>
-<blockquote>
-<p>See <a href="../Install-Doc-Tools/">Install Doc Tools</a> for details.</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th align="left">Application</th>
-<th align="left">Purpose</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left"><a href="">AsciiDOc</a></td>
-<td align="left">The predecessor to Asciidoctor (Python based)</td>
-</tr>
-<tr>
-<td align="left"><a href="https://dotnet.github.io/docfx/">DocFX</a></td>
-<td align="left">Generates documentation directly from source code</td>
-</tr>
-<tr>
-<td align="left"><a href="https://pandoc.org/index.html">Pandoc</a></td>
-<td align="left">Cross-Platform document conversion utility</td>
-</tr>
-</tbody>
-</table>
-<h3 id="database-tools">Database Tools<a class="headerlink" href="#database-tools" title="Permanent link">&para;</a></h3>
-<p>The following tools are general purpose database applications and / or servers.</p>
-<blockquote>
-<p>See <a href="../Install-PostgreSQL/">Install-PostgreSQL</a>, and <a href="../Install-DB-Tools/">Install-DB-Tools</a>
-for details.</p>
-</blockquote>
-<p><code>PostgreSQL</code> is a stand-alone guide, where as <code>SQLite3</code> is a simply installed
-from the <a href="../Install-DB-Tools/">Install-DB-Tools Guide</a>. As more database
-tools are added, and provided they <em>do not</em> need a stand alone guide, they will
-be added to the <a href="../Install-DB-Tools/">Install-DB-Tools</a> installer.</p>
-<table>
-<thead>
-<tr>
-<th align="left">Application</th>
-<th align="left">Purpose</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left"><a href="https://www.postgresql.org/download/windows/">PostgreSQL</a></td>
-<td align="left">Advanced High Performance Relational Database</td>
-</tr>
-<tr>
-<td align="left"><a href="https://sqlite.org/about.html">Sqlite</a></td>
-<td align="left">A powerful In-Process SQL Database Engine</td>
-</tr>
-</tbody>
-</table>
-<h3 id="python-tools">Python Tools<a class="headerlink" href="#python-tools" title="Permanent link">&para;</a></h3>
-<p>The following Python Tools can be installed in addition to the <code>JTSDK Core Tool Chain</code>.</p>
-<blockquote>
-<p>See <a href="../Install-Python/">Install Python</a> for details.</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th align="left">Application</th>
-<th align="left">Purpose</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left"><a href="https://www.anaconda.com/">Anaconda Python</a></td>
-<td align="left">Python data science platform</td>
-</tr>
-</tbody>
-</table>
-<h3 id="java-tools">Java Tools<a class="headerlink" href="#java-tools" title="Permanent link">&para;</a></h3>
-<p>The following tools are generally related to <code>Java</code> and associated build activities.
-While applications such as <a href="https://gradle.org/">Gradle</a> and <a href="https://www.eclipse.org/downloads/">Eclipse</a>
-may very well apply to other programming languages, they are most commonly used
-in <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java</a>
-related application development.</p>
-<blockquote>
-<p>See <a href="../Install-Java/">Install Java</a>, and <a href="../Install-Java-Tools/">Install Java Tools</a>
-for more details.</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th align="left">Application</th>
-<th align="left">Purpose</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left"><a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">Java</a></td>
-<td align="left">Cross-Platform Programming Language</td>
-</tr>
-<tr>
-<td align="left"><a href="https://ant.apache.org/">Ant</a></td>
-<td align="left">Java Library, and CLI tools, for building Java Apps from the <a href="https://www.apache.org">Apache Foundation</a></td>
-</tr>
-<tr>
-<td align="left"><a href="https://www.eclipse.org/downloads/">Eclipse</a></td>
-<td align="left">Cross-Platform IDE primarily for Java Application Development</td>
-</tr>
-<tr>
-<td align="left"><a href="https://gradle.org/">Gradle</a></td>
-<td align="left">Cross-Platform tools for building and deploying applications</td>
-</tr>
-<tr>
-<td align="left"><a href="https://maven.apache.org/index.html">Maven</a></td>
-<td align="left">Build System from the <a href="https://www.apache.org">Apache Foundation</a></td>
-</tr>
-</tbody>
-</table>
-<h2 id="miscellaneous">Miscellaneous<a class="headerlink" href="#miscellaneous" title="Permanent link">&para;</a></h2>
-<p>The following tools can be installed in addition to the <code>JTSDK Core Tool Chain</code>.</p>
-<blockquote>
-<p>See <a href="../Install-Misc-Tools/">Miscellaneous Tools Install Instructions</a> for details.</p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th align="left">Application</th>
-<th align="left">Purpose</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left"><a href="https://www.rapidee.com/en/about">RapidEE</a></td>
-<td align="left">Rapid Environment Editor (RapidEE) is an environment variables editor.</td>
-</tr>
-<tr>
-<td align="left"><a href="https://www.visualstudio.com/vs/">Visual Studio</a></td>
-<td align="left">Fully-featured integrated development environment (IDE) for Android, iOS, Windows, web, and cloud</td>
-</tr>
-<tr>
-<td align="left">Others</td>
-<td align="left">More to follow</td>
-</tr>
-</tbody>
-</table></div>
+application or framework documents as appropriate.</p></div>
         </div>
 
         <footer class="col-md-12">
