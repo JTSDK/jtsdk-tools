@@ -17,7 +17,7 @@ build for `WSJT-X`. As a result, several applications-name shortcuts have change
 ## JTEnv Java Install
 
 >NOTE - JTEnv Java requires both [Java Tools](../Install-Java-Tools.md) and 
-[Java](../Install-java.md) to be installed before building JTEnv Java.
+[Java](../Install-Java.md) to be installed before building JTEnv Java.
 
 The `jtenv-jv` application has been converted to use to a stand-alone project
 [jtsdk-java-apps](https://github.com/KI7MT/jtsdk-java-apps) and is not longer

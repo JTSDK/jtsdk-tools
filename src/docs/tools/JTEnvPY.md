@@ -81,9 +81,10 @@ conda activate jtsdk-py
 pip uninstall jtenv
 
 ```
-[Install Anaconda Python]: (../windows/Install-Python.md)
+
+[Install Anaconda Python]: https://ki7mt.github.io/jtsdk-tools/windows/Install-Python.md
 [JTSDK-Tools]: https://ki7mt.github.io/jtsdk-tools/
 [test.pypi.org]: https://test.pypi.org/project/jtenv/
 [PyPi]: https://pypi.org/
-[Anaconda Python 2018.12]: (../windows/Install-Python.md)
+[Anaconda Python 2018.12]: https://ki7mt.github.io/jtsdk-tools/windows/Install-Python.md
 [Python]: https://www.python.org/
