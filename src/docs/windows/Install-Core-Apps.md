@@ -47,7 +47,7 @@ cd src
 git clone https://github.com/KI7MT/jtsdk-tools.git
 
 # Change Directories and Make Install
-cd jtsdk-tools
+cd jtsdk-tools\src
 make install
 ```
 
@@ -65,7 +65,7 @@ cd /d (C|D):\JTSDK-Tools
 set JTSDK_HOME=%CD%
 
 # Change Directories To The Cloned Repository
-cd /d %JTSDK_HOME%\src\jtsdk-tools
+cd /d %JTSDK_HOME%\jtsdk-tools\src
 
 # Clean the build tree
 make clean
