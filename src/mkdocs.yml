@@ -11,9 +11,6 @@ nav:
     - Installation:
       - Windows:
         - 'Overview': 'windows/Home.md'
-        - 'Prerequisites': 'windows/Install-Prerequisites.md'      
-        - 'Third Party Installers': 'windows/Third-Party-Installers.md'
-        - 'Version Matrix': 'windows/Version-Matrix.md'        
         - '1. NetCore': 'windows/Install-Net-Core-SDK.md'
         - '2. VS Code': 'windows/Install-VS-Code.md'
         - '3. Git Client': 'windows/Install-Git-Client.md'
@@ -23,6 +20,8 @@ nav:
         - '7. Qt Tools': 'windows/Install-Qt.md'
         - '8. Core Apps': 'windows/Install-Core-Apps.md'
         - '9. MSYS2': 'windows/Install-Msys2.md'
+        - 'Third Party Installers': 'windows/Third-Party-Installers.md'
+        - 'Version Matrix': 'windows/Version-Matrix.md'        
         - Optional Installs:
           - 'Database Tools': 'windows/Install-DB-Tools.md'
           - 'Doc Tools': 'windows/Install-Doc-Tools.md'
@@ -38,10 +37,12 @@ nav:
           - 'MSSQL': 'windows/Install-MSSQL-Server.md'
           - 'Visual Stuidio': 'windows/Install-Visual-Studio.md'
         - Release Notes:
+          - 'Overview': 'windows/release-notes/Home.md'          
           - '3.0.3': 'windows/release-notes/Release-Notes-3.0.3.md'
           - '3.0.2': 'windows/release-notes/Release-Notes-3.0.2.md'
           - '3.0.1': 'windows/release-notes/Release-Notes-3.0.1.md'
         - Upgrades:
+          - 'Overview': 'windows/upgrades/Home.md'
           - '3.0.3': 'windows/upgrades/Upgrade-3.0.3.md'
           - '3.0.2': 'windows/upgrades/Upgrade-3.0.2.md'
           - '3.0.1': 'windows/upgrades/Upgrade-3.0.1.md'
@@ -54,7 +55,8 @@ nav:
       - Bets Testing:
         - 'jtenvjv': 'tools/jtenvjv.md'
         - 'jtenvpy': 'tools/jtenvpy.md'
-        - 'wsprcsv': 'tools/wsprcsv.md' 
+        - 'wsprcsv': 'tools/wsprcsv.md'
+        - 'atcheck': 'tools/atcheck.md' 
         - 'NetCore Global Tools': 'tools/global-tools-overview.md'
     - User Gude:
       - 'User Guide': 'user-guide/User-Guide-3.0.2.md'    

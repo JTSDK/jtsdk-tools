@@ -1,18 +1,19 @@
 # JTSDK Tools
 
-This repository is designed to work specifically with the
-[JTSDK Tools Version 3][] tool-chain, which can be used for a great many
-purposes on Windows, Linux and MacOS.
+The main purpose of JTSDK-Tools is to take a group of otherwise independent
+library's, frameworks and applications and put them together into one
+environment.
 
-## Documentation
+While the primary focus of JTSDK-Tools is to compile the many aspects of
+the [WSJT-X][] project, there is no reason it cannot be used for the  intended
+purpose of any given framework or application. For instance, you can develop
+your own Java, Qt, Python, C/C++ (just to name a few) projects all from the same
+environment.
 
-The project now has a new [Documentation Site][] hosted on `Github.io`.
-The documents cover all aspects of the project, from
-[installation](#installaiton) to beta testing. Going forward, the documentation
-site will be the most up to date information available.
-
-There will be short a grace period for the [JTSDK Tools Wiki][], after which, it
-will be disabled. Users should update their links accordingly.
+An added benefit to using JTSDK-Tools is the ability to select one or more Qt,
+Java or Python environments. Again, all from the same environment. Gone is the
+requirement to have multiple consoles open to perform specific tasks
+for a given framework.
 
 ## Software Delivery
 
@@ -32,23 +33,6 @@ general discussion, use:
 - Group Owner: JTSDK+owner@groups.io
 - Help: JTSDK+help@groups.io
 
-## Installation
-
-Installation of this package should follow the tool-chain installation and
-setup. If you've not already done so, review the following guides **before**
-checking out and compiling the source code.
-
-See [Windows Installation][] for detailed instructions.
-
-## Bug Reports
-
-For submitting bug reports and feature requests, use the [Issue Tracker][].
-
-The aim of `JTSDK-Tools` is to use an Agile delivery approach to create a
-high-quality, yet flexible build system. Utilizing Github's [Issue Tracker][].
-users can quickly see the status of any particular request, discuss the merits,
-and implement the final disposition.
-
 ## Supported OS
 
 At present, this repository only supports Windows. Later releases with include
@@ -58,9 +42,6 @@ generic Linux support, and additional Ubuntu / Debian specific artifacts.
   - Win-10 x86-64 / x86-32
   - Win-7|8 x86-64 / x86-32, in theory, but not tested.
   - Win-XP and Vista are not supported.
-
-- Linux
-  - Linux - Coming Soon!.
 
 ## System Requirements
 
@@ -75,13 +56,34 @@ mind, the following should be considered the bare-minimum requirements:
 - Disk Space: At least 25GB to 30GB of Free Space
 - SSD - If you have them, use them!
 
-<!--Page Links ---------------------------------------------------------------->
-[release section]: https://github.com/KI7MT/jtsdk-tools/releases
-[Net Core Global Tools]: https://github.com/dotnet/core/tree/master/samples/dotnetsay
-[JTSDK Tools Version 3]: https://sourceforge.net/projects/jtsdk/files/win32/3.0.0/release/
-[NetCore Global Tools]: https://github.com/dotnet/core/tree/master/samples/dotnetsay
-[JTSDK Tools Website]: https://ki7mt.github.io/jtsdk-tools/
-[Issue Tracker]: https://github.com/KI7MT/jtsdk-tools/issues
-[Documentation Site]: https://ki7mt.github.io/jtsdk-tools/
-[Windows Installation]: https://ki7mt.github.io/jtsdk-tools/windows/Home/
-[JTSDK Tools Wiki]: https://github.com/KI7MT/jtsdk-tools/wiki
+## Windows Installation
+
+The are three primary sections to the installation. Each have multiple
+subsections that must be installed for complete the core tool set. There are
+several `Optional` tools that can be installed on-top of the core requirements.
+
+For a full installation guide, see the [Overview Section][]
+
+## Linux Installation
+
+JTSDK-Tools under Linux is much different process than for Windows. Documentation
+and packaging is still under development.
+
+The one similarity between Linux and Windows is, most all of the packages listed
+in the [Version Matrix](#version-matrix) will also be installed.
+
+## Windows Release Notes
+
+See ==> [Windows Release Notes](./windows/release-notes/Home.md)
+
+## Windows Upgrades
+
+See ==> [Windows Upgrades](./windows/upgrades/Home.md)
+
+## Version Matrix
+
+For a list of library's, frameworks, and applications, see the [Version Matrix][]
+
+[Version Matrix]: https://ki7mt.github.io/jtsdk-tools/windows/Version-Matrix/ 
+[Overview Section]: https://ki7mt.github.io/jtsdk-tools/windows/Home/
+[WSJT-X]: https://physics.princeton.edu/pulsar/k1jt/wsjtx.html
