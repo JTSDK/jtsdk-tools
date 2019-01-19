@@ -65,7 +65,9 @@ cd /d (C|D):\JTSDK-Tools
 set JTSDK_HOME=%CD%
 
 # Change Directories To The Cloned Repository
-cd /d %JTSDK_HOME%\jtsdk-tools\src
+# Note: If you cloned the repository to a different location than indicated,
+# adjust accordingly.
+cd /d %JTSDK_HOME%\src\jtsdk-tools\src
 
 # Clean the build tree
 make clean
