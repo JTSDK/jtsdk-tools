@@ -114,15 +114,13 @@ SET sqlite3_dir=%JTSDK_HOME%\tools\sqlite3\%sqlite3v%
 SET JTSDK_PATH=%JTSDK_PATH%;%sqlite3_dir%
 
 :: PostgreSQL Conditional
-SET pgsqlv=10
+:: Note - This conditional only works IF DBTOOLS are installed.
 IF EXIST %JTSDK_CONFIG%\pgsql11 (
-SET pgqlv=11
+SET pgsqlv=11
 ) ELSE (
-SET pgsqlv10
+SET pgsqlv=10
 )
-IF EXIST %JTSDK_HOME%\tools\PostgreSQL\%psqlv%\pg_env.bat (
-call %JTSDK_HOME%\tools\PostgreSQL\%psqlv%\pg_env.bat
-)
+call %JTSDK_HOME%\tools\PostgreSQL\%pgsqlv%\pg_env.bat
 
 :: END DB TOOLS ----------------------------------------------------------------
 GOTO JAVA_CHECK
