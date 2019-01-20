@@ -8,7 +8,7 @@
     <PackageLicenseUrl>https://www.gnu.org/licenses/gpl-3.0.txt</PackageLicenseUrl>
     <Company>WSJT Development Team</Company>
     <Product>Build Tools For WSJT Applicaitons</Product>
-    <Version>3.0.3</Version>
+    <Version>3.0.4</Version>
     <PackageProjectUrl>https://github.com/KI7MT/jtsdk-dotnet-core</PackageProjectUrl>
     <RepositoryUrl>https://github.com/KI7MT/jtsdk-dotnet-core</RepositoryUrl>
     <RepositoryType>it</RepositoryType>

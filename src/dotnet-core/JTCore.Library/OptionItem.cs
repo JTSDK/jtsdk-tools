@@ -20,7 +20,8 @@ namespace JTCore.Library
             "CMake310",
             "Unix",
             "Java",
-            "PostgreSQL",
+            "Pgsql10",
+            "Pgsql11",
             "Sqlite3"
         };
 
@@ -34,7 +35,8 @@ namespace JTCore.Library
             "Autosvn",
             "CMake310",
             "Java",
-            "PostgreSQL",
+            "Pgsql10",
+            "Pgsql11",
             "Sqlite3"
         };
 
