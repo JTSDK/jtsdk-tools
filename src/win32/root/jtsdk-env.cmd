@@ -108,16 +108,19 @@ GOTO JAVA_CHECK
 ECHO ^*^* Setting DB Tool Paths
 SET DBTOOLS=Installed
 SET sqlite3v=3.24.0
-SET psqlv=10
 
 :: SQLITE
 SET sqlite3_dir=%JTSDK_HOME%\tools\sqlite3\%sqlite3v%
 SET JTSDK_PATH=%JTSDK_PATH%;%sqlite3_dir%
 
-:: POSTGRES
-IF EXIST "%JTSDK_HOME%\tools\PostgreSQL\10\pg_env.bat" (
-call %JTSDK_HOME%\tools\PostgreSQL\10\pg_env.bat
+:: PostgreSQL Conditional
+:: Note - This conditional only works IF DBTOOLS are installed.
+IF EXIST %JTSDK_CONFIG%\pgsql11 (
+SET pgsqlv=11
+) ELSE (
+SET pgsqlv=10
 )
+call %JTSDK_HOME%\tools\PostgreSQL\%pgsqlv%\pg_env.bat
 
 :: END DB TOOLS ----------------------------------------------------------------
 GOTO JAVA_CHECK

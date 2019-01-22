@@ -15,12 +15,12 @@ namespace JTCore.Library
             "Clean",
             "Reconfigure",
             "Autorun",
-            "Autosvn",
             "QT59",
             "CMake310",
             "Unix",
             "Java",
-            "PostgreSQL",
+            "Pgsql10",
+            "Pgsql11",
             "Sqlite3"
         };
 
@@ -31,10 +31,10 @@ namespace JTCore.Library
             "Quiet",
             "QT59",
             "Autorun",
-            "Autosvn",
             "CMake310",
             "Java",
-            "PostgreSQL",
+            "Pgsql10",
+            "Pgsql11",
             "Sqlite3"
         };
 

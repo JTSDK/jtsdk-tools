@@ -5,9 +5,9 @@
     <TargetFramework>netcoreapp2.2</TargetFramework>
 
     <Product>JTConfig</Product>
-    <Version>3.0.3</Version>
-    <VersionPrefix>3.0.3</VersionPrefix>
-    <AssemblyVersion>3.0.3</AssemblyVersion>
+    <Version>3.0.4</Version>
+    <VersionPrefix>3.0.4</VersionPrefix>
+    <AssemblyVersion>3.0.4</AssemblyVersion>
     <Description>JTSDK User Configuration Options</Description>
     <LangVersion>Latest</LangVersion>
     <Authors>Greg Beam, KI7MT</Authors>
