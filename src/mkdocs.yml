@@ -38,11 +38,13 @@ nav:
           - 'Visual Stuidio': 'windows/Install-Visual-Studio.md'
         - Release Notes:
           - 'Overview': 'windows/release-notes/Home.md'          
+          - '3.0.4': 'windows/release-notes/Release-Notes-3.0.4.md'
           - '3.0.3': 'windows/release-notes/Release-Notes-3.0.3.md'
           - '3.0.2': 'windows/release-notes/Release-Notes-3.0.2.md'
           - '3.0.1': 'windows/release-notes/Release-Notes-3.0.1.md'
         - Upgrades:
           - 'Overview': 'windows/upgrades/Home.md'
+          - '3.0.4': 'windows/upgrades/Upgrade-3.0.4.md'
           - '3.0.3': 'windows/upgrades/Upgrade-3.0.3.md'
           - '3.0.2': 'windows/upgrades/Upgrade-3.0.2.md'
           - '3.0.1': 'windows/upgrades/Upgrade-3.0.1.md'
@@ -59,7 +61,7 @@ nav:
         - 'atcheck': 'tools/atcheck.md' 
         - 'NetCore Global Tools': 'tools/global-tools-overview.md'
     - User Gude:
-      - 'User Guide': 'user-guide/User-Guide-3.0.2.md'    
+      - 'User Guide': 'user-guide/User-Guide.md'    
 # Configuration
 theme:
   name: 'flatly'
