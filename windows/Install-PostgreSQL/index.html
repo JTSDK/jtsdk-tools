@@ -309,6 +309,7 @@
             <li><a href="#helpful-links">Helpful Links</a></li>
             <li><a href="#download">Download</a></li>
             <li><a href="#installation">Installation</a></li>
+            <li><a href="#post-installation-update">Post Installation Update</a></li>
             <li><a href="#next-step">Next Step</a></li>
     </ul>
 </div></div>
@@ -329,7 +330,7 @@
 </tr>
 <tr>
 <td>Version</td>
-<td>10.4+</td>
+<td>11.2+</td>
 </tr>
 <tr>
 <td>Arch</td>
@@ -349,13 +350,14 @@ reliability, feature robustness, and performance.</p>
 </blockquote>
 <h2 id="background">Background<a class="headerlink" href="#background" title="Permanent link">&para;</a></h2>
 <ul>
-<li>PostgreSQL is highly configuregable; from it's procedural language support,
-through to it's extensinve Roles and Permission structure, installation can go
+<li>PostgreSQL is highly configurable; from it's procedural language support,
+through to it's extensive Roles and Permission structure, installation can go
 from simple to extremely complex.</li>
-<li>For the purposes of <code>JTSDK</code> usage, and the vast majority of Radio Data Store
-activity, the defualt installaiton procedure will suffice for most needs.</li>
+<li>For the purposes of <strong>JTSDK</strong> usage, and the vast majority of Radio Data Store
+activity, the default installation procedure will suffice for most needs.</li>
 <li>If users find themselves in need of advanced features, the installed instance
-can easily be extended to accomodate many advanced features without a great deal of difficulity.</li>
+can easily be extended to accomodate many advanced features without a great deal
+of difficulty.</li>
 </ul>
 <h2 id="helpful-links">Helpful Links<a class="headerlink" href="#helpful-links" title="Permanent link">&para;</a></h2>
 <ul>
@@ -368,18 +370,15 @@ can easily be extended to accomodate many advanced features without a great deal
 <h2 id="download">Download<a class="headerlink" href="#download" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="https://www.enterprisedb.com/downloads/postgres-postgresql-downloads">PostgreSQL EDB Installer</a></li>
-<li><a href="https://sourceforge.net/projects/jtsdk/files/win32/3.0.0/release/">JTSDK Third Party Installer Package</a></li>
 </ul>
-<p>Both downloads provide the same installer, and reflect the installation
-steps below. Which to use is entirely up to the end-user.</p>
 <h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
-<p>Browse to, then <code>double-click</code> the downloaded <code>PostgreSQL EDB Installer</code>, and follow the steps below.</p>
+<p>Browse to, then <strong>double-click</strong> the downloaded <strong>PostgreSQL EDB Installer</strong>, and follow the steps below.</p>
 <h3 id="welcome-screen">Welcome Screen<a class="headerlink" href="#welcome-screen" title="Permanent link">&para;</a></h3>
 <p>Select next to continue.</p>
 <table>
 <thead>
 <tr>
-<th align="center"><img alt="Welcome Screen" src="../images/postgres/postgres.1.PNG?raw=true" /></th>
+<th align="center"><img alt="Welcome Screen" src="../images/postgres/pgsql11/postgres.1.PNG?raw=true" /></th>
 </tr>
 </thead>
 <tbody>
@@ -395,11 +394,11 @@ the location.</p>
 </blockquote>
 <pre><code class="bash"># For C-Drive Installation, set path to:
 
-C:\JTSDK-Tools\tools\PostgreSQL\10
+C:\JTSDK-Tools\tools\PostgreSQL\11
 
 # For D-Drive installation, set path to:
 
-D:\JTSDK-Tools\tools\PostgreSQL\10
+D:\JTSDK-Tools\tools\PostgreSQL\11
 
 # If another drive is used, substitute the drive letter for one
 # of the examples above.
@@ -408,7 +407,7 @@ D:\JTSDK-Tools\tools\PostgreSQL\10
 <table>
 <thead>
 <tr>
-<th align="center"><img alt="Installation Directory" src="../images/postgres/postgres.2.PNG?raw=true" /></th>
+<th align="center"><img alt="Installation Directory" src="../images/postgres/pgsql11/postgres.2.PNG?raw=true" /></th>
 </tr>
 </thead>
 <tbody>
@@ -430,7 +429,7 @@ tooling can always be added later.</p>
 <table>
 <thead>
 <tr>
-<th align="center"><img alt="Select Components" src="../images/postgres/postgres.3.PNG?raw=true" /></th>
+<th align="center"><img alt="Select Components" src="../images/postgres/pgsql11/postgres.3.PNG?raw=true" /></th>
 </tr>
 </thead>
 <tbody>
@@ -444,16 +443,19 @@ tooling can always be added later.</p>
 <p>IMPORTANT: The Data Directory is critical. Use the table below to set the location.</p>
 </blockquote>
 <ul>
-<li>The database can be moved procedurally post-install if the size grows to an unmanageable level for the current drive space. For most users, the locations listed below should be adequate.</li>
-<li>When <em>uninstalling</em> PostgreSQL, this folder <em>does not</em> get removed, thus your data will remain safe.</li>
+<li>The database can be moved procedurally post-install if the size grows to an
+unmanageable level for the current drive space. For most users, the locations
+listed below should be adequate.</li>
+<li>When <em>uninstalling</em> PostgreSQL, this folder <em>does not</em> get removed, thus your
+data will remain safe.</li>
 </ul>
 <pre><code class="bash"># For C-Drive Installation, set path to:
 
-C:\JTSDK-Tools\tools\PostgreSQL\10\data
+C:\JTSDK-Tools\tools\PostgreSQL\11\data
 
 # For D-Drive installation, set path to:
 
-D:\JTSDK-Tools\tools\PostgreSQL\10\data
+D:\JTSDK-Tools\tools\PostgreSQL\11\data
 
 # If another drive is used, substitute the drive letter for one
 # of the examples above.
@@ -462,7 +464,7 @@ D:\JTSDK-Tools\tools\PostgreSQL\10\data
 <table>
 <thead>
 <tr>
-<th align="center"><img alt="Data Directory" src="../images/postgres/postgres.4.PNG?raw=true" /></th>
+<th align="center"><img alt="Data Directory" src="../images/postgres/pgsql11/postgres.4.PNG?raw=true" /></th>
 </tr>
 </thead>
 <tbody>
@@ -472,10 +474,10 @@ D:\JTSDK-Tools\tools\PostgreSQL\10\data
 </tbody>
 </table>
 <h3 id="postgres-password">Postgres Password<a class="headerlink" href="#postgres-password" title="Permanent link">&para;</a></h3>
-<p>The default user in a new PostgreSQL installation is named <code>postgres</code>. The
-default database is also named <code>postgres</code>. For local development purposes,
+<p>The default user in a new PostgreSQL installation is named <strong>postgres</strong>. The
+default database is also named <strong>postgres</strong>. For local development purposes,
 there is little need for high-security. To make things easy for development and
-testing, most use a default password of <code>postgres</code> also. This setup results in
+testing, most use a default password of <strong>postgres</strong> also. This setup results in
 the following:</p>
 <pre><code class="bash">Host.......: localhost
 Port.......: 5432
@@ -487,7 +489,7 @@ Database...: postgres
 <table>
 <thead>
 <tr>
-<th align="center"><img alt="Postgres Password" src="../images/postgres/postgres.5.PNG?raw=true" /></th>
+<th align="center"><img alt="Postgres Password" src="../images/postgres/pgsql11/postgres.5.PNG?raw=true" /></th>
 </tr>
 </thead>
 <tbody>
@@ -498,11 +500,11 @@ Database...: postgres
 </table>
 <h3 id="server-port">Server Port<a class="headerlink" href="#server-port" title="Permanent link">&para;</a></h3>
 <p>Unless you intend to run multiple servers on multiple ports, it's
-<code>highly recommended</code> to use the default <code>PostgreSQL Port of: 5432</code>.</p>
+<strong>highly recommended</strong> to use the default <strong>PostgreSQL Port of: 5432</strong>.</p>
 <table>
 <thead>
 <tr>
-<th align="center"><img alt="Server Port" src="../images/postgres/postgres.6.PNG?raw=true" /></th>
+<th align="center"><img alt="Server Port" src="../images/postgres/pgsql11/postgres.6.PNG?raw=true" /></th>
 </tr>
 </thead>
 <tbody>
@@ -512,12 +514,12 @@ Database...: postgres
 </tbody>
 </table>
 <h3 id="advanced-options">Advanced Options<a class="headerlink" href="#advanced-options" title="Permanent link">&para;</a></h3>
-<p>Unless you are familiar with <code>PostgreSQL Advanced Options</code>, it's recommended
-to leave this setting as <code>[Default locale]</code></p>
+<p>Unless you are familiar with <strong>PostgreSQL Advanced Options</strong>, it's recommended
+to leave this setting as <strong>[Default locale]</strong></p>
 <table>
 <thead>
 <tr>
-<th align="center"><img alt="Advanced Options" src="../images/postgres/postgres.7.PNG?raw=true" /></th>
+<th align="center"><img alt="Advanced Options" src="../images/postgres/pgsql11/postgres.7.PNG?raw=true" /></th>
 </tr>
 </thead>
 <tbody>
@@ -531,7 +533,7 @@ to leave this setting as <code>[Default locale]</code></p>
 <table>
 <thead>
 <tr>
-<th align="center"><img alt="Pre Installation Summary" src="../images/postgres/postgres.8.PNG?raw=true" /></th>
+<th align="center"><img alt="Pre Installation Summary" src="../images/postgres/pgsql11/postgres.8.PNG?raw=true" /></th>
 </tr>
 </thead>
 <tbody>
@@ -554,7 +556,7 @@ Database...: postgres
 <table>
 <thead>
 <tr>
-<th align="center"><img alt="Finish Installation" src="../images/postgres/postgres.9.PNG?raw=true" /></th>
+<th align="center"><img alt="Finish Installation" src="../images/postgres/pgsql11/postgres.9.PNG?raw=true" /></th>
 </tr>
 </thead>
 <tbody>
@@ -563,8 +565,45 @@ Database...: postgres
 </tr>
 </tbody>
 </table>
+<h2 id="post-installation-update">Post Installation Update<a class="headerlink" href="#post-installation-update" title="Permanent link">&para;</a></h2>
+<p>The EDB Installer adds two double-quotes to its environment script that causes
+issues within the <strong>JTSDK-Tools</strong> environment. The fix is to remove these quotes
+from the env file.</p>
+<pre><code class="bash"># For C-Drive Installation, file location is:
+
+C:\JTSDK-Tools\tools\PostgreSQL\11\pg_env.bat
+
+# For D-Drive installation, file location is:
+
+D:\JTSDK-Tools\tools\PostgreSQL\11\pg_env.bat
+
+# Using VS Code or your favorite text editor, edit pg_env.bat and remove
+# the double quotes:
+
+# For C-Drive Installation
+
+# Before
+@SET PATH=&quot;D:\JTSDK-Tools\tools\PostgreSQL\11\bin&quot;;%PATH%
+
+# After
+@SET PATH=D:\JTSDK-Tools\tools\PostgreSQL\11\bin;%PATH%
+
+# Save and Exit
+
+# For D-Drive Installation
+
+# Before
+@SET PATH=&quot;D:\JTSDK-Tools\tools\PostgreSQL\11\bin&quot;;%PATH%
+
+# After
+@SET PATH=D:\JTSDK-Tools\tools\PostgreSQL\11\bin;%PATH%
+
+# Save and exit
+
+</code></pre>
+
 <p>This concludes the <a href="./">PostgreSQL Installation</a>. Additional
-database information, tests, and additional code snippet information will be
+database information, tests, and code snippet information will be
 posted at <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#74;&#84;&#83;&#68;&#75;&#64;&#71;&#114;&#111;&#117;&#112;&#115;&#46;&#105;&#111;">&#74;&#84;&#83;&#68;&#75;&#64;&#71;&#114;&#111;&#117;&#112;&#115;&#46;&#105;&#111;</a>.</p>
 <h2 id="next-step">Next Step<a class="headerlink" href="#next-step" title="Permanent link">&para;</a></h2>
 <p>Proceed to ==&gt; <a href="../Install-DB-Tools/">Database Tools Installation</a></p></div>
