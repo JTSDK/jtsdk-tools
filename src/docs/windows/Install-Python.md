@@ -16,9 +16,9 @@
 
 ## Background
 
-The `JTSDK-Tools` no longer supports building WSJT, or WSPR
+The **JTSDK-Tools** no longer supports building WSJT, or WSPR
 (Python Based Projects). For those wishing to develop those applications,
-`JTSDK v2` should be used.
+**JTSDK v2** should be used.
 
 ## Helpful Links
 
@@ -29,13 +29,13 @@ The `JTSDK-Tools` no longer supports building WSJT, or WSPR
 
 - [Anaconda Python Installer 64-bit][]
 
-Use the `64-bit` installer, if you are on a 64-bit system, and save to a
+Use the **64-bit** installer, if you are on a 64-bit system, and save to a
 location you can easily access.
 
 ### Optional
 
-If you already have `JTSDK-Tools` installed, as you are upgrading, use can `wget`
-to download the file from the the `JTSDK-Tools` environment
+If you already have **JTSDK-Tools** installed, as you are upgrading, use can **wget**
+to download the file from the the **JTSDK-Tools** environment
 
 ```bash
 # Using wget
@@ -46,7 +46,7 @@ wget -c https://repo.continuum.io/archive/Anaconda3-2018.12-Windows-x86_64.exe
 
 ## Installation
 
-Browse to, then `double-click` the downloaded `Anaconda3 Installer`, and follow
+Browse to, then **double-click** the downloaded **Anaconda3 Installer**, and follow
 the steps below.
 
 ### Welcome Screen
@@ -121,7 +121,7 @@ D:\JTSDK-Tools\tools\Anaconda3
 If you have already [Installed VS Code](Install-VS-Code), you can skip this step.
 If not, Anaconda will install it for you.
 
-| ![Install VS Code](images/anaconda/2018.12/anaconda.8.PNG?raw=true) | 
+| ![Install VS Code](images/anaconda/2018.12/anaconda.8.PNG?raw=true) |
 |:--:|
 | *Install VS Code* |
 
@@ -137,8 +137,8 @@ Select if you want to read more information about Anaconda Python.
 
 The Anaconda installation provides a specific command shell setup with all
 the correct paths to use and create virtual environments. There exists a
-shortcut in the `Windows Start/Program` menu. Browse to your Program Menu, and
-select `Anaconda3 (64-bit)`.
+shortcut in the **Windows Start/Program** menu. Browse to your Program Menu, and
+select **Anaconda3 (64-bit)**.
 
 ### Update Package Manager
 
@@ -153,7 +153,7 @@ conda update conda
 
 ### Update All Packages
 
-After upgrading the `conda package manager`, upgrade all all packages.
+After upgrading the **conda package manager**, upgrade all all packages.
 
 >NOTE: Depending on the installer used, the number of packages to be
 >updated can vary significantly. Older installers will obviously have
@@ -183,10 +183,10 @@ python -V
 
 ## Create Virtual Environment
 
-In the same Anaconda Prompt, create a `jtsdk-Py` virtual environment.
+In the same Anaconda Prompt, create a **jtsdk-Py** virtual environment.
 
 ```bash
-conda create -n jtsdk-py
+conda create -n jtsdk-py python=3
 ```
 
 | ![JTSDK-Py Virtual ENV](images/anaconda/2018.12/anaconda.13.PNG?raw=true) |
@@ -196,7 +196,7 @@ conda create -n jtsdk-py
 ## List Environments
 
 In the same Anaconda Prompt, list all available virtual environments, switch to
-(`jtsdk-py`), then back to (`base`) environment.
+(**jtsdk-py**), then back to (**base**) environment.
 
 ```bash
 # LList the environments, then activate jtsdk-py
@@ -216,7 +216,7 @@ conda deactivate
 |:--:|
 | *List Python Virtual Environments* |
 
-This concludes the `Anaconda3 Python` installation.
+This concludes the **Anaconda3 Python** installation.
 
 ## Next Step
 
