@@ -176,10 +176,6 @@ Database...: postgres
 |:--:|
 | *Finish Installation* |
 
-This concludes the [PostgreSQL Installation](Install-PostgreSQL.md). Additional
-database information, tests, and additional code snippet information will be
-posted at <JTSDK@Groups.io>.
-
 ## Post Installation Update
 
 The EDB Installer adds two double-quotes to its environment script that causes
@@ -219,6 +215,10 @@ D:\JTSDK-Tools\tools\PostgreSQL\11\pg_env.bat
 # Save and exit
 
 ```
+
+This concludes the [PostgreSQL Installation](Install-PostgreSQL.md). Additional
+database information, tests, and additional code snippet information will be
+posted at <JTSDK@Groups.io>.
 
 ## Next Step
 
