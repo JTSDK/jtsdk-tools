@@ -191,16 +191,16 @@ C:\JTSDK-Tools\tools\PostgreSQL\11\pg_env.bat
 
 D:\JTSDK-Tools\tools\PostgreSQL\11\pg_env.bat
 
-# Using VS Code or your favorite text editor, edit pg_env.bat and remove
-# the double quotes:
+# Using VS Code or your favorite text editor, edit pg_env.bat
+# and remove the double quotes:
 
 # For C-Drive Installation
 
 # Before
-@SET PATH="D:\JTSDK-Tools\tools\PostgreSQL\11\bin";%PATH%
+@SET PATH="C:\JTSDK-Tools\tools\PostgreSQL\11\bin";%PATH%
 
 # After
-@SET PATH=D:\JTSDK-Tools\tools\PostgreSQL\11\bin;%PATH%
+@SET PATH=C:\JTSDK-Tools\tools\PostgreSQL\11\bin;%PATH%
 
 # Save and Exit
 
