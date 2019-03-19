@@ -217,7 +217,7 @@ D:\JTSDK-Tools\tools\PostgreSQL\11\pg_env.bat
 ```
 
 This concludes the [PostgreSQL Installation](Install-PostgreSQL.md). Additional
-database information, tests, and additional code snippet information will be
+database information, tests, and code snippet information will be
 posted at <JTSDK@Groups.io>.
 
 ## Next Step
