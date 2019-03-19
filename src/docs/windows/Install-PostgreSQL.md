@@ -180,6 +180,46 @@ This concludes the [PostgreSQL Installation](Install-PostgreSQL.md). Additional
 database information, tests, and additional code snippet information will be
 posted at <JTSDK@Groups.io>.
 
+## Post Installation Update
+
+The EDB Installer adds two double-quotes to its environment script that causes
+issues within the **JTSDK-Tools** environment. The fix is to remove these quotes
+from the env file.
+
+```bash
+# For C-Drive Installation, file location is:
+
+C:\JTSDK-Tools\tools\PostgreSQL\11\pg_env.bat
+
+# For D-Drive installation, file location is:
+
+D:\JTSDK-Tools\tools\PostgreSQL\11\pg_env.bat
+
+# Using VS Code or your favorite text editor, edit pg_env.bat and remove
+# the double quotes:
+
+# For C-Drive Installation
+
+# Before
+@SET PATH="D:\JTSDK-Tools\tools\PostgreSQL\11\bin";%PATH%
+
+# After
+@SET PATH=D:\JTSDK-Tools\tools\PostgreSQL\11\bin;%PATH%
+
+# Save and Exit
+
+# For D-Drive Installation
+
+# Before
+@SET PATH="D:\JTSDK-Tools\tools\PostgreSQL\11\bin";%PATH%
+
+# After
+@SET PATH=D:\JTSDK-Tools\tools\PostgreSQL\11\bin;%PATH%
+
+# Save and exit
+
+```
+
 ## Next Step
 
 Proceed to ==> [Database Tools Installation](Install-DB-Tools.md)
